@@ -1,55 +1,67 @@
 ---
 layout: post
-title: "Webpack第一课 -- 初识Webpack"
-date: 2017-05-17 09:00:00 +0800 
-categories: Webpack
-tag: Webpack
+title: "HTTP第一课--基础"
+date: 2017-08-24 09:00:00 +0800 
+categories: HTTP
+tag: HTTP
 ---
 * content
 {:toc}
 
 其他链接：
 
-+ [Webpack第二课 -- HTML、插件和webpack-dev-server篇]({{ '/2017/05/18/Webpack-second' | prepend: site.baseurl }})
-+ [Webpack第三课 -- HTML、CSS篇]({{ '/2017/05/19/Webpack-third' | prepend: site.baseurl }})
++ [HTTP第二课--TCP]({{ '/2017/08/24/HTTP-Second-TCP' | prepend: site.baseurl }})
++ [HTTP第三课--DNS]({{ '/2017/08/24/HTTP-Third-DNS' | prepend: site.baseurl }})
 
-代码`Github`地址：
 
-+ [https://github.com/maoxiaoke/You-know-what-is-webpack](https://github.com/maoxiaoke/You-know-what-is-webpack)
-
-想不到`webpack`比我想象中要难一点。
-
-`webpack`是一个现代的`JavaScript`应用程序的**模块打包器**(`module bundler`)。但随着它的发展，有向前端代码管理工具演变的趋势。
-
-对于一个网站而言，之前的管理方式是：`HTML`文件、`CSS`样式、`JavaScript`文件、图片文件各自都是独立的，需要分开地管理每一个文件，然后确保一切正常运行。`Gulp`这样的任务管理工具就是在这个基础上发展而来，能处理不同的预处理器和编译器，任务一个接着一个进行。
-
-而`webpack`抛开了这种管理方式，在开发过程中的某一个阶段通过`JavaScript`去处理所有的依赖。比如说，我们可以利用`loader`将`HTML/CSS`文件打包成`JS`文件，然后再解析出来(这里说的有点糊涂，下次理解透彻再来)。
 
 <!-- more -->
 
-## 基本概念
+## HTTP是什么
+HTTP，`Hyper Text Transfer Protocol`，简称 **超文本传输协议**，是用于万维网（WWW：World Wide Web）服务器传输超文本到本地浏览器的传输协议。
 
-我觉得最先应该对基本概念有个了解(就算这些名词你半知半解或者完全不知道，我觉得也是有必要的)。
+>HTTP属于应用层（Application Layer），是一个基于TCP/IP通信协议来传递数据（包括HTML文件、图片、查询结果等等），并且它工作在 **客户端-服务端** 的架构上。
 
-> 以下基本概念都摘自官方文档：[https://doc.webpack-china.org/concepts/](https://doc.webpack-china.org/concepts/)
 
-### 入口 -- entry
+## HTTP的特点
 
-`webpack`将创建所有应用程序的依赖关系图表(dependency graph)。图表的起点被称之为入口起点(entry point)。入口起点告诉`webpack`从哪里开始，并遵循着依赖关系图表知道要打包什么。可以将您应用程序的入口起点认为是根上下文(contextual root)或app第一个启动文件。
+**1、简单快速**  
+* 客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。
 
-在`webpack`中，我们使用**webpack 配置对象**(webpack configuration object)中的`entry`属性来定义入口。
+**2、灵活** 
+* HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记。
 
-### 输出 -- output
+**3.无连接**  
+* 无连接的含义是 **限制每次连接只处理一个请求** 。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。
 
-有`Entry`就有`Output`，该选项影响`compilation`对象的输出。`output`选项控制`webpack`如何向硬盘写入编译文件。
+**4.无状态**  
+* HTTP协议是 **无状态协议**。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。
 
-> 注意，即使可以存在多个入口起点，但只指定一个输出配置。
+**5、支持B/S及C/S模式**
 
-### Loader
+## HTTP之URI
 
-`loader`用于对模块的源代码进行转换。`loader`可以使你在`require()`或"加载"模块时预处理文件。因此，`loader`类似于其他构建工具中“任务(task)”，并提供了处理前端构建步骤的强大方法。
+### 什么是URI
+URI，`Uniform Resource Identifier`，统一资源标识符。服务器资源名被称为统一资源标识符。
 
-`loader`可以将文件从不同的语言(如`TypeScript`)转换为`JavaScript`，或将内联图像转换为`data URL`。`loader`甚至允许你在`JavaScript`中`require()` CSS文件。
+>1.HTTP使用统一资源标识符来传输数据和建立连接。      
+>2.URI 有两种：URN 以及 URL。
+
+### URN
+URN，`Uniform Resource Name`，统一资源命名，是通过名字来标识资源，比如 `mailto:java-net@java.sun.com`
+
+### URL
+URL，`Uniform Resource Locator`,，统一资源定位符，是一种特殊类型的URI，包含了用于查找某个资源的足够的信息，也是互联网上用来标识某一处资源的地址。
+
+>`&lt;scheme>://&lt;user>:&lt;password>@&lt;host>:&lt;port>/&lt;path>;&lt;params>?&lt;query>#&lt;frag>`
+
+*  URL 的组成部分请看下图
+
+![relationship-map]({{ '/styles/images/HTTP/HTTP-01.png' | prepend: site.baseurl }})
+
+*  URL 的例子请看下图
+
+![relationship-map]({{ '/styles/images/HTTP/HTTP-02.png' | prepend: site.baseurl }})
 
 ### 插件 -- Plugins
 
