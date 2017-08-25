@@ -11,7 +11,7 @@ tag: HTTP
 其他链接：
 
 + [HTTP第一课--基础]({{ '/2017/08/24/HTTP-First-Basic' | prepend: site.baseurl }})
-+ [HTTP第三课--DNS]({{ '/2017/08/24/HTTP-Third-DNS' | prepend: site.baseurl }})
++ [HTTP第三课--DNS]({{ '/2017/08/25/HTTP-Third-DNS' | prepend: site.baseurl }})
 
 
 
@@ -202,7 +202,7 @@ tag: HTTP
 
 * 提一个问题：为什么非要三次呢?怎么觉得两次就可以完成了。那TCP为什么非要进行三次连接呢?
 
->- 已失效的连接请求报文段突然又传送到了服务端，会
+>- 已失效的连接请求报文段突然又传送到了服务端，会出现问题。
 
 >- “已失效的连接请求报文段”的产生在这样一种情况下：client发出的第一个连接请求报文段并没有丢失，而是在某个网络结点长时间的滞留了，以致延误到连接释放以后的某个时间才到达server。本来这是一个早已失效的报文段。
     但server收到此失效的连接请求报文段后，就误认为是client再次发出的一个新的连接请求。于是就向client发出确认报文段，同意建立连接。
@@ -218,7 +218,7 @@ tag: HTTP
 
 ### 3.5 为什么要四次分手?
 
-* TCP` 是全双工模式，这就意味着，当 `Client` 发出 `FIN` 报文段时，只是表示 `Client` 已经没有数据要发送了，`Client` 告诉 `Server`， 它的数据已经全部发送完毕了；
+* `TCP` 是全双工模式，这就意味着，当 `Client` 发出 `FIN` 报文段时，只是表示 `Client` 已经没有数据要发送了，`Client` 告诉 `Server`， 它的数据已经全部发送完毕了；
 
 * 但是，这个时候 `Client` 还是可以接受来自 `Server` 的数据；当 `Server` 返回 `ACK` 报文 段时，表示它已经知道 `Client` 没有数据发送了，但是 `Server` 还是可以发送数据到 `Client` 的；
 
@@ -229,9 +229,9 @@ tag: HTTP
 
 * `FIN_WAIT_1`
 
- 其实 `FIN_WAIT_1` 和 `FIN_WAIT_2` 状态的真正含义都是表示等待对方的FIN报文。
+    其实 `FIN_WAIT_1` 和 `FIN_WAIT_2` 状态的真正含义都是表示等待对方的FIN报文。
     
- 而这两种状态的区别是：`FIN_WAIT_1` 状态实际上是当 `SOCKET` 在 `ESTABLISHED` 状态时， 它想主动关闭连接，向对方发送了 `FIN` 报文，此时该 `SOCKET` 即进入到 `FIN_WAIT_1` 状态。而当对方回应 `ACK` 报 文后，则进入到 `FIN_WAIT_2` 状态，当然在实际的正常情况下，无论对方何种情况下，都应该马上回应 `ACK` 报文，所以 `FIN_WAIT_1` 状态一般是比较难见到的，而 `FIN_WAIT_2` 状态还有时常常可以用 `netstat` 看到。 (主动方)
+    而这两种状态的区别是：`FIN_WAIT_1` 状态实际上是当 `SOCKET` 在 `ESTABLISHED` 状态时， 它想主动关闭连接，向对方发送了 `FIN` 报文，此时该 `SOCKET` 即进入到 `FIN_WAIT_1` 状态。而当对方回应 `ACK` 报 文后，则进入到 `FIN_WAIT_2` 状态，当然在实际的正常情况下，无论对方何种情况下，都应该马上回应 `ACK` 报文，所以 `FIN_WAIT_1` 状态一般是比较难见到的，而 `FIN_WAIT_2` 状态还有时常常可以用 `netstat` 看到。 (主动方)
  
 * `FIN_WAIT_2`
 

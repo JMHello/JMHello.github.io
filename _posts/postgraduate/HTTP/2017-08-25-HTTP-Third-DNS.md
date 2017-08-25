@@ -11,7 +11,7 @@ tag: HTTP
 其他链接：
 
 + [HTTP第一课--基础]({{ '/2017/08/24/HTTP-First-Basic' | prepend: site.baseurl }})
-+ [HTTP第二课--TCP]({{ '/2017/08/24/HTTP-Second-TCP' | prepend: site.baseurl }})
++ [HTTP第二课--TCP]({{ '/2017/08/25/HTTP-Second-TCP' | prepend: site.baseurl }})
 
 代码`Github`地址：
 

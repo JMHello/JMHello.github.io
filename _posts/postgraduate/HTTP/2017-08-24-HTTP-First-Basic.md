@@ -10,8 +10,8 @@ tag: HTTP
 
 其他链接：
 
-+ [HTTP第二课--TCP]({{ '/2017/08/24/HTTP-Second-TCP' | prepend: site.baseurl }})
-+ [HTTP第三课--DNS]({{ '/2017/08/24/HTTP-Third-DNS' | prepend: site.baseurl }})
++ [HTTP第二课--TCP]({{ '/2017/08/25/HTTP-Second-TCP' | prepend: site.baseurl }})
++ [HTTP第三课--DNS]({{ '/2017/08/25/HTTP-Third-DNS' | prepend: site.baseurl }})
 
 > 以下内容部分都摘自博客：[http://kb.cnblogs.com/page/130970/#statecode](http://kb.cnblogs.com/page/130970/#statecode)  
 > 以下内容部分都摘自书本：《HTTP权威指南》
