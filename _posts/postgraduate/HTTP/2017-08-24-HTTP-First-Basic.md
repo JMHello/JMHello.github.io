@@ -104,7 +104,7 @@ URI 有两种：URN 以及 URL。
 
 **3.4.1 请求报文（`Request Message`）**
 
-以下是请求报文的图例
+* 以下是请求报文的图例
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-05.png' | prepend: site.baseurl }})
 
@@ -127,7 +127,7 @@ URI 有两种：URN 以及 URL。
 
 **3.4.2 响应报文（`Response Message`）** 
 
-**以下是响应报文的图例**
+* 以下是响应报文的图例
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-07.png' | prepend: site.baseurl }})
 

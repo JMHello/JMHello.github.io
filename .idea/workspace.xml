@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-First-Basic.md" afterPath="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-First-Basic.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-Second-TCP.md" afterPath="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Second-TCP.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,16 +22,16 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="2">
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="2017-08-24-HTTP-First-Basic.md" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-First-Basic.md">
+            <file leaf-file-name="2017-08-25-HTTP-Second-TCP.md" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Second-TCP.md">
                 <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                   <state split_layout="SPLIT">
-                    <first_editor relative-caret-position="0">
-                      <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                    <first_editor relative-caret-position="113">
+                      <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
                       <folding />
                     </first_editor>
                     <second_editor />
@@ -37,8 +39,8 @@
                 </provider>
                 <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
                   <state split_layout="SPLIT">
-                    <first_editor relative-caret-position="66">
-                      <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+                    <first_editor relative-caret-position="308">
+                      <caret line="17" column="89" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
                       <folding />
                     </first_editor>
                     <second_editor>
@@ -59,53 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2017-08-24-HTTP-Second-TCP.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-Second-TCP.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="396">
-                <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="98" />
-                <folding>
-                  <marker date="1503583761951" expanded="true" signature="2400:2555" ph="{...}" />
-                  <marker date="1503583761951" expanded="true" signature="2451:2478" ph="/*...*/" />
-                  <marker date="1503583761951" expanded="true" signature="2955:2966" ph="{...}" />
-                  <marker date="1503583761951" expanded="true" signature="3022:3145" ph="..." />
-                  <marker date="1503583761951" expanded="true" signature="3031:3075" ph="..." />
-                  <marker date="1503583761951" expanded="true" signature="3084:3137" ph="..." />
-                  <marker date="1503583761951" expanded="true" signature="3342:3481" ph="{&quot;entry&quot;: './app/index.js'...}" />
-                  <marker date="1503583761951" expanded="true" signature="3388:3479" ph="{&quot;filename&quot;: 'bundle.js'...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-          <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding>
-                  <marker date="1503583761951" expanded="true" signature="2400:2555" ph="{...}" />
-                  <marker date="1503583761951" expanded="true" signature="2451:2478" ph="/*...*/" />
-                  <marker date="1503583761951" expanded="true" signature="2955:2966" ph="{...}" />
-                  <marker date="1503583761951" expanded="true" signature="3022:3145" ph="..." />
-                  <marker date="1503583761951" expanded="true" signature="3031:3075" ph="..." />
-                  <marker date="1503583761951" expanded="true" signature="3084:3137" ph="..." />
-                  <marker date="1503583761951" expanded="true" signature="3342:3481" ph="{&quot;entry&quot;: './app/index.js'...}" />
-                  <marker date="1503583761951" expanded="true" signature="3388:3479" ph="{&quot;filename&quot;: 'bundle.js'...}" />
-                </folding>
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="59">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -123,11 +83,12 @@
         <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-08-23-how-to-use-webpack-one.md" />
         <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-basic.md" />
-        <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-Second-TCP.md" />
         <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-Third-DNS.md" />
-        <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-First-Basic.md" />
         <option value="$PROJECT_DIR$/CNAME" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-First-Basic.md" />
+        <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-Second-TCP.md" />
+        <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Second-TCP.md" />
       </list>
     </option>
   </component>
@@ -337,18 +298,26 @@
       <workItem from="1503499174521" duration="3686000" />
       <workItem from="1503569922592" duration="2233000" />
       <workItem from="1503582459488" duration="6350000" />
-      <workItem from="1503623517812" duration="6740000" />
+      <workItem from="1503623517812" duration="15589000" />
     </task>
+    <task id="LOCAL-00001" summary="finish">
+      <created>1503639584063</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1503639584063</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20133000" />
+    <option name="totallyTimeSpent" value="28982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13582966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18502203" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -376,6 +345,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -615,6 +588,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CNAME">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reference.md">
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1746">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upgrade-your-browser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-First-Basic.md">
       <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -627,8 +646,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="66">
-            <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <first_editor relative-caret-position="132">
+            <caret line="129" column="12" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="12" />
             <folding />
           </first_editor>
           <second_editor>
@@ -637,59 +656,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-Second-TCP.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Second-TCP.md">
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="396">
-            <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="98" />
-            <folding>
-              <marker date="1503583761951" expanded="true" signature="2400:2555" ph="{...}" />
-              <marker date="1503583761951" expanded="true" signature="2451:2478" ph="/*...*/" />
-              <marker date="1503583761951" expanded="true" signature="2955:2966" ph="{...}" />
-              <marker date="1503583761951" expanded="true" signature="3022:3145" ph="..." />
-              <marker date="1503583761951" expanded="true" signature="3031:3075" ph="..." />
-              <marker date="1503583761951" expanded="true" signature="3084:3137" ph="..." />
-              <marker date="1503583761951" expanded="true" signature="3342:3481" ph="{&quot;entry&quot;: './app/index.js'...}" />
-              <marker date="1503583761951" expanded="true" signature="3388:3479" ph="{&quot;filename&quot;: 'bundle.js'...}" />
-            </folding>
+          <first_editor relative-caret-position="113">
+            <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1503583761951" expanded="true" signature="2400:2555" ph="{...}" />
-              <marker date="1503583761951" expanded="true" signature="2451:2478" ph="/*...*/" />
-              <marker date="1503583761951" expanded="true" signature="2955:2966" ph="{...}" />
-              <marker date="1503583761951" expanded="true" signature="3022:3145" ph="..." />
-              <marker date="1503583761951" expanded="true" signature="3031:3075" ph="..." />
-              <marker date="1503583761951" expanded="true" signature="3084:3137" ph="..." />
-              <marker date="1503583761951" expanded="true" signature="3342:3481" ph="{&quot;entry&quot;: './app/index.js'...}" />
-              <marker date="1503583761951" expanded="true" signature="3388:3479" ph="{&quot;filename&quot;: 'bundle.js'...}" />
-            </folding>
+          <first_editor relative-caret-position="308">
+            <caret line="17" column="89" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
+            <folding />
           </first_editor>
           <second_editor>
             <js_state />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CNAME">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
