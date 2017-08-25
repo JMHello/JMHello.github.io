@@ -13,7 +13,8 @@ tag: HTTP
 + [HTTP第二课--TCP]({{ '/2017/08/24/HTTP-Second-TCP' | prepend: site.baseurl }})
 + [HTTP第三课--DNS]({{ '/2017/08/24/HTTP-Third-DNS' | prepend: site.baseurl }})
 
-
+> 以下内容部分都摘自博客：[http://kb.cnblogs.com/page/130970/#statecode](http://kb.cnblogs.com/page/130970/#statecode)  
+> 以下内容部分都摘自书本：《HTTP权威指南》
 
 <!-- more -->
 
@@ -46,7 +47,6 @@ HTTP，`Hyper Text Transfer Protocol`，简称 **超文本传输协议**，是�
 
 ### 2.1 什么是URI
 
- 
 URI，`Uniform Resource Identifier`，统一资源标识符。服务器资源名被称为统一资源标识符。
 
 >HTTP使用统一资源标识符来传输数据和建立连接。      
@@ -55,11 +55,13 @@ URI，`Uniform Resource Identifier`，统一资源标识符。服务器资源名
 
 URI 有两种：URN 以及 URL。
 
-#### 2.2.1 URN
-URN，`Uniform Resource Name`，统一资源命名，是通过名字来标识资源，比如 `mailto:java-net@java.sun.com`
+**2.2.1 URN**
 
-#### 2.2.2 URL
-URL，`Uniform Resource Locator`,，统一资源定位符，是一种特殊类型的URI，包含了用于查找某个资源的足够的信息，也是互联网上用来标识某一处资源的地址。
+* URN，`Uniform Resource Name`，统一资源命名，是通过名字来标识资源，比如 `mailto:java-net@java.sun.com`
+
+**2.2.2 URL**
+
+* URL，`Uniform Resource Locator`，统一资源定位符，是一种特殊类型的URI，包含了用于查找某个资源的足够的信息，也是互联网上用来标识某一处资源的地址。
 
 > URL的组成部分：<scheme&gt;://<user&gt;:<password&gt;@<host&gt;:<port&gt;/<path&gt;;<params&gt;?<query&gt;#<frag&gt;
 
@@ -79,14 +81,14 @@ URL，`Uniform Resource Locator`,，统一资源定位符，是一种特殊类�
 
 ### 3.2 HTTP报文流
 
-#### 3.2.1. 报文流入源端服务器
+**3.2.1. 报文流入源端服务器**
 
 * HTTP 使用术语流入（`inbound`）和流出（`outbound`）来描述事务处理（`transaction`）的方向。报文流入源端服务器，工作完成之后，会流回用户的 Agent 代理中。以下是图例：
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-03.png' | prepend: site.baseurl }})
 
 
-#### 3.2.2. 报文向下游流动
+**3.2.2. 报文向下游流动**
 
 * HTTP 报文会像河水一样流动。不管是请求报文还是响应报文，所有报文都会向下游（`downstream`）流动。所有报文的发送者都在接收者的上游（`upstream`）。 
 
@@ -100,9 +102,9 @@ URL，`Uniform Resource Locator`,，统一资源定位符，是一种特殊类�
 
 `HTTP`报文有两种：请求报文（`Request Message`）和响应报文（`Response Message`）。接下来就开始谈一下这两种报文。
 
-#### 3.4.1 请求报文（`Request Message`）
+**3.4.1 请求报文（`Request Message`）**
 
-**以下是请求报文的图例**
+以下是请求报文的图例
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-05.png' | prepend: site.baseurl }})
 
@@ -110,20 +112,20 @@ URL，`Uniform Resource Locator`,，统一资源定位符，是一种特殊类�
 
 **3.4.1.1 方法（`method`）**
 
-方法用来告知服务器要做些什么。以下是常用的HTTP方法：
+* 方法用来告知服务器要做些什么。以下是常用的HTTP方法：
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-06.png' | prepend: site.baseurl }})
 
 **3.4.1.2 URL**
 
-命名所请求的资源
+* URL是命名所请求的资源
 
 **3.4.1.3 版本（`version`）**
 
-报文所使用的HTTP版本。其格式为 `HTTP/major.minor`。【`major`是主要版本号，`minor`是次要版本号，两个都是整数】
+* 报文所使用的HTTP版本。其格式为 `HTTP/major.minor`。【`major`是主要版本号，`minor`是次要版本号，两个都是整数】
 
 
-#### 3.4.2 响应报文（`Response Message`） 
+**3.4.2 响应报文（`Response Message`）** 
 
 **以下是响应报文的图例**
 
@@ -135,7 +137,7 @@ URL，`Uniform Resource Locator`,，统一资源定位符，是一种特殊类�
 
 **3.4.2.2 状态码（`status code`）**
 
-状态码用来告诉客户端，究竟发生了什么事情。以下是状态码的分类图：
+* 状态码用来告诉客户端，究竟发生了什么事情。以下是状态码的分类图：
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-08.png' | prepend: site.baseurl }})
 
@@ -143,8 +145,7 @@ URL，`Uniform Resource Locator`,，统一资源定位符，是一种特殊类�
 
 >1. `200 OK`：表明该请求被成功地完成，所请求的资源发送回客户端。
 >2. `302 Found`：重定向，新的URL会在response中的Location中返回，浏览器将会使用新的URL发出新的Request。  
-
->   例如在IE中输入http://www.google.com. HTTP服务器会返回304， IE取到Response中Location header的新URL， 又重新发送了一个Request。
+    例如在IE中输入http://www.google.com. HTTP服务器会返回304， IE取到Response中Location header的新URL， 又重新发送了一个Request。
 >3. `304 Not Modified`：代表上次的文档已经被缓存了， 还可以继续使用。
 >4. `400 Bad Request`：客户端请求与语法错误，不能被服务器所理解。
 >5. `403 Forbidden`：服务器收到请求，但是拒绝提供服务。
@@ -154,12 +155,6 @@ URL，`Uniform Resource Locator`,，统一资源定位符，是一种特殊类�
 
 **3.4.2.3 原因短语（`reason phrase`）**
 
-原因短语为状态码提供文本形式的解释。原因短语和状态码是成对出现的。原因短语是状态码的可读版本，应用程序开发者将其传送给用户，用以说明在请求期间发生了什么情况。
+* 原因短语为状态码提供文本形式的解释。原因短语和状态码是成对出现的。原因短语是状态码的可读版本，应用程序开发者将其传送给用户，用以说明在请求期间发生了什么情况。
 
-## 第一个webpack项目
-
-我们第一个项目使用了官方的一个例子。作为起步，非常有指导意义。主要的步骤先列举如下：
-
-+ `webpack`的安装
-+ 创建一个`bundle`文件
-+ 配置`webpack.config.js`
+> 例子：`200 OK`
