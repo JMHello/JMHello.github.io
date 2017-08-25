@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CNAME" afterPath="$PROJECT_DIR$/CNAME" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CNAME" afterPath="" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +59,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2017-08-24-HTTP-Second-TCP.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2017-08-24-HTTP-Second-TCP.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-Second-TCP.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -97,16 +97,6 @@
               <second_editor>
                 <js_state />
               </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CNAME" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CNAME">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -337,18 +327,18 @@
       <workItem from="1503499174521" duration="3686000" />
       <workItem from="1503569922592" duration="2233000" />
       <workItem from="1503582459488" duration="6350000" />
-      <workItem from="1503623517812" duration="5885000" />
+      <workItem from="1503623517812" duration="6546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19278000" />
+    <option name="totallyTimeSpent" value="19939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13582966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13582966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -687,7 +677,7 @@
     <entry file="file://$PROJECT_DIR$/CNAME">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
           <folding />
         </state>
       </provider>
