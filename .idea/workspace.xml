@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-String.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-let-and-const.md" afterPath="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-let-and-const.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
@@ -25,60 +27,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-08-25-HTTP-Second-TCP.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Second-TCP.md">
+      <file leaf-file-name="2017-08-26-ES6-String.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-String.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="198">
-                <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="84" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-          <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="544">
-                <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-08-26-ES6-let-and-const.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-let-and-const.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="442">
-                <caret line="305" column="49" selection-start-line="305" selection-start-column="49" selection-end-line="305" selection-end-column="49" />
+              <first_editor relative-caret-position="478">
+                <caret line="345" column="2" selection-start-line="345" selection-start-column="2" selection-end-line="345" selection-end-column="2" />
                 <folding>
-                  <marker date="1503735926894" expanded="true" signature="301:331" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="444:456" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="649:700" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="672:697" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="709:714" ph="//..." />
-                  <marker date="1503735926894" expanded="true" signature="1256:1294" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="1295:1315" ph="//..." />
-                  <marker date="1503735926894" expanded="true" signature="1992:2039" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="2094:2274" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="2814:2834" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="2918:2938" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3191:3221" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3241:3271" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3314:3334" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3355:3386" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3359:3384" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3745:3765" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3883:3941" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="4370:4399" ph="//..." />
-                  <marker date="1503735926894" expanded="true" signature="4792:4825" ph="//..." />
-                  <marker date="1503735926894" expanded="true" signature="4921:5073" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="4985:5024" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="5027:5065" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="1165:1178" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="2199:2249" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="2250:2264" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="2365:2404" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="3036:3064" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="3065:3085" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="3065:3089" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="3243:3270" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="3271:3284" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="3306:3327" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="3618:3638" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5407:5424" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5828:5845" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5863:5885" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5939:5966" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5985:6004" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="6022:6041" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="6447:6466" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="6501:6527" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="6744:6769" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="7681:7683" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="8135:8164" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="8557:8590" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="8686:8838" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="8750:8789" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="8792:8830" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor>
@@ -91,29 +72,32 @@
               <first_editor relative-caret-position="0">
                 <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding>
-                  <marker date="1503735926894" expanded="true" signature="301:331" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="444:456" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="649:700" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="672:697" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="709:714" ph="//..." />
-                  <marker date="1503735926894" expanded="true" signature="1256:1294" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="1295:1315" ph="//..." />
-                  <marker date="1503735926894" expanded="true" signature="1992:2039" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="2094:2274" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="2814:2834" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="2918:2938" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3191:3221" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3241:3271" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3314:3334" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3355:3386" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3359:3384" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3745:3765" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="3883:3941" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="4370:4399" ph="//..." />
-                  <marker date="1503735926894" expanded="true" signature="4792:4825" ph="//..." />
-                  <marker date="1503735926894" expanded="true" signature="4921:5073" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="4985:5024" ph="{...}" />
-                  <marker date="1503735926894" expanded="true" signature="5027:5065" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="1165:1178" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="2199:2249" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="2250:2264" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="2365:2404" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="3036:3064" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="3065:3085" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="3065:3089" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="3243:3270" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="3271:3284" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="3306:3327" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="3618:3638" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5407:5424" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5828:5845" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5863:5885" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5939:5966" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="5985:6004" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="6022:6041" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="6447:6466" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="6501:6527" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="6744:6769" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="7681:7683" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="8135:8164" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="8557:8590" ph="//..." />
+                  <marker date="1503748948001" expanded="true" signature="8686:8838" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="8750:8789" ph="{...}" />
+                  <marker date="1503748948001" expanded="true" signature="8792:8830" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -153,6 +137,7 @@
         <option value="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/Jekyll/2017-02-22-Jekyll-Cpanel.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-let-and-const.md" />
+        <option value="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-String.md" />
       </list>
     </option>
   </component>
@@ -200,100 +185,7 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studynote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studynote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTTP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studynote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ES6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
@@ -387,7 +279,7 @@
       <workItem from="1503582459488" duration="6350000" />
       <workItem from="1503623517812" duration="22203000" />
       <workItem from="1503673082777" duration="3282000" />
-      <workItem from="1503716990051" duration="10523000" />
+      <workItem from="1503716990051" duration="15195000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -400,13 +292,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49401000" />
+    <option name="totallyTimeSpent" value="54073000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18887262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18887262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -444,13 +336,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.vscode/settings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/postgraduate/Algorithms/2017-03-08-Algorithms-from-freecodecamp.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -976,6 +861,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-let-and-const.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="220">
+            <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Second-TCP.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -998,11 +905,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-let-and-const.md">
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/ES6/2017-08-26-ES6-String.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="442">
-            <caret line="305" column="49" selection-start-line="305" selection-start-column="49" selection-end-line="305" selection-end-column="49" />
+          <first_editor relative-caret-position="478">
+            <caret line="345" column="2" selection-start-line="345" selection-start-column="2" selection-end-line="345" selection-end-column="2" />
             <folding />
           </first_editor>
           <second_editor>

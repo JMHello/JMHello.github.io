@@ -8,9 +8,7 @@ tag: ES6
 * content
 {:toc}
 
-> 以下内容全部源于：
-
-1. [http://es6.ruanyifeng.com/#docs/let](http://es6.ruanyifeng.com/#docs/let)
+> 以下内容全部源于： [http://es6.ruanyifeng.com/#docs/let](http://es6.ruanyifeng.com/#docs/let)
 
 <!-- more -->
 
