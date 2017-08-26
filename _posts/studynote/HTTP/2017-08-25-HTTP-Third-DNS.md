@@ -13,7 +13,13 @@ tag: HTTP
 + [HTTP第一课--基础]({{ '/2017/08/24/HTTP-First-Basic' | prepend: site.baseurl }})
 + [HTTP第二课--TCP]({{ '/2017/08/25/HTTP-Second-TCP' | prepend: site.baseurl }})
 
-> 以下基本概念都摘自官方文档：[https://doc.webpack-china.org/concepts/](https://doc.webpack-china.org/concepts/)
+> 以下部分内容源于：
+
+1. [http://www.cnblogs.com/codecc/p/dns.html](http://www.cnblogs.com/codecc/p/dns.html)
+                   
+2. [http://blog.csdn.net/a19881029/article/details/19486949](http://blog.csdn.net/a19881029/article/details/19486949)
+
+3. [http://369369.blog.51cto.com/319630/812889/](http://369369.blog.51cto.com/319630/812889/)
 
 <!-- more -->
 

@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-08-23-how-to-use-webpack-one.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-24-HTTP-First-Basic.md" afterPath="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-24-HTTP-First-Basic.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Second-TCP.md" afterPath="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Second-TCP.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md" afterPath="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/Jekyll/2017-02-22-Jekyll-Cpanel.md" afterPath="$PROJECT_DIR$/_posts/studynote/Jekyll/2017-02-22-Jekyll-Cpanel.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/Jekyll/2017-05-09-Jekyll-second.md" afterPath="$PROJECT_DIR$/_posts/studynote/Jekyll/2017-05-09-Jekyll-second.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-17-First-meet-Webpack.md" afterPath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-17-First-meet-Webpack.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-18-Webpack-second.md" afterPath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-18-Webpack-second.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-19-Webpack-third.md" afterPath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-19-Webpack-third.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +39,8 @@
                 </provider>
                 <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                   <state split_layout="SPLIT">
-                    <first_editor relative-caret-position="88">
-                      <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+                    <first_editor relative-caret-position="462">
+                      <caret line="21" column="92" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
                       <folding />
                     </first_editor>
                     <second_editor />
@@ -66,74 +58,7 @@
     <favorites_list name="JMHello.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-05-19-Webpack-third.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-19-Webpack-third.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="88">
-                <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-                <folding>
-                  <marker date="1503722420615" expanded="true" signature="731:941" ph="..." />
-                  <marker date="1503722420615" expanded="true" signature="740:818" ph="..." />
-                  <marker date="1503722420615" expanded="true" signature="827:933" ph="..." />
-                  <marker date="1503722420615" expanded="true" signature="839:883" ph="..." />
-                  <marker date="1503722420615" expanded="true" signature="1021:1051" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="1173:1280" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="1883:2241" ph="{&quot;entry&quot;: './app/index.js'...}" />
-                  <marker date="1503722420615" expanded="true" signature="1922:1996" ph="{&quot;filename&quot;: 'bundle.js'...}" />
-                  <marker date="1503722420615" expanded="true" signature="2039:2153" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="2056:2147" ph="[...]" />
-                  <marker date="1503722420615" expanded="true" signature="2057:2146" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="2168:2239" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="3347:3857" ph="{&quot;entry&quot;: './app/index.js'...}" />
-                  <marker date="1503722420615" expanded="true" signature="3386:3460" ph="{&quot;filename&quot;: 'bundle.js'...}" />
-                  <marker date="1503722420615" expanded="true" signature="3472:3680" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="3489:3674" ph="[...]" />
-                  <marker date="1503722420615" expanded="true" signature="3490:3673" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="3615:3662" ph="{&quot;use&quot;: 'css-loader'...}" />
-                  <marker date="1503722420615" expanded="true" signature="3719:3769" ph="[...]" />
-                  <marker date="1503722420615" expanded="true" signature="3784:3855" ph="{...}" />
-                </folding>
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-          <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding>
-                  <marker date="1503722420615" expanded="true" signature="731:941" ph="..." />
-                  <marker date="1503722420615" expanded="true" signature="740:818" ph="..." />
-                  <marker date="1503722420615" expanded="true" signature="827:933" ph="..." />
-                  <marker date="1503722420615" expanded="true" signature="839:883" ph="..." />
-                  <marker date="1503722420615" expanded="true" signature="1021:1051" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="1173:1280" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="1883:2241" ph="{&quot;entry&quot;: './app/index.js'...}" />
-                  <marker date="1503722420615" expanded="true" signature="1922:1996" ph="{&quot;filename&quot;: 'bundle.js'...}" />
-                  <marker date="1503722420615" expanded="true" signature="2039:2153" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="2056:2147" ph="[...]" />
-                  <marker date="1503722420615" expanded="true" signature="2057:2146" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="2168:2239" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="3347:3857" ph="{&quot;entry&quot;: './app/index.js'...}" />
-                  <marker date="1503722420615" expanded="true" signature="3386:3460" ph="{&quot;filename&quot;: 'bundle.js'...}" />
-                  <marker date="1503722420615" expanded="true" signature="3472:3680" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="3489:3674" ph="[...]" />
-                  <marker date="1503722420615" expanded="true" signature="3490:3673" ph="{...}" />
-                  <marker date="1503722420615" expanded="true" signature="3615:3662" ph="{&quot;use&quot;: 'css-loader'...}" />
-                  <marker date="1503722420615" expanded="true" signature="3719:3769" ph="[...]" />
-                  <marker date="1503722420615" expanded="true" signature="3784:3855" ph="{...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -158,12 +83,12 @@
         <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Third-DNS.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-24-HTTP-First-Basic.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Second-TCP.md" />
-        <option value="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/Jekyll/2017-02-22-Jekyll-Cpanel.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/Jekyll/2017-05-09-Jekyll-second.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-17-First-meet-Webpack.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-18-Webpack-second.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-19-Webpack-third.md" />
+        <option value="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md" />
       </list>
     </option>
   </component>
@@ -497,7 +422,7 @@
       <workItem from="1503582459488" duration="6350000" />
       <workItem from="1503623517812" duration="22203000" />
       <workItem from="1503673082777" duration="3282000" />
-      <workItem from="1503716990051" duration="3354000" />
+      <workItem from="1503716990051" duration="3558000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -510,13 +435,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42232000" />
+    <option name="totallyTimeSpent" value="42436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -901,28 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md">
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="110">
-            <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="88">
-            <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/studynote/Jekyll/2017-02-22-Jekyll-Cpanel.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1094,6 +997,28 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md">
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="110">
+            <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="462">
+            <caret line="21" column="92" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
             <folding />
           </first_editor>
           <second_editor />
