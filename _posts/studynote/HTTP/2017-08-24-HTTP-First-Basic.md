@@ -2,7 +2,7 @@
 layout: post
 title: "HTTP第一课--基础"
 date: 2017-08-24 09:00:00 +0800 
-categories: HTTP
+categories: 学习笔记
 tag: HTTP
 ---
 * content

@@ -2,7 +2,7 @@
 layout: post
 title: "Webpack第二课 -- HTML、插件和webpack-dev-server篇"
 date: 2017-05-18 09:00:00 +0800 
-categories: 研究生涯
+categories: 学习笔记
 tag: Webpack
 ---
 * content

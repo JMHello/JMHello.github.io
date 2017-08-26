@@ -2,7 +2,7 @@
 layout: post
 title: "HTTP第二课--TCP"
 date: 2017-08-25 09:00:00 +0800 
-categories: HTTP
+categories: 学习笔记
 tag: HTTP
 ---
 * content

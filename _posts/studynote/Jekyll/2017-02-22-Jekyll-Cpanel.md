@@ -2,7 +2,7 @@
 layout: post
 title: "基于Jekyll静态框架的Github站点设计"
 data: 2017-02-22 19:27:00 +0800
-categories: 研究生涯
+categories:学习笔记
 tag: Jekyll
 ---
 * content

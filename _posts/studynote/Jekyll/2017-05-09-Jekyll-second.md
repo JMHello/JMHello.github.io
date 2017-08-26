@@ -2,7 +2,7 @@
 layout: post
 title: "Jekyll搭建博客--人类补完计划"
 data: 2017-05-09 19:27:00 +0800
-categories: 研究生涯
+categories: 学习笔记
 tag: Jekyll
 ---
 * content

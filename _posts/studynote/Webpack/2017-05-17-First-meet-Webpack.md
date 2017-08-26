@@ -2,7 +2,7 @@
 layout: post
 title: "Webpack第一课 -- 初识Webpack"
 date: 2017-05-17 09:00:00 +0800 
-categories: 研究生涯
+categories: 学习笔记
 tag: Webpack
 ---
 * content
