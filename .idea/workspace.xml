@@ -2,14 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/images/favicon.png" afterPath="$PROJECT_DIR$/styles/images/favicon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/images/me/me.png" afterPath="$PROJECT_DIR$/styles/images/me/me.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/novel/Hey-young/2015-02-24-hello-young.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Algorithms/2017-03-08-Algorithms-from-freecodecamp.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Algorithms/2017-03-12-Sort-and-search-algorithm.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Algorithms/2017-05-05-heap-algorithms.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Algorithms/2017-06-26-Set-Map-Hash.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Algorithms/2017-06-26-Tree.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Algorithms/2017-06-27-Graph-theory.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/CSS/2017-05-13-CSS-secrets.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/CSS/2017-05-16-specificity-of-css.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/CSS/2017-06-10-Center.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/CSS/2017-06-11-Layout.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/CSS/2017-07-15-Flex.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/CSS/2017-07-16-Two-or-Three.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/CSS/2017-07-23-BFC.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/DOM/2017-03-31-Javascript-dom.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/DOM/2017-04-11-DOM.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/DOM/2017-08-14-Web-Worker.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Dev/2017-04-25-First-Meet-Sass.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Dev/2017-04-26-First-Meet-Gulp.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Dev/2017-07-01-First-Meet-TypeScript.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Dev/2017-07-04-First-Meet-Angular.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Dev/2017-07-06-Angular-Second.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Dev/2017-07-12-Angular-Third.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Dev/2017-08-15-First-Meet-Cache.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Dev/2017-08-16-First-Meet-HTTPS.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-07-AJAX.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-07-Loops-and-iteration.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-10-Expressions-and-operators.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-13-Indexed-collections.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-13-Number-and-date.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-13-String.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-15-Object-model.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-21-Data-Structures-and-Types-and-Literals.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-21-Functions.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-22-Objects.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-23-More-of-prototype.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-03-24-Object-pattern.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-04-12-Map-and-reduce.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-04-14-Coercion.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-05-03-Closures.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/JavaScript/2017-08-16-This.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Node/2017-01-17-NPM-and-Package.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Node/2017-02-18-CommonJS.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Node/2017-03-06-Features-of-Node.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Node/2017-06-07-Asyn-Programing.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Node/2017-06-08-Node-Http.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Node/2017-06-09-MognoDB.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Node/2017-06-20-Connect-and-Express.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Node/2017-07-28-REST-and-RESTful.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Python/2017-06-04-Python-Base.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Responsive/2017-05-25-High-Performance-Responsive-Design.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/skill/summary/2017-06-13-How-many.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/skill/summary/2017-06-21-Stdio.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/skill/summary/2017-06-22-Questions-of-front-end.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/skill/summary/2017-06-23-Questions-of-Node.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/skill/summary/2017-07-20-Clean-Code.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Third-DNS.md" afterPath="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Third-DNS.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/me/index.html" afterPath="$PROJECT_DIR$/me/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-First-Basic.md" afterPath="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-24-HTTP-First-Basic.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Second-TCP.md" afterPath="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Second-TCP.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Third-DNS.md" afterPath="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Jekyll/2017-02-22-Jekyll-Cpanel.md" afterPath="$PROJECT_DIR$/_posts/studynote/Jekyll/2017-02-22-Jekyll-Cpanel.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Jekyll/2017-05-09-Jekyll-second.md" afterPath="$PROJECT_DIR$/_posts/studynote/Jekyll/2017-05-09-Jekyll-second.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-05-17-First-meet-Webpack.md" afterPath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-17-First-meet-Webpack.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-05-18-Webpack-second.md" afterPath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-18-Webpack-second.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-05-19-Webpack-third.md" afterPath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-19-Webpack-third.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-08-23-how-to-use-webpack-one.md" afterPath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-08-23-how-to-use-webpack-one.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +90,7 @@
         <state>
           <leaf>
             <file leaf-file-name="2017-08-25-HTTP-Third-DNS.md" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Third-DNS.md">
+              <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md">
                 <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
                   <state split_layout="SPLIT">
                     <first_editor relative-caret-position="110">
@@ -83,32 +141,7 @@
     <favorites_list name="JMHello.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-08-25-HTTP-Second-TCP.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Second-TCP.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="352">
-                <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="84" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-          <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="858">
-                <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -141,9 +174,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
-    <option name="height" value="768" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -271,22 +305,12 @@
               <option name="myItemId" value="_posts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMHello.github.io" />
+              <option name="myItemId" value="studynote" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postgraduate" />
+              <option name="myItemId" value="Webpack" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,11 +328,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="postgraduate" />
+              <option name="myItemId" value="studynote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jekyll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JMHello.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JMHello.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="studynote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JMHello.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JMHello.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="studynote" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="HTTP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JMHello.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JMHello.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,12 +418,12 @@
     <property name="nodejs_interpreter_path" value="E:/node.js/node" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\projectAndNote\JMHello.github.io\_posts\postgraduate\Webpack" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\projectAndNote\JMHello.github.io\styles\images\HTTP" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\postgraduate\HTTP" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projectAndNote\JMHello.github.io\_posts\postgraduate\Webpack" />
     </key>
   </component>
   <component name="RunManager">
@@ -419,7 +497,7 @@
       <workItem from="1503582459488" duration="6350000" />
       <workItem from="1503623517812" duration="22203000" />
       <workItem from="1503673082777" duration="3282000" />
-      <workItem from="1503716990051" duration="2193000" />
+      <workItem from="1503716990051" duration="3097000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -432,13 +510,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41071000" />
+    <option name="totallyTimeSpent" value="41975000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="768" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3778111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -476,38 +554,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-08-23-how-to-use-webpack-one.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-05-17-First-meet-Webpack.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-08-23-how-to-use-webpack-one.md">
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/Webpack/2017-08-23-how-to-use-webpack-one.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-05-17-First-meet-Webpack.md">
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-17-First-meet-Webpack.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -577,7 +631,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-08-23-how-to-use-webpack-one.md">
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/Webpack/2017-08-23-how-to-use-webpack-one.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="44">
@@ -594,7 +648,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/Webpack/2017-05-17-First-meet-Webpack.md">
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-17-First-meet-Webpack.md">
       <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="-858">
@@ -653,7 +707,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-First-Basic.md">
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-24-HTTP-First-Basic.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="264">
@@ -891,29 +945,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Second-TCP.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="352">
-            <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="84" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="858">
-            <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Third-DNS.md">
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md">
       <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="110">
@@ -948,6 +980,72 @@
               <marker date="1503719181472" expanded="true" signature="8322:8461" ph="{&quot;entry&quot;: './app/index.js'...}" />
               <marker date="1503719181472" expanded="true" signature="8368:8459" ph="{&quot;filename&quot;: 'bundle.js'...}" />
             </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Second-TCP.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="352">
+            <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="84" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="858">
+            <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/Jekyll/2017-02-22-Jekyll-Cpanel.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1122">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/postgraduate/CSS/2017-07-23-BFC.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1632">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
