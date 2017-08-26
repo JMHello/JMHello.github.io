@@ -300,3 +300,7 @@ var constantize = (obj) => {
   });
 };
 ```
+
+## 三、总结
+
+![relationship-map]({{ '/styles/images/es6/es6.png' | prepend: site.baseurl }})
