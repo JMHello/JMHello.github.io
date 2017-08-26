@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTTP第三课--DNS"
-date: 2017-08-24 09:00:00 +0800 
+date: 2017-08-25 17:00:00 +0800 
 categories: HTTP
 tag: HTTP
 ---
@@ -13,43 +13,266 @@ tag: HTTP
 + [HTTP第一课--基础]({{ '/2017/08/24/HTTP-First-Basic' | prepend: site.baseurl }})
 + [HTTP第二课--TCP]({{ '/2017/08/25/HTTP-Second-TCP' | prepend: site.baseurl }})
 
-代码`Github`地址：
-
-+ [https://github.com/maoxiaoke/You-know-what-is-webpack](https://github.com/maoxiaoke/You-know-what-is-webpack)
-
-想不到`webpack`比我想象中要难一点。
-
-`webpack`是一个现代的`JavaScript`应用程序的**模块打包器**(`module bundler`)。但随着它的发展，有向前端代码管理工具演变的趋势。
-
-对于一个网站而言，之前的管理方式是：`HTML`文件、`CSS`样式、`JavaScript`文件、图片文件各自都是独立的，需要分开地管理每一个文件，然后确保一切正常运行。`Gulp`这样的任务管理工具就是在这个基础上发展而来，能处理不同的预处理器和编译器，任务一个接着一个进行。
-
-而`webpack`抛开了这种管理方式，在开发过程中的某一个阶段通过`JavaScript`去处理所有的依赖。比如说，我们可以利用`loader`将`HTML/CSS`文件打包成`JS`文件，然后再解析出来(这里说的有点糊涂，下次理解透彻再来)。
+> 以下基本概念都摘自官方文档：[https://doc.webpack-china.org/concepts/](https://doc.webpack-china.org/concepts/)
 
 <!-- more -->
 
-## 基本概念
+## 一、什么是DNS
 
-我觉得最先应该对基本概念有个了解(就算这些名词你半知半解或者完全不知道，我觉得也是有必要的)。
+`DNS`，`Domain Name System`，域名系统。它是一种组织成域层次结构的计算机和网络服务命名系统，用于`TCP/IP`网络。它所提供的服务是用来将主机名和域名转换成IP地址的工作。
 
-> 以下基本概念都摘自官方文档：[https://doc.webpack-china.org/concepts/](https://doc.webpack-china.org/concepts/)
+* 简单理解：DNS就是根据域名查出IP地址。
 
-### 入口 -- entry
+* 图例
 
-`webpack`将创建所有应用程序的依赖关系图表(dependency graph)。图表的起点被称之为入口起点(entry point)。入口起点告诉`webpack`从哪里开始，并遵循着依赖关系图表知道要打包什么。可以将您应用程序的入口起点认为是根上下文(contextual root)或app第一个启动文件。
+![relationship-map]({{ '/styles/images/HTTP/HTTP-14.png' | prepend: site.baseurl }})
 
-在`webpack`中，我们使用**webpack 配置对象**(webpack configuration object)中的`entry`属性来定义入口。
+> 补充：`DNS`在53端口上监听请求并提供响应的服务。出于性能的考虑，`DNS`查询请求用`UDP`协议交互，并且每个请求的大小会小于512个字节。如果返回的请求大小会大于512个字节，交互双方将会协商使用 `TCP`协议。
 
-### 输出 -- output
+## 二、DNS域名空间
 
-有`Entry`就有`Output`，该选项影响`compilation`对象的输出。`output`选项控制`webpack`如何向硬盘写入编译文件。
+DNS域名空间，`DNS Domain Namespace`，是一种分层树状结构，如下图所示：
 
-> 注意，即使可以存在多个入口起点，但只指定一个输出配置。
+![relationship-map]({{ '/styles/images/HTTP/HTTP-15.png' | prepend: site.baseurl }})
 
-### Loader
+* 按其功能命名空间中用来描述 `DNS` 域名称的五个类别的介绍。
 
-`loader`用于对模块的源代码进行转换。`loader`可以使你在`require()`或"加载"模块时预处理文件。因此，`loader`类似于其他构建工具中“任务(task)”，并提供了处理前端构建步骤的强大方法。
+![relationship-map]({{ '/styles/images/HTTP/HTTP-16.png' | prepend: site.baseurl }})
 
-`loader`可以将文件从不同的语言(如`TypeScript`)转换为`JavaScript`，或将内联图像转换为`data URL`。`loader`甚至允许你在`JavaScript`中`require()` CSS文件。
+
+
+## 三、DNS资源记录
+
+### 3.1 什么是DNS资源记录
+
+DNS资源记录是指映射关系，通常由域名管理员进行配置。
+
+### 3.2 常用的DNS资源记录
+
+#### 3.2.1 图例
+
+![relationship-map]({{ '/styles/images/HTTP/HTTP-17.png' | prepend: site.baseurl }})
+
+#### 3.2.2 常用的DNS资源记录具体内容
+
+1. `SOA`记录
+
+    * 描述：
+    
+        起始授权机构(SOA) 资源记录。指示区域的源名称，并包含作为区域主要信息源的服务器的名称。SOA 资源记录在任何标准区域中始终是首位记录。
+    
+        它表示该区域的其他基本属性，表示最初创建它的DNS服务器或现在是该区域的主服务器的DNS服务器。
+    
+        它还用于存储会影响区域更新或过期的其他属性，如版本信息和计时。【 这些属性会影响在该区域的权威服务器之间进行区域传输的频繁程度语法】
+    
+     * 语法：`owner  TTL  CLASS SOA  name_server  responsible_person`
+     
+            `(serial_number  refresh_interval  retry_interval  expiration  minimum_time_to_live)`
+
+    ![relationship-map]({{ '/styles/images/HTTP/HTTP-18.png' | prepend: site.baseurl }})
+    
+    ```
+    @ IN SOA www.baidu. 123456789.qq.com(  
+        20140261750 ; 序列号  
+        10800       ; 3小时后刷新 3h  
+        3600        ; 1小时后重试 1h  
+        604800      ; 1周后期满 1w  
+        86400 )     ; TTL最小值为1天 1h 
+    ```
+
+2. `A`记录：
+   
+   * 描述：
+   
+        主机地址(A) 资源记录。将 DNS 域名映射到Internet 协议(IP) 版本4 的32 位地址中（RFC 1035）
+   
+   * 语法：`owner  TTL  CLASS  A  IPv4_address`
+   
+   ```
+   [plain] view plain copy
+   www.baidu.com.  IN  A  192.168.1.1  
+   www.baidu.com.  IN  A  127.0.0.1  
+   ```
+3. `NS`记录：
+   
+   描述：将owner中指定的DNS 域名映射到在name_server_domain_name字段中指定的运行DNS服务器的主机名
+   
+   语法：`owner  TTL  CLASS  NS name_server_domain_name`
+   
+    ```
+   [plain] view plain copy
+   www.baidu.com.  IN  NS  baidu.com.  
+    ```
+
+4. `MX`记录：
+   
+   * 描述：
+   
+        邮件交换器(MX) 资源记录如mail_exchanger_host中指定的那样，为邮件交换器主机提供邮件路由，以便将邮件发送给owner字段中指定的域名。preference表示在指定了多个交换器主机情况下的首选顺序。每个交换机主机都必须在有效区域中有一个相应的主机(A) 地址资源记录（RFC 1035）
+   
+   * 语法：`owner  TTL  CLASS  MX  preference mail_exchanger_host`
+   
+   ```
+   [plain] view plain copy
+   mail.com.  IN  MX  10  baidu.mail.com.  
+              IN  MX  20  sohu.mail.com.      
+    ```
+
+5. `CNAME`记录：
+   
+   * 描述：
+   
+        规范名 (CNAME) 资源记录。将owner 字段中的别名或备用的DNS 域名映射到canonical_name字段中指定的标准或主要DNS 域名。此数据中所使用的标准或主要DNS 域名是必需的，并且必须解析为名称空间中有效的DNS 域名
+   
+   * 语法：`owner  TTL  CLASS  CNAME  canonical_name`
+   
+   ```
+   [plain] view plain copy
+   www.com.   IN  CNAME  www.mixserver.com.  
+   mail.com.  IN  CNAME  www.mixserver.com.  
+   ```
+   
+> 补充：   
+>DNS 数据库中包含的资源记录 (RR)。   
+>每个 RR 标识数据库中的特定资源。  
+>我们在建立DNS服务器时，经常会用到SOA,NS,A之类的记录；在维护DNS服务器时，会用到MX，CNAME记录。  
+>A：IP地址(最常用，映射IP地址)；CNAME：别名(较常用，映射到其他域名) 
+    
+## 四、DNS 查询
+
+DNS 中的域名服务器最主要的功能：响应域名解析器的查询要求。【这个域名解析器可能是PC端的解析器，也可能是具有解析功能的另一台域名服务器】
+
+域名解析器是安装在PC端的软件，负责向本地DNS（Local DNS）发起 域名解析请求。
+
+>DNS 查询有三类：递归查询、迭代查询、反向查询
+
+### 4.1 递归查询
+
+#### 4.1.1 什么是递归查询
+
+域名服务器将代替请求的客户机（下级DNS服务器）进行域名查询。如果域名服务器不能直接回答，则域名服务器会在域各种树的各个分支的上下进行递归查询，最终将查询的结果返回给客户机。【在域名查询期间，客户机始终处于等待状态。】
+
+#### 4.1.2 递归查询的触发时机
+
+（一般）本机向本地域名服务器的查询；
+
+#### 4.1.3 递归查询的特点
+
+若主机询问的本地域名服务器不知道所要查询的域名的IP地址，则本地域名服务器就以DNS客户的身份，向其它根域名服务继续 发出请求报文（替该主机继续查询）；
+
+#### 4.1.4 递归查询的图例
+
+![relationship-map]({{ '/styles/images/HTTP/HTTP-19.png' | prepend: site.baseurl }})
+
+
+> 注意：许多授权域名服务器都不会提供递归查询的功能，比如根域名服务器.和二级域名服务器.com都不提供递归查询的功能，所以真正意义上的递归查询是由Local DNS来完成的。
+
+#### 4.1.5 递归查询的步骤
+
+本地域名服务器只向根域名服务器查询一次，其它的查询在之后的几个域名服务器之间进行，最后再由根域名服务器把结果返回给本地域名服务器。
+  
+其实这个过程中相当于根域名服务器是本地域名服务器的小弟，本地域名服务器就交个要查的域名给根域名服务器去办事，办好后给回老大。
+
+#### 4.1.6 递归查询返回的可能结果
+
+* 一般情况下，递归查询的时候会收到以下三种可能的返回结果：
+
+1. 一个或若干个A记录，或者带有CNAME链的A记录。
+       
+    A记录即要请求的域名的IP地址，带有CNAME链的A记录就像上一篇博客“DNS开源服务器BIND最小配置详解”里面请求ftp.cobb.com时会先将ftp.cobb.com CNAME到 ljx.cobb.com，然后返回ljx.cobb.com的A记录。
+
+2. 一个标示域或主机不存在的错误信息。
+
+    需要注意的是这个错误信息也可能含有CNAME记录。例如我要请求ftp.cobb.com，而我的域名服务器将ftp.cobb.com CNAME到了ljx.cobb.com，但是ljx.cobb.com这个主机不存在，这个时候就返回CNAME记录和错误信息。
+
+3. 暂时性的错误信息。
+
+    它主要是因为网络不可达该主机，网络不可达不一定表明该主机不存在。
+    
+### 4.2 迭代查询
+
+#### 4.2.1 什么是迭代查询
+
+　　域名服务器在返回一些下一次查询的指引或者主机IP地址，域名解析器在收到指引后会再次向这些指引发起查询请求，直到收到主机IP地址。
+
+#### 4.2.2 迭代查询的触发时机
+
+本地域名服务器向根域名服务器的查询; (本地域名服务器也可采用递归查询，取决于最初的查询请求报文采用哪种方式)
+
+#### 4.2.3 迭代查询的特点
+
+根域名服务器通常把自己知道的顶级域名服务器IP告诉本地域名服务器，让它去决定就是这个IP还是继续往下以同样的方式对待顶级域名服务器，权限域名服务器；
+
+#### 4.2.4 迭代查询的图例
+
+![relationship-map]({{ '/styles/images/HTTP/HTTP-20.png' | prepend: site.baseurl }})
+
+#### 4.2.5 迭代查询步骤
+
+此过程本地域名服务器都是主角，像侦探一样一个线索一个线索地往下查；
+
+① 主机先向其本地域名服务器dns.xyz.com进行递归查询；
+
+② 本地域名服务器采用迭代查询，向一个根域名服务器查询；
+
+③ 根域名服务器告诉本地域名服务器下次应查询的顶级域名服务器(dns.com)的IP地址；
+
+④ 本地域名服务器向顶级域名服务器(dns.com)查询；
+
+⑤ 顶级域名服务器告诉本地域名服务器下次应查询的权限域名服务器(dns.abc.com)的IP地址；
+
+⑥ 本地域名服务器向权限域名服务器(dns.abc.com)查询；
+
+⑦ 权限域名服务器告诉本地域名服务器要查的域名的主机的IP地址；
+
+⑧ 本地域名服务器最后把结果告诉主机(m.xyz.com);
+
+
+#### 4.2.6 迭代查询可能返回的结果
+
+　一般情况下，迭代查询的时候会收到以下三种可能的返回结果：
+
+ 1. A记录或者带有CNAME链的A记录。
+
+ 2. 标示域或主机不存在的错误信息。
+
+ 3. 暂时性错误。可能因为网络不可达。
+
+ 4. 可以给出下一步域名解析的域名服务器（包括它的IP地址）的列表。告诉解析器再去哪里进一步解析。
+
+### 4.3 反向查询
+
+反向查询是根据一个资源记录查询域名。
+
+这个资源记录可能是A记录，CNAME记录或者MX记录（见“DNS开源服务器BIND最小配置详解”）。
+
+为了实现反向查询，DNS中有一个特殊的域名IN-ADDR.ARPA来专门作反向查询定义。
+
+## 五、总结DNS的工作原理
+
+![relationship-map]({{ '/styles/images/HTTP/HTTP-21.png' | prepend: site.baseurl }})
+
+当我们请求一个域名时，直到获取到IP地址，整个过程是如何工作的？以请求 `www.codecc.xyz`为例：
+
+　　1、首先，我们的主机会去查找本地的 `hosts` 文件和本地DNS解析器缓存，如果hosts文件和本地DNS缓存存在`www.codecc.xyz`和`IP`的映射关系，则完成域名解析，请求该IP地址，否则进入第二步。
+
+　　2、当 `hosts` 和本地 `DNS` 解析器缓存都没有对应的网址映射关系，则会根据机器( `/etc/reslove.conf` )配置的本地DNS服务器进行查询，此服务器收到查询时，如果要查询的域名在本地配置区域资源或者缓存中存在映射关系，则跳到步骤9，将解析结果直接返回给客户机。
+
+　　PS：一二步骤为递归查询，其余步骤为迭代查询
+
+　　3、若本地 `DNS` 服务器不存在该域名的映射关系，就把请求发送至13台根 `DNS` 服务器。
+
+　　4、根 `DNS` 服务器会判断这个域名( `.xyz` )由谁来授权管理，并返回一个负责该顶级域的DNS服务器的一个IP给本地DNS服务器。
+
+　　5、本地DNS服务器收到该IP后，会再将查询请求发送至( `.xyz`)所在的DNS服务器。
+
+　　6、如果( `.xyz` )的DNS服务器无法解析该域名，就会去判断这个二级域名( `codecc.xyz` )的管理者，返回一个负责该二级域的DNS服务器的IP给本地DNS服务器。
+
+　　7、本地DNS服务器收到该IP后，会再次将查询请求发送至(codecc.xyz)所在的DNS服务器。
+
+　　8、( `codecc.xyz` )的DNS服务器会存有 `www.codecc.xzy` 的映射关系，将解析后的IP返回给本地DNS服务器
+
+　　9、本地 `DNS` 服务器根据查询到的解析 `IP` 发送给客户机，至此，`DNS` 解析完成。
 
 ### 插件 -- Plugins
 
