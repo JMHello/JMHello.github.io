@@ -130,4 +130,4 @@ tag: 深入理解Web前端
 
 ## 三、用户行为与缓存
 
-![relationship-map]({{ '/styles/images/web/cache/cache-04.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/web/cache/cache-05.png' | prepend: site.baseurl }})

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/Web/2017-08-28-Browser-Cache-Mechanism.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/Web/2017-08-28-From-Url-To-Render.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-18-Webpack-second.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-19-Webpack-third.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/javascript/2017-08-27-js-Array.md" afterPath="$PROJECT_DIR$/_posts/studynote/javascript/2017-08-27-js-Array.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/studynote/Webpack/2017-05-17-First-meet-Webpack.md" afterPath="$PROJECT_DIR$/_posts/originalNote/Webpack/2017-08-28-Webpack.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/Web/2017-08-28-Browser-Cache-Mechanism.md" afterPath="$PROJECT_DIR$/_posts/originalNote/Web/2017-08-28-Browser-Cache-Mechanism.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +39,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="470">
-                <caret line="132" column="90" selection-start-line="132" selection-start-column="90" selection-end-line="132" selection-end-column="90" />
+                <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -352,7 +346,7 @@
       <workItem from="1503887528262" duration="3664000" />
       <workItem from="1503895189104" duration="25000" />
       <workItem from="1503904383920" duration="10008000" />
-      <workItem from="1503927431113" duration="6572000" />
+      <workItem from="1503927431113" duration="6665000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -365,7 +359,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96634000" />
+    <option name="totallyTimeSpent" value="96727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="0" width="1288" height="768" extended-state="0" />
@@ -932,7 +926,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="470">
-            <caret line="132" column="90" selection-start-line="132" selection-start-column="90" selection-end-line="132" selection-end-column="90" />
+            <caret line="132" column="57" selection-start-line="132" selection-start-column="57" selection-end-line="132" selection-end-column="57" />
             <folding />
           </first_editor>
           <second_editor>
