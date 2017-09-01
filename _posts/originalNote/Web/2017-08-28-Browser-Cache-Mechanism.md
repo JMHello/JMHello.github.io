@@ -13,6 +13,7 @@ tag: 深入理解Web前端
 + 中文官方主页： [http://jekyll.com.cn/](http://jekyll.com.cn/)
 
 
+
 **图1：浏览器缓存机制**
 
 ![relationship-map]({{ '/styles/images/web/cache/cache-01.png' | prepend: site.baseurl }})
@@ -24,7 +25,9 @@ tag: 深入理解Web前端
 
 <!-- more -->
 
-> 以下部分内容参考：[https://doc.webpack-china.org/configuration](https://doc.webpack-china.org/configuration)
+> * 以下部分内容参考：[http://www.cnblogs.com/wangpenghui522/p/5498427.html](http://www.cnblogs.com/wangpenghui522/p/5498427.html)
+> * 以下部分内容参考：《JavaScript 权威指南》（第3版）
+
 
 ## 一、浏览器如何判断缓存是否过期 
 
@@ -131,3 +134,34 @@ tag: 深入理解Web前端
 ## 三、用户行为与缓存
 
 ![relationship-map]({{ '/styles/images/web/cache/cache-05.png' | prepend: site.baseurl }})
+
+## 四、清除缓存
+
+由于在开发的时候不会专门去配置强缓存，而浏览器又默认会缓存图片，css和js等静态资源，所以开发环境下经常会因为强缓存导致资源没有及时更新而看不到最新的效果，解决这个问题的方法有很多，常用的有以下几种：
+
+1. 直接 `ctrl+f5`，这个办法能解决页面直接引用的资源更新的问题。
+
+2. 使用`ctrl+shift+delete`清除缓存。
+
+3. 如果用的是`chrome`，可以`F12`在`network`那里把缓存给禁掉（这是个非常有效的方法）。
+
+4. 在开发阶段，给资源加上一个动态的参数，如`css/index.css?v=0.0001`，由于每次资源的修改都要更新引用的位置，同时修改参数的值，所以操作起来不是很方便，一般使用前端的构建工具来修改这个参数或在动态页面，比如`jsp`里开发就可以用服务器变量来解决（`v=${sysRnd}`）。
+
+```js
+function addVersion(asset){
+  asset.forEach(function(item,index){
+    if(item.indexOf('.js') != -1){
+      document.write('<script src="'+item+'?v='+ (new Date().getTime()) +'"><\/script>');
+    }else if(item.indexOf('.css') != -1){
+      document.write('<link rel="stylesheet" href="'+item+'?v='+(new Date().getTime())+'">');
+    }
+  });
+}
+```
+
+5. 如果资源引用的页面，被嵌入到了一个`iframe`里面，可以在`iframe`的区域右键单击重新加载该页面。
+ 
+6. 如果缓存问题出现在`ajax`请求中，最有效的解决办法就是`ajax`的请求地址追加随机数。
+   
+7. 还有一种情况就是动态设置`iframe`的`src`时，有可能也会因为缓存问题，导致看不到最新的效果，这时候在要设置的`src`后面添加随机数也能解决问题。
+ 
