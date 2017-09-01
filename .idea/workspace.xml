@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-21-ES6-Function.md" afterPath="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-31-ES6-Function.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-21-ES6-Variable-Destructuring.md" afterPath="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-31-ES6-Variable-Destructuring.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CNAME" afterPath="$PROJECT_DIR$/CNAME" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-08-31-ES6-Variable-Destructuring.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-08-31-ES6-Variable-Destructuring.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/studynote/ES6/2017-08-31-ES6-Variable-Destructuring.md">
           <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -101,6 +99,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CNAME" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CNAME">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -123,7 +131,6 @@
         <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-Second-TCP.md" />
         <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-25-HTTP-Second-TCP.md" />
         <option value="$PROJECT_DIR$/_posts/postgraduate/HTTP/2017-08-24-HTTP-First-Basic.md" />
-        <option value="$PROJECT_DIR$/CNAME" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/_includes/about.html" />
@@ -155,6 +162,7 @@
         <option value="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-21-ES6-Function.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-21-ES6-Variable-Destructuring.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/ES6/2017-08-31-ES6-Variable-Destructuring.md" />
+        <option value="$PROJECT_DIR$/CNAME" />
       </list>
     </option>
   </component>
@@ -379,7 +387,7 @@
       <workItem from="1503904383920" duration="10008000" />
       <workItem from="1503927431113" duration="6901000" />
       <workItem from="1503987517994" duration="6462000" />
-      <workItem from="1504138722140" duration="6931000" />
+      <workItem from="1504138722140" duration="7317000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -392,7 +400,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110356000" />
+    <option name="totallyTimeSpent" value="110742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -436,11 +444,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/styles/images/zhifubao.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/images/logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1094,6 +1097,14 @@
           <second_editor>
             <js_state />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CNAME">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
