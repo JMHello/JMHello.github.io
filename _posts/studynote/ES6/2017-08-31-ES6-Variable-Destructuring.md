@@ -12,7 +12,7 @@ tag: ES6
 
 + [javascript - 数组]({{ '/2017/08/27/js-Array' | prepend: site.baseurl }})
 
-> 以下内容全部源于： [http://es6.ruanyifeng.com/#docs/function](http://es6.ruanyifeng.com/#docs/function)
+> 以下内容全部源于： [http://es6.ruanyifeng.com/#docs/destructuring](http://es6.ruanyifeng.com/#docs/destructuring)
 
 <!-- more -->
 
