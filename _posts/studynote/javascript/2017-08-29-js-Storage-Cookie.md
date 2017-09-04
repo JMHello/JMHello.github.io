@@ -10,7 +10,7 @@ tag: javascript
 
 其他链接：
 
-+ [ES6 - String扩展]({{ '/2017/08/26/ES6-String' | prepend: site.baseurl }})
++ [javasript - 数据存储--Web存储机制]({{ '/2017/09/04/js-Storage-Web' | prepend: site.baseurl }})
 
 > 以下内容全部源于： 《JavaScript高级程序设计（第3版）》
 
@@ -366,16 +366,44 @@ var SubCookieUtil = {
         }
         
         document.cookie = cookieText;
+   },
+   // 删除某个 cookie 中的单个子 cookie而不影响其他的
+   unset: function (name, subName, path, domain, secure){
+        var subcookies = this.getAll(name);
+        
+        if (subcookies){
+            delete subcookies[subName];
+            this.setAll(name, subcookies, null, path, domain, secure);
+        }
+   },
+   // 用于删除整个 cookie
+    unsetAll: function(name, path, domain, secure){
+        this.setAll(name, null, new Date(0), path, domain, secure);
    }
 }; 
+
+//假设 document.cookie=data=name=Nicholas&book=Professional%20JavaScript
+//设置两个 cookie
+SubCookieUtil.set("data", "name", "Nicholas");
+SubCookieUtil.set("data", "book", "Professional JavaScript");
+//设置全部子 cookie 和失效日期
+SubCookieUtil.setAll("data", { name: "Nicholas", book: "Professional JavaScript" },
+ new Date("January 1, 2010"));
+//修改名字的值，并修改 cookie 的失效日期
+SubCookieUtil.set("data", "name", "Michael", new Date("February 1, 2010"));
+ 
+ //仅删除名为 name 的子 cookie
+ SubCookieUtil.unset("data", "name");
+ //删除整个 cookie
+ SubCookieUtil.unsetAll("data"); 
 ```
 
-
-* `SubCookieUtil.getAll()`方法和 `CookieUtil.get()`在解析 `cookie` 值的方式上非常相似。
-    * 区别在于 `cookie` 的值并非立即解码，而是先根据`&`字符将子 `cookie` 分割出来放在一个数组中，每一个子 `cookie`
-      再根据等于号分割，这样在 parts 数组中的前一部分便是子 `cookie` 名，后一部分则是子 `cookie` 的值。
-    * 这两个项目都要使用 `decodeURIComponent()`来解码，然后放入 `result` 对象中，最后作为方法的返
-      回值。如果 `cookie` 不存在，则返回 `null`。
+* `getAll()`方法：
+    * `SubCookieUtil.getAll()`方法和 `CookieUtil.get()`在解析 `cookie` 值的方式上非常相似。
+        * 区别在于 `cookie` 的值并非立即解码，而是先根据`&`字符将子 `cookie` 分割出来放在一个数组中，每一个子 `cookie`
+          再根据等于号分割，这样在 parts 数组中的前一部分便是子 `cookie` 名，后一部分则是子 `cookie` 的值。
+        * 这两个项目都要使用 `decodeURIComponent()`来解码，然后放入 `result` 对象中，最后作为方法的返回值。
+        * 如果 `cookie` 不存在，则返回 `null`。
   
 * `set()`方法：
     * 接收 7 个参数：
@@ -390,357 +418,34 @@ var SubCookieUtil = {
   * 为了在同一个`cookie`中存储多个子`cookie`，路径、域和`secure`标志必须一致；针对整个 `cookie` 的失效日期则可以在任何一个单独的子 cookie 写入的时候同时设置。
   * 在这个方法中，第一步是获取指定 `cookie` 名称对应的所有子 `cookie`。逻辑或操作符“`||`”用于当 `getAll()`
 
-### 2.2  字符方法
-
-#### 2.2.1 charAt()
-
-接收一个参数，即基于 0 的字符位置。以单字符字符串的形式返回给定位置的那个字符。
-
-```js
-var stringValue = "hello world";
-alert(stringValue.charAt(1)); //"e" 
-```
-
-#### 2.2.2 charCodeAt()
-
-接收一个参数，即基于 0 的字符位置。返回给定位置的那个字符的字符编码。
-
-```js
-var stringValue = "hello world";
-alert(stringValue.charCodeAt(1)); //输出"101" 
-```
-
-#### 2.2.3 方括号法
-
-使用方括号加数字索引来访问字符串中的特定字符。
-
-> IE8 及 Firefox、Safari、Chrome 和 Opera 所有版本的支持。如果是在 IE7 及更早版本中使用这种语法，会返回 undefined 值（尽管根本不是特殊的undefined 值）。
-
-```js
-var stringValue = "hello world";
-alert(stringValue[1]); //"e" 
-```
-
-### 2.3 字符串操作方法
-
-* 以下讲的字符串操作方法不会修改字符串本身的值——它们只是返回一个基本类型的字符串值，对原始字符串没有任何影响。
-
-#### 2.3.1 concat()
-
-concat()用于将一或多个字符串拼接起来，返回拼接得到的新字符串，且可以接受任意多个参数，即：可以通过它拼接任意多个字符串。
-
-```js
-var stringValue = "hello ";
-var result = stringValue.concat("world", "!");
-alert(result); //"hello world!"
-alert(stringValue); //"hello" 
-```
-
-> 虽然 `concat()` 是专门用来拼接字符串的方法，但实践中使用更多的还是加号操作符`（+）`。而且，使用加号操作符在大多数情况下都比使用 `concat()` 方法要简便易行（特别是在拼接多个字符串的情况下）。
-
-#### 2.3.2 slice(start,end)
-
-* start： 指定子字串的开始位置
-
-* end：（可选）表示子字符串到哪里结束。【指：子字符串最后一个字符后面的位置】
-
-* 如果没有给这些方法传递第二个参数，则将字符串的长度作为结束位置。
-
-```js
-var stringValue = "hello world";
-
-alert(stringValue.slice(3)); //"lo world" 
-
-alert(stringValue.slice(3, 7)); //"lo w"
-```
-
-* 在传递的参数是负值的情况下，slice()方法会将传入的负值与字符串的长度相加。
-
-```js
-var stringValue = "hello world";
-alert(stringValue.slice(-3)); //"rld"
-alert(stringValue.slice(3, -4)); //"lo w" 
-```
-
-#### 2.3.3 substr(start,end)
-
-* start： 指定子字串的开始位置
-
-* end：（可选）表示子字符串到哪里结束。【指：返回的字符个数】
-
-* 如果没有给这些方法传递第二个参数，则将字符串的长度作为结束位置。
-
-```js
-var stringValue = "hello world";
-alert(stringValue.substr(3)); //"lo world"
-alert(stringValue.substr(3, 7)); //"lo worl" 
-```
-
-* 在传递的参数是负值的情况下，substr()方法将负的第一个参数加上字符串的长度，而将负的第二个参数转换为 0。
-
-```js
-var stringValue = "hello world";
-alert(stringValue.substr(-3)); //"rld"
-alert(stringValue.substr(3, -4)); //""（空字符串）
-```
-
-#### 2.3.4 substring(start,end)
-
-* start： 指定子字串的开始位置
-
-* end：（可选）表示子字符串到哪里结束。【指：子字符串最后一个字符后面的位置】
-
-* 如果没有给这些方法传递第二个参数，则将字符串的长度作为结束位置。
-
-```js
-var stringValue = "hello world";
-alert(stringValue.substring(3)); //"lo world"
-alert(stringValue.substring(3,7)); //"lo w"
-```
-
-* 在传递的参数是负值的情况下，substring()方法会把所有负值参数都转换为 0。
-
-```js
-var stringValue = "hello world";
-alert(stringValue.substring(-3)); //"hello world"
-alert(stringValue.substring(3, -4)); //"hel"
-```
-
-### 2.4  字符串位置方法
-
-#### 2.4.1 indexOf(str,index)
-
-* 从字符串的开头向后搜索子字符串，然后返子字符串的位置（如果没有找到该子字符串，则返回-1）。
-
-* str：代表要搜索的字符串
-
-* index：（可选）表示从字符串中的哪个位置开始搜索。
-
-```js
-var stringValue = "hello world";
-alert(stringValue.indexOf("o")); //4 
-alert(stringValue.indexOf("o", 6)); //7 
-```
-
-#### 2.4.2 lastndexOf(str,index)
-
-* 从字符串的末尾向前搜索子字符串，然后返子字符串的位置（如果没有找到该子字符串，则返回-1）。
-
-* str：代表要搜索的字符串
-
-* index：（可选）表示从字符串中的哪个位置开始搜索。
-
-```js
-var stringValue = "hello world";
-alert(stringValue.lastIndexOf("o")); //7 
-alert(stringValue.lastIndexOf("o", 6)); //4 
-```
-
-#### 2.4.3 实例：找到所有匹配的子字符串
-
-```js
-var stringValue = "Lorem ipsum dolor sit amet, consectetur adipisicing elit";
-var positions = new Array();
-var pos = stringValue.indexOf("e");
-while(pos > -1){
- positions.push(pos);
- pos = stringValue.indexOf("e", pos + 1);
-}
-
-alert(positions); //"3,24,32,35,52"
-```
-
-> 这个例子通过不断增加 indexOf()方法开始查找的位置，遍历了一个长字符串。在循环之外，首
-  先找到了"e"在字符串中的初始位置；而进入循环后，则每次都给 indexOf()传递上一次的位置加 1。
-  这样，就确保了每次新搜索都从上一次找到的子字符串的后面开始。每次搜索返回的位置依次被保存在
-  数组 positions 中，以便将来使用。
-
-### 2.5 trim()
-
-trim()方法创建一个字符串的副本【所以原始字符串中的前置及后缀空格会保持不变】，删除前置及后缀的所有空格，然后返回结果。
-
-```js
-var stringValue = " hello world ";
-var trimmedStringValue = stringValue.trim();
-alert(stringValue); //" hello world "
-alert(trimmedStringValue); //"hello world" 
-```
-
-> 支持有 IE9+、Firefox 3.5+、Safari 5+、Opera 10.5+和 Chrome。此外，Firefox 3.5+、Safari 5+
-  和 Chrome 8+还支持非标准的 trimLeft()和 trimRight()方法，分别用于删除字符串开头和末尾的
-  空格。
-
-### 2.6 字符串大小写转换方法
-* 借鉴自 java.lang.String 中的同名方法  
-toLowerCase()  
-toUpperCase()
-
-* 针对特定地区的实现  
-toLocaleLowerCase()  
-toLocaleUpperCase()  
-
->对有些地区来说，针对地区的方法与其通用方法得到的结果相同，但少数语言（如土耳其语）会为 Unicode 大小写转换应用特殊的规则，这时候就必须使用针对地区的方法来保证实现正确的转换。  
->一般来说，在不知道自己的代码将在哪种语言环境中运行的情况下，还是使用针对地区的方法更稳妥一些。
-  
-```js
-var stringValue = "hello world";
-alert(stringValue.toLocaleUpperCase()); //"HELLO WORLD"
-alert(stringValue.toUpperCase()); //"HELLO WORLD"
-alert(stringValue.toLocaleLowerCase()); //"hello world"
-alert(stringValue.toLowerCase()); //"hello world" 
-```
-
-### 2.7 字符串的模式匹配方法
-
-#### 2.7.1 match()
-
-`match()` 方法只接受一个参数，要么是一个正则表达式，要么是一个 `RegExp` 对象。会返回一个数组。
-
-```js
-var text = "cat, bat, sat, fat";
-var pattern = /.at/;
-
-//与 pattern.exec(text)相同
-var matches = text.match(pattern);
-alert(matches.index); //0
-alert(matches[0]); //"cat"
-alert(pattern.lastIndex); //0 
-```
-
-> 如果是调用 `RegExp` 对象的 `exec()` 方法并传递本例中的字符串作为参数，那么也会得到与此相同的数组：数组的第一项是与整个模式匹配的字符串，之后的每一项（如果有）保存着与正则表达式中的捕获组匹配的字符串。
-
-#### 2.7.2 search()
-
-* `search()` 方法只接受一个参数，要么是一个正则表达式，要么是一个 `RegExp` 对象。
-* 返回字符串中第一个匹配项的索引；如果没有找到匹配项，则返回-1。
-* search()方法始终是从字符串开头向后查找模式。
-
-```js
-var text = "cat, bat, sat, fat";
-var pos = text.search(/at/);
-alert(pos); //1 
-```
-
-#### 2.7.2 replace()
-
-* `replace()` 方法用来替换子字符串。
-* 第一个参数可以是一个 RegExp 对象或者一个字符串（这个字符串不会被转换成正则表达式），第二个参数可以是一个字符串或者一个函数。
-* 如果第一个参数是字符串，那么只会替换第一个子字符串。要想替换所有子字符串，唯一的办法就是提供一个正则表达式，而且要指定全局（g）标志
-```js
-var text = "cat, bat, sat, fat";
-var result = text.replace("at", "ond");
-alert(result); //"cond, bat, sat, fat"
-
-result = text.replace(/at/g, "ond");
-alert(result); //"cond, bond, sond, fond" 
-```
-
-* 如果第二个参数是字符串，那么还可以使用一些特殊的字符序列，将正则表达式操作得到的值插入到结果字符串中。
-
-![relationship-map]({{ '/styles/images/javascript/string/string-02.png' | prepend: site.baseurl }})
-
-* 通过这些特殊的字符序列，可以使用最近一次匹配结果中的内容。每个以"at"结尾的单词都被替换了，替换结果是"word"后跟一对圆括号，而圆括号中是被字符序列$1 所替换的单词。
-
-```js
-var text = "cat, bat, sat, fat";
-result = text.replace(/(.at)/g, "word ($1)");
-alert(result); //word (cat), word (bat), word (sat), word (fat) 
-```
-
-* 第二个参数也可以是一个函数。
-
-在只有一个匹配项（即与模式匹配的字符串）的情况下，会向这个函数传递 3 个参数：模式的匹配项、模式匹配项在字符串中的位置和原始字符串。在
-正则表达式中定义了多个捕获组的情况下，传递给函数的参数依次是模式的匹配项、第一个捕获组的匹配项、第二个捕获组的匹配项……，但最后两个参数仍然分别是模式的匹配项在字符串中的位置和原始
-字符串。这个函数应该返回一个字符串，表示应该被替换的匹配项使用函数作为 replace()方法的第二个参数可以实现更加精细的替换操作
-
-* 为插入 HTML 代码定义了函数 htmlEscape()，这个函数能够转义 4 个字符：小于号、大于号、和号以及双引号。实现这种转义的最简单方式，就是使用正则表达式查找这几个字符，然后定义一个能够针对每个匹配的字符返回特定 HTML 实体的函数。
-  
-```js
-function htmlEscape(text){
- return text.replace(/[<>"&]/g, function(match, pos, originalText){
- switch(match){
- case "<":
- return "&lt;";
- case ">":
- return "&gt;";
- case "&":
- return "&amp;";
- case "\"":
- return "&quot;";
- }
- });
-}
-alert(htmlEscape("<p class=\"greeting\">Hello world!</p>"));
-//&lt;p class=&quot;greeting&quot;&gt;Hello world!&lt;/p&gt; 
-
-```
-
-#### 2.7.3 split()
-
-* split()方法基于指定的分隔符将一个字符串分割成多个子字符串，并将结果放在一个数组中。
-* 分隔符可以是字符串，也可以是一个 RegExp 对象（这个方法不会将字符串看成正则表达式）。
-* split()方法可以接受可选的第二个参数，用于指定数组的大小，以便确保返回的数组不会超过既定大小。
-
-```js
-var colorText = "red,blue,green,yellow";
-var colors1 = colorText.split(","); //["red", "blue", "green", "yellow"]
-var colors2 = colorText.split(",", 2); //["red", "blue"]
-var colors3 = colorText.split(/[^\,]+/); //["", ",", ",", ",", ""] 
-```
-
->对 split()中正则表达式的支持因浏览器而异。尽管对于简单的模式没有什么差别，但对于未发现
- 匹配项以及带有捕获组的模式，匹配的行为就不大相同了。以下是几种常见的差别。  
-  IE8 及之前版本会忽略捕获组。ECMA-262 规定应该把捕获组拼接到结果数组中。IE9 能正确地
- 在结果中包含捕获组。  
-  Firefox 3.6 及之前版本在捕获组未找到匹配项时，会在结果数组中包含空字符串；ECMA-262 规
- 定没有匹配项的捕获组在结果数组中应该用 undefined 表示。
- 在正则表达式中使用捕获组时还有其他微妙的差别。在使用这种正则表达式时，一定要在各种浏览
- 器下多做一些测试。
-
-### 2.8 localeCompare()
-* localeCompare()方法比较两个字符串，并返回下列值中的一个。
-*  如果字符串在字母表中应该排在字符串参数之前，则返回一个负数（大多数情况下是-1，具体的值要视实现而定）；
-*  如果字符串等于字符串参数，则返回 0；
-*  如果字符串在字母表中应该排在字符串参数之后，则返回一个正数（大多数情况下是 1，具体的值同样要视实现而定）。
-
-```js
-var stringValue = "yellow";
-alert(stringValue.localeCompare("brick")); //1
-alert(stringValue.localeCompare("yellow")); //0
-alert(stringValue.localeCompare("zoo")); //-1
-```
-
->这个例子比较了字符串"yellow"和另外几个值："brick"、"yellow"和"zoo"。因为"brick"在
- 字母表中排在"yellow"之前，所以 localeCompare()返回了 1；而"yellow"等于"yellow"，所以
- localeCompare()返回了 0；最后，"zoo"在字母表中排在"yellow"后面，所以 localeCompare()
- 返回了-1。
- 
-* localeCompare()返回的数值取决于实现。
-
-``` js
-function determineOrder(value) {
- var result = stringValue.localeCompare(value);
- if (result < 0){
- alert("The string 'yellow' comes before the string '" + value + "'.");
- } else if (result > 0) {
- alert("The string 'yellow' comes after the string '" + value + "'.");
- } else { 
-}
-determineOrder("brick");
-determineOrder("yellow");
-determineOrder("zoo"); 
-
-```
-
-> localeCompare()方法比较与众不同的地方，就是实现所支持的地区（国家和语言）决定了这个
-  方法的行为。比如，美国以英语作为 ECMAScript 实现的标准语言，因此 localeCompare()就是区分
-  大小写的，于是大写字母在字母表中排在小写字母前头就成为了一项决定性的比较规则。不过，在其他
-  地区恐怕就不是这种情况了。
-  
-### 2.9  fromCharCode()
-
-这个方法的任务是接收一或多个字符编码，然后将它们转换成一个字符串。从本质上来看，这个方法与实例方法 charCodeAt()执行的是相反的操作。
-
-```js
-alert(String.fromCharCode(104, 101, 108, 108, 111)); //"hello"
-```
+* `setAll()`方法：
+    * 接收 6 个参数：
+        * cookie 名称
+        * 包含所有子 cookie 的对象
+        * （可选）`cookie` 失效日期或时间的 Date 对象
+        * （可选） `cookie` 路径
+        * （可选）`cookie` 域和
+        * （可选）布尔 `secure` 标志
+    * 这个方法使用 `for-in` 循环遍历第二个参数中的属性。
+    * 为了确保确实是要保存的数据，使用了 `hasOwnProperty()`方法，来确保只有实例属性被序列化到子 `cookie` 中。
+    * 由于可能会存在属性名为空字符串的情况，所以在把属性名加入结果对象之前还要检查一下属性名的长度。
+    * 将每个子 `cookie`的名值对儿都存入 `subcookieParts` 数组中，以便稍后可以使用 `join()`方法以`&`号组合起来。
+    * 剩下的方法则和 `CookieUtil.set()`一样。
+    
+* 普通 `cookie` 可以通过将失效时间设置为过去的时间的方法来删除，但是子 `cookie` 不能这样做。  
+  为了删除一个子 `cookie`，首先必须获取包含在某个 `cookie`中的所有子 `cookie`，然后仅删除需要删除的那个子 `cookie`，然后再将余下的子 `cookie` 的值保存为 `cookie`的值。
+
+## 六、 关于 cookie 的思考 
+
+* 还有一类 `cookie` 被称为“`HTTP 专有 cookie`”。`HTTP` 专有 `cookie` 可以从浏览器或者服务器设置，但
+是只能从服务器端读取，因为 JavaScript 无法获取 `HTTP` 专有 `cookie` 的值。
+
+* 由于所有的 `cookie` 都会由浏览器作为请求头发送，所以在 `cookie` 中存储大量信息会影响到特定域的请求性能。
+    * `cookie` 信息越大，完成对服务器请求的时间也就越长。
+    * 尽管浏览器对 `cookie` 进行了大小限制，不过最好还是尽可能在 `cookie` 中少存储信息，以避免影响性能。
+
+* `cookie` 的性质和它的局限使得其并不能作为存储大量信息的理想手段，所以又出现了其他方法。
+
+* 一定不要在 `cookie` 中存储重要和敏感的数据。
+    * `cookie` 数据并非存储在一个安全环境中，其中包含的任何数据都可以被他人访问。
+    * 所以不要在 `cookie` 中存储诸如信用卡号或者个人地址之类的数据。

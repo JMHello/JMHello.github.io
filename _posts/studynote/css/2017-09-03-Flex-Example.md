@@ -18,17 +18,17 @@ tag: CSS
 
 先`pose`一张图：
 
-![relationship-map]({{ '/styles/images/flex/flex-14.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-14.png' | prepend: site.baseurl }})
 
 ## 一、骰子的布局
 
 * 骰子的一面，最多可以放置9个点。
 
-![relationship-map]({{ '/styles/images/flex/flex-15.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-15.png' | prepend: site.baseurl }})
 
 * 下面，就来看看Flex如何实现，从1个点到9个点的布局。
 
-![relationship-map]({{ '/styles/images/flex/flex-16.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-16.png' | prepend: site.baseurl }})
 
 * 如果不加说明，本节的HTML模板一律如下。
 
@@ -44,7 +44,7 @@ tag: CSS
 
 * 首先，只有左上角1个点的情况。Flex布局默认就是首行左对齐，所以一行代码就够了。
 
-![relationship-map]({{ '/styles/images/flex/flex-17.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-17.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -54,7 +54,7 @@ tag: CSS
 
 * 设置项目的对齐方式，就能实现居中对齐和右对齐。
 
-![relationship-map]({{ '/styles/images/flex/flex-18.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-18.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -63,7 +63,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-19.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-19.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -74,7 +74,7 @@ tag: CSS
 
 * 设置交叉轴对齐方式，可以垂直移动主轴。
 
-![relationship-map]({{ '/styles/images/flex/flex-20.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-20.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -83,7 +83,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-21.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-21.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -93,7 +93,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-22.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-22.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -103,7 +103,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-23.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-23.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -115,7 +115,7 @@ tag: CSS
 
 ### 1.2 双项目
 
-![relationship-map]({{ '/styles/images/flex/flex-24.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-24.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -124,7 +124,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-25.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-25.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -134,7 +134,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-26.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-26.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -145,7 +145,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-27.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-27.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -156,7 +156,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-28.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-28.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -168,7 +168,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-29.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-29.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -183,7 +183,7 @@ tag: CSS
 
 ### 1.3 三项目
 
-![relationship-map]({{ '/styles/images/flex/flex-30.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-30.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -201,7 +201,7 @@ tag: CSS
 
 ### 1.4 四项目
 
-![relationship-map]({{ '/styles/images/flex/flex-31.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-31.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -212,7 +212,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-32.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-32.png' | prepend: site.baseurl }})
 
 ```html
 <div class="box">
@@ -243,7 +243,7 @@ tag: CSS
 
 ### 1.5 六项目
 
-![relationship-map]({{ '/styles/images/flex/flex-33.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-33.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -253,7 +253,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-34.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-34.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -264,7 +264,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-35.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-35.png' | prepend: site.baseurl }})
 
 ```html
 <div class="box">
@@ -305,7 +305,7 @@ tag: CSS
 
 ### 1.6 九项目
 
-![relationship-map]({{ '/styles/images/flex/flex-36.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-36.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -320,7 +320,7 @@ tag: CSS
 
 最简单的网格布局，就是平均分布。在容器里面平均分配空间，跟上面的骰子布局很像，但是需要设置项目的自动缩放。
 
-![relationship-map]({{ '/styles/images/flex/flex-37.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-37.png' | prepend: site.baseurl }})
 
 ```html
 <div class="Grid">
@@ -344,7 +344,7 @@ tag: CSS
 
 某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。
 
-![relationship-map]({{ '/styles/images/flex/flex-38.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-38.png' | prepend: site.baseurl }})
 
 ```html
 <div class="Grid">
@@ -380,10 +380,18 @@ tag: CSS
 }
 ```
 
-## 三、圣杯布局
-圣杯布局（Holy Grail Layout）指的是一种最常见的网站布局。页面从上到下，分成三个部分：头部（header），躯干（body），尾部（footer）。其中躯干又水平分成三栏，从左到右为：导航、主栏、副栏。
+* `flex: 0 0 per%`：
+    * 第一个值代表`flex-grow`：这里设置为0，是因为不让当前项目放大
+    * 第二个值代表`flex-shrink`：这里设置为0，是因为其他项目都为1，则空间不足时，这个`shrink = 0 ` 的项目不缩小。 
+    * 第三个值代表`flex-basis`：在分配多余空间之前，当前项目占据的主轴空间
 
-![relationship-map]({{ '/styles/images/flex/flex-39.png' | prepend: site.baseurl }})
+## 三、圣杯布局
+
+* 圣杯布局（`Holy Grail Layout`）指的是一种最常见的网站布局。
+    * 页面从上到下，分成三个部分：头部（`header`），躯干（`body`），尾部（`footer`）。
+        * 其中躯干又水平分成三栏，从左到右为：导航、主栏、副栏。
+
+![relationship-map]({{ '/styles/images/css/flex/flex-39.png' | prepend: site.baseurl }})
 
 ```html
 <body class="HolyGrail">
@@ -440,13 +448,14 @@ footer {
     flex: auto;
   }
 }
-
 ```
+
+* `flex:1`等价于`flex-grow: 1; flex-shrink: 1; flex-basis: 0%;`
 
 ## 四、输入框的布局
 我们常常需要在输入框的前方添加提示，后方添加按钮。
 
-![relationship-map]({{ '/styles/images/flex/flex-40.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-40.png' | prepend: site.baseurl }})
 
 ```html
 <div class="InputAddOn">
@@ -470,7 +479,7 @@ footer {
 
 有时，主栏的左侧或右侧，需要添加一个图片栏。
 
-![relationship-map]({{ '/styles/images/flex/flex-41.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-41.png' | prepend: site.baseurl }})
 
 ```html
 <div class="Media">
@@ -498,7 +507,7 @@ footer {
 
 有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间。这时可以采用Flex布局，让底栏总是出现在页面的底部。
 
-![relationship-map]({{ '/styles/images/flex/flex-42.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-42.png' | prepend: site.baseurl }})
 
 ```html
 <body class="Site">
@@ -524,7 +533,7 @@ footer {
 
 每行的项目数固定，会自动分行。
 
-![relationship-map]({{ '/styles/images/flex/flex-43.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-43.png' | prepend: site.baseurl }})
 
 ``` css
 .parent {

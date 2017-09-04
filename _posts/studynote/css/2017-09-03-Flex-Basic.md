@@ -50,7 +50,7 @@ tag: CSS
 * 采用 `Flex` 布局的元素，称为 `Flex` 容器（`flex container`），简称"容器"。
     * 它的所有子元素自动成为容器成员，称为 `Flex` 项目（`flex item`），简称"项目"。
 
-![relationship-map]({{ '/styles/images/flex/flex-01.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-01.png' | prepend: site.baseurl }})
 
 * 容器默认存在两根轴：
     * 水平的主轴（`main axis`）和垂直的交叉轴（`cross axis`）。
@@ -71,7 +71,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-02.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-02.png' | prepend: site.baseurl }})
 
 * 它可能有4个值。
     * `row`（默认值）：主轴为水平方向，起点在左端。
@@ -84,7 +84,7 @@ tag: CSS
 默认情况下，项目都排在一条线（又称"轴线"）上。
 `flex-wrap`属性定义，如果一条轴线排不下，如何换行。
 
-![relationship-map]({{ '/styles/images/flex/flex-03.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-03.png' | prepend: site.baseurl }})
 
 ```css
 .box {
@@ -96,15 +96,15 @@ tag: CSS
 
 * `nowrap`（默认）：不换行。
 
-![relationship-map]({{ '/styles/images/flex/flex-04.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-04.png' | prepend: site.baseurl }})
 
 * `wrap`：换行，第一行在上方。
 
-![relationship-map]({{ '/styles/images/flex/flex-05.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-05.png' | prepend: site.baseurl }})
 
 * `wrap-reverse`：换行，第一行在下方。
 
-![relationship-map]({{ '/styles/images/flex/flex-06.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-06.png' | prepend: site.baseurl }})
 
 
 ### 3.3 flex-flow
@@ -117,7 +117,7 @@ tag: CSS
 }
 ```
 
-### 3.4 3.4 justify-content属性
+### 3.4 justify-content属性
 
 `justify-content`属性定义了项目在主轴上的对齐方式。
 
@@ -127,7 +127,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-07.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-07.png' | prepend: site.baseurl }})
 
 * 它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。
     * `flex-start`（默认值）：左对齐
@@ -146,7 +146,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-08.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-08.png' | prepend: site.baseurl }})
 
 * 它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。
     * `flex-start`：交叉轴的起点对齐。
@@ -165,7 +165,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-09.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-09.png' | prepend: site.baseurl }})
 
 * 该属性可能取6个值。
     * `flex-start`：与交叉轴的起点对齐。
@@ -187,7 +187,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-10.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-10.png' | prepend: site.baseurl }})
 
 ### 4.2 flex-grow属性
 
@@ -199,7 +199,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-11.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-11.png' | prepend: site.baseurl }})
 
 * 如果所有项目的`flex-grow`属性都为1，则它们将等分剩余空间（如果有的话）。
 * 如果一个项目的`flex-grow`属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
@@ -214,7 +214,7 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-12.jpg' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-12.jpg' | prepend: site.baseurl }})
 
 * 如果所有项目的`flex-shrink`属性都为1，当空间不足时，都将等比例缩小。
 * 如果一个项目的`flex-shrink`属性为0，其他项目都为1，则空间不足时，前者不缩小。
@@ -247,6 +247,56 @@ tag: CSS
 * 该属性有两个快捷值：`auto (1 1 auto)` 和 `none (0 0 auto)`。
 * 建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
 
+* 当 `flex` 取值为一个非负数字，则该数字为 `flex-grow` 值，`flex-shrink` 取 1，`flex-basis` 取 0%，如下是等同的：
+
+```css
+.item {flex: 1;}
+.item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+```
+
+* 当 `flex` 取值为一个长度或百分比，则视为 `flex-basis` 值，`flex-grow` 取 1，`flex-shrink` 取 1，有如下等同情况（注意 0% 是一个百分比而不是一个非负数字）：
+
+```css
+.item-1 {flex: 0%;}
+.item-1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+.item-2 {flex: 24px;}
+.item-1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 24px;
+}
+```
+
+* 当 `flex` 取值为两个非负数字，则分别视为 `flex-grow` 和 `flex-shrink` 的值，`flex-basis` 取 `0%`，如下是等同的：
+
+```css
+.item {flex: 2 3;}
+.item {
+    flex-grow: 2;
+    flex-shrink: 3;
+    flex-basis: 0%;
+}
+```
+
+* 当 `flex` 取值为一个非负数字和一个长度或百分比，则分别视为 `flex-grow` 和 `flex-basis` 的值，`flex-shrink` 取 1，如下是等同的：
+
+```css
+.item {flex: 2333 3222px;}
+.item {
+    flex-grow: 2333;
+    flex-shrink: 1;
+    flex-basis: 3222px;
+}
+```
+
 ### 4.6 align-self属性
 
 * `align-self`属性允许单个项目有与其他项目不一样的对齐方式，可覆盖`align-items`属性。
@@ -258,6 +308,6 @@ tag: CSS
 }
 ```
 
-![relationship-map]({{ '/styles/images/flex/flex-13.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/css/flex/flex-13.png' | prepend: site.baseurl }})
 
 该属性可能取6个值，除了auto，其他都与align-items属性完全一致。
