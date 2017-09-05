@@ -69,7 +69,7 @@ tag: css
     * 在`HTML`文档中，就是<`html`>
     * 在`XML`文档中，可以是该语言允许的任何元素
     
-## 三、水平格式化
+## 三、块级元素 --- 水平格式化
 
 * 水平格式化的复杂性在于`width`影响的是内容区的宽而不是整个可见的元素框。
 
@@ -223,7 +223,7 @@ p {
 }
 ```
 
-## 四、垂直格式化
+## 四、块级元素 --- 垂直格式化
 
 > 一个元素的默认高度由其内容决定。高度还会受其内容宽度的影响：段落越窄，相应就越高。
 
@@ -396,4 +396,119 @@ li {
 
 ![relationship-map]({{ '/styles/images/css/box/box-08.png' | prepend: site.baseurl }})
 
-### 4.5 负外边距 
+### 4.5 负外边距
+ 
+* 负外边距会影响外边距的合并
+    * 如果垂直外边距都设置为负值，浏览器会取两个外边距**绝对值的最大值**
+    * 如果一个正外边距和一个负外边距合并，会从**正外边距减去这个负外边距的绝对值**
+
+基本`html`格式
+
+```html
+<p class="one">one</p>
+<p class="two">two</p>
+```
+
+例1：垂直外边距都设置为负值
+
+```css
+p {
+    width: 200px;
+    height: 40px;
+}
+.one {
+    margin-bottom: -20px;
+    background: blue;
+}
+.two {
+    margin-top: -30px;
+    background: red;
+}
+```
+
+* 段落1
+
+![relationship-map]({{ '/styles/images/css/box/box-10.png' | prepend: site.baseurl }})
+
+* 段落2
+
+![relationship-map]({{ '/styles/images/css/box/box-11.png' | prepend: site.baseurl }})
+
+例2：一正一负
+
+```css
+p {
+    width: 200px;
+    height: 40px;
+}
+.one {
+    margin-bottom: 20px;
+    background: blue;
+}
+.two {
+    margin-top: -30px;
+    background: red;
+}
+```
+
+* 段落1
+
+![relationship-map]({{ '/styles/images/css/box/box-12.png' | prepend: site.baseurl }})
+
+* 段落2
+
+![relationship-map]({{ '/styles/images/css/box/box-13.png' | prepend: site.baseurl }})
+
+## 五、行内元素相关术语和知识
+
+### 5.1 匿名文本
+
+* 匿名文本(`anonymous text`)：指所有未包含在行内元素的字符串。
+    * 例：`<p>Hello<em>,lalal</em></p>`，'Hello'就是匿名文本
+* 空格也是匿名文本的一部分，因为空格也是正常字符
+
+### 5.2 em框
+
+* `em`框在字体中定义，也称为字符框(`character box`)。实际的字型可能比其`em`框更高或更矮
+
+### 5.3 内容区
+
+* 在非替换元素中，内容区可能有两种：
+    1. 内容区可以是元素中各字符的`em`框串在一起构成的框，也称为`em框定义`
+    2. 内容区可以是由元素中字符字形描述的框 
+* 在替换元素中，内容区就是元素的固有高度 + margin + border + padding
+
+### 5.4 行间距
+
+* 行间距(`leading`)是`font-siz`的值和`line-height`值之差。
+    * 这个差`/2`，即分成两半，分别应用到内容区的顶部和底部。
+        * 内容区增加的这两部份也可称为半间距(`half-leading`)
+* **行间距只应用于非替换元素**
+
+### 5.5 行内框
+
+* 行内框通过向内容区增加行间距来描述。
+* 非替换元素：元素行内框的高度始终 = `line-height`的值 
+* 替换元素：元素行内框的高度恰好 = 内容高度 
+    * 原因：行间距不应用到替换元素上
+    
+### 5.6 行框
+
+* 包含改行中出现的行内框的**最高点**和**最低点**的最小框。
+    * 行框的上边界要位于最高行内框的上边界
+    * 行框的底边要放在最低行内框的下边界
+
+### 5.7 行内元素的一些特点
+
+1. 行内元素的`background`应用内容区及所有内边距
+2. 行内元素的`border`包围内容区和所有内边距和边框
+3. 非替换元素的`padding`、`border`、`margin`对行内元素无垂直效果
+    * 即：它们垂直方向的值不会影响元素行内框的高
+
+
+
+
+
+
+
+
