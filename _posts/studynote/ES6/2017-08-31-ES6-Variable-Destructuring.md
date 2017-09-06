@@ -8,9 +8,6 @@ tag: ES6
 * content
 {:toc}
 
-其他链接：
-
-+ [javascript - 数组]({{ '/2017/08/27/js-Array' | prepend: site.baseurl }})
 
 > 以下内容全部源于： [http://es6.ruanyifeng.com/#docs/destructuring](http://es6.ruanyifeng.com/#docs/destructuring)
 
