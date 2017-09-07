@@ -66,8 +66,8 @@
         // Used for matching numbers
         core_pnum = /[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source,
 
-        // Used for splitting on whitespace
-        core_rnotwhite = /\S+/g,
+            // Used for splitting on whitespace
+            core_rnotwhite = /\S+/g,
 
         // A simple way to check for HTML strings
         // Prioritize #id over <tag> to avoid XSS via location.hash (#9521)
