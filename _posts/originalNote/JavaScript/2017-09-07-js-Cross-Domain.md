@@ -31,7 +31,7 @@ tag: javascript
 
 `CORS`，`Cross-Origin Resource Sharing`，跨域资源共享。它是基于`HTTP`来实现的。以下是`CORS`的原理图：
 
-![relationship-map]({{'/styles/images/javascript/crossDomain/crossDomain-01.png' | prepend: site.baseurl}})
+![relationship-map]({{'/styles/images/javascript/crossDomain/crossDomain-02.png' | prepend: site.baseurl}})
 
 以下是文字描述：
 * `www.jmazm.com`与`www.qq.com`明显不同域，假设前者要往后者拿数据，由于不同域，因此需要跨域处理。

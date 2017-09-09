@@ -34,7 +34,6 @@ var server = http.createServer(function(request, response) {
 ```
 
 * 如果不在`createServer()`中使用参数，可通过监听该方法创建的服务器对象的`request`事件【该事件在接收到客户端请求时触发】。以下代码的效果其实与上面的代码的效果是等价的。
-
 ```js
 var http = require('http');
 var server = http.createServer();
@@ -52,7 +51,6 @@ server.on('request', function(request, response) {
     * `backlog`：（可选），整数值，默认值为`511`，指定位于等待队列中的客户端连接的最大数量。【一旦超过这个长度，`HTTP`服务器将开始拒绝来自新客户端的连接。】
     * `callback`：（可选），建立客户端连接后，会触发该服务器的`listening`事件，而该参数就是来指定`listening`事件触发时调用的回调函数
 * 不使用`callback`参数，也可按如下：
-
 ```js
 server.on('listening', function() {
   //...
@@ -64,7 +62,6 @@ server.on('listening', function() {
 `server.close()`：用来关闭服务器。
 
 * 当服务器被关闭时，触发`close`事件，可通过监听该事件并`callback`指定当服务器被关闭时所需执行的处理：
-
 ```js
 server.on('close', function() {
   //...
@@ -74,7 +71,6 @@ server.on('close', function() {
 ### 1.4 error事件
 
 * 在对`HTTP`服务器指定需要监听的地址及端口时，如果该地址及端口已被占用，将产生一个错误码“`EADDRIUSE`”,表示**用于监听的地址及端口已被占用**。同时触发了`HTTP`服务器的`error事件
-
 ```js
 server.on('error', function(e) {
   if(e.code == 'EADDRINUSE') {
@@ -89,8 +85,7 @@ server.on('error', function(e) {
 * 在`HTTP 1.1`中，支持长连接。
     * 如果客户端发出的请求头信息或服务器端发出的响应头信息中添加"`Connection:keep-alive`"，则`HTTP`连接将继续保持，客户端可以继续通过相同的连接向服务器端发出请求。
 * 当客户端和服务器端建立连接时，触发`HTTP`服务器对象的`connection`事件
-    * 回调函数中的参数`socket`：服务器端用于监听客户端请求的`socket`端口对象
-    
+    * 回调函数中的参数`socket`：服务器端用于监听客户端请求的`socket`端口对象   
 ```js
 server.on('connection', function(socket) {
   console.log('客户端已连接。。。')
@@ -108,7 +103,6 @@ server.on('connection', function(socket) {
     * `msecs`：整数，设置服务器的超时时间，单位：**毫秒**。【设为0时取消服务器的超时处理】
     * `callback`：回调函数，其参数`socket`----服务器端用于监听客户端请求的`socket`端口对象
 * 当服务器超时时，触发服务器对象的`timeout`事件，可不使用`callback`参数
-
 ```js
 server.on('timeout', function(socket) {
   //...
@@ -116,7 +110,6 @@ server.on('timeout', function(socket) {
 ```
 
 * `HTTP`服务器拥有的一个属性：`timeout`，整数值，单位毫秒，用于查看/修改服务器的超时时间
-
 ```js
 server.timeout = 1000;
 console.log(server.timeout);
