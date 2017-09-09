@@ -10,7 +10,9 @@ tag: javascript
 
 * 其他连接：
 
-+ [javasript -跨域 - CORS]({{ '/2017/09/27/js-CORS' | prepend: site.baseurl }})
++ [javasript - 跨域 - CORS]({{ '/2017/09/07/js-CORS' | prepend: site.baseurl }})
++ [javasript - 跨域 - JSONP]({{ '/2017/09/09/js-JSONP' | prepend: site.baseurl }})
++ [javasript - 跨域 - Iframe和window.name]({{ '/2017/09/09/js-Iframe' | prepend: site.baseurl }})
 
 <!-- more -->
 
