@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "nodeJs - HTTP服务器"
-data: 2017-09-08 17:27:00 +0800
+title: "nodeJs - 获取客户端请求信息"
+data: 2017-09-09 17:27:00 +0800
 categories: 学习笔记
 tag: node.js
 ---
@@ -10,7 +10,7 @@ tag: node.js
 
 其他链接：
 
-+ [nodeJs - 获取客户端请求信息]({{ '/2017/09/09/nodeJs-Get-IncomingMessage' | prepend: site.baseurl }})
++ [nodeJs - HTTP服务器]({{ '/2017/09/08/nodeJs-HTTP-Server' | prepend: site.baseurl }})
 
 > 以下内容全部源于： 《Node.js权威指南》
 
@@ -122,20 +122,7 @@ server.timeout = 1000;
 console.log(server.timeout);
 ```
 
-## 二、获取客户端请求信息
-
-* `http.IncomingMessage`对象：用于读取客户端请求流中的数据
-    * 当从客户端请求流中读取到新的数据时触发`data`事件
-    * 当读取完客户端请求流中的数据时触发`end`事件
-* `http.IncomingMessage`对象拥有的一些属性
-    * `method`：字符串，客户端向服务器端发送请求时使用的方法，`POST
-    * `url`：字符串，客户端发送请求时所使用的URL。【常用来判断客户端请求的页面及需要执行的处理。】
-    * `headers`：客户端发送的请求头对象，存放客户端发送的所有请求头信息，包括`cookie`以及浏览器的各种信息
-    * `httpVersion`：字符串，客户端发送的`HTTP`版本
-    * `trailers`：客户端发送的`trailer`对象。它存放了客户端附加的一些`HTTP`头信息。该对象被包含在客户端发送的请求数据之后，因此只有当`http.ImcomingMessage`对象的`end`事件触发之后才能读取到`trailer`对象中的信息
-    * `socket`：服务器端用于监听客户端请求的`socket`端口对象
-
-## 总结
+## 二、总结
 
 * 如何自己搭建一个简单的本地服务器呢？
     1. 创建`server`对象
