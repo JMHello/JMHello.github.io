@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-09-07-js-Cross-Domain.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/studynote/nodejs/2017-09-08-nodeJs-HTTP-Server.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/nodejs/2017-09-08-nodeJs-HTTP-Server.md" afterPath="$PROJECT_DIR$/_posts/studynote/nodejs/2017-09-08-nodeJs-HTTP-Server.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,17 +29,17 @@
         <entry file="file://$PROJECT_DIR$/_posts/studynote/nodejs/2017-09-08-nodeJs-HTTP-Server.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="426">
-                <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+              <first_editor relative-caret-position="484">
+                <caret line="133" column="16" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="16" />
                 <folding>
-                  <marker date="1504933568914" expanded="true" signature="665:676" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="899:910" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="1384:1395" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="1551:1562" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="1731:1781" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="1762:1779" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="2143:2173" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="2662:2673" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="665:676" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="899:910" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="1384:1395" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="1551:1562" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="1731:1781" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="1762:1779" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="2143:2173" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="2662:2673" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor>
@@ -54,14 +52,14 @@
               <first_editor relative-caret-position="0">
                 <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding>
-                  <marker date="1504933568914" expanded="true" signature="665:676" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="899:910" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="1384:1395" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="1551:1562" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="1731:1781" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="1762:1779" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="2143:2173" ph="{...}" />
-                  <marker date="1504933568914" expanded="true" signature="2662:2673" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="665:676" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="899:910" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="1384:1395" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="1551:1562" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="1731:1781" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="1762:1779" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="2143:2173" ph="{...}" />
+                  <marker date="1504933857494" expanded="true" signature="2662:2673" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -298,7 +296,7 @@
       <workItem from="1504708769718" duration="1397000" />
       <workItem from="1504761650430" duration="10073000" />
       <workItem from="1504776087866" duration="7685000" />
-      <workItem from="1504928994732" duration="3653000" />
+      <workItem from="1504928994732" duration="3941000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -311,7 +309,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204208000" />
+    <option name="totallyTimeSpent" value="204496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="464" y="0" width="902" height="768" extended-state="0" />
@@ -1126,8 +1124,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/studynote/nodejs/2017-09-08-nodeJs-HTTP-Server.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="426">
-            <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <first_editor relative-caret-position="484">
+            <caret line="133" column="16" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="16" />
             <folding />
           </first_editor>
           <second_editor>
