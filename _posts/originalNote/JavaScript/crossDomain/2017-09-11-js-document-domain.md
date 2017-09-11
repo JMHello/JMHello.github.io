@@ -9,11 +9,11 @@ tag: javascript
 {:toc}
 
 * 其他连接：
-
-+ [javasript - 同源策略]({{ '/2017/09/07/js-Same-Origin-Policy' | prepend: site.baseurl }})
-+ [javasript - 跨域 - CORS]({{ '/2017/09/07/js-CORS' | prepend: site.baseurl }})
-+ [javasript - 跨域 - JSONP]({{ '/2017/09/07/js-JSONP' | prepend: site.baseurl }})
-+ [javasript - 跨域 - Iframe和window.name]({{ '/2017/09/09/js-Iframe' | prepend: site.baseurl }})
+    + [javasript - 同源策略]({{ '/2017/09/07/js-Same-Origin-Policy' | prepend: site.baseurl }})
+    + [javasript - 跨域 - CORS]({{ '/2017/09/07/js-CORS' | prepend: site.baseurl }})
+    + [javasript - 跨域 - JSONP]({{ '/2017/09/07/js-JSONP' | prepend: site.baseurl }})
+    + [javasript - 跨域 - Iframe和window.name]({{ '/2017/09/09/js-Iframe' | prepend: site.baseurl }})
+    + [javasript - 跨域 - 动态创建script标签]({{ '/2017/09/11/js-script' | prepend: site.baseurl }})
 
 <!-- more -->
 
