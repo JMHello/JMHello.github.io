@@ -3,7 +3,7 @@ layout: post
 title: "jQuery - 整体框架"
 date: 2017-09-05 19:00:00 +0800 
 categories: 原创
-tag: 深入理解Web前端
+tag: jQuery
 ---
 * content
 {:toc}
