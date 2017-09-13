@@ -90,7 +90,7 @@ EventUtil.addHandler(window, "message", function(event){
 * `html`
 ```html
 <!--  
- 1. `a.html`里引入一个`iframe`，其`src`为：`http://127.0.0.1:3002/b.html`
+ 1. a.html`里引入一个iframe，其src为：http://127.0.0.1:3002/b.html
 -->
 <!--<iframe src="http://127.0.0.1:3002/b.html"></iframe>-->
 ```
