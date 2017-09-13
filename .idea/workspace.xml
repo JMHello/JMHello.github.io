@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-13-js-postMessage-iframe.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-07-js-CORS.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-07-js-CORS.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-07-js-Same-Origin-Policy.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-07-js-Same-Origin-Policy.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-09-js-JSONP.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-09-js-JSONP.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-09-js-window-name-iframe.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-09-js-window-name-iframe.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-11-js-document-domain.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-11-js-document-domain.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-11-js-script.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-11-js-script.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-13-js-hash.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-13-js-hash-iframe.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-13-js-postMessage-iframe.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-13-js-postMessage-iframe.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +29,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-13-js-postMessage-iframe.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="306">
-                <caret line="118" column="88" selection-start-line="118" selection-start-column="88" selection-end-line="118" selection-end-column="88" />
+              <first_editor relative-caret-position="66">
+                <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -462,7 +454,7 @@
       <workItem from="1505134510392" duration="8647000" />
       <workItem from="1505203692375" duration="1045000" />
       <workItem from="1505266343269" duration="11949000" />
-      <workItem from="1505315848664" duration="3663000" />
+      <workItem from="1505315848664" duration="3776000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -475,7 +467,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245028000" />
+    <option name="totallyTimeSpent" value="245141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="780" extended-state="0" />
@@ -1437,17 +1429,17 @@
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-13-js-postMessage-iframe.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="306">
-            <caret line="118" column="88" selection-start-line="118" selection-start-column="88" selection-end-line="118" selection-end-column="88" />
+          <first_editor relative-caret-position="66">
+            <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
             <folding>
-              <marker date="1505319727869" expanded="true" signature="2600:2832" ph="{...}" />
-              <marker date="1505319727869" expanded="true" signature="2670:2830" ph="{...}" />
-              <marker date="1505319727869" expanded="true" signature="3090:3157" ph="..." />
-              <marker date="1505319727869" expanded="true" signature="3090:3158" ph="..." />
-              <marker date="1505319727869" expanded="true" signature="3232:3247" ph="//..." />
-              <marker date="1505319727869" expanded="true" signature="3515:3910" ph="{...}" />
-              <marker date="1505319727869" expanded="true" signature="3680:3906" ph="{...}" />
-              <marker date="1505319727869" expanded="true" signature="3744:3900" ph="//..." />
+              <marker date="1505319849398" expanded="true" signature="2600:2832" ph="{...}" />
+              <marker date="1505319849398" expanded="true" signature="2670:2830" ph="{...}" />
+              <marker date="1505319849398" expanded="true" signature="3090:3157" ph="..." />
+              <marker date="1505319849398" expanded="true" signature="3090:3158" ph="..." />
+              <marker date="1505319849398" expanded="true" signature="3232:3247" ph="//..." />
+              <marker date="1505319849398" expanded="true" signature="3515:3910" ph="{...}" />
+              <marker date="1505319849398" expanded="true" signature="3680:3906" ph="{...}" />
+              <marker date="1505319849398" expanded="true" signature="3744:3900" ph="//..." />
             </folding>
           </first_editor>
           <second_editor />
@@ -1458,14 +1450,14 @@
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding>
-              <marker date="1505319727869" expanded="true" signature="2600:2832" ph="{...}" />
-              <marker date="1505319727869" expanded="true" signature="2670:2830" ph="{...}" />
-              <marker date="1505319727869" expanded="true" signature="3090:3157" ph="..." />
-              <marker date="1505319727869" expanded="true" signature="3090:3158" ph="..." />
-              <marker date="1505319727869" expanded="true" signature="3232:3247" ph="//..." />
-              <marker date="1505319727869" expanded="true" signature="3515:3910" ph="{...}" />
-              <marker date="1505319727869" expanded="true" signature="3680:3906" ph="{...}" />
-              <marker date="1505319727869" expanded="true" signature="3744:3900" ph="//..." />
+              <marker date="1505319849398" expanded="true" signature="2600:2832" ph="{...}" />
+              <marker date="1505319849398" expanded="true" signature="2670:2830" ph="{...}" />
+              <marker date="1505319849398" expanded="true" signature="3090:3157" ph="..." />
+              <marker date="1505319849398" expanded="true" signature="3090:3158" ph="..." />
+              <marker date="1505319849398" expanded="true" signature="3232:3247" ph="//..." />
+              <marker date="1505319849398" expanded="true" signature="3515:3910" ph="{...}" />
+              <marker date="1505319849398" expanded="true" signature="3680:3906" ph="{...}" />
+              <marker date="1505319849398" expanded="true" signature="3744:3900" ph="//..." />
             </folding>
           </first_editor>
           <second_editor>

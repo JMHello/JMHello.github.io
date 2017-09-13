@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "javasript -跨域 - location.hash + iframe"
-data: 2017-09-13 10:27:00 +0800
+title: "javasript -跨域 - postMessage() + iframe"
+data: 2017-09-13 22:27:00 +0800
 categories: 原创
 tag: javascript
 ---
