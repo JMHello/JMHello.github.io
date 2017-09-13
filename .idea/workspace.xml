@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/designPatterns/2017-09-13-js-adapter-pattern.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/designPatterns/2017-09-13-js-singleton-pattern.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-13-js-hash.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-13-js-hash.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/designPatterns/2017-09-13-js-adapter-pattern.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/designPatterns/2017-09-13-js-adapter-pattern.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,28 +88,28 @@
               <first_editor relative-caret-position="0">
                 <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding>
-                  <marker date="1505288979847" expanded="true" signature="602:678" ph="[...]" />
-                  <marker date="1505288979847" expanded="true" signature="681:903" ph="//..." />
-                  <marker date="1505288979847" expanded="true" signature="730:873" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="917:985" ph="{&quot;name&quot;: 'jm'...}" />
-                  <marker date="1505288979847" expanded="true" signature="1055:1104" ph="/** TODO: 实现一个数据适配器 arrToObjAdapter ...*/" />
-                  <marker date="1505288979847" expanded="true" signature="1137:1231" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1148:1229" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1276:1332" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1295:1330" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1349:1405" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1368:1403" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1438:1501" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1479:1499" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1723:1789" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1745:1787" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1828:1897" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1853:1895" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1960:2018" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1960:2027" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1982:2018" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="2061:2131" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="2102:2129" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="624:700" ph="[...]" />
+                  <marker date="1505289126466" expanded="true" signature="703:925" ph="//..." />
+                  <marker date="1505289126466" expanded="true" signature="752:895" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="939:1007" ph="{&quot;name&quot;: 'jm'...}" />
+                  <marker date="1505289126466" expanded="true" signature="1077:1126" ph="/** TODO: 实现一个数据适配器 arrToObjAdapter ...*/" />
+                  <marker date="1505289126466" expanded="true" signature="1159:1253" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1170:1251" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1298:1354" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1317:1352" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1371:1427" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1390:1425" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1460:1523" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1501:1521" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1745:1811" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1767:1809" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1850:1919" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1875:1917" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1982:2040" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1982:2049" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="2004:2040" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="2083:2153" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="2124:2151" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -120,31 +117,31 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="438">
-                <caret line="131" column="48" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
+              <first_editor relative-caret-position="394">
+                <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
                 <folding>
-                  <marker date="1505288979847" expanded="true" signature="602:678" ph="[...]" />
-                  <marker date="1505288979847" expanded="true" signature="681:903" ph="//..." />
-                  <marker date="1505288979847" expanded="true" signature="730:873" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="917:985" ph="{&quot;name&quot;: 'jm'...}" />
-                  <marker date="1505288979847" expanded="true" signature="1055:1104" ph="/** TODO: 实现一个数据适配器 arrToObjAdapter ...*/" />
-                  <marker date="1505288979847" expanded="true" signature="1137:1231" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1148:1229" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1276:1332" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1295:1330" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1349:1405" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1368:1403" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1438:1501" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1479:1499" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1723:1789" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1745:1787" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1828:1897" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1853:1895" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1960:2018" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1960:2027" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="1982:2018" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="2061:2131" ph="{...}" />
-                  <marker date="1505288979847" expanded="true" signature="2102:2129" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="624:700" ph="[...]" />
+                  <marker date="1505289126466" expanded="true" signature="703:925" ph="//..." />
+                  <marker date="1505289126466" expanded="true" signature="752:895" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="939:1007" ph="{&quot;name&quot;: 'jm'...}" />
+                  <marker date="1505289126466" expanded="true" signature="1077:1126" ph="/** TODO: 实现一个数据适配器 arrToObjAdapter ...*/" />
+                  <marker date="1505289126466" expanded="true" signature="1159:1253" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1170:1251" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1298:1354" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1317:1352" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1371:1427" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1390:1425" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1460:1523" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1501:1521" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1745:1811" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1767:1809" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1850:1919" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1875:1917" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1982:2040" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="1982:2049" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="2004:2040" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="2083:2153" ph="{...}" />
+                  <marker date="1505289126466" expanded="true" signature="2124:2151" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor>
@@ -534,7 +531,7 @@
       <workItem from="1505031295986" duration="1411000" />
       <workItem from="1505134510392" duration="8647000" />
       <workItem from="1505203692375" duration="1045000" />
-      <workItem from="1505266343269" duration="10338000" />
+      <workItem from="1505266343269" duration="10484000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -547,7 +544,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239754000" />
+    <option name="totallyTimeSpent" value="239900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="780" extended-state="0" />
@@ -1486,8 +1483,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="438">
-            <caret line="131" column="48" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
+          <first_editor relative-caret-position="394">
+            <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
             <folding />
           </first_editor>
           <second_editor>

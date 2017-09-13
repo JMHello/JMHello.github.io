@@ -22,7 +22,7 @@ tag: javascript
 
 * 下面举个小例子，解释一下适配器，看下图。
 
-![relationship-map]({{ '/styles/images/js/designPattern-01.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/javascript/designPattern/designPattern-01.png' | prepend: site.baseurl }})
 
 ## 二、适配器的应用
 
