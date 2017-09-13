@@ -14,7 +14,7 @@ tag: javascript
     + [javasript - 跨域 - JSONP]({{ '/2017/09/07/js-JSONP' | prepend: site.baseurl }})
     + [javasript - 跨域 - document.domain和iframe]({{ '/2017/09/11/js-document-domain' | prepend: site.baseurl }})
     + [javasript - 跨域 - 动态创建script标签]({{ '/2017/09/11/js-script' | prepend: site.baseurl }})
-    + [javasript - 跨域 - location.hash + iframe]({{ '/2017/09/13/js-hash' | prepend: site.baseurl }})
+    + [javasript - 跨域 - location.hash + iframe]({{ '/2017/09/13/js-hash-iframe' | prepend: site.baseurl }})
 
 * 参考文献：
     * [http://www.cnblogs.com/inJS/p/6129945.html](http://www.cnblogs.com/inJS/p/6129945.html)
