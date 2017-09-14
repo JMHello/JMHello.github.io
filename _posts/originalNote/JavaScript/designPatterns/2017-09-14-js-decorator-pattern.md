@@ -153,20 +153,34 @@ var button = document.getElementById( 'button' );
 ### 4.1 before（前置通知）
 
 ```js
+// 原型上
 Function.prototype.before = function( beforefn ){
     var __self = this; // 保存原函数的引用
     
-    return function(){ // 返回包含了原函数和新函数的"代理"函数
-        beforefn.apply( this, arguments ); // 执行新函数，修正 this
+    return function(){ //  返回包含了原函数和新函数的"代理"函数
+        beforefn.apply( this, arguments ); // 执行新函数，且保证 this 不被劫持，新函数接受的参数；也会被原封不动地传入原函数，新函数在原函数之前执行
         
-        return __self.apply( this, arguments ); // 执行原函数
+        return __self.apply( this, arguments ); //  执行原函数并返回原函数的执行结果，并且保证 this 不被劫持
     }
 }; 
+
+// 不污染原型
+var before = function( fn, beforefn ){
+    return function(){
+        beforefn.apply( this, arguments );
+        return fn.apply( this, arguments );
+    }
+} 
 ```
+
+* “代理”函数只是结构上像代理而已，并不承担代理的职责（比如控制对象的访问等）。
+    * 它的工作是把请求分别转发给新添加的函数和原函数，且负责保证它们的执行顺序，让新添加的函数在原函数之前执行（前置装饰），这样就实现了动态装饰的效果。
 
 ### 4.2 after（后置通知）
 
 ```js
+
+// 原型上
 Function.prototype.after = function( afterfn ){
     var __self = this; // 保存原函数的引用
     
@@ -178,7 +192,20 @@ Function.prototype.after = function( afterfn ){
         return ret; // 返回的是after紧跟随的那个函数所返回的值
     }
 }; 
+
+// 不污染原型
+var after = function(fn, afterFn) {
+    return function() {
+      var ret = fn.apply(this, arguments);
+      
+      afterFn.apply(this, arguments);
+      
+      return this;
+    };
+}
 ```
+
+* 新添加的函数在原函数执行之后再执行。
 
 ### 4.3 AOP简单实例
 
@@ -200,14 +227,303 @@ func();
 
 ## 五、 用AOP装饰函数
 
-```js
+### 5.1 数据统计上报
 
+* 页面中有一个登录 `button`，点击这个 `button` 会弹出登录浮层，与此同时要进行数据上报，来统计有多少用户点击了这个登录 `button`。
+
+```html
+<html>
+<button tag="login" id="button">点击打开登录浮层</button>
+<script>
+    var showLogin = function(){
+        console.log( '打开登录浮层' );
+        log( this.getAttribute( 'tag' ) );
+    };
+    
+    var log = function( tag ){
+        console.log( '上报标签为: ' + tag );
+        // (new Image).src = 'http:// xxx.com/report?tag=' + tag; // 真正的上报代码略
+    };
+    
+    document.getElementById( 'button' ).onclick = showLogin;
+</script>
+</html> 
 ```
 
-```js
+* 在 `showLogin` 函数里，既要负责打开登录浮层，又要负责数据上报，这是两个层面的功能，在此处却被**耦合**在一个函数里。
 
+* 解决耦合方法：使用后置通知（`after`），详细代码可看**四、AOP**
+
+```html
+<html>
+<button tag="login" id="button">点击打开登录浮层</button>
+
+<script>
+    var showLogin = function(){
+        console.log( '打开登录浮层' );
+    }
+    
+    var log = function(){
+        console.log( '上报标签为: ' + this.getAttribute( 'tag' ) );
+    }
+    
+    // 打开登录浮层之后上报数据
+    showLogin = showLogin.after( log ); 
+    
+    document.getElementById( 'button' ).onclick = showLogin;
+</script>
+</html>
 ```
 
-```js
+### 5.2 用AOP动态改变函数的参数
 
+```js
+Function.prototype.before = function( beforefn ){
+    var __self = this;
+    
+    return function(){
+        beforefn.apply( this, arguments ); // (1)
+        
+        return __self.apply( this, arguments ); // (2)
+    }
+} 
 ```
+
+* 从这段代码的`(1)`处 和`(2)`处可以看到，`beforefn` 和原函数 `__self` 共用一组参数列表
+  `arguments`，当我们在 `beforefn` 的函数体内改变 `arguments` 的时候，原函数 `__self` 接收的参数列表自然也会变化。
+  
+```js
+var fn = function(param) {
+  console.log(param);
+}
+
+fn = fn.before(function(param) {
+  param.a = 'first';
+});
+
+fn({
+    'b': 'second'
+});
+
+// 一开始 param 为
+//{
+//    'b': 'second'
+//}
+
+// 最后param为
+// {
+//    a: 'first',
+//    b: 'second'
+// }
+```
+
+### 5.3 解决 CSRF 攻击
+
+**CSRF**
+
+* `CSRF`（`Cross-site request forgery`）跨站请求伪造。
+    * 解决 `CSRF` 攻击最简单的一个办法就是在 `HTTP` 请求中带上一个 `Token` 参数。
+    
+**解决CSRF的思路：**
+
+* 思路1：直接在 `ajax`函数的参数`param`（这个参数一般是发送给服务器的数据，格式为`JSON`）附加`Token`这个参数
+    * 这个思路存在一个`bug`：不是所有项目都需要`Token`验证的，那么这个`Token`参数可能就是多余的，或者 `Token` 的生成方式不同
+* 思路2：用`AOP`的前置通知（`before`）
+    * 完美解决了思路1的`bug`：还原一个纯净的`Ajax`函数，提高了`Ajax`函数的可复用性
+    
+```js
+var getToken = function(){
+ return 'Token';
+} 
+
+// 思路1
+var ajax = function( type, url, param ){
+    param = param || {};
+    
+    // 每个ajax请求里的param都会包含Token参数
+    Param.Token = getToken(); 
+}; 
+
+//思路2
+var ajax= function( type, url, param ){
+    // ajax函数的参数很纯洁：不存在Token参数
+    console.log(param); 
+    
+    // 发送 ajax 请求的代码略
+};
+
+// 使用前置通知before，动态给ajax函数装饰上（也可以说添加上）Token参数
+ajax = ajax.before(function( type, url, param ){
+    param.Token = getToken();
+});
+
+ajax( 'get', 'http:// xxx.com/userinfo', { name: 'sven' } ); 
+
+// 最后输出 {name: "sven", Token: "Token"} 
+```
+
+### 5.4 插件式的表单验证
+
+* 在表单数据提交给后台之前，常常要做一些校验，比如登录的时候需要验证用户名和密码是否为空。
+
+**思路1：一个formSubmit函数搞掂表单验证和发送数据**
+
+```html
+<html>
+<body>
+    用户名：<input id="username" type="text"/> 
+    密码： <input id="password" type="password"/>
+    <input id="submitBtn" type="button" value="提交">
+</body>
+<script>
+    // 获取元素
+    var username = document.getElementById( 'username' ),
+        password = document.getElementById( 'password' ),
+        submitBtn = document.getElementById( 'submitBtn' );
+    
+    // 表单验证
+    var formSubmit = function(){
+        
+        if ( username.value === '' ){
+            return alert ( '用户名不能为空' );
+        }
+        
+        if ( password.value === '' ){
+            return alert ( '密码不能为空' );
+        }
+        
+        // 发送给服务器的数据
+        var param = {
+            username: username.value,
+            password: password.value
+        };
+        
+        // ajax
+        ajax( 'http:// xxx.com/login', param ); 
+    };
+    
+    // 点击事件
+    submitBtn.onclick = function(){
+        formSubmit();
+    };
+</script>
+</html> 
+```
+
+* `formSubmit` 函数在此处承担了两个职责：
+    * 提交 `ajax` 请求
+    * 验证用户输入的合法性。
+* 以上代码存在很大缺点：
+    * 函数臃肿，职责混乱
+    * 没有任何可复用性。
+    
+**思路2：部分分离校验输入和提交 `ajax` 请求的代码**
+
+* 校验输入的逻辑放到 `validata` 函数中，并且约定当 `validata` 函数返回 `false` 的时候，表示校验未通过。
+
+```js
+// 校验表单的函数
+var validata = function(){
+    if ( username.value === '' ){
+        alert ( '用户名不能为空' );
+        return false;
+    }
+    
+    if ( password.value === '' ){
+        alert ( '密码不能为空' );
+        return false;
+    }
+}
+
+// 提交表单数据的函数
+var formSubmit = function(){
+    // 校验未通过，直接return，不提交表单数据
+    if ( validata() === false ){ 
+        return;
+    }
+    
+    var param = { 
+        username: username.value,
+        password: password.value
+    }
+    
+    ajax( 'http:// xxx.com/login', param );
+}
+
+submitBtn.onclick = function(){
+    formSubmit();
+} 
+```
+
+* 思路2存在的问题：
+    * 貌似`validata` 和 `formSubmit`好像已经分离开来，然而`formSubmit`函数的内部还要计算 `validata` 函数的返回值，因为返回值的结果表明了是否通过校验。
+      那也说明`validata` 和 `formSubmit`还没有完全分离开来
+
+**思路3：完全分离validata 和 formSubmit**
+
+* 关键点：改写 `Function.prototype.before`，如果 `beforefn` 的执行结果返回 `false`，表示不再执行后面的原函数。
+
+```js
+// 进化版的前置通知 --- before
+Function.prototype.before = function( beforefn ){
+    var __self = this;
+    
+    return function(){
+        if ( beforefn.apply( this, arguments ) === false ){
+            // beforefn 返回 false 的情况直接 return，不再执行后面的原函数
+            return;
+        }
+        
+        return __self.apply( this, arguments );
+    }
+}
+
+var validata = function(){
+    if ( username.value === '' ){
+        alert ( '用户名不能为空' );
+        return false;
+    }
+    
+    if ( password.value === '' ){
+        alert ( '密码不能为空' );
+        return false;
+    }
+}
+var formSubmit = function(){
+    // 已经不存在于validata函数有关的任何计算代码
+    
+    var param = {
+        username: username.value,
+        password: password.value
+    }
+    
+    ajax( 'http:// xxx.com/login', param );
+}
+
+// 使用修改后的前置通知--before，实现validata 与 formSubmit的完全分离，它俩不再有任何耦合的关系
+formSubmit = formSubmit.before( validata );
+
+submitBtn.onclick = function(){
+    formSubmit();
+} 
+```
+
+* 注意：为函数通过 `Function.prototype.before` 或者 `Function.prototype.after` 被装饰之后
+   1. 返回的实际上是一个新的函数，如果在原函数上保存了一些属性，那么这些属性会丢失。
+   2. 也叠加了函数的作用域，如果装饰的链条过长，性能上也会受到一些影响。 
+* 实例
+
+```js
+var func = function(){
+    alert( 1 );
+}
+
+func.a = 'a';
+
+func = func.after( function(){
+ alert( 2 );
+});
+
+alert ( func.a ); // 输出：undefined 
+```
+     
