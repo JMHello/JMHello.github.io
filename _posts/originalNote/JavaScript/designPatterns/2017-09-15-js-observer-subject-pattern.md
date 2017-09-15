@@ -36,7 +36,8 @@ tag: javascript
     * 例：
         * 我们可以订阅 `ajax` 请求的 `error`、`succ` 等事件。
         * 如果想在动画的每一帧完成之后做一些事情，那我们可以订阅一个事件，然后在动画的每一帧完成之后发布这个事件。
-    * 在异步编程中使用发布—订阅模式，我们就无需过多关注对象在异步运行期间的内部状态，而只需要订阅感兴趣的事件发生点。
+        
+> 在异步编程中使用发布—订阅模式，我们就无需过多关注对象在异步运行期间的内部状态，而只需要订阅感兴趣的事件发生点。
 
 * 发布—订阅模式可以**取代对象之间硬编码的通知机制**，一个对象不用再显式地调用另外一个对象的某个接口。
     * 发布—订阅模式让两个对象**松耦合**地联系在一起，虽然不太清楚彼此的细节，但这不影响它们之间相互通信。
@@ -165,202 +166,147 @@ Event.publish('otherTopic'); // 输出 'otherTopic'
         "pageSize": 2,
         "recordCount": 5,
         "resultList": []
-      }
+       }
     }
     ```
-    2. 我们是在**需要更新数据的函数里**订阅消息的。
-    3. 只要数据需要变化的地方我们就需要发布消息。包括如下：
-        * 获取首页数据
-        * 获取尾页数据
-        * 获取当前页数据
-        * 获取上一页数据
-        * 获取下一页的数据
-        * 更改一页显示多少条数据
-
-* 完整的分页插件代码如下（部分功能的代码没有显示，避免代码太长，这里主要为大家展示的是如何在分页插件中使用发布-订阅模式）：
-
-```js
-
-/**
-* @param {Object} outer 分页插件对象
-* @param {Object} data 分页插件的配置数据
-*/
-var Pagination=function (outer,data) {
-        this.outer = outer;
-        this.pageList = data.pageList || [10,20,30]; // 每页显示的数据
-        this.pageSize = data.pageSize || 0; // 一页显示的数据——请求时的字段
-        this.pageCount = data.pageCount || 1; // 页面总数
-        this.beginPageIndex = data.beginPageIndex || 1; // 首页
-        this.currentPage = data.currentPage || 1; // 当前页
-        this.endPageIndex = data.endPageIndex || 1; // 尾页
-        this.recordCount = data.recordCount || 0; // 数据总数
-        this.recordList = data.recordList || []; // 数据
-        this.beginPageBtn = null; // 首页按钮
-        this.endPageBtn = null; // 尾页按钮
-        this.lastIndexBtn = null; // 上一页按钮
-        this.nextIndexPage = null; // 下一页按钮
-        this.currentPageNum = null; // 当前页
-        this.totalRecords = null; // 总数
-        this.pageSizeChoice = null; // 每页显示数据的选择
-        this.pageCurrentChoiceBtn = null; // 选择当前页的按钮
-        this.pageSizeBtn = null; // 选择每页展示数据数的按钮
-        
-        this.cE = new JM.component.CustormEvent(); // 订阅-分布模式的对象
-};
-
-//获取input里的值
-var getIndex = function (eles,input,callback) {
-    for (var i = 0,len = eles.length; i < len; i++) {
-        eles[i].onclick = function () {
-            input.value = this.innerHTML;
-            callback && callback.call(this, input.value);
-        }
-    }
-};
-
-var fn = Pagination.prototype;
-
-//创建分页插件的基本架构
-fn.createStructure = function () {
-    // 获取元素省略
-};
-
-//创建当前页的下拉框的架构
-fn.createCurrentPageList = function () {
-   // ...
-};
-
-// 创建每页展示数据数的下拉框的架构
-fn.createPageList = function () {
-   // ...
-};
-
-// 获取当前页
-fn.getCurrentPage = function () {
-    var _self = this;
-    
-    this.createCurrentPageList();
-    
-    JM.addHandler(this.pageCurrentChoiceBtn,'click',function (e) {
-        // 代码省略
-        getIndex(sm,this,function (pN) {
-            // 代码省略
+    2. 我们是在**需要更新数据的函数里，即：需要对数据进行处理的函数里**订阅消息的。
+    ```js
+    //更新数据——也是对外获取数据的接口
+    fn.updateMsg = function (fn) {
+       var self = this;
+       var msg = (function () {
+           var _self = self;
            
-            _self.cE.publish('updateMsg');// 发布消息
-        });
-    },false);
-};
-
-//获取每页显示数据数
-fn.getPageList = function () {
-    var _self = this;
-    
-    this.createPageList();
-    
-    JM.addHandler(this.pageSizeBtn,'click',function (e) {
-        // 代码省略
-        getIndex(sm,this,function (size) {
-            // 代码省略
-            
-            _self.cE.publish('updateMsg'); // 发布消息
-        });
-    },false);
-};
-
-//获取上一页的数据
-fn.getPrev = function () {
-    var _self = this;
-    JM.addHandler(this.lastIndexBtn,'click',function (e) {
-        // 代码省略
-        
-        _self.cE.publish('updateMsg');// 发布消息
-    },false);
-};
-
-//获取下一页的数据
-fn.getNext = function () {
-    var _self = this;
-    JM.addHandler(this.nextIndexPage,'click',function (e) {
-        // 代码省略
-        
-        _self.cE.publish('updateMsg'); // 发布消息
-    },false);
-};
-
-//获取首页的数据
-fn.getFirst = function () {
-    var _self = this;
-    JM.addHandler(this.beginPageBtn,'click',function (e) {
-        // 代码省略
-        
-        _self.cE.publish('updateMsg');//发布消息
-    },false);
-};
-
-//获取尾页数据
-fn.getEnd = function () {
-    var _self = this;
-    
-    JM.addHandler(this.endPageBtn,'click',function (e) {
-        // 代码省略
-        _self.cE.publish('updateMsg');//发布消息
-    },false);
-};
-
-//计算数据
-fn.change = function () {
-    var _len = this.recordCount;
-    if (_len) {
-        this.endPageIndex = Math.ceil(_len/this.pageSize);
-    } else {
-        this.endPageIndex = 1;
-    }
-    
-    this.getCurrentPage();
-};
-
-//更新数据——也是对外获取数据的接口
-fn.updateMsg = function (fn) {
-   var self = this;
-   var msg = (function () {
-       var _self = self;
+           return function () {
+               fn.call(_self, function (result) {
+                   _self.pageList = result.pageList|| _self.pageList;
+                   _self.pageSize = result.pageSize|| _self.pageSize;
+                   _self.pageCount = result.pageCount|| _self.pageCount;
+                   _self.beginPageIndex = result.beginPageIndex|| _self.beginPageIndex;
+                   _self.currentPage = result.currentPage|| _self.currentPage;
+                   _self.endPageIndex = result.endPageIndex|| _self.endPageIndex;
+                   _self.recordCount = result.recordCount|| _self.recordCount;
+                   _self.recordList = result.resultList|| _self.recordList;
+                   _self.totalRecords.innerHTML = _self.recordCount;
+                   
+                   _self.change();
+               },{
+                   'currentPage': parseInt(_self.pageCurrentChoiceBtn.value),
+                   'pageSize': parseInt(_self.pageSizeBtn.value)
+               });
+           };
+       })();
        
-       return function () {
-           fn.call(_self, function (result) {
-               _self.pageList = result.pageList|| _self.pageList;
-               _self.pageSize = result.pageSize|| _self.pageSize;
-               _self.pageCount = result.pageCount|| _self.pageCount;
-               _self.beginPageIndex = result.beginPageIndex|| _self.beginPageIndex;
-               _self.currentPage = result.currentPage|| _self.currentPage;
-               _self.endPageIndex = result.endPageIndex|| _self.endPageIndex;
-               _self.recordCount = result.recordCount|| _self.recordCount;
-               _self.recordList = result.resultList|| _self.recordList;
-               _self.totalRecords.innerHTML = _self.recordCount;
-               
-               _self.change();
-           },{
-               'currentPage': parseInt(_self.pageCurrentChoiceBtn.value),
-               'pageSize': parseInt(_self.pageSizeBtn.value)
-           });
-       };
-   })();
-   
-   this.cE.subscribe('updateMsg',msg); // 订阅消息
-};
+       this.cE.subscribe('updateMsg',msg); // 订阅消息
+    };
+    ```
+    3. **只要数据需要变化的地方我们就需要发布消息**。包括如下：
+        * 获取首页数据
+        ```js
+        //获取首页的数据
+        fn.getFirst = function () {
+            var _self = this;
+            JM.addHandler(this.beginPageBtn,'click',function (e) {
+                // 代码省略
+                
+                _self.cE.publish('updateMsg');//发布消息
+            },false);
+        };
+        ```
+        
+        * 获取尾页数据
+         ```js
+         //获取尾页数据
+         fn.getEnd = function () {
+             var _self = this;
+             
+             JM.addHandler(this.endPageBtn,'click',function (e) {
+                 // 代码省略
+                 _self.cE.publish('updateMsg');//发布消息
+             },false);
+         };       
+         ```
+         
+        * 获取当前页数据
+        ```js
+        // 获取当前页
+        fn.getCurrentPage = function () {
+            var _self = this;
+            
+            this.createCurrentPageList();
+            
+            JM.addHandler(this.pageCurrentChoiceBtn,'click',function (e) {
+                // 代码省略
+                getIndex(sm,this,function (pN) {
+                    // 代码省略
+                   
+                    _self.cE.publish('updateMsg');// 发布消息
+                });
+            },false);
+        };
+        ```
+        
+        * 获取上一页数据
+         ```js
+           //获取上一页的数据
+           fn.getPrev = function () {
+               var _self = this;
+               JM.addHandler(this.lastIndexBtn,'click',function (e) {
+                   // 代码省略
+                   
+                   _self.cE.publish('updateMsg');// 发布消息
+               },false);
+           }; 
+         ```
+         
+        * 获取下一页的数据
+        ```js
+        //获取下一页的数据
+        fn.getNext = function () {
+            var _self = this;
+            JM.addHandler(this.nextIndexPage,'click',function (e) {
+                // 代码省略
+                
+                _self.cE.publish('updateMsg'); // 发布消息
+            },false);
+        };
+        ```
+        
+        * 更改一页显示多少条数据
+        ```js
+        //获取每页显示数据数
+        fn.getPageList = function () {
+            var _self = this;
+            
+            this.createPageList();
+            
+            JM.addHandler(this.pageSizeBtn,'click',function (e) {
+                // 代码省略
+                getIndex(sm,this,function (size) {
+                    // 代码省略
+                    
+                    _self.cE.publish('updateMsg'); // 发布消息
+                });
+            },false);
+        };
+        ```
 
-//分页插件初始化
-fn.init=function () {
-   this.createStructure();
-   this.getCurrentPage();
-   this.getPageList();
-   this.getPrev();
-   this.getNext();
-   this.getFirst();
-   this.getEnd();
-   
-   this.cE.publish('updateMsg'); // 发布消息
-};
-```
+         * 分页插件初始化
+         ```js
+         //分页插件初始化
+         fn.init=function () {
+            this.createStructure();
+            this.getCurrentPage();
+            this.getPageList();
+            this.getPrev();
+            this.getNext();
+            this.getFirst();
+            this.getEnd();
+            
+            this.cE.publish('updateMsg'); // 发布消息
+         };
+         ```
+
 
 ## 六、总结
 
