@@ -31,7 +31,7 @@ tag: javascript
     * 早期的开发中，`MVC`模式主要用于服务端，而前端主要负责`View`视图。
     * 随着`BackboneJs`、`EmberJs`等框架的出现，前端也逐渐兴起了`MVC`模式
 
-接下来讲一下`MVC`：
+### 1.1 MVC的简介
 
 * `MVC`：
     * `M`：模型层 -- `Model`，
@@ -48,11 +48,62 @@ tag: javascript
             * 例：初始化模型层、视图层，通过控制层建立起视图层和模型层之间的联系
 
 
+### 1.2 MVC模式整个过程的简单描述
+
+* 当用户与**视图**交互的时候，会触发一些用户的事件，这些事件会被**控制器**监听。
+
+* **控制器**会根据不同的用户事件调用**模块层**的一些相应的接口，通过这个接口的调用，修改**模块层**的数据，导致**模块层**数据的改变。
+
+* 而**视图**会根据**观察者模式**去观察模块的数据，当模块的数据进行改变的时候，则会通过**事件通知**的方式去通知**视图**。
+
+* 最后，视图根据新的数据来改变自己的状态，即：改变我们的用户界面
+
+## 二、实例
+
+### 2.1 简单的增减价钱牌实例
+
+![relationship-map]({{ '/styles/images/javascript/designPattern/designPattern-04.png' | prepend: site.baseurl }})
+
+* html
+
+```html
+<div class="calculator">
+    <div class="num">0元</div>
+    <button type="button" class="js-add">+</button>
+    <button type="button" class="js-sub">-</button>
+</div>
+```
+
+* css
+
+```css
+  .calculator {
+            width: 300px;
+        }
+        .calculator .num {
+            text-align: center;
+            font-size: 80px;
+            background: yellow;
+        }
+        .calculator button {
+            width: 50%;
+            font: bold 24px/38px '';
+            float: left;
+        }
+```
+
+* js
+   
+* `Model`
+
+```js
+class Model {
+    constructor () {
+        
+    }
+}
+```
 
 
-当用户与视图交互的时候，会触发一些用户的事件，这些事件会被控制器监听，控制器会根据不同的用户事件调用模块层的一些相应的接口，通过
-这个接口的调用，修改模块层的数据，导致模块层数据的改变。
 
-而视图会根据**观察者模式**去观察模块的数据，当模块的数据进行改变的时候，则会通过事件通知的方式去通知视图。
-最后，视图根据新的数据来改变自己的状态，即：改变我们的用户界面
     
