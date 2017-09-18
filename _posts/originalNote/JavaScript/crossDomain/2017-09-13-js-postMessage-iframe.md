@@ -88,6 +88,7 @@ EventUtil.addHandler(window, "message", function(event){
 **`http://127.0.0.1:3001/a.html`**
 
 * `html`
+
 ```html
 <!--  
  1. a.html`里引入一个iframe，其src为：http://127.0.0.1:3002/b.html
@@ -96,6 +97,7 @@ EventUtil.addHandler(window, "message", function(event){
 ```
 
 * `js`
+
 ```js
 // 2. 获取iframe
 var iframeWindow = document.getElementById("myframe").contentWindow;
@@ -107,6 +109,7 @@ iframeWindow.postMessage("A secret", "http://127.0.0.1:3002/b.html");
 **`http://127.0.0.1:3002/b.html`**
 
 * `js`
+
 ```js
 var onmessage = function (event) {  
     var data = event.data;//消息  
