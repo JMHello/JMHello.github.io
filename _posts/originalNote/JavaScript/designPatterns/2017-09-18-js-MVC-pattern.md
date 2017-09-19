@@ -58,9 +58,9 @@ tag: javascript
 
 * 最后，视图根据新的数据来改变自己的状态，即：改变我们的用户界面
 
-## 二、实例
+## 二、实例1：简单的增减价钱牌实例
 
-### 2.1 简单的增减价钱牌实例
+### 2.1 代码展示
 
 ![relationship-map]({{ '/styles/images/javascript/designPattern/designPattern-04.png' | prepend: site.baseurl }})
 
@@ -99,11 +99,146 @@ tag: javascript
 ```js
 class Model {
     constructor () {
-        
+        this.val = 0;
+        this.views = [];
+    }
+    
+    add (num) {
+        if (this.val <= 100) {
+           this.val += num; 
+        }
+    }
+    
+    sub (num) {
+        if (this.val > 0) {
+            this.val -= num;
+        }
+    }
+    getVal () {
+        return this.val;
+    }
+    register (view) {
+        this.views.push(view);
+    }
+    
+    notify () {
+        this.views.forEach((view) => {
+            view.render(this);
+        })
+    }
+}
+```
+
+* View
+
+```js
+class View {
+    constructor (controller) {
+        let doc = document;
+
+        this.addBtn = doc.getElementsByClassName('js-add')[0];
+        this.subBtn = doc.getElementsByClassName('js-sub')[0];
+        this.num = doc.getElementsByClassName('num')[0];
+
+        this.controller = controller;
+    }
+
+    addEvent (controller) {
+        // 使用 bind 绑定this，经过修正后，this = controller，而不是按钮
+        this.addBtn.onclick = this.controller.increase.bind(controller);
+        this.subBtn.onclick = this.controller.descrease.bind(controller);
+    }
+
+    render (model) {
+        this.num.innerHTML = `${model.getVal()}元`;
     }
 }
 ```
 
 
+* Controller
 
+```js
+class Controller {
+    constructor () {
+        this.view = null;
+        this.model = null;
+    }
+
+    init () {
+        // 初始化Model 和 view
+        this.model = new Model();
+        this.view = new View(this);
+
+        // 事件绑定
+        this.view.addEvent(this.model);
     
+        // View观察注册Model，当Model更新就会去通知View
+        this.model.register(this.view);
+        this.model.notify();
+    }
+
+    increase () {
+        // 此时 this 指代的是 controller
+        this.model.add(1);
+        this.model.notify();
+    }
+
+    descrease () {
+        // 此时 this 指代的是 controller
+        this.model.sub(1);
+        this.model.notify();
+    }
+}
+```
+
+* 调用代码
+
+```js
+var controller= new Controller();
+
+controller.init();
+```
+
+### 2.2 遇到的问题
+
+* `this`的指向出了问题，代码如下：
+
+```js
+class View {
+    constructor (controller) {
+        //...
+    }
+    // 一开始addEvent是这样写的
+    addEvent () {
+        this.addBtn.onclick = this.controller.increase;
+        this.subBtn.onclick = this.controller.descrease;
+    }
+}
+
+class Controller {
+    // ...
+    init () {
+        // ...
+        this.view.addEvent(this.model);
+        // ...
+    }
+
+    increase () {
+        // 此时 this 指代的是按钮addBtn
+        // this.model = undefined
+        // 因此会报错
+        this.model.add(1);
+        this.model.notify();
+    }
+    // ...
+}
+```
+
+* 我忽略了一句很重要的话：**如果将类中定义方法提取出来单独使用，`this`会指向该方法运行时所在的环境。**
+    * 这就意味着 `Controller`类的`increase`拿到了`View`类的`addEvent`里使用，由于`increase`是绑定在按钮的`click`事件上，
+        即：`increase`是用在了`addBtn`这个对象上，因此，`increase`里的`this`的指向指代的是`addBtn`这个对象，所以，
+        `this.model = undefined`。
+        
+    * 解决方法：
+        * `bind`：更改函数内`this`的指向，详情请看上面的代码。
