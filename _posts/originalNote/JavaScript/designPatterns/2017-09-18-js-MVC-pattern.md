@@ -103,24 +103,31 @@ class Model {
         this.views = [];
     }
     
+    // 增加
     add (num) {
         if (this.val <= 100) {
            this.val += num; 
         }
     }
     
+    // 减少
     sub (num) {
         if (this.val > 0) {
             this.val -= num;
         }
     }
+    
+    // 获取值
     getVal () {
         return this.val;
     }
+    
+    // 注册
     register (view) {
         this.views.push(view);
     }
     
+    // 通知
     notify () {
         this.views.forEach((view) => {
             view.render(this);
@@ -133,22 +140,22 @@ class Model {
 
 ```js
 class View {
-    constructor (controller) {
+    constructor () {
         let doc = document;
 
         this.addBtn = doc.getElementsByClassName('js-add')[0];
         this.subBtn = doc.getElementsByClassName('js-sub')[0];
         this.num = doc.getElementsByClassName('num')[0];
-
-        this.controller = controller;
     }
-
+    
+    // 事件绑定 
     addEvent (controller) {
         // 使用 bind 绑定this，经过修正后，this = controller，而不是按钮
         this.addBtn.onclick = this.controller.increase.bind(controller);
         this.subBtn.onclick = this.controller.descrease.bind(controller);
     }
 
+    // 渲染
     render (model) {
         this.num.innerHTML = `${model.getVal()}元`;
     }
