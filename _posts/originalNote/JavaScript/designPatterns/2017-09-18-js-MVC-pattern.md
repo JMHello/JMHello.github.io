@@ -3,7 +3,7 @@ layout: post
 title: "javasript - 设计模式 - MVC模式"
 data: 2017-09-18 12:27:00 +0800
 categories: 原创
-tag: javascript
+tag: js-设计模式
 ---
 * content
 {:toc}
