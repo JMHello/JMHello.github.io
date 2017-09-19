@@ -61,6 +61,8 @@ document.body.click(); // 模拟用户点击
 
 ## 四、发布-订阅模式通用实现
 
+* `es5`
+
 ```js
 var Event = function() {
     this.clientList = {};
@@ -82,7 +84,7 @@ Event.prototype = {
     publish: function() {
         var key = Array.prototype.shift.call(arguments), // 取出消息类型
             fns = this.clientList[key], // 取出该消息对应的回调函数集合
-            len = fn.length ;   
+            len = fns.length ;   
         
         // 如果没有订阅该消息，则返回
         if (!fns || len === 0 ) {
@@ -110,7 +112,7 @@ Event.prototype = {
             fns && (len = 0); 
         } else {
             // 反向遍历订阅的回调函数列表
-            for (var l = fns.length; i > 0; i--) {
+            for (var l = fns.length; l > 0; l--) {
                 var _fn = fns[l];
                 if (_fn == fn) {
                     fns.splice(l, 1); // 删除订阅者的回调函数
@@ -120,6 +122,59 @@ Event.prototype = {
     }
 }
 
+```
+
+* `es6` 
+
+```js
+class EventCustomer {
+    constructor () {
+        this.clientList = {};
+    }
+    
+    // 订阅消息
+    subscribe (key, fn) {
+        if (!this.clientList[key]) {
+           this.clientList[key] = [];
+        }
+
+        this.clientList[key].push(fn);
+    }
+
+    // 发布消息
+    publish (...args) {
+        let key = Array.prototype.shift.call(arguments),
+            fns = this.clientList[key],
+            len = fns.length;
+
+        if (!fns || len === 0) {
+            return false;
+        }
+
+        fns.forEach(function (fn) {
+            // 等价于 fn.apply(this, arguments);
+            fn(...args);
+        })
+    }
+
+    // 删除消息
+    remove (key, fn) {
+        let fns = this.clientList[key];
+
+        if (!fns) {
+            return false;
+        }
+
+        if (!fn) {
+            fns && (fns.length = 0);
+        } else {
+            for (let len = fns.length, _fn; len--;) {
+                _fn = fns[len];
+                _fn == fn && fns.splice(len, 1);
+            }
+        }
+    }
+}
 ```
 
 ## 五、发布-订阅模式的实例
