@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/studynote/ES6/2017-09-20-ES6-Class-Extend.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/ES6/2017-09-19-ES6-Module.md" afterPath="$PROJECT_DIR$/_posts/studynote/ES6/2017-09-19-ES6-Module.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/ES6/2017-09-19-ES6-Object.md" afterPath="$PROJECT_DIR$/_posts/studynote/ES6/2017-09-19-ES6-Object.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/javascript/2017-09-19-js-Object.md" afterPath="$PROJECT_DIR$/_posts/studynote/javascript/2017-09-19-js-Object.md" />
-    </list>
+    <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="" />
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -693,7 +687,7 @@
       <workItem from="1505697721155" duration="12600000" />
       <workItem from="1505781098999" duration="18552000" />
       <workItem from="1505832663577" duration="1255000" />
-      <workItem from="1505867380501" duration="13146000" />
+      <workItem from="1505867380501" duration="13277000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -706,7 +700,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315079000" />
+    <option name="totallyTimeSpent" value="315210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
