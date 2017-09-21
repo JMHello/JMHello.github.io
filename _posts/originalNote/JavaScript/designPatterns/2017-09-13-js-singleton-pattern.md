@@ -56,6 +56,7 @@ alert ( a === b ); // true
 
 * `CreateDiv` 单例类：负责在页面中创建唯一的 `div` 节点
 
+
 ```js
 var CreateDiv = (function(){
     var instance;
