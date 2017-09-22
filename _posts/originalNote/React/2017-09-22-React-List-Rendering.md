@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "React - 列表渲染"
-data: 2017-09-22 22:27:00 +0800
+data: 2017-09-22 12:27:00 +0800
 categories: 原创
 tag: React
 ---
@@ -87,7 +87,7 @@ ReactDom.render(
 
 ![relationship-map]({{ '/styles/images/react/react-06.png' | prepend: site.baseurl }})
 
-### 1.3 key属性
+### 1.3 key属性（重点）
 
 ```js
 fruits.map((item, index) => {
