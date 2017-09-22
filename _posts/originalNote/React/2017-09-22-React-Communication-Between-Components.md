@@ -1,32 +1,35 @@
 ---
 layout: post
-title: "React - state"
-data: 2017-09-22 15:27:00 +0800
+title: "React - 组件间通信"
+data: 2017-09-22 16:27:00 +0800
 categories: 原创
 tag: React
 ---
 * content
 {:toc}
 
+
+下面将要讲到的**搜索过滤**的例子需要同时用到两个组件：`Input`组件、`List`组件，此时就不是单一一个组件间的修改状态`this.state`那么简单了，
+
+就需要实现不同组件之间的通信！！！
+
 <!-- more -->
 
-## 一、state
+## 一、组件间通信
 
-### 1.1 state简介
+### 1.1 组件间通信方法
 
-> * `React` 将组件看成是一个状态机，一开始有一个初始状态，然后用户互动，导致状态变化，从而触发重新渲染 `UI`。
-> * `getInitialState`：`getInitialState` 方法用于定义初始状态，即：为一个对象，这个对象可以通过 `this.state` 属性读取。
-> * `this.setState`：当用户点击组件，导致状态变化，`this.setState` 方法就修改状态值，每次修改以后，自动调用 `this.render` 方法，再次渲染组件。
+* 1.最原始的传递数据的方法：找一个共同都可以访问的变量（这里指全局变量），里面存储的就是要传递的数据。然而这种方法也太不安全了！！
 
-### 1.2 实例 - 是否点击item的状态改变
+* 2.全局事件 --- 观察者模式，如下图所示
 
-* 效果图：未点击item前
+![relationship-map]({{ '/styles/images/react/react-10.png' | prepend: site.baseurl }})
 
-![relationship-map]({{ '/styles/images/react/react-08.png' | prepend: site.baseurl }})
+* 3.`React`里的通信方法：`Input`组件先通知父组件`App`，父组件`App`再通知子组件`List`：数据有变化！！
+    * 简单理解：我们需要通过父组件来作为`搭线人`，获取孩子们想要互相交流的信息，并一一告知对应的孩子。
 
-* 效果图：点击item
 
-![relationship-map]({{ '/styles/images/react/react-09.png' | prepend: site.baseurl }})
+### 1.2 实例 -- 搜索过滤
 
 * Item/index.jsx
 
