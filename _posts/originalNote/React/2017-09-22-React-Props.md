@@ -98,3 +98,4 @@ export default List;
 ```
 
 > `tips`：只能是父组件向子组件传递数据哟！！！
+> `props`只能读取不能修改！！！！
