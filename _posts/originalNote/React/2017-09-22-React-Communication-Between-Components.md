@@ -25,68 +25,131 @@ tag: React
 
 ![relationship-map]({{ '/styles/images/react/react-10.png' | prepend: site.baseurl }})
 
-* 3.`React`里的通信方法：`Input`组件先通知父组件`App`，父组件`App`再通知子组件`List`：数据有变化！！
+* 3.`React`里的通信方法：`Input`组件先通知父组件`App`，父组件`App`再通知子组件`List`：数据有变化！！可看下图。
     * 简单理解：我们需要通过父组件来作为`搭线人`，获取孩子们想要互相交流的信息，并一一告知对应的孩子。
+    * 这里主要用到了 **调用回调** 和 **参数变化** 来实现组件间通信
 
+![relationship-map]({{ '/styles/images/react/react-11.png' | prepend: site.baseurl }})
 
 ### 1.2 实例 -- 搜索过滤
 
-* Item/index.jsx
+* 父组件：App/index.js
 
 ```js
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 import './style.css';
 
-class Item extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      isSelected: false
+import List from './list';
+import Input from './input';
+import fruits from './fruits';
+
+class App extends Component {
+
+	constructor() {
+		super();
+		this.state = {  // 新增：this.state
+			keyword: ''
+		}
+	}
+
+	onChange(value) { // 新增：onChange事件
+		this.setState({
+			keyword: value
+		});
+	}
+
+	render() {
+        const keyword = this.state.keyword;
+		return (
+			<div className="app">
+				<h1>Find My Fruit</h1>
+				<Input onChange={this.onChange.bind(this)} />  // 新添加事件this.onChange
+				<List keyword={keyword}/> // 新添加属性keyword
+			</div>
+		)
+	}
+}
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
+```
+
+* 子组件 Input/index.jsx
+
+```js
+import React, { Component } from 'react';
+
+import './index.css';
+
+class Input extends Component {
+
+    handleKeyUp(event) {
+        const value = event.target.value;
+        this.props.onChange(value); // 新添加代码
     }
-  }
 
-  clickHandler () {
-    this.setState({
-      isSelected: !this.state.isSelected
-    });
-  }
+    render() {
+        return (
+            <div className="input-container">
+                <input
+                    onKeyUp={this.handleKeyUp.bind(this)}
+                />
+            </div>
+        )
+    }
 
+}
+
+export default Input;
+
+```
+
+* 子组件 List/index.js
+
+```js
+/**
+ * Created by jm on 2017/9/22.
+ */
+import React, {Component} from 'react';
+
+import Item from '../Item';
+
+import fruits from '../fruits';
+
+import './style.css';
+
+class List extends Component {
   render () {
-    const item = this.props.item, // 数据
-          isSelected = this.state.isSelected, // 当前是否被选择的flag值
-          selectedClass = isSelected ? ' item-selected' : ''; // 是否被选中后的类名
+    const keyword = this.props.keyword,  // 新添加代码：输入框输入的值
+          fruitShow = fruits.filter((item) => { // 过滤数组
+            return item.includes(keyword);
+          });
+
     return (
-      <li
-        className={'item' + selectedClass}
-        onClick={this.clickHandler.bind(this)}
-      >
-        {item}
-      </li>
+      <ul className="list">
+        {
+          fruitShow.map((item, index) => { // 不再使用fruits数组，代替的是过滤后的数组fruitShow
+            return (
+              <Item key={index} item={item}/>
+            )
+          })
+        }
+      </ul>
     )
   }
 }
 
-export default Item;
-
+export default List;
 ```
 
-* `this.state.isSelected`默认是`false`，即：用户还没有点击任何一项
+> 补充：`App`组件中的`onChange`事件不想`js`中的`onchange`事件，在这个`<Input>`中是不会触发的，`onChange`只是代表一个属性，然后通过`this.props.onChange`传递给它的子组件`Input`，
+> 由子组件`Input`中的输入框`input`触发。
 
-* `clickHandler()`函数里利用`this.setState()`方法修改状态值。如果`clickHandler`函数里的代码修改如下，是完全不起作用的。我们只能使用`this.setState()`去修改状态.。
+## 二、总结
 
-```js
-clickHandler () {
-   this.state.isSelected = !this.state.isSelected
-}
-```
-
-* 当用户点击某一个`item`的时候，就会触发`clickHandler`函数，并自动对`this.state.isSelected`取反，且修改相应的`className`值。
-
-> 补充：`this.state`只能在`constuctor`函数里才有用！！
-
-### 1.3 props 和 state 的区别
-
-* `this.props` 和 `this.state` 都用于描述组件的特性，但他们有以下区别：
-    * `this.props`：表示那些一旦定义，就不再改变的特性。【不可变属性：只可读不可修改】
-    * `this.state`：是会随着用户互动而产生变化的特性。【可变属性：可修改】
+1. `React`的组件中的通信必须是基于**父组件**，子组件间是无法通信的。
+2. 利用 `this.props` 和 `this.state`的辅助，就可以基于父组件的基础上完美实现组件间通信。
