@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "React - 组件化"
-data: 2017-09-21 22:27:00 +0800
+title: "React - 事件绑定"
+data: 2017-09-22 10:27:00 +0800
 categories: 原创
 tag: React
 ---
@@ -71,7 +71,7 @@ class App extends Component {
             </div>
         );
     }
-
+}
 // ...
 ```
 

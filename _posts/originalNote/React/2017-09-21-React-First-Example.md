@@ -2,7 +2,7 @@
 layout: post
 title: "React - 第一个小实例"
 data: 2017-09-21 12:27:00 +0800
-categories: 学习笔记
+categories: 原创
 tag: React
 ---
 * content
