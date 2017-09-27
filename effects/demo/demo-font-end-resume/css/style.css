@@ -1,0 +1,251 @@
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.line {
+    height: 1px;
+    display: block;
+    border-bottom: 1px solid #dddfde;
+}
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* 简历 - 头部 */
+.header {
+    padding: 16px 0;
+    text-align: center;
+    color: #fdfbfe;
+    background: linear-gradient(to bottom, #212a31 0%, #2e3d44 100%);
+}
+
+.header .header-title {
+    font: 40px/1.5 '';
+}
+.header .header-info {
+    font-size: 14px;
+}
+.content {
+    display: flex;
+}
+/* 简历 - 左边 */
+.left-content {
+    width: 30%;
+    background: #222222;
+}
+.left-content .avatar {
+    padding: 40px 0;
+    text-align: center;
+}
+.avatar img {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 1px rgba(255, 255, 255, 1);
+}
+.avatar img:hover {
+    animation: ease glowing 0.8s infinite;
+}
+@keyframes glowing {
+    to  {
+        box-shadow: 1px 4px 22px 5px rgba(255, 255, 255, 1);
+    }
+}
+
+.section-block-l .section-hd {
+    height: 40px;
+}
+.section-block-l .section-hd .hd-tt{
+    padding-left: 20px;
+    font: bold 20px/2.4 '';
+    color: white;
+    background: rgba(0, 0, 0, .4);
+    position: relative;
+}
+.section-block-l .section-hd .hd-tt:after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: orangered;
+}
+.section-block-l .section-list {
+   padding-top: 10px;
+   padding-left: 20px;
+}
+.section-block-l .section-list .list-item {
+    font: 14px/3 '';
+    color: #c1bfc2;
+}
+
+.list-item .list-left {
+    display: inline-block;
+}
+.section-block-l .section-list .list-link {
+    color: #c1bfc2;
+}
+.section-block-l .section-list .list-link:hover {
+    color: crimson;
+}
+.section-block-l .section-content {
+    padding: 20px;
+    color: #c1bfc2;
+}
+.section-block-l .skill-item {
+    padding: 20px 16px;
+}
+.skill-item .item-hd {
+    margin-bottom: 10px;
+}
+.skill-item .item-hd .item-tt {
+    color: white;
+    float: left;
+}
+.skill-item .item-hd .item-grasp {
+    padding: 2px 4px;
+    float: right;
+    color: white;
+    border-radius: 5px;
+    background: dodgerblue;
+}
+.skill-item .item-progress,
+.item-progress .progress-running {
+    height: 6px;
+    border-radius: 10px;
+}
+.skill-item .item-progress {
+    width: 100%;
+    background: whitesmoke;
+}
+.skill-item .item-progress {
+    overflow: hidden;
+    transform: rotate(0deg);
+}
+.item-progress .progress-running {
+    height: 100%;
+    display: block;
+    background: linear-gradient( to right , #db2242 0% , #fd0000 100% ) no-repeat ;
+    transform-origin:left center;/*设置进度条的基点为最左边中间,因为scale是从基点开始进行缩放的,默认基点是正中间*/
+}
+.skill-item:hover .progress-running {
+    animation: progressRunning 0.6s linear  ;
+}
+
+@keyframes progressRunning {
+    from{
+        transform:scaleX(0);
+    }
+    to{
+        transform:scaleX(1);
+    }
+}
+@-webkit-keyframes progressRunning {
+    from{
+        transform:scaleX(0);
+    }
+    to{
+        transform:scaleX(1);
+    }
+}
+
+/* 简历 - 右边 */
+.right-content {
+    width: 70%;
+    background: #cacacc;
+}
+.right-content .rc-container {
+    padding: 20px;
+}
+.section-block-r {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #f2f2f2;
+    box-shadow: 2px 4px 5px 3px #999999;
+}
+.section-block-r .section-hd {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.section-block-r .hd-icon {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-right: 14px;
+    background: linear-gradient(90deg, rgba(255, 64, 0, .6) 0%, rgba(246, 1, 0, .8)) 100%;
+    transform: rotate(45deg);
+}
+.section-block-r .hd-tt {
+    width: 84%;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    box-shadow: 4px 5px 5px rgba(124, 182, 98 ,.8);
+    position: relative;
+}
+.experience-item {
+    padding: 20px 0 20px 30px;
+}
+.experience-item .item-hd{
+    font: bolder 16px/2 '';
+}
+.experience-item .item-hd .item-time {
+    padding-left: 10px;
+}
+.experience-item .item-des {
+    width: 96%;
+    word-wrap: break-word;
+}
+
+@media (max-width: 1020px) {
+    .left-content {
+        width: 36%;
+    }
+    .right-content {
+        width: 64%;
+    }
+    .section-block-l .section-list .list-item {
+        font: 12px/3 '';
+        float: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .section-block-l .section-list {
+        padding: 20px;
+    }
+    .section-block-l .section-list .list-item {
+        float: left;
+        width: 50%;
+    }
+    .left-content {
+        width: 100%;
+    }
+    .right-content {
+        width: 100%;
+    }
+}
+@media (max-width: 430px) {
+    .section-block-l .section-list .list-left {
+        width: 30%;
+        text-align: justify;
+    }
+    .section-block-l .section-list .list-right {
+        width: 70%;
+    }
+    .section-block-l .section-list .list-item {
+        width: 100%;
+        font: 16px/2 '';
+        float: none;
+    }
+
+}
