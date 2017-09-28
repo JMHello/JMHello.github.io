@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/css/2017-09-04-css-box-model.md" afterPath="$PROJECT_DIR$/_posts/originalNote/css/2017-09-04-css-box-model.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/css/2017-09-05-css-visual-formatting-model.md" afterPath="$PROJECT_DIR$/_posts/originalNote/css/2017-09-05-css-visual-formatting-model.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-09-06-js-Ajax.md" afterPath="$PROJECT_DIR$/_posts/originalNote/Ajax/2017-09-06-js-Ajax.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -389,7 +386,7 @@
       <workItem from="1506298390515" duration="6176000" />
       <workItem from="1506327367240" duration="4547000" />
       <workItem from="1506475251763" duration="3154000" />
-      <workItem from="1506566957850" duration="104000" />
+      <workItem from="1506566957850" duration="191000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -402,7 +399,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367922000" />
+    <option name="totallyTimeSpent" value="368009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="1" width="1366" height="766" extended-state="0" />
