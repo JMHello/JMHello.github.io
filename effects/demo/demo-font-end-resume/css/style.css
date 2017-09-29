@@ -36,7 +36,7 @@
     background: #222222;
 }
 .left-content .avatar {
-    padding: 40px 0;
+    padding: 26px 0;
     text-align: center;
 }
 .avatar img {
@@ -183,7 +183,7 @@
 }
 .section-block-r .hd-tt {
     width: 84%;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     border-bottom: 1px solid transparent;
     box-shadow: 4px 5px 5px rgba(124, 182, 98 ,.8);
@@ -200,6 +200,7 @@
 }
 .experience-item .item-des {
     width: 96%;
+    font: 14px/1.7 '';
     word-wrap: break-word;
 }
 
