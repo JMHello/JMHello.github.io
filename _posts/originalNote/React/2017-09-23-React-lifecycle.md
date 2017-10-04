@@ -8,11 +8,16 @@ tag: React
 * content
 {:toc}
 
+* 参考博文
+    * [http://blog.csdn.net/pcaxb/article/details/53887605](http://blog.csdn.net/pcaxb/article/details/53887605)
+
 <!-- more -->
 
 ## 一、lifecycle - 生命周期
 
 ![relationship-map]({{ '/styles/images/react/react-12.png' | prepend: site.baseurl }})
+
+---
 
 ![relationship-map]({{ '/styles/images/react/react-13.png' | prepend: site.baseurl }})
 
@@ -72,6 +77,8 @@ tag: React
 
 * `componentWillUnmount()`
     * 组件将要卸载时调用，一些事件监听和定时器需要在此时清除。
+
+* 
 
 * `constructor`: 初始化
 * `componentWillMount`：插入前
