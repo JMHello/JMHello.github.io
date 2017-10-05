@@ -3,7 +3,7 @@ layout: post
 title: "css - getBoundingClientRect()"
 data: 2017-10-03 12:27:00 +0800
 categories: 原创
-tag: CSS
+tag: javascript
 ---
 * content
 {:toc}

@@ -18,6 +18,7 @@ tag: React
 ![relationship-map]({{ '/styles/images/react/react-12.png' | prepend: site.baseurl }})
 
 ---
+___
 
 ![relationship-map]({{ '/styles/images/react/react-13.png' | prepend: site.baseurl }})
 
@@ -61,7 +62,7 @@ tag: React
 >        * 因为相同的属性状态一定会生成相同的`dom`树，这样就不需要创造新的`dom`树和旧的`dom`树进行`diff`算法对比，节省大量性能，尤其是在`dom`结构复杂的时候。
 >    * 该方法在初始化渲染的时候不会调用，在使用 `forceUpdate` 方法的时候也不会。
 
-> * `componentWillUpdata(nextProps, nextState)`
+> * `componentWillUpdate(nextProps, nextState)`
 >    * 组件初始化时不调用，只有在组件将要更新时才调用。
 >    * 在接收到新的`props`或者是`state`的时以及在`render`之前调用。
 >    * 在该方法中不再允许更新`props`和`state`，如果你需要更新`props`或者`state`,可以在`componentWillReceiveProps`中修改。
@@ -78,16 +79,9 @@ tag: React
 > * `componentWillUnmount()`
 >    * 组件将要卸载时调用，一些事件监听和定时器需要在此时清除。
 
-* 
-
-* `constructor`: 初始化
-* `componentWillMount`：插入前
-* `render` :  插入到DOM中
-* `componentDidMount`：插入DOM后
-* `componentWillUpdate`：组件更新前
-* `componentDidUpdate`：组件更新后
-* `componentWillUnmount`：从DOM移除
 
 > 补充一下：只要将适当的行为分别添加到以上这些方法中，`React`就会自动识别，找准最适当的时机去执行这些代码！！！
 
+### 1.4 总结
 
+![relationship-map]({{ '/styles/images/react/react-13.png' | prepend: site.baseurl }})
