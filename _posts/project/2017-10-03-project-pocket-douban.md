@@ -60,7 +60,7 @@ tag: project
 
 ### 3.1 文件结构
 
-![relationship-map]({{ '/styles/images/project/douban/douban-05png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/project/douban/douban-05.png' | prepend: site.baseurl }})
 
 ### 3.2 想法
 
@@ -75,5 +75,5 @@ tag: project
 
 以下是路由配置`routeMap.jsx`文件的内容
 
-![relationship-map]({{ '/styles/images/project/douban/douban-06png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/project/douban/douban-06.png' | prepend: site.baseurl }})
 
