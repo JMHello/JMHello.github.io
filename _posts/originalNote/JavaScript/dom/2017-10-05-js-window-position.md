@@ -26,12 +26,19 @@ var leftPos = (typeof window.screenLeft == "number") ? window.screenLeft : windo
 var topPos = (typeof window.screenTop == "number") ? window.screenTop : window.screenY; 
 ```
 
+
 > * 在 `IE`、`Opera` 中：
->    * `screenLeft` 和 `screenTop` 中保存的是**从屏幕左边和上边到由 `window` 对象表示的页面可见区域的距离**。
+>    * `screenLeft` 和 `screenTop` 中保存的是从屏幕左边和上边到由 `window` 对象**表示的页面可见区域的距离**。
 >    * 换句话说，如果 `window` 对象是最外层对象，而且浏览器窗口紧贴屏幕最上端——即 `y` 轴坐标为 0，
 >    那么 `screenTop` 的值就是位于**页面可见区域上方的浏览器工具栏的像素高度**。
+
+![relationship-map]({{ '/styles/images/javascript/DOM/style/style-12.png' | prepend: site.baseurl }})
+
+
 >* 在 `Chrome`、`Firefox`和 `Safari`中，`screenY` 或 `screenTop`中：
 >    * 保存的是整个浏览器窗口相对于屏幕的坐标值，即在窗口的 `y` 轴坐标为 `0` 时返回 `0`。
+
+![relationship-map]({{ '/styles/images/javascript/DOM/style/style-11.png' | prepend: site.baseurl }})
 
 > * `Firefox`、`Safari` 和 `Chrome` 始终返回页面中每个框架的 `top.screenX` 和`top.screenY` 值。
 >   * 即使在页面由于被设置了外边距而发生偏移的情况下，相对于 `window` 对象使用`screenX` 和 `screenY` 每次也都会返回相同的值。
