@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "css - 窗口位置"
+title: "javascript - 窗口位置"
 data: 2017-10-05 10:27:00 +0800
 categories: 原创
-tag:javascript
+tag: javascript
 ---
 * content
 {:toc}
