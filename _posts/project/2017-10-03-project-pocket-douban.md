@@ -58,7 +58,7 @@ tag: project
 
 ### 2.3 项目下载
 
-
+[https://github.com/JMHello/douban-01.git](https://github.com/JMHello/douban-01.git)
 
 ## 三、口袋豆瓣 - 法2
 
@@ -83,7 +83,7 @@ tag: project
 
 ### 3.4 项目下载
 
-[http://git.imweb.io/jm_hello/douban-pocket.git](http://git.imweb.io/jm_hello/douban-pocket.git)
+[https://github.com/JMHello/douban-02.git](https://github.com/JMHello/douban-02gt.git)
 
 ## 四、主要使用的工具包
 
