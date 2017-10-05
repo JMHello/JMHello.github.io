@@ -71,7 +71,7 @@ tag: project
 ### 3.3 做法
 
 * 既然一个页面就可以代表三个页面，那么就必须通过一些**标志**知道当前是属于哪一个页面的内容。
-* 这里我用到了 `this.props.params.type`，这个是路由配置的参数。
+* 这里我用到了 `this.props.params.type`（这个是路由配置的参数）+ `onhashchange()`这个事件。
 
 以下是路由配置`routeMap.jsx`文件的内容
 
