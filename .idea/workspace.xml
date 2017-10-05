@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-02-js-client.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-02-js-client.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-03-js-scroll.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-03-js-scroll.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/project/2017-10-03-project-pocket-douban.md" afterPath="$PROJECT_DIR$/_posts/project/2017-10-03-project-pocket-douban.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/effects/demo/demo-pocket-doban/demo1" afterPath="$PROJECT_DIR$/effects/demo/demo-pocket-doban/demo1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/effects/demo/demo-pocket-doban/demo2" afterPath="$PROJECT_DIR$/effects/demo/demo-pocket-doban/demo2" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +30,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/project/2017-10-03-project-pocket-douban.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="393">
-                <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <first_editor relative-caret-position="242">
+                <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -366,7 +365,7 @@
       <workItem from="1506999875275" duration="2130000" />
       <workItem from="1507028362502" duration="5602000" />
       <workItem from="1507047152073" duration="5622000" />
-      <workItem from="1507170960694" duration="10222000" />
+      <workItem from="1507170960694" duration="10302000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -379,7 +378,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411409000" />
+    <option name="totallyTimeSpent" value="411489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -391,7 +390,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.54559505" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27357033" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -768,8 +767,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/project/2017-10-03-project-pocket-douban.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="393">
-            <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <first_editor relative-caret-position="242">
+            <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
             <folding />
           </first_editor>
           <second_editor />
