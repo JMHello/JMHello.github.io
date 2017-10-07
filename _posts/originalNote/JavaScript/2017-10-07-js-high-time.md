@@ -104,7 +104,7 @@ setTimeout(function(){
     * 过长的、过深嵌套的函数调用。
     * 进行大量处理的循环。
 
-### 3.3 脚本长时间运行 - 循环
+### 3.3 数组分块技术（array chunking)
 
 * 长时间运行的循环通常遵循以下模式：
 
@@ -125,3 +125,21 @@ for (var i=0, len=data.length; i < len; i++){
 >    2. 数据是否必须按顺序完成？
 >        * 通常，数组只是对项目的组合和迭代的一种简便的方法而无所谓顺序。
 >        * 如果**项目的顺序不是非常重要**，那么可能可以将某些处理推迟到以后。
+
+> * 当你发现**某个循环占用了大量时间**，同时对于上述两个问题，你的回答都是“否”，那么你就可以使用定时器分割这个循环。
+> * 这是一种叫做**数组分块**（`array chunking`）的技术，小块小块地处理数组，通常每次一小块。
+>   * 基本的思路：为要处理的项目创建一个队列，然后使用定时器取出下一个要处理的项目进行处理，接着再设置另一个定时器。
+
+```js
+function chunk(array, process, context){
+    setTimeout(function(){
+        var item = array.shift();
+        
+        process.call(context, item);
+        
+        if (array.length > 0){
+          setTimeout(arguments.callee, 100);
+        }
+    }, 100);
+} 
+```
