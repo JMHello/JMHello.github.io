@@ -133,13 +133,31 @@ for (var i=0, len=data.length; i < len; i++){
 ```js
 function chunk(array, process, context){
     setTimeout(function(){
+        // 取出下一个条目并处理
         var item = array.shift();
         
+        // 通过 call()调用的 process()函数，这样可以设置一个合适的执行环境（如果必须）
         process.call(context, item);
         
+        // 若还有条目，再设置另一个定时器
         if (array.length > 0){
+          // 可以根据你的需要更改这个间隔大小，不过 100ms 在大多数情况下效果不错。
           setTimeout(arguments.callee, 100);
         }
     }, 100);
 } 
 ```
+
+> * `chunk(array, process, context)`函数分析：
+>    * `chunk(array, process, context)`接受三个参数：
+>        * `array`：要处理的项目的数组。
+>        * `process`：用于处理项目的函数。
+>        * `context`：可选的运行该函数的环境。
+>    * 在数组分块模式中，`array` 变量本质上就是一个 **“待办事宜”列表**，它包含了要处理的项目。
+>    * 使用 `shift()` 方法可以获取队列中下一个要处理的项目，然后将其传递给某个函数。
+>    * 如果在队列中还有其他项目，则设置另一个定时器，并通过 `arguments.callee` 调用同一个匿名函数。
+
+> * 补充：
+>   * 由于数组是引用类型，如果你想保持原数组不变，则应该将该数组的克隆传递给 `chunk()`，即：`某数组.concat()`。
+>   * 数组分块的重要性在于它可以将多个项目的处理在执行队列上分开，在每个项目处理之后，给予其他的浏览器处理机会运行，这样就可能避免长时间运行脚本的错误。
+>   * 一旦某个函数需要花 `50ms` 以上的时间完成，那么最好看看能否将任务分割为一系列可以使用定时器的小任务。
