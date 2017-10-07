@@ -29,11 +29,12 @@
         <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-07-js-high-time.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="461">
-                <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+              <first_editor relative-caret-position="197">
+                <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
                 <folding>
-                  <marker date="1507359733855" expanded="true" signature="378:490" ph="{...}" />
-                  <marker date="1507359733855" expanded="true" signature="402:473" ph="{...}" />
+                  <marker date="1507360141475" expanded="true" signature="378:490" ph="{...}" />
+                  <marker date="1507360141475" expanded="true" signature="402:473" ph="{...}" />
+                  <marker date="1507360141475" expanded="true" signature="2192:2243" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -378,7 +379,7 @@
       <workItem from="1507047152073" duration="5622000" />
       <workItem from="1507170960694" duration="12206000" />
       <workItem from="1507197184673" duration="6560000" />
-      <workItem from="1507295897555" duration="8906000" />
+      <workItem from="1507295897555" duration="9357000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -391,7 +392,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428859000" />
+    <option name="totallyTimeSpent" value="429310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -403,7 +404,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3431221" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2194745" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -804,11 +805,12 @@
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-07-js-high-time.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="461">
-            <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+          <first_editor relative-caret-position="197">
+            <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
             <folding>
-              <marker date="1507359733855" expanded="true" signature="378:490" ph="{...}" />
-              <marker date="1507359733855" expanded="true" signature="402:473" ph="{...}" />
+              <marker date="1507360141475" expanded="true" signature="378:490" ph="{...}" />
+              <marker date="1507360141475" expanded="true" signature="402:473" ph="{...}" />
+              <marker date="1507360141475" expanded="true" signature="2192:2243" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
