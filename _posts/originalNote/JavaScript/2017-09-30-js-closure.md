@@ -51,6 +51,31 @@ baz(); // 2
 
 ### 3.1 用闭包模拟私有方法（模块模式）
 
+* 在没有了解闭包之前，我们可能会这样写一个计数器：
+
+```js
+var Counter = {
+    privateCounter: 0,
+    changeBy: function(val) {
+      privateCounter += val;
+    },
+    increment: function() {
+      changeBy(1);
+    },
+    decrement: function() {
+      changeBy(-1);
+    },
+    value: function() {
+      return privateCounter;
+    }
+}
+```
+
+> * 上述代码轻松实现了一个简单的计数器。
+> * 然而，其他人可通过`Counter.privateCounter`访问到 `privateCounter` 变量和`Counter.changeBy()`调用 `changeBy` 函数。
+> * `Counter`也是有权利有自己的隐私的：它不希望别人访问到`privateCounter`和调用`changeBy()`。
+> * 可惜，上述写法无法保障 `Counter` 的隐私权。请看下面的代码：
+
 ```js
 var Counter = (function() {
   // 私有属性
@@ -89,9 +114,8 @@ console.log(Counter1.value()); /* logs 1 */
 console.log(Counter2.value()); /* logs 0 */
 ```
 
-> * 两个计数器是如何维护它们各自的独立性的。
-> * 每次调用 `makeCounter()` 函数期间，其环境是不同的。
-> * 每次调用中， `privateCounter` 中含有不同的实例。
+> * 利用 `IIFE` 建立了一个封闭的作用域，即：闭包，在封闭的作用域中建立了 **私有变量`privateCounter`** 和 **私有方法`changeBy()`**，并返回 `Counter` 对外的公共 `API`。 
+
 
 ### 3.2 循环与闭包
 
@@ -151,9 +175,16 @@ for (var i = 1; i <= 5; i++) {
     }, j * 1000);
   })(i);
 }
+
+// 使用 es6 语法 -- let
+for(let i = 1; i <= 5; i++) {
+   setTimeout(function() {
+        console.log(i);
+   }, i * 1000);
+}
 ```
 
-> 总结：在迭代内使用 `IIFE` 会为每个迭代都生成一个新的作用域，使得延迟函数的回调可以将新的
+> * 总结：在迭代内使用 `IIFE` 会为每个迭代都生成一个新的作用域，使得延迟函数的回调可以将新的
      作用域封闭在每个迭代内部，每个迭代中都会含有一个具有正确值的变量供我们访问。
 
 
