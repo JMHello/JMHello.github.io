@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-07-js-high-time.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-07-js-high-time.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-06-js-time.md" afterPath="$PROJECT_DIR$/_posts/studynote/javascript/2017-10-06-js-time.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-07-js-high-time.md" afterPath="$PROJECT_DIR$/_posts/studynote/javascript/2017-10-07-js-high-time.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,19 +27,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="2017-10-07-js-high-time.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-07-js-high-time.md">
+        <entry file="file://$PROJECT_DIR$/_posts/studynote/javascript/2017-10-07-js-high-time.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="361">
-                <caret line="162" column="6" lean-forward="false" selection-start-line="162" selection-start-column="6" selection-end-line="162" selection-end-column="6" />
+              <first_editor relative-caret-position="419">
+                <caret line="273" column="40" lean-forward="false" selection-start-line="273" selection-start-column="40" selection-end-line="273" selection-end-column="40" />
                 <folding>
-                  <marker date="1507362612821" expanded="true" signature="378:490" ph="{...}" />
-                  <marker date="1507362612821" expanded="true" signature="402:473" ph="{...}" />
-                  <marker date="1507362612821" expanded="true" signature="2222:2273" ph="{...}" />
-                  <marker date="1507362612821" expanded="true" signature="2661:2683" ph="{...}" />
-                  <marker date="1507362612821" expanded="true" signature="3392:3769" ph="{...}" />
-                  <marker date="1507362612821" expanded="true" signature="3419:3760" ph="{...}" />
-                  <marker date="1507362612821" expanded="true" signature="3646:3754" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="380:492" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="404:475" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="2224:2275" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="2681:2703" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="3412:3789" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="3439:3780" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="3666:3774" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="4959:5312" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="5024:5039" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="5081:5310" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="5229:5298" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="5702:5804" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="5767:5795" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="6278:6371" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="6628:6720" ph="{...}" />
+                  <marker date="1507367842321" expanded="true" signature="6750:6775" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -72,8 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/designPatterns/2017-09-18-js-MVC-pattern.md" />
-        <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/crossDomain/2017-09-07-js-CORS.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/ES6/2017-09-19-ES6-Module.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/javascript/2017-09-19-js-Object.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/ES6/2017-09-20-ES6-Class-Extend.md" />
@@ -123,6 +131,8 @@
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-06-js-high-time.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-06-js-time.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-07-js-high-time.md" />
+        <option value="$PROJECT_DIR$/_posts/studynote/javascript/2017-10-06-js-time.md" />
+        <option value="$PROJECT_DIR$/_posts/studynote/javascript/2017-10-07-js-high-time.md" />
       </list>
     </option>
   </component>
@@ -200,7 +210,7 @@
               <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
               <item name="studynote" type="462c0819:PsiDirectoryNode" />
-              <item name="HTTP" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -238,11 +248,11 @@
       <recent name="E:\projectAndNote\JMHello.github.io\styles\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projectAndNote\JMHello.github.io\_posts\studynote\javascript" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\Ajax" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\JavaScript\crossDomain" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\Web" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote" />
-      <recent name="E:\projectAndNote\JMHello.github.io\_posts\postgraduate\Webpack" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -383,7 +393,7 @@
       <workItem from="1507047152073" duration="5622000" />
       <workItem from="1507170960694" duration="12206000" />
       <workItem from="1507197184673" duration="6560000" />
-      <workItem from="1507295897555" duration="11782000" />
+      <workItem from="1507295897555" duration="13600000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -396,13 +406,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431735000" />
+    <option name="totallyTimeSpent" value="433553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12574404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15401785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -751,24 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-06-js-time.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="176">
-            <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="24" />
-            <folding>
-              <marker date="1507348386805" expanded="true" signature="1324:1351" ph="{...}" />
-              <marker date="1507348386805" expanded="true" signature="2173:2293" ph="{...}" />
-              <marker date="1507348386805" expanded="true" signature="2235:2291" ph="{...}" />
-              <marker date="1507348386805" expanded="true" signature="2416:2542" ph="{...}" />
-              <marker date="1507348386805" expanded="true" signature="2475:2514" ph="{...}" />
-              <marker date="1507348386805" expanded="true" signature="2520:2540" ph="{...}" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Second-TCP.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -806,19 +798,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-07-js-high-time.md">
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/javascript/2017-10-06-js-time.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="361">
-            <caret line="162" column="6" lean-forward="false" selection-start-line="162" selection-start-column="6" selection-end-line="162" selection-end-column="6" />
+          <first_editor relative-caret-position="88">
+            <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             <folding>
-              <marker date="1507362612821" expanded="true" signature="378:490" ph="{...}" />
-              <marker date="1507362612821" expanded="true" signature="402:473" ph="{...}" />
-              <marker date="1507362612821" expanded="true" signature="2222:2273" ph="{...}" />
-              <marker date="1507362612821" expanded="true" signature="2661:2683" ph="{...}" />
-              <marker date="1507362612821" expanded="true" signature="3392:3769" ph="{...}" />
-              <marker date="1507362612821" expanded="true" signature="3419:3760" ph="{...}" />
-              <marker date="1507362612821" expanded="true" signature="3646:3754" ph="{...}" />
+              <marker date="1507366738754" expanded="true" signature="1326:1353" ph="{...}" />
+              <marker date="1507366738754" expanded="true" signature="2175:2295" ph="{...}" />
+              <marker date="1507366738754" expanded="true" signature="2237:2293" ph="{...}" />
+              <marker date="1507366738754" expanded="true" signature="2418:2544" ph="{...}" />
+              <marker date="1507366738754" expanded="true" signature="2477:2516" ph="{...}" />
+              <marker date="1507366738754" expanded="true" signature="2522:2542" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/studynote/javascript/2017-10-07-js-high-time.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="419">
+            <caret line="273" column="40" lean-forward="false" selection-start-line="273" selection-start-column="40" selection-end-line="273" selection-end-column="40" />
+            <folding>
+              <marker date="1507367842321" expanded="true" signature="380:492" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="404:475" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="2224:2275" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="2681:2703" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="3412:3789" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="3439:3780" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="3666:3774" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="4959:5312" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="5024:5039" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="5081:5310" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="5229:5298" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="5702:5804" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="5767:5795" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="6278:6371" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="6628:6720" ph="{...}" />
+              <marker date="1507367842321" expanded="true" signature="6750:6775" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
