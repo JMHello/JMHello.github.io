@@ -29,12 +29,12 @@
         <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-VO.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="307">
-                <caret line="75" column="73" lean-forward="false" selection-start-line="75" selection-start-column="73" selection-end-line="75" selection-end-column="73" />
+              <first_editor relative-caret-position="373">
+                <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
                 <folding>
-                  <marker date="1507459278237" expanded="true" signature="946:1185" ph="{...}" />
-                  <marker date="1507459278237" expanded="true" signature="1099:1130" ph="{...}" />
-                  <marker date="1507459278237" expanded="true" signature="1152:1183" ph="{...}" />
+                  <marker date="1507459297911" expanded="true" signature="946:1185" ph="{...}" />
+                  <marker date="1507459297911" expanded="true" signature="1099:1130" ph="{...}" />
+                  <marker date="1507459297911" expanded="true" signature="1152:1183" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -366,7 +366,7 @@
       <workItem from="1507047152073" duration="5622000" />
       <workItem from="1507170960694" duration="12206000" />
       <workItem from="1507197184673" duration="6560000" />
-      <workItem from="1507295897555" duration="26250000" />
+      <workItem from="1507295897555" duration="26283000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -379,11 +379,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="446203000" />
+    <option name="totallyTimeSpent" value="446236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="766" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12745099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -391,7 +390,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1844197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1844197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -867,12 +866,12 @@
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-VO.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="307">
-            <caret line="75" column="73" lean-forward="false" selection-start-line="75" selection-start-column="73" selection-end-line="75" selection-end-column="73" />
+          <first_editor relative-caret-position="373">
+            <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
             <folding>
-              <marker date="1507459278237" expanded="true" signature="946:1185" ph="{...}" />
-              <marker date="1507459278237" expanded="true" signature="1099:1130" ph="{...}" />
-              <marker date="1507459278237" expanded="true" signature="1152:1183" ph="{...}" />
+              <marker date="1507459297911" expanded="true" signature="946:1185" ph="{...}" />
+              <marker date="1507459297911" expanded="true" signature="1099:1130" ph="{...}" />
+              <marker date="1507459297911" expanded="true" signature="1152:1183" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
