@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/images/javascript/other/other-02.png" afterPath="$PROJECT_DIR$/styles/images/javascript/other/other-02.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/images/javascript/other/other-03.png" afterPath="$PROJECT_DIR$/styles/images/javascript/other/other-03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-VO.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-scope.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-scope.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,15 +25,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-10-08-js-scope.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-scope.md">
+      <file leaf-file-name="2017-10-08-js-VO.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-VO.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="303">
-                <caret line="118" column="2" lean-forward="false" selection-start-line="118" selection-start-column="2" selection-end-line="118" selection-end-column="2" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="307">
+                <caret line="75" column="73" lean-forward="false" selection-start-line="75" selection-start-column="73" selection-end-line="75" selection-end-column="73" />
                 <folding>
-                  <marker date="1507457815898" expanded="true" signature="1499:1605" ph="{...}" />
-                  <marker date="1507457815898" expanded="true" signature="1537:1591" ph="{...}" />
+                  <marker date="1507459278237" expanded="true" signature="946:1185" ph="{...}" />
+                  <marker date="1507459278237" expanded="true" signature="1099:1130" ph="{...}" />
+                  <marker date="1507459278237" expanded="true" signature="1152:1183" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -69,7 +68,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/studynote/ES6/2017-09-19-ES6-Object.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/designPatterns/2017-09-13-js-singleton-pattern.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-09-06-js-Ajax.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/Webpack/2017-09-21-Webpack-resolve.md" />
@@ -120,6 +118,7 @@
         <option value="$PROJECT_DIR$/_posts/studynote/javascript/2017-10-08-js-function-method.md" />
         <option value="$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-25-HTTP-Third-DNS.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-scope.md" />
+        <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-VO.md" />
       </list>
     </option>
   </component>
@@ -139,7 +138,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/_site/effects/demo/demo-pocket-doban/demo1/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1" />
     <option name="y" value="1" />
     <option name="width" value="1364" />
@@ -185,19 +184,6 @@
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
               <item name="originalNote" type="462c0819:PsiDirectoryNode" />
               <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-              <item name="studynote" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-              <item name="studynote" type="462c0819:PsiDirectoryNode" />
-              <item name="HTTP" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -380,7 +366,7 @@
       <workItem from="1507047152073" duration="5622000" />
       <workItem from="1507170960694" duration="12206000" />
       <workItem from="1507197184673" duration="6560000" />
-      <workItem from="1507295897555" duration="25128000" />
+      <workItem from="1507295897555" duration="26250000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -393,18 +379,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445081000" />
+    <option name="totallyTimeSpent" value="446203000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="1" y="1" width="1364" height="766" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4356589" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12745099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17928903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1844197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -444,7 +431,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/originalNote/React/2017-09-19-React.md" />
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/Webpack/2017-09-21-Webpack-resolve.md" />
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/Webpack/2017-08-28-Webpack.md" />
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/designPatterns/2017-09-14-js-decorator-pattern.md" />
@@ -867,11 +853,26 @@
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-scope.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="303">
-            <caret line="118" column="2" lean-forward="false" selection-start-line="118" selection-start-column="2" selection-end-line="118" selection-end-column="2" />
+          <first_editor relative-caret-position="347">
+            <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="97" />
             <folding>
               <marker date="1507457815898" expanded="true" signature="1499:1605" ph="{...}" />
               <marker date="1507457815898" expanded="true" signature="1537:1591" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-VO.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="307">
+            <caret line="75" column="73" lean-forward="false" selection-start-line="75" selection-start-column="73" selection-end-line="75" selection-end-column="73" />
+            <folding>
+              <marker date="1507459278237" expanded="true" signature="946:1185" ph="{...}" />
+              <marker date="1507459278237" expanded="true" signature="1099:1130" ph="{...}" />
+              <marker date="1507459278237" expanded="true" signature="1152:1183" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
