@@ -9,7 +9,7 @@ tag: javascript
 {:toc}
 
 * 参考资料
-    + 《JavaScript高级程序设计（第3版）》 22.3 高级定时器
+    + 《JavaScript高级程序设计（第3版）》 5.5.5 函数属性和方法
 
 * 相关链接
     + [javascript - 定时器]({{ '/2017/10/06/js-time' | prepend: site.baseurl }})
