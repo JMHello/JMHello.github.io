@@ -11,6 +11,11 @@ tag: javascript
 * 参考博文
     + [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures)
 
+* 相关文章
+    + [javascript - 变量对象和活动对象](http://www.jmazm.com/2017/10/08/js-VO/)
+    + [javascript - 执行上下文](http://www.jmazm.com/2017/10/08/js-EC/)
+    + [javascript - 作用域与作用域链](http://www.jmazm.com/2017/10/08/js-Scope/)
+
 <!-- more -->
 
 ## 一、闭包概念
