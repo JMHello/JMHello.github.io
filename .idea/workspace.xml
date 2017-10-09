@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-VO.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-VO.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-scope.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-scope.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
@@ -92,20 +91,20 @@
         <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-scope.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="444">
-                <caret line="226" column="73" lean-forward="false" selection-start-line="226" selection-start-column="73" selection-end-line="226" selection-end-column="73" />
+              <first_editor relative-caret-position="251">
+                <caret line="88" column="76" lean-forward="false" selection-start-line="88" selection-start-column="76" selection-end-line="88" selection-end-column="76" />
                 <folding>
-                  <marker date="1507551694316" expanded="true" signature="1026:1125" ph="{...}" />
-                  <marker date="1507551694316" expanded="true" signature="1065:1111" ph="{...}" />
-                  <marker date="1507551694316" expanded="true" signature="2037:2144" ph="{...}" />
-                  <marker date="1507551694316" expanded="true" signature="2206:2312" ph="{...}" />
-                  <marker date="1507551694316" expanded="true" signature="2244:2298" ph="{...}" />
-                  <marker date="1507551694316" expanded="true" signature="3107:3128" ph="{...}" />
-                  <marker date="1507551694316" expanded="true" signature="3144:3188" ph="{...}" />
-                  <marker date="1507551694316" expanded="true" signature="3604:3625" ph="{...}" />
-                  <marker date="1507551694316" expanded="true" signature="3690:3712" ph="[...]" />
-                  <marker date="1507551694316" expanded="true" signature="3894:3978" ph="{...}" />
-                  <marker date="1507551694316" expanded="true" signature="3949:3973" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="1026:1125" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="1065:1111" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="2117:2224" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="2286:2392" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="2324:2378" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="3187:3208" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="3224:3268" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="3684:3705" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="3770:3792" ph="[...]" />
+                  <marker date="1507551854218" expanded="true" signature="3974:4058" ph="{...}" />
+                  <marker date="1507551854218" expanded="true" signature="4029:4053" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -469,7 +468,7 @@
       <workItem from="1507197184673" duration="6560000" />
       <workItem from="1507295897555" duration="30709000" />
       <workItem from="1507525101764" duration="12000" />
-      <workItem from="1507533769350" duration="6508000" />
+      <workItem from="1507533769350" duration="6677000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -482,7 +481,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="457182000" />
+    <option name="totallyTimeSpent" value="457351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -494,7 +493,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0077279755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06955178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -947,20 +946,20 @@
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-scope.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="444">
-            <caret line="226" column="73" lean-forward="false" selection-start-line="226" selection-start-column="73" selection-end-line="226" selection-end-column="73" />
+          <first_editor relative-caret-position="251">
+            <caret line="88" column="76" lean-forward="false" selection-start-line="88" selection-start-column="76" selection-end-line="88" selection-end-column="76" />
             <folding>
-              <marker date="1507551694316" expanded="true" signature="1026:1125" ph="{...}" />
-              <marker date="1507551694316" expanded="true" signature="1065:1111" ph="{...}" />
-              <marker date="1507551694316" expanded="true" signature="2037:2144" ph="{...}" />
-              <marker date="1507551694316" expanded="true" signature="2206:2312" ph="{...}" />
-              <marker date="1507551694316" expanded="true" signature="2244:2298" ph="{...}" />
-              <marker date="1507551694316" expanded="true" signature="3107:3128" ph="{...}" />
-              <marker date="1507551694316" expanded="true" signature="3144:3188" ph="{...}" />
-              <marker date="1507551694316" expanded="true" signature="3604:3625" ph="{...}" />
-              <marker date="1507551694316" expanded="true" signature="3690:3712" ph="[...]" />
-              <marker date="1507551694316" expanded="true" signature="3894:3978" ph="{...}" />
-              <marker date="1507551694316" expanded="true" signature="3949:3973" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="1026:1125" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="1065:1111" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="2117:2224" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="2286:2392" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="2324:2378" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="3187:3208" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="3224:3268" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="3684:3705" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="3770:3792" ph="[...]" />
+              <marker date="1507551854218" expanded="true" signature="3974:4058" ph="{...}" />
+              <marker date="1507551854218" expanded="true" signature="4029:4053" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
