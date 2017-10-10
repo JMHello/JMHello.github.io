@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-describe.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-expect.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JMHello.github.io.iws" />
@@ -24,45 +26,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-10-10-js-this.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-10-js-this.md">
+      <file leaf-file-name="2017-10-10-jest-expect.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-expect.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="97">
-                <caret line="304" column="2" lean-forward="false" selection-start-line="304" selection-start-column="2" selection-end-line="304" selection-end-column="2" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="455">
+                <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
                 <folding>
-                  <marker date="1507642855826" expanded="true" signature="506:540" ph="{&quot;this&quot;: thisValue...}" />
-                  <marker date="1507642855826" expanded="true" signature="1041:1248" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="1072:1246" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="1340:1388" ph="//..." />
-                  <marker date="1507642855826" expanded="true" signature="1340:1405" ph="//..." />
-                  <marker date="1507642855826" expanded="true" signature="1702:1726" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="2120:2190" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="2143:2188" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="2204:2250" ph="//..." />
-                  <marker date="1507642855826" expanded="true" signature="2204:2315" ph="//..." />
-                  <marker date="1507642855826" expanded="true" signature="2650:2659" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="3085:3086" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="3085:3109" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="3176:3217" ph="{&quot;base&quot;: global...}" />
-                  <marker date="1507642855826" expanded="true" signature="3239:3280" ph="{&quot;base&quot;: global...}" />
-                  <marker date="1507642855826" expanded="true" signature="3484:3686" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="3516:3686" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="3518:3541" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="3598:3634" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="3904:3961" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="3927:3959" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="3996:4002" ph="//..." />
-                  <marker date="1507642855826" expanded="true" signature="4043:4079" ph="{&quot;base&quot;: foo...}" />
-                  <marker date="1507642855826" expanded="true" signature="4236:4293" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="4259:4291" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="4325:4334" ph="//..." />
-                  <marker date="1507642855826" expanded="true" signature="4373:4415" ph="{&quot;base&quot;: foo...}" />
-                  <marker date="1507642855826" expanded="true" signature="4764:4815" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="4784:4813" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="5679:5765" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="5699:5737" ph="{...}" />
-                  <marker date="1507642855826" expanded="true" signature="5907:5967" ph="{...}" />
+                  <marker date="1507648860656" expanded="true" signature="453:480" ph="{&quot;name&quot;: 'jm'...}" />
+                  <marker date="1507648860656" expanded="true" signature="517:671" ph="{...}" />
+                  <marker date="1507648860656" expanded="true" signature="554:593" ph="{...}" />
+                  <marker date="1507648860656" expanded="true" signature="632:668" ph="{...}" />
+                  <marker date="1507648860656" expanded="true" signature="888:929" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
+                  <marker date="1507648860656" expanded="true" signature="888:986" ph="{...}" />
+                  <marker date="1507648860656" expanded="true" signature="944:985" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
+                  <marker date="1507648860656" expanded="true" signature="1035:1208" ph="{...}" />
+                  <marker date="1507648860656" expanded="true" signature="1082:1119" ph="{...}" />
+                  <marker date="1507648860656" expanded="true" signature="1167:1205" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -96,8 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/originalNote/React/2017-09-21-React.-First-Example.md" />
-        <option value="$PROJECT_DIR$/_posts/studynote/ES6/2017-09-22-ES6-Class-Iterator-for-of.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/React/2017-09-21-React-Event-Bind.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/React/2017-09-21-React-First-Example.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/React/2017-09-21-React-Componentization.md" />
@@ -147,6 +125,8 @@
         <option value="$PROJECT_DIR$/_posts/originalNote/test/2017-10-09-js-test-framework.md" />
         <option value="$PROJECT_DIR$/effects/demo/demo-font-end-resume/index.html" />
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-10-js-this.md" />
+        <option value="$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-describe.md" />
+        <option value="$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-expect.md" />
       </list>
     </option>
   </component>
@@ -166,11 +146,10 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/_site/effects/demo/demo-pocket-doban/demo1/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="766" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="683" />
+    <option name="width" value="683" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -211,7 +190,15 @@
               <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
               <item name="originalNote" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+              <item name="originalNote" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="jest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -221,7 +208,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nextTencent/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nextTencent/example/p8-pencil" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="E:\node.js\node.exe" />
@@ -236,19 +223,19 @@
     <property name="node.js.selected.package.stylelint" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\JavaScript" />
-      <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\test" />
-      <recent name="E:\projectAndNote\JMHello.github.io\_posts\studynote\javascript" />
-      <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\JavaScript\dom" />
-      <recent name="E:\projectAndNote\JMHello.github.io\_posts\project" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\studynote\javascript" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\Ajax" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\JavaScript\crossDomain" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\Web" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\test\jest" />
+      <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\JavaScript" />
+      <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\test" />
+      <recent name="E:\projectAndNote\JMHello.github.io\_posts\studynote\javascript" />
+      <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\JavaScript\dom" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -393,7 +380,7 @@
       <workItem from="1507525101764" duration="12000" />
       <workItem from="1507533769350" duration="14887000" />
       <workItem from="1507595130051" duration="4639000" />
-      <workItem from="1507608134942" duration="12791000" />
+      <workItem from="1507608134942" duration="17335000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -406,19 +393,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482991000" />
+    <option name="totallyTimeSpent" value="487535000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="683" y="0" width="683" height="768" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12868217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3782946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35394126" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.362916" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -457,14 +445,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_includes/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/originalNote/Ajax/2017-09-06-js-Ajax.md" />
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/css/2017-09-05-css-visual-formatting-model.md" />
     <entry file="file://$PROJECT_DIR$/tag/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -930,6 +910,52 @@
               <marker date="1507642855826" expanded="true" signature="5679:5765" ph="{...}" />
               <marker date="1507642855826" expanded="true" signature="5699:5737" ph="{...}" />
               <marker date="1507642855826" expanded="true" signature="5907:5967" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-describe.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="161">
+            <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <folding>
+              <marker date="1507646893270" expanded="true" signature="260:296" ph="{&quot;delicious&quot;: delicious...}" />
+              <marker date="1507646893270" expanded="true" signature="329:529" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="378:430" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="480:526" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="731:860" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="767:822" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="901:1486" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="969:1306" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="1049:1131" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="1211:1301" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="1374:1483" ph="{...}" />
+              <marker date="1507646893270" expanded="true" signature="1420:1478" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-expect.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="455">
+            <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+            <folding>
+              <marker date="1507648860656" expanded="true" signature="453:480" ph="{&quot;name&quot;: 'jm'...}" />
+              <marker date="1507648860656" expanded="true" signature="517:671" ph="{...}" />
+              <marker date="1507648860656" expanded="true" signature="554:593" ph="{...}" />
+              <marker date="1507648860656" expanded="true" signature="632:668" ph="{...}" />
+              <marker date="1507648860656" expanded="true" signature="888:929" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
+              <marker date="1507648860656" expanded="true" signature="888:986" ph="{...}" />
+              <marker date="1507648860656" expanded="true" signature="944:985" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
+              <marker date="1507648860656" expanded="true" signature="1035:1208" ph="{...}" />
+              <marker date="1507648860656" expanded="true" signature="1082:1119" ph="{...}" />
+              <marker date="1507648860656" expanded="true" signature="1167:1205" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
