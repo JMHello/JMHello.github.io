@@ -30,19 +30,19 @@
         <entry file="file://$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-expect.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="455">
-                <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+              <first_editor relative-caret-position="535">
+                <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
                 <folding>
-                  <marker date="1507648860656" expanded="true" signature="453:480" ph="{&quot;name&quot;: 'jm'...}" />
-                  <marker date="1507648860656" expanded="true" signature="517:671" ph="{...}" />
-                  <marker date="1507648860656" expanded="true" signature="554:593" ph="{...}" />
-                  <marker date="1507648860656" expanded="true" signature="632:668" ph="{...}" />
-                  <marker date="1507648860656" expanded="true" signature="888:929" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
-                  <marker date="1507648860656" expanded="true" signature="888:986" ph="{...}" />
-                  <marker date="1507648860656" expanded="true" signature="944:985" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
-                  <marker date="1507648860656" expanded="true" signature="1035:1208" ph="{...}" />
-                  <marker date="1507648860656" expanded="true" signature="1082:1119" ph="{...}" />
-                  <marker date="1507648860656" expanded="true" signature="1167:1205" ph="{...}" />
+                  <marker date="1507649040142" expanded="true" signature="453:480" ph="{&quot;name&quot;: 'jm'...}" />
+                  <marker date="1507649040142" expanded="true" signature="517:671" ph="{...}" />
+                  <marker date="1507649040142" expanded="true" signature="554:593" ph="{...}" />
+                  <marker date="1507649040142" expanded="true" signature="632:668" ph="{...}" />
+                  <marker date="1507649040142" expanded="true" signature="888:929" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
+                  <marker date="1507649040142" expanded="true" signature="888:986" ph="{...}" />
+                  <marker date="1507649040142" expanded="true" signature="944:985" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
+                  <marker date="1507649040142" expanded="true" signature="1035:1208" ph="{...}" />
+                  <marker date="1507649040142" expanded="true" signature="1082:1119" ph="{...}" />
+                  <marker date="1507649040142" expanded="true" signature="1167:1205" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -146,7 +146,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/_site/effects/demo/demo-pocket-doban/demo1/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="768" />
@@ -380,7 +380,7 @@
       <workItem from="1507525101764" duration="12000" />
       <workItem from="1507533769350" duration="14887000" />
       <workItem from="1507595130051" duration="4639000" />
-      <workItem from="1507608134942" duration="17335000" />
+      <workItem from="1507608134942" duration="17536000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -393,11 +393,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="487535000" />
+    <option name="totallyTimeSpent" value="487736000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3782946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -406,7 +405,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.362916" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36166924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -943,19 +942,19 @@
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-expect.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="455">
-            <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+          <first_editor relative-caret-position="535">
+            <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
             <folding>
-              <marker date="1507648860656" expanded="true" signature="453:480" ph="{&quot;name&quot;: 'jm'...}" />
-              <marker date="1507648860656" expanded="true" signature="517:671" ph="{...}" />
-              <marker date="1507648860656" expanded="true" signature="554:593" ph="{...}" />
-              <marker date="1507648860656" expanded="true" signature="632:668" ph="{...}" />
-              <marker date="1507648860656" expanded="true" signature="888:929" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
-              <marker date="1507648860656" expanded="true" signature="888:986" ph="{...}" />
-              <marker date="1507648860656" expanded="true" signature="944:985" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
-              <marker date="1507648860656" expanded="true" signature="1035:1208" ph="{...}" />
-              <marker date="1507648860656" expanded="true" signature="1082:1119" ph="{...}" />
-              <marker date="1507648860656" expanded="true" signature="1167:1205" ph="{...}" />
+              <marker date="1507649040142" expanded="true" signature="453:480" ph="{&quot;name&quot;: 'jm'...}" />
+              <marker date="1507649040142" expanded="true" signature="517:671" ph="{...}" />
+              <marker date="1507649040142" expanded="true" signature="554:593" ph="{...}" />
+              <marker date="1507649040142" expanded="true" signature="632:668" ph="{...}" />
+              <marker date="1507649040142" expanded="true" signature="888:929" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
+              <marker date="1507649040142" expanded="true" signature="888:986" ph="{...}" />
+              <marker date="1507649040142" expanded="true" signature="944:985" ph="{&quot;flavor&quot;: 'grapefruit'...}" />
+              <marker date="1507649040142" expanded="true" signature="1035:1208" ph="{...}" />
+              <marker date="1507649040142" expanded="true" signature="1082:1119" ph="{...}" />
+              <marker date="1507649040142" expanded="true" signature="1167:1205" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
