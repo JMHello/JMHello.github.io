@@ -76,25 +76,151 @@ describe('the La Croix cans on my desk', () => {
 
 ### 2.3 .toBeNull()
 
-### 2.4 .toBeUndefined
+> * `.toBeNull()` 等价于 `.toBe(null)`。
+> * 当你想检测某个值是否为`null`时，可使用这个方法。
+
+```js
+function bloop() {
+  return null;
+}
+
+test(`bloop returns null`, () => {
+  expect(bloop()).toBeNull();
+})
+```
+
+### 2.4 .toBeUndefined()
+
+> * 使用 `.toBeUndefined()` 去检测一个变量是不是`undefined`。
+> * `.toBeUndefined()` 等价于 `.toBe(undefined)`，但是更好的做法是在代码中避免直接引用`undefined`。
+
+```js
+test(`the best drink for octopus flavor is undefined`, () => {
+  expect(bestDrinkForFlavor(`octopus`)).toBeUndefined();
+})
+```
 
 ## 三、与包含相关的匹配器（对象、数组、字符串）
 
 ### 3.1 t.toHaveProperty()
 
-### 3.2 .toContain()
+### 3.2 .toContain(item) - 数组和字符串
 
-### 3.3 .toMatch()
+> * 当你想检测一个`item` 在不在数组里，可以使用 `.toContain(item)`。【严格遵守`===`全等】
+> * 也可以检测字符串是否存在于另外一个字符串里。
+
+```js
+test(`the flavor list contains lime`, () => {
+  expect(getAllFlavors()).toContain(`lime`);
+})
+```
+
+### 3.3 .toMatch(regexpOrString)
+
+> * 字符串匹配正则可以使用`.toMatch()`。
+> * 该方法接受的参数：正则表达式或者字符串
+
+```js
+describe(`an essay on the best flavor`, () => {
+  test(`mentions grapefruite`, () => {
+    expect(essayOnTheBestFlavor()).toMatch(/grapefruit/);
+    expect(essayOnTheBestFlavor()).toMatch(new RegExp(`grapefruit`));
+    
+    expect(`grapefruits`).toMatch(`fruit`);
+  })
+})
+```
 
 ## 四、与逻辑相关的匹配器
 
-### 4.1 .toBeTruthy()
+### 4.1 .toBeTruthy() - 真
 
-### 4.2 .toBeFalsy()
+> * 当你不介意值是什么，但你只想保证值是正确的时，就可以使用`.toBeTruthy()`。
 
-### 4.3 .toBeGreaterThan
+> * 例子：
 
-### 4.4 .toBeLessThan
+```js
+drinkSomeLaCroix ();
+if (thirstInfo()) {
+  drinkMoreLaCroix();
+}
+```
+
+> * 你并不介意 `thirstInfo` 返回值是什么，特别的是，它返回的是`true` 或者一个复杂的对象，促使你的代码能继续运行。
+```js
+test(`drinking La Croix leads to having thirst info`, () => {
+  drinkSomeLaCroix();
+  expect(thirstInfo()).toBeTruthy();
+})
+```
+
+> * 在 `javascript` 中，有6个假值： `false`、`0`、`null`、`' '`、`undefined` 、`NaN`。其他的值都是真的。
+### 4.2 .toBeFalsy() - 假
+
+> * 当你不介意值是什么，但你只想保证值是假（错误）的时，就可以使用`.toBeFalsy()`。
+
+```js
+drinkSomeLaCroix ();
+if (!getErrors()) {
+  drinkMoreLaCroix();
+}
+```
+
+> * 你并不介意 `getErrors` 返回值是什么，特别的是，它返回的是`false`、`0`、`null`、`' '`、`undefined` 、`NaN`，促使你的代码能继续运行。
+```js
+test(`drinking La Croix does not lead to errors`, () => {
+  drinkSomeLaCroix();
+  expect(getErrors()).toBeFalsy();
+})
+```
+
+### 4.3 .toBeGreaterThan(number) - 大于
+
+> * 等价于 `>` - 大于。
+> * 这个方法可以比较浮点数。
+
+```js
+test(`ounces per can is more than 10`, () => {
+  expect(ouncesPerCan()).toBeGreaterThan(10);
+})
+```
+
+### 4.4 .toBeGreaterThanOrEqual(number) - 大于或等于
+
+> * 这个方法可以比较浮点数。
+
+```js
+test('ounces per can is at least 12', () => {
+  expect(ouncesPerCan()).toBeGreaterThanOrEqual(12);
+});
+```
+
+### 4.5 .toBeLessThan(number) - 小于
+
+> * 这个方法可以比较浮点数。
+
+```js
+test('ounces per can is less than 20', () => {
+  expect(ouncesPerCan()).toBeLessThan(20);
+});
+```
+
+### 4.6 .toBeLessThanOrEqual(number)  - 小于或等于
+
+> * 这个方法可以比较浮点数。
+
+```js
+test('ounces per can is at most 12', () => {
+  expect(ouncesPerCan()).toBeLessThanOrEqual(12);
+});
+```
 
 ## 五、.not
 
+> * `.not`取反。即：原来是`true`的变为`false`，原来是`false`的变为`true`。
+
+```js
+test(`the best flavor is not coconut`, () => {
+  expect(bestLaCroixFlavor()).not.toBe(`coconut`);
+})
+```
