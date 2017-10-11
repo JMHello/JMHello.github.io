@@ -102,7 +102,41 @@ test(`the best drink for octopus flavor is undefined`, () => {
 
 ## 三、与包含相关的匹配器（对象、数组、字符串）
 
-### 3.1 t.toHaveProperty()
+### 3.1 t.toHaveProperty(keyPath, value)
+
+> * 使用 `.toHaveProperty()` 可以判断对象中是否存在 `keyPath` 这个属性
+> * 如果传入第二个参数，可以判断对象中的 `keyPath` 这个属性的值是否等于`value`。
+> * `.toHaveProperty()` 匹配器主要使用 **深度相等**，像 `toEqual()`，并且会递归检测所有字段的相等性。
+
+```js
+const houseForSale = {
+  bath: true,
+  bedroom: 4,
+  kitchen: {
+    ameniies: [`oven`, `stove`, `washer`],
+    area: 20,
+    wallColor: `white`
+  }
+}
+
+test(`this house has my desired features`, () => {
+  // 简单引用
+  expect(houseForSale).toHaveProperty(`bath`);
+  expect(houseForSale).toHaveProperty(`bedroom`, 4);
+  
+  expect(houseForSale).not.toHaveProperty(`pool`);
+  
+  // 深度引用，通过点操作符
+  expect(houseForSale).toHaveProperty(`kitchen.area`, 20);
+  expect(houseForSale).toHaveProperty(`kitchen.amenities`, [
+    `oven`,
+    `stove`,
+    `washer`
+  ]);
+  
+  expect(houseForSale).not.toHaveProperty(`kitchen.open`);
+})
+```
 
 ### 3.2 .toContain(item) - 数组和字符串
 
@@ -147,6 +181,7 @@ if (thirstInfo()) {
 ```
 
 > * 你并不介意 `thirstInfo` 返回值是什么，特别的是，它返回的是`true` 或者一个复杂的对象，促使你的代码能继续运行。
+
 ```js
 test(`drinking La Croix leads to having thirst info`, () => {
   drinkSomeLaCroix();
@@ -155,6 +190,7 @@ test(`drinking La Croix leads to having thirst info`, () => {
 ```
 
 > * 在 `javascript` 中，有6个假值： `false`、`0`、`null`、`' '`、`undefined` 、`NaN`。其他的值都是真的。
+
 ### 4.2 .toBeFalsy() - 假
 
 > * 当你不介意值是什么，但你只想保证值是假（错误）的时，就可以使用`.toBeFalsy()`。
@@ -167,6 +203,7 @@ if (!getErrors()) {
 ```
 
 > * 你并不介意 `getErrors` 返回值是什么，特别的是，它返回的是`false`、`0`、`null`、`' '`、`undefined` 、`NaN`，促使你的代码能继续运行。
+
 ```js
 test(`drinking La Croix does not lead to errors`, () => {
   drinkSomeLaCroix();
