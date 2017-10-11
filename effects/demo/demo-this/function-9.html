@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  var foo = {
+    bar: function() {
+      console.log(this);e
+    }
+  };
+
+  foo.bar(); // Reference, OK => foo
+  (foo.bar)(); // Reference, OK => foo
+
+  (foo.bar = foo.bar)(); // window
+  (false || foo.bar)(); // window
+  (foo.bar,foo.bar)(); // window
+</script>
+</body>
+</html>

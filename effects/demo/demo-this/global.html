@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局作用域下的this</title>
+</head>
+<body>
+<script>
+  this.a = 10; // 等价 window.a = 10;
+  console.log(a); // 10
+
+  b = 20;
+  console.log(this.b); // 20
+
+  var c = 30;
+  console.log(this.c); // 30
+</script>
+</body>
+</html>

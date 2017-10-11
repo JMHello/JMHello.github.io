@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  try {
+    throw function () {
+      console.log(this);
+    }
+  } catche (e) {
+    e(); // __catchObject - in ES3, global - fixed in ES5
+  }
+</script>
+</body>
+</html>

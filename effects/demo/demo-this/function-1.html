@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  var foo = {x: 10};
+
+  var bar = {
+    x: 20,
+    test: function () {
+
+      console.log(this === bar); // true
+      console.log(this.x); // 20
+
+      this = foo; // 报错，不可以改变 this 的值
+
+      console.log(this.x); // 如果没有报错的话，这里是 10 而不是 20.
+    }
+  };
+
+  // 在进入上下文，this的值决定于 bar 对象
+  bar.test(); // true, 20
+</script>
+</body>
+</html>

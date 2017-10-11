@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  function foo () {
+    function bar () {
+      console.log(this); // window
+    }
+    bar(); // 与 AO.bar() 一样
+  }
+</script>
+</body>
+</html>

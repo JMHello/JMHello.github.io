@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  function foo () {
+    console.log(this);
+  }
+
+  foo(); // window
+
+
+  console.log(foo === foo.prototype.constructor); //true
+
+  foo.prototype.constructor(); // {constructor: f} -- foo.prototype
+
+</script>
+</body>
+</html>

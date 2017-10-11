@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  var foo = {
+    bar: function () {
+      console.log(this);
+    }
+  };
+
+  var test = foo.bar;
+
+  test(); // window
+</script>
+</body>
+</html>

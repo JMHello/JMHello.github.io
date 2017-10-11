@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  function A () {
+    console.log(this); // 新创建的对象 - 下面的`a`对象
+    this.x = 10;
+  }
+  var a = new A();
+  console.log(a.x); // 10
+</script>
+</body>
+</html>

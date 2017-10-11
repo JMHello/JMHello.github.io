@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  var foo = {x: 10};
+
+  var bar = {
+    x: 20,
+    test: function () {
+
+      console.log(this === bar); // true
+      console.log(this.x); // 20
+
+      this = foo; // 报错，不可以改变 this 的值
+
+      console.log(this.x); // 如果没有报错的话，这里是 10 而不是 20.
+    }
+  };
+
+  // 将 bar.test 的引用 赋给 foo.test ，此时 this 的值变为 foo
+  foo.test = bar.test;
+  foo.test(); // false, 10
+</script>
+</body>
+</html>

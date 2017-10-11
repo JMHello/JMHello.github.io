@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  var foo = {
+    bar: function () {
+      console.log(this,this === foo);
+    }
+  };
+
+  foo.bar(); // foo, true
+
+  // 将 foo.bar 复制给全局变量 exampleFunc，使用另外一种形式的调用表达式
+  // foo.bar 和 exampleFunc 两个函数是相等的，但是其 this值是不一样的。
+
+  var exampleFunc = foo.bar;
+
+  console.log(exampleFunc === foo.bar); // true
+
+  exampleFunc(); // window, false
+</script>
+</body>
+</html>

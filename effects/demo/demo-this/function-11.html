@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作用域下的this</title>
+</head>
+<body>
+<script>
+  var x = 10;
+
+  with({
+    foo: function () {
+      console.log(this.x);
+    },
+    x: 20
+  }) {
+    foo(); // 20
+  }
+
+  // 因为
+  var fooReference = {
+    base: __withObject,
+    propertyName: 'foo'
+  }
+</script>
+</body>
+</html>
