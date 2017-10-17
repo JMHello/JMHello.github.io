@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>debounce-实例</title>
+</head>
+<body>
+<script>
+  var delta = 1000;
+
+  function log(e) {
+    console.log(e);
+  }
+
+  function debounce(fn, delta) {
+    var timeoutId = null;
+
+    return function () {
+      clearTimeout(timeoutId);
+
+      var args = arguments;
+
+      timeoutId = setTimeout(function() {
+        fn.apply(null, args);
+      }, delta);
+    }
+  }
+
+  var debouncedLog = debounce(log, delta);
+  window.onkeydown = debouncedLog;
+</script>
+</body>
+</html>

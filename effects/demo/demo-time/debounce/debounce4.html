@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>debounce-实例</title>
+</head>
+<body>
+<script>
+  function debounce(fn, delta, context) {
+    var timeoutID = null;
+
+    return function() {
+      clearTimeout(timeoutID);
+
+      var args = arguments;
+      timeoutID = setTimeout(function() {
+        fn.apply(context, args);
+      }, delta);
+    };
+  }
+
+  function foo() {
+    console.log('foo');
+  }
+
+  var debouncedFoo = debounce(foo, 1000);
+
+  window.onmousemove = debouncedFoo;
+</script>
+</body>
+</html>

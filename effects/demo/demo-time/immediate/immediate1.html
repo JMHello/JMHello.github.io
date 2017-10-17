@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>immediate实现</title>
+</head>
+<body>
+<script>
+    var delta = 1000;
+    var timeId = null;
+    var safe = true;
+
+    function log () {
+      console.log('foo');
+    }
+
+    function immediateLog () {
+      if (safe) {
+        log();
+        safe = false;
+      }
+
+      clearTimeout(timeId);
+      timeId = setTimeout(() => {
+        safe = true;
+      }, delta);
+    }
+
+    window.onkeydown = immediateLog;
+</script>
+</body>
+</html>

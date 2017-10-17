@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>debounce-实例</title>
+</head>
+<body>
+<script>
+    var delta = 500;
+    var timeoutId = null;
+
+    function log () {
+      console.log('foo');
+    }
+
+    function debouncedLog () {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        // 等待一段时间，并且检查事件是否再次发生
+        log();
+      }, delta);
+    }
+
+    window.onkeydown = debouncedLog;
+</script>
+</body>
+</html>

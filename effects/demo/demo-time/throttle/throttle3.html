@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改mousemove存在问题</title>
+</head>
+<body>
+<script>
+    var delta = 1000;
+    var safe =true;
+
+    function log() {
+      console.log('foo');
+    }
+
+    function throttledLog() {
+      if (safe) {
+        log();
+        safe = false;
+
+        setTimeout(function () {
+          safe = true;
+        }, delta);
+      }
+    };
+
+    window.onmousemove = throttledLog;
+</script>
+</body>
+</html>

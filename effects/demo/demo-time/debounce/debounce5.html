@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>debounce-实例</title>
+</head>
+<body>
+<script>
+  function debounce(fn, delta, context) {
+    var timeoutID = null;
+
+    return function() {
+      clearTimeout(timeoutID);
+
+      var args = arguments;
+      timeoutID = setTimeout(function() {
+        fn.apply(context, args);
+      }, delta);
+    };
+  }
+
+  var total = 0;
+
+  function foo() {
+    total++;
+    console.log(total);
+  }
+
+  var debouncedFoo = debounce(foo, 300);
+
+  for (var i = 0; i < 10; i++) {
+    debouncedFoo();
+  }
+
+ console.log(total);
+</script>
+</body>
+</html>

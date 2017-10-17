@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mousemove存在问题</title>
+</head>
+<body>
+<script>
+    var then = 0;
+    
+    function log () {
+      var now = Date.now();
+      if (1000 / (now - then) > 60) {
+        console.log('It\'s over 9000!!!');
+        console.log(now, then, 1000/(now - then)>60);
+      }
+      then = now;
+
+    }
+
+    window.onmousemove = log;
+</script>
+</body>
+</html>
