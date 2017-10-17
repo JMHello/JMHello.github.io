@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>非捕获分组</title>
+</head>
+<body>
+<script>
+  var pattern = /I like (apple|orange) and (?:swimming|running)/;
+  var test = pattern.exec('I like orange and swimming');
+  console.log(test);
+</script>
+</body>
+</html>

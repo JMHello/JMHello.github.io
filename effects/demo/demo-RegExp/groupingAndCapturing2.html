@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>捕获和分组</title>
+</head>
+<body>
+<script>
+  var pattern = /I like (apple|orange) and (swimming|running)/;
+  var test = pattern.exec('I like orange and swimming');
+  var test2 = pattern.exec('I like apple and running'); // 如果注释了这里，那么下面的输出依然是orange swimming
+  console.log(test);
+  console.log(test2);
+  console.log('RegExp.$1：' + RegExp.$1,'，RegExp.$2：' + RegExp.$2); // RegExp.$1：apple ，RegExp.$2：running
+</script>
+</body>
+</html>

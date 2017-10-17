@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>捕获和分组</title>
+</head>
+<body>
+<script>
+  var pattern = /I like (apple|orange) and (swimming|running)/;
+  var test = pattern.exec('I like orange and swimming');
+  console.log(test);
+  console.log('RegExp.$1：' + RegExp.$1, ', RegExp.$2：' + RegExp.$2); // orange swimming
+</script>
+</body>
+</html>

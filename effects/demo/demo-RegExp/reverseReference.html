@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>反向引用</title>
+</head>
+<body>
+<script>
+  // 这个写法错误：var reg = /<(div)><\/$1>/;
+  var reg = /<(div)><\/\1>/; // 等价于 /<div></div>/
+  console.log(reg.test('<div></div>'));
+</script>
+</body>
+</html>
