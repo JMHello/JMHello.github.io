@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正向前瞻</title>
+</head>
+<body>
+<script>
+  var pattern = /Lily(?=\slike\sswimming)/g;
+  var target = 'Lily like swimming Lily like swimming Lily like running  ';
+  console.log(target.match(pattern)); // ["Lily", "Lily"]
+</script>
+</body>
+</html>

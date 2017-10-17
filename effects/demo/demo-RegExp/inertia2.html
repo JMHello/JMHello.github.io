@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则实例1 - 计算span的个数</title>
+</head>
+<body>
+<script>
+var str = '<span>coding</span> is ' +
+  '<span>interesting</span>' +
+  '<strong>coding</span> is ' +
+  '<span>interesting</span>' +
+  '<strong>coding</span> is ' +
+  '<span>beijing</span>' +
+  '<strong>coding</span> is ' +
+  '<span>interesting</span>' +
+  '<strong>coding</span> is' +
+  ' <span>hello</span>\n';
+
+var reg = /(<span>.*?<\/span>)/g;
+
+var result = str.match(reg);
+
+var r_len = result.length;
+
+console.log(result);
+console.log(r_len);
+</script>
+</body>
+</html>
