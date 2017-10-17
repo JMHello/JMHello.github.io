@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-RegExp/groupingAndCapturing2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-RegExp/notGroupingAndCapturing.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-RegExp/reverseReference.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-RegExp/greedy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-RegExp/inertia.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/images/RegExp/eg/eg-02.png" afterPath="$PROJECT_DIR$/styles/images/RegExp/eg/eg-02.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/studynote/RegExp/2017-09-03-RegExp.md" afterPath="$PROJECT_DIR$/_posts/studynote/RegExp/2017-09-03-RegExp.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/studynote/RegExp/2017-09-03-RegExp-Example.md" afterPath="$PROJECT_DIR$/_posts/studynote/RegExp/2017-10-17-RegExp-Example.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,20 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-09-03-RegExp.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-09-03-RegExp.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/studynote/RegExp/2017-09-03-RegExp.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="199">
-                <caret line="347" column="32" lean-forward="false" selection-start-line="347" selection-start-column="32" selection-end-line="347" selection-end-column="32" />
+              <first_editor relative-caret-position="441">
+                <caret line="436" column="0" lean-forward="false" selection-start-line="436" selection-start-column="0" selection-end-line="436" selection-end-column="0" />
                 <folding>
-                  <marker date="1508228961233" expanded="true" signature="2443:2544" ph="/*...*/" />
-                  <marker date="1508228961233" expanded="true" signature="2568:2812" ph="{...}" />
-                  <marker date="1508228961233" expanded="true" signature="3263:3364" ph="/*...*/" />
-                  <marker date="1508228961233" expanded="true" signature="3388:3604" ph="{...}" />
-                  <marker date="1508228961233" expanded="true" signature="3891:3941" ph="{...}" />
-                  <marker date="1508228961233" expanded="true" signature="6465:6504" ph="{...}" />
-                  <marker date="1508228961233" expanded="true" signature="8199:8291" ph="//..." />
+                  <marker date="1508229899249" expanded="true" signature="2443:2544" ph="/*...*/" />
+                  <marker date="1508229899249" expanded="true" signature="2568:2812" ph="{...}" />
+                  <marker date="1508229899249" expanded="true" signature="3263:3364" ph="/*...*/" />
+                  <marker date="1508229899249" expanded="true" signature="3388:3604" ph="{...}" />
+                  <marker date="1508229899249" expanded="true" signature="3891:3941" ph="{...}" />
+                  <marker date="1508229899249" expanded="true" signature="6465:6504" ph="{...}" />
+                  <marker date="1508229899249" expanded="true" signature="8199:8291" ph="//..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -66,31 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reverseReference.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/reverseReference.html">
+      <file leaf-file-name="inertia.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/inertia.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="notGroupingAndCapturing.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/notGroupingAndCapturing.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="groupingAndCapturing1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/groupingAndCapturing1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="11" selection-end-column="87" />
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -122,8 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-01-js-offset.md" />
-        <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-01-js-client.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-01-js-scroll.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-03-js-page.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/React/2017-09-23-React-lifecycle.md" />
@@ -172,7 +149,9 @@
         <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/notGroupingAndCapturing.html" />
         <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/groupingAndCapturing2.html" />
         <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/reverseReference.html" />
+        <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/greedy.html" />
         <option value="$PROJECT_DIR$/_posts/studynote/RegExp/2017-09-03-RegExp.md" />
+        <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/inertia.html" />
       </list>
     </option>
   </component>
@@ -452,7 +431,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506347000" />
+    <option name="totallyTimeSpent" value="507285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -513,26 +492,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/project/2017-10-03-project-pocket-douban.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="335">
-            <caret line="89" column="23" lean-forward="true" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-09-04-js-Storage.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/studynote/HTTP/2017-08-24-HTTP-First-Basic.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1012,22 +971,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/greedy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/studynote/RegExp/2017-09-03-RegExp.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="199">
-            <caret line="347" column="32" lean-forward="false" selection-start-line="347" selection-start-column="32" selection-end-line="347" selection-end-column="32" />
+          <first_editor relative-caret-position="441">
+            <caret line="436" column="0" lean-forward="false" selection-start-line="436" selection-start-column="0" selection-end-line="436" selection-end-column="0" />
             <folding>
-              <marker date="1508228961233" expanded="true" signature="2443:2544" ph="/*...*/" />
-              <marker date="1508228961233" expanded="true" signature="2568:2812" ph="{...}" />
-              <marker date="1508228961233" expanded="true" signature="3263:3364" ph="/*...*/" />
-              <marker date="1508228961233" expanded="true" signature="3388:3604" ph="{...}" />
-              <marker date="1508228961233" expanded="true" signature="3891:3941" ph="{...}" />
-              <marker date="1508228961233" expanded="true" signature="6465:6504" ph="{...}" />
-              <marker date="1508228961233" expanded="true" signature="8199:8291" ph="//..." />
+              <marker date="1508229899249" expanded="true" signature="2443:2544" ph="/*...*/" />
+              <marker date="1508229899249" expanded="true" signature="2568:2812" ph="{...}" />
+              <marker date="1508229899249" expanded="true" signature="3263:3364" ph="/*...*/" />
+              <marker date="1508229899249" expanded="true" signature="3388:3604" ph="{...}" />
+              <marker date="1508229899249" expanded="true" signature="3891:3941" ph="{...}" />
+              <marker date="1508229899249" expanded="true" signature="6465:6504" ph="{...}" />
+              <marker date="1508229899249" expanded="true" signature="8199:8291" ph="//..." />
             </folding>
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/inertia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
