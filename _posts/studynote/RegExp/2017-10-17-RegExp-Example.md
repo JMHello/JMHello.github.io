@@ -97,7 +97,7 @@ console.log(`replace:  ` + str2.replace(/()/g, ','));
 ```js
 function query (queryString,name) {
   const reg = new RegExp('(?:\\?|&)' + name + '=(.*?(?=&|$))');
-  const result = reg.exec(queryString);
+  const result = reg.exec(queryString) || [];
 
   return result[1];
 }
@@ -105,5 +105,6 @@ function query (queryString,name) {
 console.log('name：' + query('?name=jm&age=&sex=1', 'name')); // "jm"
 console.log('age：' + query('?name=jm&age=&sex=1', 'age')); // ""
 console.log('sex：' + query('?name=jm&age=&sex=1', 'sex')); // 1
+console.log('sex：' + query('?', 'sex')); // undefined 
 ```
 
