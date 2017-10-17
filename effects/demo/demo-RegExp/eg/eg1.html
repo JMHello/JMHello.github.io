@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>将非 P 元素都替换成 P 元素</title>
+</head>
+<body>
+<script>
+  var str = '<div id="babalala">paragraph </div><p>哈哈哈</p><span class="yellow">hello jsonp!</span><strong>呵呵呵pi!</strong>';
+  var reg = /<(\/?)(?!p).*?>/g;
+
+  console.log(str.replace(reg, '<$1p>')); // 注意：$1指的是 "/"
+  console.log(RegExp.$1); // "/"
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>将给定的数字转化成千分位的格式</title>
+</head>
+<body>
+<script>
+  var str = '123456789';
+
+  var reg = /(?=(?!\b)(\d{3})+$)/g;
+
+  console.log(str.match(reg)); // ["", ""]
+  console.log(str.replace(reg, ',')) // 123,456,789
+
+  var str2 = '123456789';
+  console.log(str2.match(/()/g));
+  console.log(`replace:  ` + str2.replace(/()/g, ','));
+</script>
+</body>
+</html>
