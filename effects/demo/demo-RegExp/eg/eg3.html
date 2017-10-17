@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function query (queryString,name) {
+      const reg = new RegExp('(?:\\?|&)' + name + '=(.*?(?=&|$))');
+      const result = reg.exec(queryString);
+
+      return result[1];
+    }
+
+    console.log('name：' + query('?name=jm&age=&sex=1', 'name')); // "jm"
+    console.log('age：' + query('?name=jm&age=&sex=1', 'age')); // ""
+    console.log('sex：' + query('?name=jm&age=&sex=1', 'sex')); // 1
+</script>
+</body>
+</html>

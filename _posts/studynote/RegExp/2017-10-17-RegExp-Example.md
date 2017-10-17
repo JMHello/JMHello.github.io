@@ -11,7 +11,7 @@ tag: RegExp
  其他链接：
 
  + [RegExp-正则]({{ '/2017/09/03/RegExp' | prepend: site.baseurl }})
-
+ + [单词边界](http://www.cnblogs.com/fuhai/p/6149169.html)
 
 <!-- more -->
 
@@ -89,4 +89,21 @@ console.log(`replace:  ` + str2.replace(/()/g, ','));
 > * 结果如图
 
 ![relationship-map]({{ '/styles/images/RegExp/eg/eg-08.png' | prepend: site.baseurl }})
+
+## 4. 获取queryString中指定的值
+
+> * 点击打开[demo](/effects/demo/demo-RegExp/eg/eg3.html)
+
+```js
+function query (queryString,name) {
+  const reg = new RegExp('(?:\\?|&)' + name + '=(.*?(?=&|$))');
+  const result = reg.exec(queryString);
+
+  return result[1];
+}
+
+console.log('name：' + query('?name=jm&age=&sex=1', 'name')); // "jm"
+console.log('age：' + query('?name=jm&age=&sex=1', 'age')); // ""
+console.log('sex：' + query('?name=jm&age=&sex=1', 'sex')); // 1
+```
 

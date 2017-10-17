@@ -17,5 +17,13 @@
   console.log(str2.match(/()/g));
   console.log(`replace:  ` + str2.replace(/()/g, ','));
 </script>
+<script>
+    function a (url,name) {
+      const reg = new RegExp('(?:\\?|&)' + name + '=(.*(?=&|$))');
+      return reg.exec(url)[1];
+    }
+
+    console.log(a('?name=mm&age=&','age'));
+</script>
 </body>
 </html>
