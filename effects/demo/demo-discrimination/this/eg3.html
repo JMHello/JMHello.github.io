@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>混合 - this</title>
+</head>
+<body>
+<script>
+    var obj = {};
+
+    obj.getThis = function () {
+       return () => {
+        console.log(this);
+      };
+    }
+
+    obj.getThis()(); // obj
+
+    // 等价于
+//    var obj = {
+//      getThis: function () {
+//        return () => {
+//          console.log(this);
+//        }
+//      }
+//    };
+//
+//    obj.getThis()(); // obj
+
+
+</script>
+</body>
+</html>

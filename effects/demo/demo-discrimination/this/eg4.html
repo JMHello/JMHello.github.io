@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>混合 - this</title>
+</head>
+<body>
+<script>
+    var obj = {};
+
+    obj.getThis = function () {
+      var inner = function () {
+        console.log(this);
+      }
+      inner();
+    }
+
+    obj.getThis(); // window
+
+</script>
+</body>
+</html>
