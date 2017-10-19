@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element - 序列化属性</title>
+</head>
+<body>
+<script>
+  function outputAttributes(element){
+    var pairs = [],
+        attrName,
+        attrValue,
+        i,
+        len;
+
+    for (i=0, len=element.attributes.length; i < len; i++){
+      attrName = element.attributes[i].nodeName;
+      attrValue = element.attributes[i].nodeValue;
+      pairs.push(attrName + "=\"" + attrValue + "\"");
+    }
+    return pairs.join(" ");
+  }
+
+  document.body.innerHTML = '<div id="new" class="blue"></div>'
+  const div = document.getElementById('new');
+  console.log(outputAttributes(div)); // id="new" class="blue"
+</script>
+</body>
+</html>

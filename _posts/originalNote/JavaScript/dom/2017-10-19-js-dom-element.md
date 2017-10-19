@@ -194,3 +194,75 @@ console.log(myDiv.getAttribute('class')); // null
 ```
 
 ### 3.4 attributes 属性
+
+> * `Element` 类型是使用 `attributes` 属性的唯一一个 `DOM` 节点类型。
+>   * `attributes` 属性中包含一系列节点，每个节点的 `nodeName` 就是特性的名称，而节点的 `nodeValue` 就是特性的值。
+> * `attributes` 属性中包含一个 **`NamedNodeMap`**，与 `NodeList` 类似，也是一个 **“动态”的集合**。
+> * 元素的每一个特性都由一个 `Attr` 节点表示，每个节点都保存在 `NamedNodeMap` 对象中。
+
+---
+
+> * `NamedNodeMap` 对象拥有下列方法。
+>    * `getNamedItem(name)`：返回 `nodeName` 属性等于 `name` 的节点。
+>    * `removeNamedItem(name)`：从列表中移除 `nodeName` 属性等于 `name` 的节点。【返回表示被删除特性的 Attr 节点】
+>    * `setNamedItem(node)`：向列表中添加节点，以节点的 `nodeName` 属性为索引。
+>    * `item(pos)`：返回位于数字 `pos` 位置处的节点。
+
+---
+
+> * 点击打开[demo](/effects/demo/demo-node/element/eg5.html)
+
+```js
+document.body.innerHTML = '<div id="red" class="big"></div>';
+const myDiv = document.body.querySelector('div');
+
+// 取得元素的 id 特性
+console.log(myDiv.attributes.getNamedItem('id').nodeValue); // red
+console.log(myDiv.attributes['id'].nodeValue); // red
+
+// 设置特性的值
+myDiv.attributes['class'].nodeValue = 'small';
+console.log(myDiv.attributes['class'].nodeValue); // small
+
+//  removeNamedItem()
+const oldAttr = myDiv.attributes.removeNamedItem('id');
+console.log(oldAttr); // id="red"
+```
+
+---
+
+> * 迭代元素的每一个特性，然后将它们构造成 `name="value" name="value"`这样的字符串格式
+> * 点击打开[demo](/effects/demo/demo-node/element/eg6.html)
+
+```js
+function outputAttributes(element){
+var pairs = [],
+    attrName,
+    attrValue,
+    i,
+    len;
+
+for (i=0, len=element.attributes.length; i < len; i++){
+  attrName = element.attributes[i].nodeName;
+  attrValue = element.attributes[i].nodeValue;
+  pairs.push(attrName + "=\"" + attrValue + "\"");
+}
+return pairs.join(" ");
+}
+
+document.body.innerHTML = '<div id="new" class="blue"></div>'
+const div = document.getElementById('new');
+console.log(outputAttributes(div)); // id="new" class="blue"
+```
+
+## 四、创建元素  - createElement()
+
+> * **`document.createElement(tagName)`**：【参数：要创建的元素标签名】
+> * 返回值：返回一个 `DOM` 元素的引用。
+
+
+> * 在新元素上设置特性（如：`id`、`class`）只是给它们赋予了相应的信息。
+> * 要把新元素添加到文档树，可以使用 `appendChild()`、`insertBefore()` 或 `replaceChild()`方法，设置的这些特性才会影响浏览器的显示。
+>   * 即：一旦将元素添加到文档树中，浏览器就会立即呈现该元素，此后，对这个元素所作的任何修改都会实时反映在浏览器中。
+
+

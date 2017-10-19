@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element - attributes属性</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = '<div id="red" class="big"></div>';
+  const myDiv = document.body.querySelector('div');
+
+  // 取得元素的 id 特性
+  console.log(myDiv.attributes.getNamedItem('id').nodeValue); // red
+  console.log(myDiv.attributes['id'].nodeValue); // red
+
+  // 设置特性的值
+  myDiv.attributes['class'].nodeValue = 'small';
+  console.log(myDiv.attributes['class'].nodeValue); // small
+
+  //  removeNamedItem()
+  const oldAttr = myDiv.attributes.removeNamedItem('id');
+  console.log(oldAttr); // id="red"
+</script>
+</body>
+</html>
