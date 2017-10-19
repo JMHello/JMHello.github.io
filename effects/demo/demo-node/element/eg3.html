@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element - setAttribute()</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = '<div class="red"></div>';
+  const myDiv = document.body.querySelector('div');
+
+  // 设置已有属性
+  myDiv.setAttribute('class', 'blue');
+  console.log(myDiv.getAttribute('class')); // blue
+
+  // 设置未有属性
+  myDiv.setAttribute('data-index', 1);
+  console.log(myDiv.getAttribute('data-index')); // 1
+
+  // 设置元素共有属性
+  myDiv.id = "myDiv";
+  console.log(myDiv.id); // myDiv
+
+  // 设置自定义属性
+  myDiv['data-user'] = 'jm';
+  console.log(myDiv.getAttribute('data-user')); // null
+
+
+</script>
+</body>
+</html>

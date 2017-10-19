@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element - 访问标签名</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"></div>`;
+  const div = document.getElementById('div');
+
+  console.log(div.nodeName, div.tagName); // DIV，DIV
+
+  if (div.tagName == "div"){ //不能这样比较，很容易出错！
+    //在此执行某些操作
+  }
+  if (div.tagName.toLowerCase() === "div"){ //这样最好（适用于任何文档）
+    //在此执行某些操作
+  }
+</script>
+</body>
+</html>

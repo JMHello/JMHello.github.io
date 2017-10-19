@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element - getAttribute()</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = '<div id="myDiv" class="bd" title="Body text" data-user="jm" style="background: blue;" onclick="console.log(this)"></div>';
+  const myDiv = document.getElementById('myDiv');
+
+  console.log(myDiv.getAttribute('id')); // "myDiv"
+  console.log(myDiv.getAttribute('class')); // "bd"
+
+  // 读取自定义属性
+  console.log(myDiv.getAttribute('data-user')); // "jm"
+  console.log(myDiv['data-user']); // "undefined"
+
+  // 读取onclick
+  console.log(myDiv.getAttribute('onclick')); // console.log(this)
+  console.log(myDiv.onclick); // function (event){console.log(this)}
+
+  // 读取style
+  console.log(myDiv.getAttribute('style')); // background: blue;
+  console.log(myDiv.style); // CSSStyleDeclaration ==》 一个很复杂的对象
+</script>
+</body>
+</html>
