@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>es6 - this</title>
+</head>
+<body>
+<script>
+   var obj = {};
+
+   obj.getThis = () => {
+     return () => {
+       console.log(this);
+     }
+   }
+
+   obj.getThis()();
+
+</script>
+</body>
+</html>

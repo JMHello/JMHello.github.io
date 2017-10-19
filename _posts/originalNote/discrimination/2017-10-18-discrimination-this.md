@@ -72,6 +72,28 @@ obj.getThis(); // window
 
 ![relationship-map]({{ '/styles/images/discrimination/this/this-02.png' | prepend: site.baseurl }})
 
+---
+
+> * 例2
+> * 点击打开[demo](/effects/demo/demo-discrimination/this/eg6.html)
+
+```js
+var obj = {};
+
+obj.getThis = () => {
+ return () => {
+   console.log(this);
+ }
+}
+
+obj.getThis()(); //window
+```
+
+> * 结果如图所示
+
+![relationship-map]({{ '/styles/images/discrimination/this/this-02.png' | prepend: site.baseurl }})
+
+
 ### 1.3 来个混合写法
 
 > * 例1：
@@ -129,6 +151,24 @@ obj.getThis(); // window
 
 ![relationship-map]({{ '/styles/images/discrimination/this/this-02.png' | prepend: site.baseurl }})
 
+---
+
+> * 例3
+> * 点击打开[demo](/effects/demo/demo-discrimination/this/eg5.html)
+
+```js
+function outer () {
+  return () => {
+    console.log(this);
+  }
+}
+
+outer()(); // window
+```
+
+> * 结果如图所示
+
+![relationship-map]({{ '/styles/images/discrimination/this/this-02.png' | prepend: site.baseurl }})
 
 ### 1.4 总结
 

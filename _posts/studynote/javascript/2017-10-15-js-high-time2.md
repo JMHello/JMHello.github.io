@@ -32,6 +32,9 @@ tag: javascript
 >   * **`1 / n >= t`**
 > * 如果 `t` 以毫秒为单位：**`1000 / n >= t`**
 
+> * 如果将水龙头拧紧直到水是以水滴的形式流出，那你会发现 **每隔一段时间，就会有一滴水流出**。
+> * 即：**预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期**。
+
 ### 1.2 onmousemove的问题
 
 * 先看一下`onmousemove`的 `demo` 【点击打开[demo](/effects/demo/demo-time/throttle/throttle1.html)】
@@ -109,6 +112,7 @@ function throttle (fn, delta, context) {
     
     if (safe) {
       fn.call(context, args);
+      safe = false;
       setTimeout(function() {
         safe = true;
       },delta);
@@ -117,9 +121,23 @@ function throttle (fn, delta, context) {
 }
 ```
 
+* 点击打开[demo](/effects/demo/demo-time/throttle/throttle4.html)
+
+```js
+ function sayHi () {
+  console.log(this); // sayHi
+}
+
+var throttleLog = throttle(sayHi, 1000, sayHi);
+window.onmousemove = throttleLog;
+```
+
 ## 二、Debounce
 
 ### 2.1 debounce介绍
+
+> * 如果用手指一直按住一个弹簧，它将不会弹起直到你松手为止。
+> * 即：当调用动作 `n` 毫秒后，才会执行该动作，若在这 `n` 毫秒内又调用此动作则将重新计算执行时间。
 
 ### 2.2 实例 - keydown vs keyup
 
@@ -149,21 +167,21 @@ window.onkeyup = function () {
 
 ```js
  var delta = 500;
-    var timeoutId = null;
+var timeoutId = null;
 
-    function foo () {
-      console.log('foo');
-    }
+function foo () {
+  console.log('foo');
+}
 
-    function debouncedLog () {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        // 等待一段时间，并且检查事件是否再次发生
-        foo();
-      }, delta);
-    }
+function debouncedLog () {
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(() => {
+    // 等待一段时间，并且检查事件是否再次发生
+    foo();
+  }, delta);
+}
 
-    window.onkeydown = debouncedLog;
+window.onkeydown = debouncedLog;
 ```
 
 > * 时间间隔设为了 `500ms`，如果你在 `500ms` 按着键盘不放，也只会输出一次`foo`（不是马上输出），即：只调用一次 `debouncelog`。

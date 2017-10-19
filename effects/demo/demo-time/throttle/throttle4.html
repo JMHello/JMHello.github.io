@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完美throttle函数</title>
+</head>
+<body>
+<script>
+
+    function throttle (fn, delta, context) {
+      var safe = true;
+
+      return function () {
+        context = context || this;
+
+        if (safe) {
+          fn.call(context, arguments);
+          safe = false;
+
+          setTimeout(function () {
+            safe = true;
+          }, delta);
+        }
+      }
+    }
+
+    function sayHi () {
+      console.log(this);
+    }
+
+    var throttleLog = throttle(sayHi, 1000, sayHi);
+    window.onmousemove = throttleLog;
+
+
+</script>
+</body>
+</html>
