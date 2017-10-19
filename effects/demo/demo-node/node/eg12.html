@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - replaceChild()</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i id="i"></i></div>`;
+  const div = document.getElementById('div');
+
+  // 深复制
+  const deepCopyResult = div.cloneNode(true);
+  console.log(deepCopyResult); // <div id="div"><i id="i"></i></div>
+
+  // 浅复制
+  const shallowCopeResult = div.cloneNode(false);
+  console.log(shallowCopeResult); // <div id="div"></div>
+</script>
+</body>
+</html>

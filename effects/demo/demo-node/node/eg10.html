@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - removeChild()</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i id="i"></i></div>`;
+  const div = document.getElementById('div');
+  const i = document.getElementById('i');
+
+  // 移除节点i
+  const returnNode = div.removeChild(i);
+  console.log(returnNode === i); // true
+</script>
+</body>
+</html>

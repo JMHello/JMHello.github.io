@@ -245,6 +245,8 @@ console.log(p1.ownerDocument); // #document
 
 ## 四、操作节点
 
+> * `currentNode` 都是指父节点。
+
 ### 4.1 末尾添加节点 - appendChild()
 
 > * **`currentNode.appendChild(newNode)`**：
@@ -277,3 +279,99 @@ console.log(returnNode === i); // true
 > * 添加节点后：
 
 ![relationship-map]({{ '/styles/images/javascript/DOM/node/node-06.png' | prepend: site.baseurl }})
+
+### 4.2 任意位置插入节点 insertBefore()
+
+> * **`currentNode.insertBefore(newNode, referenceNode)`** （参数：要插入的节点和作为参照的节点）
+> * 用法：可以将节点放在 `childNodes` 列表中某个特定的位置上。
+>    *  插入节点后，被插入的节点会变成 **参照节点的前一个同胞节点**（`previousSibling`），同时被方法返回。
+> * 如果参照节点是 `null`，则 `insertBefore()` 与 `appendChild()` 执行相同的操作。
+
+> * 例 【点击打开[demo](/effects/demo/demo-node/node/eg9.html)】
+
+```js
+document.body.innerHTML = `<div id="div"><i id="i"></i><p id="p1"><i></i></p></div>`;
+const div = document.getElementById('div');
+const i = document.getElementById('i');
+const p1 = document.getElementById('p1');
+
+// 插入后成为最后一个子节点
+const returnNode1 = div.insertBefore(i, null);
+console.log(returnNode1 === i); // true
+
+// 插入后成为第一个子节点
+const span = document.createElement('span');
+const returnNode2 = p1.insertBefore(span, p1.firstChild);
+console.log(returnNode2 === p1.firstChild); // true
+
+// 插入到最后一个子节点前面
+const em = document.createElement('em');
+const returnNode3 = div.insertBefore(em, div.lastChild);
+console.log(returnNode3 === div.childNodes[div.childNodes.length - 2]); // true
+```
+
+### 4.3 删除节点 - removeNode() 和 replaceChild()
+
+> * **`currentNode.removeNode(node)`** - 删除节点
+> * 用法：用于移除节点。
+> * 返回值：被移除的节点。
+> * 例 【点击打开[demo](/effects/demo/demo-node/node/eg10.html)】
+
+```js
+document.body.innerHTML = `<div id="div"><i id="i"></i></div>`;
+const div = document.getElementById('div');
+const i = document.getElementById('i');
+
+// 移除节点i
+const returnNode = div.removeChild(i);
+console.log(returnNode === i); // true
+```
+
+---
+
+> * **`currentNode.replaceChild(newNode, replacedNode)`** - 替换节点 【参数：要插入的节点和要替换的节点】
+> * 用法：用于移除节点。【要替换的节点将由这个方法返回并从文档树中被移除，同时由要插入的节点占据其位置】
+> * 返回值：被移除的节点。
+> * 在使用 `replaceChild()` 插入一个节点时，该节点的所有关系指针都会从被它替换的节点复制过来。即：被替换的节点仍然还在文档中，但它在文档中已经没有了自己的位置。
+
+> * 例 【点击打开[demo](/effects/demo/demo-node/node/eg11.html)】
+
+```js
+  document.body.innerHTML = `<div id="div"><i id="i"></i></div>`;
+  const div = document.getElementById('div');
+  const i = document.getElementById('i');
+  const newNode = document.createElement('span');
+
+  // 移除节点i，并用 span 替换
+  const returnNode = div.replaceChild(newNode, i);
+  console.log(returnNode === i); // true
+```
+
+### 4.4 cloneNode()
+
+> * **`someNode.cloneNode(flag)`** 【参数：布尔值】
+> * `cloneNode()`方法接受一个布尔值参数，表示 **是否执行深复制**。
+>    * 在参数为 `true` 的情况下，执行 **深复制** --- 复制节点及其整个子节点树。
+>    * 在参数为 `false` 的情况下，执行**浅复制** --- 只复制节点本身。
+> * 用法：用于创建调用这个方法的节点的一个完全相同的副本。
+> * 复制后返回的节点副本属于文档所有，但并没有为它指定父节点，除非通过 `appendChild()`、`insertBefore()`或 `replaceChild()`将它添加到文档中。
+
+> * 例 【点击打开[demo](/effects/demo/demo-node/node/eg12.html)】
+
+```js
+document.body.innerHTML = `<div id="div"><i id="i"></i></div>`;
+const div = document.getElementById('div');
+
+// 深复制
+const deepCopyResult = div.cloneNode(true);
+console.log(deepCopyResult); // <div id="div"><i id="i"></i></div>
+
+// 浅复制
+const shallowCopeResult = div.cloneNode(false);
+console.log(shallowCopeResult); // <div id="div"></div>
+```
+
+> * 注意：
+> * `cloneNode()`方法不会复制添加到 `DOM` 节点中的 `JavaScript` 属性，例如事件处理程序等。
+> * 这个方法 **只复制特性、（在明确指定的情况下也复制）子节点，其他一切都不会复制**。
+> * `IE` 在此存在一个 `bug`，即它会复制事件处理程序，所以我们建议在复制之前最好先移除事件处理程序。

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - replaceChild()</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i id="i"></i></div>`;
+  const div = document.getElementById('div');
+  const i = document.getElementById('i');
+  const newNode = document.createElement('span');
+
+  // 移除节点i，并用 span 替换
+  const returnNode = div.replaceChild(newNode, i);
+  console.log(returnNode === i); // true
+</script>
+</body>
+</html>

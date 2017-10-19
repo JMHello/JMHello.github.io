@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - insertBefore()</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i id="i"></i><p id="p1"><i></i></p></div>`;
+  const div = document.getElementById('div');
+  const i = document.getElementById('i');
+  const p1 = document.getElementById('p1');
+
+  // 插入后成为最后一个子节点
+  const returnNode1 = div.insertBefore(i, null);
+  console.log(returnNode1 === i); // true
+
+  // 插入后成为第一个子节点
+  const span = document.createElement('span');
+  const returnNode2 = p1.insertBefore(span, p1.firstChild);
+  console.log(returnNode2 === p1.firstChild); // true
+
+  // 插入到最后一个子节点前面
+  const em = document.createElement('em');
+  const returnNode3 = div.insertBefore(em, div.lastChild);
+  console.log(returnNode3 === div.childNodes[div.childNodes.length - 2]); // true
+</script>
+</body>
+</html>
