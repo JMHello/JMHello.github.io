@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - nextSibling</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i id="i"></i><p id="p1"></p><p id="p2"></p></div>`;
+  const div = document.getElementById('div');
+  const i = document.getElementById('i');
+  const p1 = document.getElementById('p1');
+
+  console.log(div.nextElementSibling); // null
+  console.log(i.nextElementSibling); // <p id="p1"></p>
+  console.log(p1.nextElementSibling); // <p id="p2"></p>
+</script>
+</body>
+</html>

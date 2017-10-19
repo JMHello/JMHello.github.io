@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - parentNode</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i id="i"></i><p id="p"></p><p></p></div>`;
+  const i = document.getElementById('i');
+  const p = document.getElementById('p');
+
+  console.log(i.parentNode); // <div id="div"><i id="i"></i><p id="p"></p><p></p></div>
+  console.log(p.parentNode); // <div id="div"><i id="i"></i><p id="p"></p><p></p></div>
+  console.log(i.parentNode === p.parentNode); // true
+</script>
+</body>
+</html>

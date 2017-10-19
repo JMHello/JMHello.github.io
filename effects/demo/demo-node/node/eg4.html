@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - previousElementSibling</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i id="i"></i><p id="p1"></p><p id="p2"></p></div>`;
+  const div = document.getElementById('div');
+  const i = document.getElementById('i');
+  const p1 = document.getElementById('p1');
+
+  console.log(div.previousElementSibling); // null
+  console.log(i.previousElementSibling); // null
+  console.log(p1.previousElementSibling); // <i id="i"></i>
+</script>
+</body>
+</html>

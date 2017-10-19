@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - firstChild 和 lastChild</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i></i><p id="p1"></p><p id="p2"><span></span></p></div>`;
+  const div = document.getElementById('div');
+  const p1 = document.getElementById('p1');
+  const p2 = document.getElementById('p2');
+
+  // 存在不只一个子节点
+  console.log(div.firstChild, div.lastChild); // <i></i>，<p id="p2">...</p>
+  console.log(div.firstChild === div.childNodes[0]); // true
+  console.log(div.lastChild === div.childNodes[div.childNodes.length - 1]); // true
+
+  // 不存在子节点
+  console.log(p1.firstChild, p1.lastChild); // null, null
+
+  // 只有一个子节点
+  console.log(p2.firstChild === p2.lastChild); // true
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - appendChild()</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i id="i"></i><p id="p1"></p></div>`;
+  const div = document.getElementById('div');
+  const i = document.getElementById('i');
+
+  // i元素是div元素的第一个子节点，因此该节点就会成为父节点的最后一个子节点
+  const returnNode = div.appendChild(i);
+  console.log(returnNode === div.firstChild); // false
+  console.log(returnNode === div.lastChild); // true
+  console.log(returnNode === i); // true
+</script>
+</body>
+</html>

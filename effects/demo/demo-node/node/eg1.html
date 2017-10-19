@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node - childNodes</title>
+</head>
+<body>
+<script>
+  document.body.innerHTML = `<div id="div"><i></i><p></p><p></p></div>`;
+  const div = document.getElementById('div');
+  // 通过方括号方位
+  console.log(div.childNodes[0]); // <i></i>
+
+  // 通过item()访问
+  console.log(div.childNodes.item(1)) // <p></p>
+
+  // childNodes 的 length 属性
+  console.log(div.childNodes.length) // 3
+
+  console.log(div.childNodes);
+</script>
+</body>
+</html>
