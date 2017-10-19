@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-19-discrimination-element.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-node/element/eg5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-node/element/eg6.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-text.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-node/text/eg1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-node/text/eg2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-node/text/eg3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-node/text/eg4.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-element.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-element.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-19-discrimination-element.md" afterPath="$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-19-discrimination-element.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,95 +33,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="eg6.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/effects/demo/demo-node/element/eg6.html">
+      <file leaf-file-name="2017-10-19-js-dom-text.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-text.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="60">
+                <caret line="138" column="47" lean-forward="false" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eg4.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/effects/demo/demo-node/text/eg4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="25" selection-end-column="62" />
+            <state relative-caret-position="44">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="20" selection-end-column="45" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-10-18-discrimination-this.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-18-discrimination-this.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="289">
-                <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="99" />
-                <folding>
-                  <marker date="1508377458787" expanded="true" signature="449:473" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="491:508" ph="//..." />
-                  <marker date="1508377458787" expanded="true" signature="521:576" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="546:574" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="912:934" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="952:973" ph="//..." />
-                  <marker date="1508377458787" expanded="true" signature="984:1033" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="1003:1031" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="1285:1329" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="1301:1327" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="1662:1716" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="1681:1713" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="1735:1749" ph="//..." />
-                  <marker date="1508377458787" expanded="true" signature="1761:1843" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="1786:1841" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="1805:1837" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="2178:2247" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="2206:2234" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="2493:2540" ph="{...}" />
-                  <marker date="1508377458787" expanded="true" signature="2510:2538" ph="{...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-10-19-js-dom-element.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-element.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="1907">
-                <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
-                <folding>
-                  <marker date="1508423263620" expanded="true" signature="926:956" ph="{...}" />
-                  <marker date="1508423263620" expanded="true" signature="928:954" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="997:1027" ph="{...}" />
-                  <marker date="1508423263620" expanded="true" signature="999:1025" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="2360:2367" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="2646:2659" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="3161:3182" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="3168:3182" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="3274:3288" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="3973:3988" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="4086:4138" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="4719:4739" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="4828:4832" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="5183:5197" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="5245:5267" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="6622:6639" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="6737:6768" ph="//..." />
-                  <marker date="1508423263620" expanded="true" signature="7027:7317" ph="{...}" />
-                  <marker date="1508423263620" expanded="true" signature="7145:7291" ph="{...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-10-19-discrimination-element.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-19-discrimination-element.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="308">
-                <caret line="14" column="69" lean-forward="false" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-                <folding>
-                  <marker date="1508424181156" expanded="true" signature="817:876" ph="{...}" />
-                  <marker date="1508424181156" expanded="true" signature="860:874" ph="{...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -150,11 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-10-jest-expect.md" />
-        <option value="$PROJECT_DIR$/_posts/originalNote/test/jest/2017-10-11-jest-mocks-function.md" />
-        <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/groupingAndCapturing.html" />
-        <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/groupingAndCapturing1.html" />
-        <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/notGroupingAndCapturing.html" />
         <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/groupingAndCapturing2.html" />
         <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/reverseReference.html" />
         <option value="$PROJECT_DIR$/effects/demo/demo-RegExp/greedy.html" />
@@ -201,6 +128,11 @@
         <option value="$PROJECT_DIR$/effects/demo/demo-node/element/eg6.html" />
         <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-element.md" />
         <option value="$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-19-discrimination-element.md" />
+        <option value="$PROJECT_DIR$/effects/demo/demo-node/text/eg1.html" />
+        <option value="$PROJECT_DIR$/effects/demo/demo-node/text/eg2.html" />
+        <option value="$PROJECT_DIR$/effects/demo/demo-node/text/eg3.html" />
+        <option value="$PROJECT_DIR$/effects/demo/demo-node/text/eg4.html" />
+        <option value="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-text.md" />
       </list>
     </option>
   </component>
@@ -265,7 +197,7 @@
               <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
               <item name="originalNote" type="462c0819:PsiDirectoryNode" />
-              <item name="discrimination" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -291,7 +223,7 @@
               <item name="effects" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="demo-node" type="462c0819:PsiDirectoryNode" />
-              <item name="element" type="462c0819:PsiDirectoryNode" />
+              <item name="text" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,11 +249,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projectAndNote\JMHello.github.io\effects\demo\demo-node\text" />
+      <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\JavaScript\dom" />
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\discrimination" />
       <recent name="E:\projectAndNote\JMHello.github.io\effects\demo\demo-node\element" />
-      <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\JavaScript\dom" />
       <recent name="E:\projectAndNote\JMHello.github.io\effects\demo\demo-node\node" />
-      <recent name="E:\projectAndNote\JMHello.github.io\effects\demo\demo-discrimination\this" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\projectAndNote\JMHello.github.io\_posts\originalNote\discrimination" />
@@ -476,7 +408,7 @@
       <workItem from="1507608134942" duration="26595000" />
       <workItem from="1507704988096" duration="3832000" />
       <workItem from="1507720072057" duration="2183000" />
-      <workItem from="1508374516359" duration="21924000" />
+      <workItem from="1508374516359" duration="23907000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -489,19 +421,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545493000" />
+    <option name="totallyTimeSpent" value="547476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25892857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25892857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4770206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24884081" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -541,44 +472,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/2017-10-08-js-EC.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="154">
-            <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="97" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/groupingAndCapturing1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="11" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/notGroupingAndCapturing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/groupingAndCapturing2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="70" lean-forward="false" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/reverseReference.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/greedy.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1298,11 +1191,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/effects/demo/demo-node/element/eg6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="25" selection-end-column="62" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-19-discrimination-element.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="550">
+            <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+            <folding>
+              <marker date="1508424381232" expanded="true" signature="774:833" ph="{...}" />
+              <marker date="1508424381232" expanded="true" signature="817:831" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1338,11 +1237,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/effects/demo/demo-node/element/eg6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="25" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/effects/demo/demo-node/text/eg1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-element.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="1907">
-            <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+          <first_editor relative-caret-position="368">
+            <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="56" />
             <folding>
               <marker date="1508423263620" expanded="true" signature="926:956" ph="{...}" />
               <marker date="1508423263620" expanded="true" signature="928:954" ph="//..." />
@@ -1369,15 +1284,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-19-discrimination-element.md">
+    <entry file="file://$PROJECT_DIR$/effects/demo/demo-node/text/eg2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/effects/demo/demo-node/text/eg3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/effects/demo/demo-node/text/eg4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="20" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-text.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="308">
-            <caret line="14" column="69" lean-forward="false" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-            <folding>
-              <marker date="1508424181156" expanded="true" signature="817:876" ph="{...}" />
-              <marker date="1508424181156" expanded="true" signature="860:874" ph="{...}" />
-            </folding>
+          <first_editor relative-caret-position="60">
+            <caret line="138" column="47" lean-forward="false" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建文本节点 - createTextNode() - 2</title>
+</head>
+<body>
+<script>
+  var element = document.createElement("div");
+  element.className = "message";
+
+  var textNode = document.createTextNode("Hello world!");
+  element.appendChild(textNode);
+
+  var anotherTextNode = document.createTextNode("Yippee!");
+  element.appendChild(anotherTextNode);
+
+  document.body.appendChild(element);
+
+  console.log(element.childNodes.length); //2
+  console.log(element.firstChild.nodeValue) // Hello world!
+  console.log(element.lastChild.nodeValue) // Yippee!
+
+  element.normalize();
+  console.log(element.childNodes.length); //1
+  console.log(element.firstChild.nodeValue); // "Hello world!Yippee!"
+  console.log(element.lastChild.nodeValue) // "Hello world!Yippee!"
+</script>
+</body>
+</html>

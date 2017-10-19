@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建文本节点 - createTextNode() - 1</title>
+</head>
+<body>
+<script>
+  var element = document.createElement("div");
+  element.className = "message";
+
+  var textNode = document.createTextNode("Hello world!");
+  element.appendChild(textNode);
+
+  var anotherTextNode = document.createTextNode("Yippee!");
+  element.appendChild(anotherTextNode);
+
+  document.body.appendChild(element);
+</script>
+</body>
+</html>
