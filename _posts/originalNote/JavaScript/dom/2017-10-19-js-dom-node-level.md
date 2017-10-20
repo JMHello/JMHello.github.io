@@ -308,9 +308,9 @@ const returnNode3 = div.insertBefore(em, div.lastChild);
 console.log(returnNode3 === div.childNodes[div.childNodes.length - 2]); // true
 ```
 
-### 4.3 删除节点 - removeNode() 和 replaceChild()
+### 4.3 删除节点 - removeChild() 和 replaceChild()
 
-> * **`currentNode.removeNode(node)`** - 删除节点
+> * **`currentNode.removeChild(node)`** - 删除节点
 > * 用法：用于移除节点。
 > * 返回值：被移除的节点。
 > * 例 【点击打开[demo](/effects/demo/demo-node/node/eg10.html)】

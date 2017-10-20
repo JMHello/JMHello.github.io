@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "discrimination - element"
+title: "discrimination - dom - element"
 data: 2017-10-18 14:27:00 +0800
 categories: 原创
 tag: 辨析

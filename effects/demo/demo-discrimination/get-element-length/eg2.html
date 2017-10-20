@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不同获取元素的方法 - 添加新节点后 - length长度的变化2</title>
+</head>
+<body>
+<script>
+  function append (pNode, node) {
+    if (node && node.nodeType === 1) {
+      const result = pNode.appendChild(node);
+      return result;
+    }
+
+    return false;
+  }
+  document.body.innerHTML = `<ul id="list"><li>1</li><li>2</li><li>3</li></ul>`;
+  const list = document.getElementById('list');
+  const newLi = document.createElement('li');
+  const aLi1 = list.querySelectorAll('li');
+
+
+  // 未添加节点前的 li 的个数
+  console.log(aLi1.length); // 3
+
+
+  // 添加节点后，li的个数
+  const result = append(list, newLi);
+  console.log(result === newLi); // true
+
+  console.log(aLi1.length); // 3
+
+  console.log(list.querySelectorAll('li').length); // 4
+</script>
+</body>
+</html>
