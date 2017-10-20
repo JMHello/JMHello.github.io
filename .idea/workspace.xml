@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f078e539-2dcc-4711-a7fb-ca13a18fa931" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-20-discrimination-get-element-length.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-discrimination/get-element-length/eg1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-discrimination/get-element-length/eg2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/effects/demo/demo-jquery/jquery-3.2.1.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-node-level.md" afterPath="$PROJECT_DIR$/_posts/originalNote/JavaScript/dom/2017-10-19-js-dom-node-level.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-19-discrimination-element.md" afterPath="$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-19-discrimination-element.md" />
     </list>
     <ignored path="JMHello.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,22 +37,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-10-20-discrimination-get-element-length.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-10-20-discrimination-get-element-length.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-20-discrimination-get-element-length.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="361">
-                <caret line="81" column="81" lean-forward="false" selection-start-line="81" selection-start-column="81" selection-end-line="81" selection-end-column="81" />
+              <first_editor relative-caret-position="858">
+                <caret line="66" column="3" lean-forward="false" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
                 <folding>
-                  <marker date="1508476312457" expanded="true" signature="604:624" ph="//..." />
-                  <marker date="1508476312457" expanded="true" signature="653:676" ph="//..." />
-                  <marker date="1508476312457" expanded="true" signature="658:676" ph="//..." />
-                  <marker date="1508476312457" expanded="true" signature="1340:1363" ph="//..." />
-                  <marker date="1508476312457" expanded="true" signature="1345:1363" ph="//..." />
+                  <marker date="1508476343791" expanded="true" signature="604:624" ph="//..." />
+                  <marker date="1508476343791" expanded="true" signature="653:676" ph="//..." />
+                  <marker date="1508476343791" expanded="true" signature="658:676" ph="//..." />
+                  <marker date="1508476343791" expanded="true" signature="1340:1363" ph="//..." />
+                  <marker date="1508476343791" expanded="true" signature="1345:1363" ph="//..." />
                 </folding>
               </first_editor>
               <second_editor />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QQ.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/me/pic/QQ.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -164,7 +165,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/_site/effects/demo/demo-pocket-doban/demo1/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1" />
     <option name="y" value="1" />
     <option name="width" value="1364" />
@@ -222,28 +223,13 @@
             <path>
               <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="effects" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="effects" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="effects" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="demo-discrimination" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMHello.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMHello.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="effects" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="demo-discrimination" type="462c0819:PsiDirectoryNode" />
-              <item name="get-element-length" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="pic" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -428,7 +414,7 @@
       <workItem from="1507704988096" duration="3832000" />
       <workItem from="1507720072057" duration="2183000" />
       <workItem from="1508374516359" duration="25221000" />
-      <workItem from="1508465764015" duration="4554000" />
+      <workItem from="1508465764015" duration="5415000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1503639584063</created>
@@ -441,10 +427,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="553344000" />
+    <option name="totallyTimeSpent" value="554205000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16517857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -453,7 +439,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6506955" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17156105" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -493,13 +479,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/effects/demo/demo-RegExp/lookAhead.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/studynote/RegExp/2017-09-03-RegExp.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1152,18 +1131,23 @@
     <entry file="file://$PROJECT_DIR$/_posts/originalNote/discrimination/2017-10-20-discrimination-get-element-length.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="361">
-            <caret line="81" column="81" lean-forward="false" selection-start-line="81" selection-start-column="81" selection-end-line="81" selection-end-column="81" />
+          <first_editor relative-caret-position="858">
+            <caret line="66" column="3" lean-forward="false" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
             <folding>
-              <marker date="1508476312457" expanded="true" signature="604:624" ph="//..." />
-              <marker date="1508476312457" expanded="true" signature="653:676" ph="//..." />
-              <marker date="1508476312457" expanded="true" signature="658:676" ph="//..." />
-              <marker date="1508476312457" expanded="true" signature="1340:1363" ph="//..." />
-              <marker date="1508476312457" expanded="true" signature="1345:1363" ph="//..." />
+              <marker date="1508476343791" expanded="true" signature="604:624" ph="//..." />
+              <marker date="1508476343791" expanded="true" signature="653:676" ph="//..." />
+              <marker date="1508476343791" expanded="true" signature="658:676" ph="//..." />
+              <marker date="1508476343791" expanded="true" signature="1340:1363" ph="//..." />
+              <marker date="1508476343791" expanded="true" signature="1345:1363" ph="//..." />
             </folding>
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/me/pic/QQ.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
