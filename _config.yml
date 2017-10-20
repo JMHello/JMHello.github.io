@@ -2,8 +2,8 @@
 name: JM的博客
 email: 471938302@qq.com
 author: JM
-url: https://jmazm.com
-resume_site: https://jmazm.com
+url: https://www.jmazm.com
+resume_site: http://www.jmazm.com/effects/demo/demo-font-end-resume/index.html
 github: https://github.com/JMHello/
 baseurl: ""  #根目录
 description: Believe yourself! The future belongs to you!
@@ -17,11 +17,11 @@ paginate: 8
 paginate_path: "page:num"
 gems: [jekyll-paginate]
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
-github_username: maoxiaoke
+github_username: JMHello
 highlighter: rouge
 markdown: kramdown
 FB:
   comments :
     provider : disqus
     disqus :
-        short_name : xiaokedada
+        short_name : jm
