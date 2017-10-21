@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速正则的匹配</title>
+</head>
+<body>
+<script>
+    const reg = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/;
+
+    // 情况1 $('<li>Hello')
+    console.log(`<li>Hello`.match(reg)); // ["<li>Hello", "<li>", undefined, index: 0, input: "<li>Hello"]
+
+    // 情况2 $('#div')
+    console.log(`#div`.match(reg)); // ["#div", undefined, "div", index: 0, input: "#div"]
+
+    // 情况3 $(`div`) 、$('.div') 、$('#div div.box')
+    console.log(`div`.match(reg)); // null
+    console.log(`.div`.match(reg)); // null
+    console.log(`#div div.box`.match(reg)); // null
+</script>
+</body>
+</html>

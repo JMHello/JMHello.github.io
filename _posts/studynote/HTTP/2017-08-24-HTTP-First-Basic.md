@@ -69,6 +69,10 @@ URI 有两种：URN 以及 URL。
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-01.png' | prepend: site.baseurl }})
 
+* 对应的 `location.xxx`：
+
+![relationship-map]({{ '/styles/images/HTTP/HTTP-01.png' | prepend: site.baseurl }})
+
 *  URL 的例子请看下图
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-02.png' | prepend: site.baseurl }})
