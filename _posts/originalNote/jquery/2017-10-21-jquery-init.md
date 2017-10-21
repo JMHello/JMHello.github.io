@@ -151,3 +151,29 @@ if ( selector.charAt(0) === "<" && selector.charAt( selector.length - 1 ) === ">
 >       * `$('<li>Hello)`： `match` ===》 `['<li>Hello', '<li>', undefined]`。【从这里可以看出为什么 `$('<li>hello')` 最后得到的还是 `<li></li>` 】
 >       * `$('#div1')`： `match` ====》 `['#div', undefined, 'div']`。
 >       * `$('div')` 、`$('.div')` 、`$('#div div.box')`： `match` ====》 `null`。
+
+### 3.4 119-120
+
+```js
+ // Match html or make sure no context is specified for #id
+if ( match && (match[1] || !context) ) { }
+```
+
+> *  表明能进入此 `if` 分支的只有：
+>   * **标签** ：`$('<li>')`, `$('<li>1</li><li>2</li>')`。
+>   * **`id`** ：`$('#div')`。 
+> * `match`： 不接受 `match = null`的情况，即：`$('div')` 、`$('.div')` 、`$('#div div.box')`。
+> * `!context`：说明是 `id`。
+
+### 3.5 122-123 && 149-150
+
+```js
+// HANDLE: $(html) -> $(array)
+if ( match[1] ) {}
+
+// HANDLE: $(#id)
+else{}
+```
+
+> * **`if`语句**：处理标签，如 `$('<li>')`, `$('<li>1</li><li>2</li>')`。
+> * **`else`语句**：处理 `id` ，如 `$('#div1')`。
