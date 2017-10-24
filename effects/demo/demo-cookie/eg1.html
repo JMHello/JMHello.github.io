@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie添加、读取、删除</title>
+</head>
+<body>
+<script>
+    function setCookie (name, value, opts) {
+        let str = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
+
+        if (Object.prototype.toString.call(opts) === '[object Object]') {
+          const options = Object.entries(opts);
+
+          for (let [key, value] of options) {
+            if (key !== 'secure') {
+              str += `;${key}=${value}`;
+            } else {
+              str += `;${key}`
+            }
+          }
+        }
+
+        console.log(str);
+        document.cookie = str;
+    }
+
+    setCookie('name', 'jm', {
+      path: '/',
+      domain: '127.0.0.1/hello',
+      expires: '2027-09-05T12:32:07.203Z',
+      secure:''
+    });
+
+    function getCookie (name) {
+
+    }
+</script>
+</body>
+</html>

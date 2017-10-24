@@ -177,3 +177,41 @@ else{}
 
 > * **`if`语句**：处理标签，如 `$('<li>')`, `$('<li>1</li><li>2</li>')`。
 > * **`else`语句**：处理 `id` ，如 `$('#div1')`。
+
+### 3.5 124
+
+```js
+context = context instanceof jQuery ? context[0] : context;
+```
+
+### 3.6 126-131
+
+```js
+// scripts is true for back-compat
+jQuery.merge( this, jQuery.parseHTML(
+    match[1],
+    context && context.nodeType ? context.ownerDocument || context : document,
+    true
+) );
+```
+
+> * **`jQuery.paresHTML(data [, context ] [, keepScripts ] )`**： 使用原生方法将字符串转换为一个DOM节点的集合，然后可以插入到文档。
+>   * `data`：用来解析的 `HTML` 字符串。
+>       * `match[1]`：就是需要转换的`html`字符串。
+>   * `context`：`DOM` 元素的上下文，在这个上下文中将创建的 `HTML` 片段。
+>        * `context && context.nodeType ? context.ownerDocument || context : document`：这里指的就是根节点。
+>   * `keepScripts`：一个布尔值，表明是否在传递的 `HTML` 字符串中包含脚本。
+>       * `true`：表明在传递的`HTML`字符串中包含脚本
+
+> * 这里要提一个小问题：为什么还需要 `context && context.nodeType` 进行判断呢？
+> * 
+
+---
+
+> * **`jQuery.merge(first, second)`**：合并两个数组内容到第一个数组。【返回值：数组】
+> * `first`：第一个用于合并的数组，其中将会包含合并后的第二个数组的内容。
+>   * `this`：
+> * `second`：第二个用于合并的数组，该数组不会被修改，其中的内容将会被合并到第一个数组中。
+>   * 
+
+

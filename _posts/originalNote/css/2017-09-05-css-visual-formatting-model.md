@@ -135,6 +135,7 @@ p {
 ```
 
 * 三个属性都设置为`auto`，两个外边距为0，`width`为400px
+
 ```css
 p {
     width:auto; /* 实际上，width = 400px */
