@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "javasript - 数据存储--cookie"
+title: "javascript - 本地存储 -- cookie"
 data: 2017-10-25 17:27:00 +0800
-categories: 学习笔记
+categories: 原创
 tag: javascript
 ---
 * content
@@ -12,7 +12,7 @@ tag: javascript
 
 + [javasript - 数据存储--Web存储机制]({{ '/2017/09/04/js-Storage-Web' | prepend: site.baseurl }})
 
-> 以下内容全部源于： 《JavaScript高级程序设计（第3版）》
+> 以下内容部分源于： 《JavaScript高级程序设计（第3版）》
 
 <!-- more -->
 
@@ -68,7 +68,7 @@ tag: javascript
 > * `path` 一般为 `/` - 表示根目录
 
 > * **失效时间**：
->    * 表示 `cookie` 何时应该被删除的时间戳（即：何时应该停止向服务器发送这个`cookie`）
+>    * 表示 `cookie` 何时应该被删除的时间戳（即：何时应该停止向服务器发送这个`cookie`） 
 >        * `Expires=2018-09-05T12:32:07.203Z` - 过期时间 - 绝对时间。
 >        * `Max-Age=36000` - 距离过期的秒数 - 相对时间 - 存在兼容性问题。
 >    * `session cookie` - 临时 `cookie`：浏览器会话结束时（浏览器关闭）就会将所有 `cookie` 删除。
