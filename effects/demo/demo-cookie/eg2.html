@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie的path属性</title>
+</head>
+<body>
+<script>
+// 没有设置 path 属性
+document.cookie = `${decodeURIComponent('name1')}=${decodeURIComponent('jm1')};`;
+
+// 设置了 path 属性
+document.cookie = `${decodeURIComponent('name2')}=${decodeURIComponent('jm2')}; path=/`;
+document.cookie = `${decodeURIComponent('name3')}=${decodeURIComponent('jm3')}; path=/Hello`;
+document.cookie = `${decodeURIComponent('name4')}=${decodeURIComponent('jm4')}; path=/JMHello.github.io`;
+</script>
+</body>
+</html>

@@ -43,7 +43,7 @@ tag: javascript
 
 ## 三、cookie的构成
 
-### 3.1 cookie的构成
+### 3.1 name && value
 
 > * 基本构成：`name = value`
 
@@ -56,16 +56,66 @@ tag: javascript
 >    * 储存在 `cookie` 中的字符串值。
 >    * 值必须被 `URL` 编码。====》 `decodeURIComponent(value)`
     
+### 3.2 domain
+
 > * **域（`domain`）**：
 >    * 说明 `cookie` 对于哪个域是有效的。
 >    * 所有向该域发送的请求中都会包含这个 `cookie` 信息。
 >    * 如果没有明确设定，那么这个域会被认作来自设置 `cookie` 的那个域。
 > * 提示：假设当前页面为`ke.qq.com`，那么你的 `domain`就可以设置成 `ke.qq.com` 或 `qq.com`，不能设置成其他域，如：`www.baidu.com`
 
+### 3.4 path
+
 > * **路径（`path`）**：
 >    * 对于指定域中的那个路径，应该向服务器发送 `cookie`。
 >        * 例如，你可以指定 `cookie` 只有从`http://www.wrox.com/books/ `中才能访问，那么 `http://www.wrox.com` 的页面就不会发送 `cookie` 信息，即使请求都是来自同一个域的。
 > * `path` 一般为 `/` - 表示根目录
+
+---
+
+> * 先看下述代码，这个是 `eg2.html` 【点击打开[demo](/effects/demo/demo-cookie/eg2.html)】
+
+```js
+// 没有设置 path 属性
+document.cookie = `${decodeURIComponent('name1')}=${decodeURIComponent('jm1')};`;
+
+// 设置了 path 属性
+document.cookie = `${decodeURIComponent('name2')}=${decodeURIComponent('jm2')}; path=/`;
+document.cookie = `${decodeURIComponent('name3')}=${decodeURIComponent('jm3')}; path=/Hello`;
+document.cookie = `${decodeURIComponent('name4')}=${decodeURIComponent('jm4')}; path=/JMHello.github.io`;
+```
+
+> * 结果如下图所示：
+
+![relationship-map]({{ '/styles/images/javascript/cookie/cookie-02.png' | prepend: site.baseurl }})
+
+> * 从上图可以发现：
+>   * 没有设置 `path` 属性的 `name1`，其 `path` 值为：`/JMHello.github.io/effects/demo/demo-cookie`，其实这个就是 `eg2.html`文件所在的路径；
+>   * 设置了 `path` 属性的 `name2` 的值为 `/`，`name4` 的值为 `/JMHello.github.io`。而 `name3` 的 `cookie` 根本不存在。
+
+----
+
+![relationship-map]({{ '/styles/images/javascript/cookie/cookie-03.png' | prepend: site.baseurl }})
+
+> * `eg3.html`(什么内容都没有) 与 `eg2.html` 在同一个文件夹内，打开 `eg3.html` 你会发现：`eg2.html`所设置的`cookie` 在 `eg3.html` 里都可以访问到！！
+
+![relationship-map]({{ '/styles/images/javascript/cookie/cookie-04.png' | prepend: site.baseurl }})
+
+---
+
+> * 我再随便找了一个文件是不在 `demo-cookie` 这个文件夹里的，然后你会发现：
+
+![relationship-map]({{ '/styles/images/javascript/cookie/cookie-05.png' | prepend: site.baseurl }})
+
+---
+
+> * 总结
+>   1. 当不设置 `path` 属性的时候，其默认值为 **当前文件的路径**。
+>   2. 当设置了 `path` 属性的时候，如果设置的值不是根目录下所拥有的路径，例如：`name3`的`/hello`，这个路径根本不存在，所以其 `cookie` 值也是不会设置成功的。相反，如果路径存在，那么设置`cookie`值就会成功。
+>   3. 我们可以这样理解：`/` 比 `/JMHello.github.io` 的级别要浅，`/JMHello.github.io` 的级别又比 `/JMHello.github.io/effects/demo/demo-cookie` 浅，因此，只要在级别低的地方设置了`cookie`，
+>       那么在级别高的地方也就能共享级别高所设置的 `cookie`，因此 `eg3.html` 可以共享 `name1`、`name2`、`name4` 的 `cookie`，以及 那个不知名的文件能访问 `name2`、`name4` 的 `cookie`。
+
+### 3.5 expires && max-age
 
 > * **失效时间**：
 >    * 表示 `cookie` 何时应该被删除的时间戳（即：何时应该停止向服务器发送这个`cookie`） 
@@ -74,26 +124,29 @@ tag: javascript
 >    * `session cookie` - 临时 `cookie`：浏览器会话结束时（浏览器关闭）就会将所有 `cookie` 删除。
 >    * `permanent cookie` - 持久 `cookie`：上述两个标识设置了一定的过期时间。
 
+### 3.6 secure
 
 > * **安全标志（`secure`）**：
 >    * 指定后，`cookie` 只有在使用 `SSL` 连接的时候才发送到服务器，即：只有在 `https`下才发送。
 >        * 例如，`cookie` 信息只能发送给 `https://www.wrox.com，而 http://www.wrox.com` 的请求则不能发送 `cookie`。
 >    * 每一段信息都作为 `Set-Cookie` 头的一部分，使用分号加空格分隔每一段，如下例所示。
 
+### 3.7 httpOnly
+
 > * **`httpOnly`**：
 >   * 不能通过 `js` 的 `document.cookie` 访问，这个属性只能通过后台设置。
     
+### 3.8 cookie属性展示图
 
 ![relationship-map]({{ '/styles/images/javascript/cookie/cookie-01.png' | prepend: site.baseurl }})
 
-### 3.2 小实例 - 腾讯课堂的首页的选项卡切换
+### 3.9 小实例 - 腾讯课堂的首页的选项卡切换
 
 ![relationship-map]({{ '/effects/images/javascript/cookie/cookie-01.gif' | prepend: site.baseurl }})
 
 > * 可以看到，一开始我先把 `index-new-key` 删除，其实它是保存你是选择“前端”还是“兴趣职场”的选项卡，当你关闭页面后，再次打开腾讯课堂首页，
 > 如果`index-new-key` 为 `{"index_interest_cate_id":2004}` 则是“前端”的选项卡；如果`index-new-key` 为 `{"index_interest_cate_id":999}` 则是“兴趣职场”的选项卡。
     
-
 
 ## 四、操作 cookie
 
@@ -183,7 +236,8 @@ document.cookie = encodeURIComponent("name") + "=" +encodeURIComponent("Nicholas
         expires: new Date('2017-12-20').toGMTString()
       });
       Cookies.setCookie('age', 18, {
-        path: '/'
+        path: '/',
+        expires: new Date('2017-10-30').toGMTString()
       });
     }
 
