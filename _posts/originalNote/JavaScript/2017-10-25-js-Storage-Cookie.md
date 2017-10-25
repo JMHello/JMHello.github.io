@@ -12,7 +12,9 @@ tag: javascript
 
 + [javasript - 数据存储--Web存储机制]({{ '/2017/09/04/js-Storage-Web' | prepend: site.baseurl }})
 
-> 以下内容部分源于： 《JavaScript高级程序设计（第3版）》
+> * 以下内容部分源于：
+>   * 《JavaScript高级程序设计（第3版）》
+  
 
 <!-- more -->
 
@@ -62,7 +64,45 @@ tag: javascript
 >    * 说明 `cookie` 对于哪个域是有效的。
 >    * 所有向该域发送的请求中都会包含这个 `cookie` 信息。
 >    * 如果没有明确设定，那么这个域会被认作来自设置 `cookie` 的那个域。
-> * 提示：假设当前页面为`ke.qq.com`，那么你的 `domain`就可以设置成 `ke.qq.com` 或 `qq.com`，不能设置成其他域，如：`www.baidu.com`
+
+---
+
+> * 实例：这是在 `ke.qq.com` 上实践的。
+
+> * 1.操作过程
+
+![relationship-map]({{ '/effects/images/javascript/cookie/cookie-03.gif' | prepend: site.baseurl }})
+
+> * 2.代码
+
+![relationship-map]({{ '/styles/images/javascript/cookie/cookie-06.png' | prepend: site.baseurl }})
+
+> * 补充，上述代码还缺少了以下这种情况
+
+![relationship-map]({{ '/styles/images/javascript/cookie/cookie-08.png' | prepend: site.baseurl }})
+
+> * 3.`cookie`展示
+
+![relationship-map]({{ '/styles/images/javascript/cookie/cookie-07.png' | prepend: site.baseurl }})
+
+---
+
+> * 分析：
+>   1. 在没有设置 `domain` 的情况下，`name1` 的 `domain` 默认为 `ke.qq.com`。
+>   2. `name2` 的 `domain` 设置了 `ke.qq.com` ，但是，其 `cookie` 中 `domain` 的值却是 `.ke.qq.com`，即最前面多了一个点号。
+>   3. `name3` 的 `domain` 设置了 `.qq.com`（**有点**），`name4` 的 `domain` 设置了 `qq.com`（**没点**），但是它们 `cookie` 中 `domain` 的值却都是 **`.qq.com`**。
+>   4. `name5` 只是单纯的根域名，无效。
+>   5. `name6` ，由于 `cookie` 无法跨域的限制，也是无效的。
+>   6. `name7` ，由于 `domain` 值超过了当前域的层级，无效。
+
+---
+
+> * 总结
+>   1. 如果没有明确指定哪个域，默认情况下，这个域会被认作来自设置 `cookie` 的那个域，就像 `name1` 。
+>   2. 在当前域的层级范围内，然后至少是二级域名相同的情况下，才可以设置其`domain`值。
+>       * 例如：`ke.qq.com` 有三层，设置 `ke.qq.com` 或者 `qq.com` 都可以。 就像 `name2`、`name3`、`name4`。
+>   3. 
+
 
 ### 3.4 path
 
@@ -98,6 +138,7 @@ document.cookie = `${decodeURIComponent('name4')}=${decodeURIComponent('jm4')}; 
 ![relationship-map]({{ '/styles/images/javascript/cookie/cookie-03.png' | prepend: site.baseurl }})
 
 > * `eg3.html`(什么内容都没有) 与 `eg2.html` 在同一个文件夹内，打开 `eg3.html` 你会发现：`eg2.html`所设置的`cookie` 在 `eg3.html` 里都可以访问到！！
+> * 点击打开[demo](/effects/demo/demo-cookie/eg3.html)
 
 ![relationship-map]({{ '/styles/images/javascript/cookie/cookie-04.png' | prepend: site.baseurl }})
 
@@ -113,7 +154,7 @@ document.cookie = `${decodeURIComponent('name4')}=${decodeURIComponent('jm4')}; 
 >   1. 当不设置 `path` 属性的时候，其默认值为 **当前文件的路径**。
 >   2. 当设置了 `path` 属性的时候，如果设置的值不是根目录下所拥有的路径，例如：`name3`的`/hello`，这个路径根本不存在，所以其 `cookie` 值也是不会设置成功的。相反，如果路径存在，那么设置`cookie`值就会成功。
 >   3. 我们可以这样理解：`/` 比 `/JMHello.github.io` 的级别要浅，`/JMHello.github.io` 的级别又比 `/JMHello.github.io/effects/demo/demo-cookie` 浅，因此，只要在级别低的地方设置了`cookie`，
->       那么在级别高的地方也就能共享级别高所设置的 `cookie`，因此 `eg3.html` 可以共享 `name1`、`name2`、`name4` 的 `cookie`，以及 那个不知名的文件能访问 `name2`、`name4` 的 `cookie`。
+>       那么在级别高的地方也就能共享级别低所设置的 `cookie`，因此 `eg3.html` 可以共享 `name1`、`name2`、`name4` 的 `cookie`，以及 那个不知名的文件能访问 `name2`、`name4` 的 `cookie`。
 
 ### 3.5 expires && max-age
 

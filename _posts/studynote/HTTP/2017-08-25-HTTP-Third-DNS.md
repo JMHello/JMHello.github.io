@@ -32,12 +32,15 @@ tag: HTTP
 * 图例
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-14.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/HTTP/HTTP-14.png' | prepend: site.baseurl }})
 
 > 补充：`DNS`在53端口上监听请求并提供响应的服务。出于性能的考虑，`DNS`查询请求用`UDP`协议交互，并且每个请求的大小会小于512个字节。如果返回的请求大小会大于512个字节，交互双方将会协商使用 `TCP`协议。
 
 ## 二、DNS域名空间
 
 DNS域名空间，`DNS Domain Namespace`，是一种分层树状结构，如下图所示：
+
+![relationship-map]({{ '/styles/images/HTTP/HTTP-15.jpg' | prepend: site.baseurl }})
 
 ![relationship-map]({{ '/styles/images/HTTP/HTTP-15.png' | prepend: site.baseurl }})
 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie的domain属性</title>
+</head>
+<body>
+<script>
+  // 没有设置 path 属性
+  document.cookie = `${decodeURIComponent('domain1')}=${decodeURIComponent('jm1')};`;
+
+  // 设置了 path 属性
+  document.cookie = `${decodeURIComponent('domain2')}=${decodeURIComponent('jm2')}; domain=127.0.0.1`;
+  document.cookie = `${decodeURIComponent('domain2')}=${decodeURIComponent('jm2')}; domain=localhost:80`;
+</script>
+</body>
+</html>
