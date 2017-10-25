@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "javasript - 数据存储--cookie"
-data: 2017-08-29 17:27:00 +0800
+data: 2017-10-25 17:27:00 +0800
 categories: 学习笔记
 tag: javascript
 ---
@@ -127,115 +127,87 @@ document.cookie = encodeURIComponent("name") + "=" +encodeURIComponent("Nicholas
 
 ### 4.3 完整的cookie读取、写入和删除
 
-
-> * 设置 `cookie`
-
 ```js
+ const Cookies = {
+  // 设置cookie
+  setCookie: function (name, value, opts) {
+    let str = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 
-```
+    if (Object.prototype.toString.call(opts) === '[object Object]') {
+      const options = Object.entries(opts);
 
-> * 读取 `cookie`
-
-```js
-
-```
-
-```js
-var CookieUtil = {
-    // 读取cookie
-    get: function (name){
-         var cookieName = encodeURIComponent(name) + "=",
-             cookieStart = document.cookie.indexOf(cookieName),
-             cookieValue = null;
-            
-         if (cookieStart > -1){
-             var cookieEnd = document.cookie.indexOf(";", cookieStart);
-             
-             if (cookieEnd == -1){
-             cookieEnd = document.cookie.length;
-             }
-             
-            cookieValue = decodeURIComponent(document.cookie.substring(cookieStart+ cookieName.length, cookieEnd));
-        }
-        
-        return cookieValue;
-    },
-    // 写入cookie
-    set: function (name, value, expires, path, domain, secure) {
-        var cookieText = encodeURIComponent(name) + "=" +encodeURIComponent(value);
-        
-        if (expires instanceof Date) {
-            cookieText += "; expires=" + expires.toGMTString();
-        }
-        
-        if (path) {
-         cookieText += "; path=" + path;
-        } 
-        
-        if (domain) {
-            cookieText += "; domain=" + domain;
-        }
-        
-        if (secure) {
-            cookieText += "; secure";
-        }
-        
-        document.cookie = cookieText;
-    },
-    // 删除cookie
-    unset: function (name, path, domain, secure){
-        this.set(name, "", new Date(0), path, domain, secure);
+      for (let [key, value] of options) {
+        str += (key !== 'secure' ? `; ${key}=${value}`: str += `; ${key}`);
+      }
     }
-}; 
 
-//设置 cookie
-CookieUtil.set("name", "Nicholas");
-CookieUtil.set("book", "Professional JavaScript");
-
-//读取 cookie 的值
-alert(CookieUtil.get("name")); //"Nicholas"
-alert(CookieUtil.get("book")); //"Professional JavaScript"
-
-//删除 cookie
-CookieUtil.unset("name");
-CookieUtil.unset("book"); 
-
-//设置 cookie，包括它的路径、域、失效日期
-CookieUtil.set("name", "Nicholas", "/books/projs/", "www.wrox.com",
- new Date("January 1, 2010"));
- 
-//删除刚刚设置的 cookie
-CookieUtil.unset("name", "/books/projs/", "www.wrox.com");
-
-//设置安全的 cookie
-CookieUtil.set("name", "Nicholas", null, null, null, true);
+    // console.log(str);
+    document.cookie = str;
+  },
+  // 获取 cookie
+  getCookie: function (name) {
+    if (name && typeof name === 'string') {
+      const reg = new RegExp(name + '=(.+?(?=\;|$))')
+      const result = document.cookie.match(reg);
+      return (result? result[1]: null);
+    } else {
+      return document.cookie;
+    }
+  },
+  // 删除cookie
+  removeCookie: function (name) {
+      this.setCookie(name, '', {
+        expires: new Date(0).toGMTString()
+      })
+  }
+}
 ```
 
-> * `CookieUtil.get()`方法根据 `cookie` 的名字获取相应的值。
->    * 它会在 `document.cookie` 字符串中查找 `cookie` 名加上等于号的位置。
->    * 如果找到了，那么使用 `indexOf()`查找该位置之后的第一个分号（表示了该 `cookie` 的结束位置）。
->    * 如果没有找到分号，则表示该 `cookie` 是字符串中的最后一个，则余下的字符串都是 `cookie` 的值。
->    * 该值使用 `decodeURIComponent()`进行解码并最后返回。
->    * 如果没有发现 `cookie`，则返回 `null`。
-  
-> * `CookieUtil.set()`方法在页面上设置一个 `cookie`。
->    * 接收如下几个参数【参数是按照它们的使用频率排列的，只有头两个是必需的】：
->        * `cookie` 的名称
->        * `cookie` 的值
->        * （可选）用于指定 `cookie` 何时应被删除的 Date 对象
->        * （可选）`cookie` 的 `URL` 路径
->        * （可选）域
->        * （可选）表示是否要添加 `secure` 标志的布尔值。
->  * 这个方法中，名称和值都使用`encodeURIComponent()`进行了`URL`编码，并检查其他选项。
->  * 如果`expires`参数是 `Date` 对象，那么会使用 `Date` 对象的 `toGMTString()`方法正确格式化 `Date` 对象，并添加到`expires` 选项上。
->  * 方法的其他部分就是构造 `cookie` 字符串并将其设置到 `document.cookie` 中。
-  
-> * 没有删除已有 `cookie` 的直接方法。
->    * 所以，需要使用相同的路径、域和安全选项再次设置 `cookie`，并将失效时间设置为过去的时间。
->    * `CookieUtil.unset()`方法可以处理这种事情。
->        * 它接收 4 个参数：要删除的 cookie 的名称、可选的路径参数、可选的域参数和可选的安全参数。
->    * 这些参数加上空字符串并设置失效时间为 `1970 年 1 月 1 日`（初始化为 `0ms` 的 `Date` 对象的值），传
-      给 `CookieUtil.set()`。这样就能确保删除 `cookie`。
+> * 实例 【点击打开[demo](/effects/demo/demo-cookie/eg1.html)】
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie添加、读取、删除</title>
+</head>
+<body>
+<button type="button" id="set"> 设置 cookie</button>
+<button type="button" id="get"> 获取 cookie</button>
+<button type="button" id="del"> 删除 cookie</button>
+<script>
+    // 设置cookie
+    document.getElementById('set').onclick = function () {
+      Cookies.setCookie('name', 'jm', {
+        expires: new Date('2017-12-20').toGMTString()
+      });
+      Cookies.setCookie('age', 18, {
+        path: '/'
+      });
+    }
+
+    // 获取cookie
+    document.getElementById('get').onclick = function () {
+      console.log('name：' + Cookies.getCookie('name'));
+      console.log('age:' + Cookies.getCookie('age'));
+      console.log('sex：' + Cookies.getCookie('sex'));
+      console.log('document.cookie=' + Cookies.getCookie());
+    }
+
+    // 删除cookie 
+    document.getElementById('del').onclick = function () {
+      Cookies.removeCookie('name');
+      console.log('document.cookie=' + Cookies.getCookie() + '. 没有了name');
+    }
+</script>
+</body>
+</html>
+```
+
+> * 效果
+
+![relationship-map]({{ '/effects/images/javascript/cookie/cookie-02.gif' | prepend: site.baseurl }})
       
 ## 五、子cookie    
 
