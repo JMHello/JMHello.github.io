@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "javascript - 本地存储 -- cookie - 下篇"
+title: "javascript - 本地存储 -- cookie - 中篇"
 data: 2017-10-25 17:27:00 +0800
 categories: 原创
 tag: javascript
@@ -11,6 +11,7 @@ tag: javascript
 * 其他链接：
     + [javasript - 数据存储--Web存储机制]({{ '/2017/09/04/js-Storage-Web' | prepend: site.baseurl }})
     + [javascript - 本地存储 -- cookie - 上篇]({{ '/2017/10/25/js-Storage-Cookie1' | prepend: site.baseurl }})
+    + [javascript - 本地存储 -- cookie - 下篇]({{ '/2017/10/26/js-Storage-Cookie3' | prepend: site.baseurl }})
 
 > * 以下内容部分源于：
 >   * 《JavaScript高级程序设计（第3版）》
@@ -133,6 +134,8 @@ document.cookie = encodeURIComponent("name") + "=" +encodeURIComponent("Nicholas
 > * 效果
 
 ![relationship-map]({{ '/effects/images/javascript/cookie/cookie-02.gif' | prepend: site.baseurl }})
+
+> * 补充：**删除 `cookie` 的时候，其 `path` 和 `domain` 一定要相同，否则无法删除！！！**
 
 ## 二、cookie的限制
 
@@ -357,6 +360,8 @@ const SubCookieUtil = {
 > * 过程展示
 
 ![relationship-map]({{ '/effects/images/javascript/cookie/cookie-04.gif' | prepend: site.baseurl }})
+
+> * 补充：**删除子 `cookie` 的时候，其 `path` 和 `domain` 一定要相同，否则无法删除！！！**
 
 ## 四、 关于 cookie 的思考 
 
