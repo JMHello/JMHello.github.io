@@ -2,16 +2,167 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>cookie的domain属性</title>
+    <title>子cookie</title>
 </head>
 <body>
+<button type="button" id="set">设置一个子cookie</button>
+<button type="button" id="setAll">设置整个子cookie</button>
+<button type="button" id="get">获取一个子cookie</button>
+<button type="button" id="getAll">获取整个子cookie</button>
+<button type="button" id="remove">移除一个子cookie</button>
+<button type="button" id="removeAll">移除整个子cookie</button>
 <script>
-  // 没有设置 path 属性
-  document.cookie = `${decodeURIComponent('domain1')}=${decodeURIComponent('jm1')};`;
+  const SubCookieUtil = {
+    /**
+     * 设置一个子cookie
+     * @param {String} name ookie的名字
+     * @param {String} subName 子cookie的名字
+     * @param {String} value 子cookie的值
+     * @param {Object} opts 配置（path、domain、secure、expires）
+     */
+    set: function (name, subName, value, opts) {
+      let subcookies = this.getAll(name) || {};
 
-  // 设置了 path 属性
-  document.cookie = `${decodeURIComponent('domain2')}=${decodeURIComponent('jm2')}; domain=127.0.0.1`;
-  document.cookie = `${decodeURIComponent('domain2')}=${decodeURIComponent('jm2')}; domain=localhost:80`;
+      subcookies[subName] = value;
+
+      this.setAll(name, subcookies, opts || {});
+    },
+    /**
+     * 设置整个子cookie
+     * @param {String} name cookie的名子
+     * @param {Object} subCookies 子cookie对象
+     * @param {Object} opts 配置（path、domain、secure、expires）
+     */
+    setAll: function(name, subCookies, opts){
+      let cookieText = `${encodeURIComponent(name)}=`,
+        subcookieParts = [];
+
+      for (let [key,value] of Object.entries(subCookies)){
+        subcookieParts.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`);
+      }
+
+      cookieText += subcookieParts.join("&");
+
+      if (opts && Object.prototype.toString.call(opts) === '[object Object]') {
+        for (let [key,value] of Object.entries(opts)){
+          cookieText += (key !== 'secure'? `; ${key}=${value}`: `; ${key}`)
+        }
+      }
+
+      document.cookie = cookieText;
+    },
+    /**
+     * 获取单个子cookie
+     * @param {String} name cookie的名字
+     * @param {String} subName 子cookie的名字
+     * @returns {Object|Null}
+     */
+    get: function (name, subName) {
+      const subCookies = this.getAll(name);
+
+      if (subCookies) {
+        return subCookies[subName];
+      }
+
+      return null;
+    },
+    /**
+     * 获取所有子cookie
+     * @param {String} name cookie的名字
+     * @returns {Object|Null}
+     */
+    getAll: function (name) {
+      const chosenCookie = document.cookie.match(new RegExp('(?:^' + encodeURIComponent(name) +'=|\\s+'+ encodeURIComponent(name) +'=)(.+?(?=;|$))'));
+      let arr = [];
+      let info = {};
+
+      if(chosenCookie) {
+        arr = chosenCookie[1].split('&');
+
+        for (let i in arr) {
+          let parts = arr[i].split('=');
+          info[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]);
+        }
+
+        return info;
+      }
+
+      return null;
+    },
+    /**
+     * 移除一个子cookie
+     * @param {String} name cookie的名字
+     * @param {String} subName 子cookie的名字
+     * @param {Object} opts 配置（path、domain、secure、expires）
+     */
+    remove: function (name, subName, opts) {
+      const subCookies = this.getAll(name);
+
+      if (subCookies) {
+        delete subCookies[subName];
+        this.setAll(name, subCookies, opts);
+      }
+    },
+    /**
+     * 移除整个cookie
+     * @param {String} name cookie的名字
+     * @param {Object} opts cookie配置
+     */
+    removeAll: function (name, opts) {
+      this.setAll(name, this.getAll(name), opts);
+    }
+  };
+
+  // 设置一个子cookie
+  document.getElementById('set').onclick = function () {
+    console.log('设置一个子cookie：data');
+    SubCookieUtil.set("data", "name", "jm");
+    console.log('-----------------------------');
+  };
+
+  // 设置整个子cookie
+  document.getElementById('setAll').onclick = function () {
+    console.log('设置整个子cookie：data1、data2');
+    SubCookieUtil.setAll("data1", { name: "cc", book: "tt" },{
+      path: '/',
+      expires: new Date('2017-12-20').toGMTString()
+    });
+    SubCookieUtil.setAll("data2", { name: "aa", book: "bb" });
+    console.log('-----------------------------');
+  };
+
+  // 获取一个子cookie
+  document.getElementById('get').onclick = function () {
+    console.log('获取一个子cookie的值：data');
+    console.log('data==>name：' + SubCookieUtil.get("data", "name"));
+    console.log('data==>book：' + SubCookieUtil.get("data", "book"));
+    console.log('-----------------------------');
+  };
+
+  // 获取整个子cookie
+  document.getElementById('getAll').onclick = function () {
+    console.log('获取整个子cookie：data、name、data2');
+    console.log('data：' + SubCookieUtil.getAll('data'));
+    console.log('name：'+ SubCookieUtil.getAll('name'));
+    console.log('data2：' + SubCookieUtil.getAll('data2'));
+    console.log('-----------------------------');
+  };
+
+  // 删除一个子cookie
+  document.getElementById('remove').onclick = function () {
+    console.log('删除一个子cookie：data2的name值，data2之前的值为：name=aa&book=bb');
+    SubCookieUtil.remove('data2', 'name');
+    console.log('-----------------------------');
+  };
+
+  // 删除整个子cookie
+  document.getElementById('removeAll').onclick = function () {
+    console.log('删除整个子cookie：data1');
+    SubCookieUtil.removeAll('data1', {
+      expires: new Date(0).toGMTString(),
+      path: '/'
+    });
+  };
 </script>
 </body>
 </html>
