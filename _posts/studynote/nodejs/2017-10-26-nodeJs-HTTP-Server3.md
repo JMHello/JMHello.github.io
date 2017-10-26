@@ -376,3 +376,99 @@ response.end();
 > * `response.end(chunk,[encoding])`：结束响应内容的书写。【在每次发送数据时，**必须调用该方法来结束响应**。】
 >   * `chunk`：可选，指定响应内容，一个 `Buffer` 对象或一个字符串。
 >   * `encoding`：可选，如果第一参数值为字符串，可使用此属性指定如何编码该字符串。【**默认`utf8`**】
+
+### 1.10 response.setTimeout(msecs, [callback])
+
+> * `response.setTimeout(msecs, [callback])`：设置响应超时时间
+>   * `msecs`：必选。整数，设置超时时间，单位：`ms`。
+>   * `callback`：可选。指定当响应超时时调用的回调函数。（函数中不使用任何参数）。
+
+```js
+// 等价 response.setTimeout(msecs, [callback])
+response.on('timeout', function() {
+  //...
+})
+```
+
+---
+
+> * **如果在指定的时间内服务器没有做出响应，可能是因为网络间的连接出现问题，或者是因为服务器故障，或者是网络防火墙阻止了客户端与服务器的连接**。
+
+![relationship-map]({{ '/styles/images/nodejs/http/http-05.png | prepend: site.baseurl }})
+
+---
+
+> * 实例：
+
+```js
+var http = require('http');
+
+var server = http.createServer(function (req, res) {
+  if (req.url !== '/favicon.ico') {
+    // 设置相应超时时间，这里并没有使用回调函数
+    res.setTimeout(1000);
+
+    // 使用 timeout 事件，相当于 上行代码的回调函数
+    res.on('timeout', function () {
+      console.log('响应超时了！！！！！！');
+    })
+
+    setTimeout(function () {
+      res.setHeader("Content-Type", "text/plain; charset=utf-8");
+      console.log("Content-Type：" + res.getHeader("Content-Type"));
+      res.write('你好，response.getHeader()方法使用成功了！！');
+      res.end();
+    }, 2000);
+  }
+});
+
+server.listen(8080, "127.0.0.1", function () {
+  console.log('开始监听');
+});
+```
+
+> * 过程
+
+![relationship-map]({{ '/effects/images/nodejs/http/http-11.gif | prepend: site.baseurl }})
+
+### 1.11 close事件
+
+> * **在 `res.end()` 方法被调用之前**，如果连接中断，会触发 `http.ServerResponse` 对象的 `close` 事件。
+> * 可通过监听该事件并指定事件回调函数，从而指定中断时所需执行的操作。
+
+```js
+res.on('close', function() {
+  // ...
+})
+```
+
+---
+
+> * 实例：在页面打开的5秒内关闭页面就会显示连接中断
+
+```js
+var http = require('http');
+
+var server = http.createServer(function (req, res) {
+  if (req.url !== '/favicon.ico') {
+    // close 事件
+    res.on('close', function () {
+      console.log('连接被中断！！！！！');
+    });
+    
+    setTimeout(function () {
+      res.setHeader("Content-Type", "text/plain; charset=utf-8");
+      res.write('你好，response.getHeader()方法使用成功了！！');
+      res.end();
+    }, 5000);
+  }
+});
+
+server.listen(8080, "127.0.0.1", function () {
+  console.log('开始监听');
+});
+```
+
+> * 过程
+
+![relationship-map]({{ '/effects/images/nodejs/http/http-12.gif | prepend: site.baseurl }})
