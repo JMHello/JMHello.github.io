@@ -82,7 +82,7 @@ tag: javascript
 >   1. 如果没有明确指定哪个域，默认情况下，这个域会被认作来自设置 `cookie` 的那个域，就像 `name1` 。
 >   2. 在当前域的层级范围内，然后至少是二级域名相同的情况下，才可以设置其`domain`值。
 >       * 例如：`ke.qq.com` 有三层，设置 `ke.qq.com` 或者 `qq.com` 都可以。 就像 `name2`、`name3`、`name4`。
->   3. 
+>   3. `.qq.com` 和 `qq.com` 的效果是一样的，不过`HTTP`规定，`.qq.com`是标准的格式！
 
 
 ### 2.3 path
