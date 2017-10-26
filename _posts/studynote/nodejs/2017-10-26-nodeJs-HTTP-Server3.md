@@ -334,3 +334,45 @@ server.listen(8080, "127.0.0.1", function () {
 > * 过程
 
 ![relationship-map]({{ '/effects/images/nodejs/http/http-10.gif | prepend: site.baseurl }})
+
+### 1.7 response.addTrailers(headers)
+
+> * **`response.addTrailers(headers)`**
+>   * `header`：对象，存放需要追加的响应头信息。
+>   * 在使用这个方法时，**响应流须使用分块编码方式**。【如果客户端使用 `HTTP` 的版本为 1.1 以上（包括1.1版本），则响应流自动设置为分块编码方式；版本为1.0，此方法不生效】
+>   * 使用此方法，**必须在响应头中添加 `Trailer` 字段并将字段值设为追加的响应头中所指定的字段名**。
+
+```js
+response.writeHead(200, {
+  'Content-Type': 'text/plain',
+  'Trailer': 'Content-MD5' // 添加Trailer字段
+});
+response.write('一些数据。');
+
+// addTrailers 方法
+response.addTrailers({
+  'Content-MD5': '7895bf4b8828b55ceaf47747b4bca667'
+});
+response.end();
+```
+
+### 1.8 response.write(chunk,[encoding])
+
+> * `response.write(chunk,[encoding])`：发送响应内容。
+>   * `chunk`：必选。指定响应内容，一个 `Buffer` 对象或一个字符串。
+>   * `encoding`：如果第一参数值为字符串，可使用此属性指定如何编码该字符串。【**默认`utf8`**】
+
+---
+
+> * **如果在 `write` 方法前没有使用 `writeHead` 方法，那么 `Node.js` 将隐式创建一个响应头。**
+> * 在使用 `end` 方法结束响应内容的书写之前，可调用多次 `write` 方法。
+>   * 第一次调用 `write` 方法， `Node.js` 将立即发送 **缓存的响应头信息及 `write` 方法中指定的响应内容**。
+>   * 当再次调用 `write` 方法时，`Node.js` 将 **单独发送 `write` 方法中指定的响应内容。该响应内容将与之前发送的响应内容一起缓存在客户端中。**
+
+![relationship-map]({{ '/styles/images/nodejs/http/http-04.png | prepend: site.baseurl }})
+
+### 1.9 response.end([chunk],[encoding])
+
+> * `response.end(chunk,[encoding])`：结束响应内容的书写。【在每次发送数据时，**必须调用该方法来结束响应**。】
+>   * `chunk`：可选，指定响应内容，一个 `Buffer` 对象或一个字符串。
+>   * `encoding`：可选，如果第一参数值为字符串，可使用此属性指定如何编码该字符串。【**默认`utf8`**】
