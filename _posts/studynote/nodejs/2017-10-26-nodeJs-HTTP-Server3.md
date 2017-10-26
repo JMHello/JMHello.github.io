@@ -293,7 +293,7 @@ server.listen(8080, "127.0.0.1", function () {
 >   * 默认情况下，`HTTP`服务器自动将服务器端当前时间作为响应头中的 `Date` 字段值发送给客户端。
 >   * 可以通过将 `http.ServerResponse` 对象的 `sendDate` 属性设置为 `false` 的方法在响应头中删除字段。
 
-![relationship-map]({{ '/styles/images/nodejs/http/http-03.png | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/nodejs/http/http-3.png | prepend: site.baseurl }})
 
 ---
 
