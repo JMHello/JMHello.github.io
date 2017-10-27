@@ -29,11 +29,13 @@ tag: javascript
 > * 接下来讲讲用户登录的大致过程。
 
 
-![relationship-map]({{ '/styles/images/javascript/cookie/cookie-10.png' | prepend: site.baseurl }})
+![relationship-map](/styles/images/javascript/cookie/cookie-10.png)
 
-![relationship-map]({{ '/styles/images/javascript/cookie/cookie-11.png' | prepend: site.baseurl }})
+![relationship-map](/styles/images/javascript/cookie/cookie-11.png)
 
-![relationship-map]({{ '/styles/images/javascript/cookie/cookie-12.png' | prepend: site.baseurl }})
+![relationship-map](/styles/images/javascript/cookie/cookie-12.png)
+
+### 1.2 实例
 
 
 

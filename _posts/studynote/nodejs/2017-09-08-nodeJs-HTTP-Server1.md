@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "nodeJs - HTTP服务器"
+title: "nodeJs - HTTP服务器 - 上篇"
 data: 2017-09-08 17:27:00 +0800
 categories: 学习笔记
 tag: node.js
@@ -10,7 +10,6 @@ tag: node.js
 
 其他链接：
 
-+ [nodeJs - 获取客户端请求信息]({{ '/2017/09/09/nodeJs-Get-IncomingMessage' | prepend: site.baseurl }})
 + [nodeJs - HTTP服务器 - 中篇 - http.IncomingMessage]({{ '/2017/10/26/nodeJs-HTTP-Server2' | prepend: site.baseurl }})
 + [nodeJs - HTTP服务器 - 下篇 - http.ServerResponse]({{ '/2017/10/26/nodeJs-HTTP-Server3' | prepend: site.baseurl }})
 

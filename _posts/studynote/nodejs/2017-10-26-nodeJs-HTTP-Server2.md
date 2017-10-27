@@ -10,8 +10,7 @@ tag: node.js
 
 其他链接：
 
-+ [nodeJs - 获取客户端请求信息]({{ '/2017/09/09/nodeJs-Get-IncomingMessage' | prepend: site.baseurl }})
-+ [nodeJs - HTTP服务器 - 上篇]({{ '/2017/09/08/nodeJs-HTTP-Server1' | prepend: site.baseurl }})
++ [nodeJs - HTTP服务器 - 上篇](http://www.jmazm.com/2017/09/08/nodeJs-HTTP-Server1/)
 + [nodeJs - HTTP服务器 - 下篇 - http.ServerResponse]({{ '/2017/10/26/nodeJs-HTTP-Server3' | prepend: site.baseurl }})
 
 > 以下内容全部源于： 《Node.js权威指南》
