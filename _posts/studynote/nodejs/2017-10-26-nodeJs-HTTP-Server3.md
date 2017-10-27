@@ -186,7 +186,7 @@ server.listen(8080, "127.0.0.1", function () {
 
 > * 过程
 
-![relationship-map]({{ '/effects/images/nodejs/http/http-07.gif | prepend: site.baseurl }})
+![relationship-map](/effects/images/nodejs/http/http-07.gif)
 
 ### 1.5 response.removeHeader(name)
 
@@ -236,7 +236,7 @@ server.listen(8080, "127.0.0.1", function () {
 
 > * 过程
 
-![relationship-map]({{ '/effects/images/nodejs/http/http-08.gif | prepend: site.baseurl }})
+![relationship-map](/effects/images/nodejs/http/http-08.gif)
 
 ---
 
@@ -281,7 +281,7 @@ server.listen(8080, "127.0.0.1", function () {
 
 > * 过程
 
-![relationship-map]({{ '/effects/images/nodejs/http/http-09.gif | prepend: site.baseurl }})
+![relationship-map](/effects/images/nodejs/http/http-09.gif)
 
 ---
 
@@ -293,7 +293,7 @@ server.listen(8080, "127.0.0.1", function () {
 >   * 默认情况下，`HTTP`服务器自动将服务器端当前时间作为响应头中的 `Date` 字段值发送给客户端。
 >   * 可以通过将 `http.ServerResponse` 对象的 `sendDate` 属性设置为 `false` 的方法在响应头中删除字段。
 
-![relationship-map]({{ '/styles/images/nodejs/http/http-3.png | prepend: site.baseurl }})
+![relationship-map](/styles/images/nodejs/http/http-3.png)
 
 ---
 
@@ -333,7 +333,7 @@ server.listen(8080, "127.0.0.1", function () {
 
 > * 过程
 
-![relationship-map]({{ '/effects/images/nodejs/http/http-10.gif | prepend: site.baseurl }})
+![relationship-map](/effects/images/nodejs/http/http-10.gif)
 
 ### 1.7 response.addTrailers(headers)
 
@@ -369,7 +369,7 @@ response.end();
 >   * 第一次调用 `write` 方法， `Node.js` 将立即发送 **缓存的响应头信息及 `write` 方法中指定的响应内容**。
 >   * 当再次调用 `write` 方法时，`Node.js` 将 **单独发送 `write` 方法中指定的响应内容。该响应内容将与之前发送的响应内容一起缓存在客户端中。**
 
-![relationship-map]({{ '/styles/images/nodejs/http/http-04.png | prepend: site.baseurl }})
+![relationship-map](/styles/images/nodejs/http/http-04.png)
 
 ### 1.9 response.end([chunk],[encoding])
 
@@ -394,7 +394,7 @@ response.on('timeout', function() {
 
 > * **如果在指定的时间内服务器没有做出响应，可能是因为网络间的连接出现问题，或者是因为服务器故障，或者是网络防火墙阻止了客户端与服务器的连接**。
 
-![relationship-map]({{ '/styles/images/nodejs/http/http-05.png | prepend: site.baseurl }})
+![relationship-map](/styles/images/nodejs/http/http-05.png)
 
 ---
 
@@ -429,7 +429,7 @@ server.listen(8080, "127.0.0.1", function () {
 
 > * 过程
 
-![relationship-map]({{ '/effects/images/nodejs/http/http-11.gif | prepend: site.baseurl }})
+![relationship-map](/effects/images/nodejs/http/http-11.gif)
 
 ### 1.11 close事件
 
@@ -471,4 +471,4 @@ server.listen(8080, "127.0.0.1", function () {
 
 > * 过程
 
-![relationship-map]({{ '/effects/images/nodejs/http/http-12.gif | prepend: site.baseurl }})
+![relationship-map](/effects/images/nodejs/http/http-12.gif)
