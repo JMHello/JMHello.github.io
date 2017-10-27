@@ -161,7 +161,7 @@ server.listen(8080, "127.0.0.1", function () {
 
 > * 过程
 
-![relationship-map]({{ '/effects/images/nodejs/http/http-06.gif | prepend: site.baseurl }})
+![relationship-map](/effects/images/nodejs/http/http-06.gif)
 
 ### 1.4 response.getHeader(name)
 
@@ -193,7 +193,7 @@ server.listen(8080, "127.0.0.1", function () {
 > * `response.removeHeader(name)`：删除一个响应字段。
 > * **`response.removeHeader()` 方法必须在 `http.ServerResponse` 对象的 `write` 方法发送数据之前被调用**。
 
-### 2.5 response.headersSent
+### 1.6 response.headersSent
 
 > * `response.headersSent`属性：当响应头已发送时，该属性值为 `true`， 当响应头未发送时，属性值为 `false`。
 
