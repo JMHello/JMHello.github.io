@@ -44,10 +44,15 @@ tag: javascript
 
 ![relationship-map](/styles/images/javascript/cookie/cookie-13.png)
 
+
 ### 1.3 demo 下载
 
 > * 点击下载[demo](/effects/demo/demo-cookie/login.zip)
 > * 下载 `demo` 后可以阅读 `readme.md` 文件，里面有详细的操作步骤。
+
+### 1.4 demo 过程
+
+![relationship-map](/effects/images/nodejs/cookie/cookie-01.gif)
 
 ## 二、总结
 
