@@ -9,9 +9,8 @@ tag: javascript
 {:toc}
 
 * 其他链接：
-    + [javasript - 数据存储--Web存储机制]({{ '/2017/09/04/js-Storage-Web' | prepend: site.baseurl }})
     + [javascript - 本地存储 -- cookie - 上篇]({{ '/2017/10/25/js-Storage-Cookie1' | prepend: site.baseurl }})
-    + [javascript - 本地存储 -- cookie - 下篇]({{ '/2017/10/26/js-Storage-Cookie3' | prepend: site.baseurl }})
+    + [javascript - 本地存储 -- cookie - 下篇]({{ '/2017/10/28/js-Storage-Cookie3' | prepend: site.baseurl }})
 
 > * 以下内容部分源于：
 >   * 《JavaScript高级程序设计（第3版）》

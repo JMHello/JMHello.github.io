@@ -71,7 +71,7 @@ URI 有两种：URN 以及 URL。
 
 * 对应的 `location.xxx`：
 
-![relationship-map]({{ '/styles/images/HTTP/HTTP-01.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/HTTP/HTTP-22.png' | prepend: site.baseurl }})
 
 *  URL 的例子请看下图
 

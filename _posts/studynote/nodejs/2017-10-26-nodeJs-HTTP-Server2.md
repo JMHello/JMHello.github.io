@@ -58,3 +58,15 @@ server.listen(8080, "127.0.0.1", function () {
 
 ![relationship-map]({{ '/effects/images/nodejs/http/http-03.gif' | prepend: site.baseurl }})
 
+### 1.3 req 的 data 事件
+
+> * `req` 的 `data` 事件可以接收到前端传来的数据
+
+```js
+req.on('data', function(data) {
+  // ...
+})
+```
+
+
+
