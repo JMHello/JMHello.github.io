@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "XSS - 反射型"
-data: 2017-10-28 19:27:00 +0800
+data: 2017-10-29 19:27:00 +0800
 categories: 原创
 tag: WebSecurity
 ---
