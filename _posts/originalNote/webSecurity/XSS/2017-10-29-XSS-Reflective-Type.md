@@ -34,7 +34,7 @@ tag: WebSecurity
 
 ## 二、反射型demo
 
-> 点击下载[demo](/effects/files/reflectiveType.zip)，详细的操作可以阅读 `readme.md` 文件。
+> 点击下载[demo](/effects/files/webSecurity/reflectiveType.zip)，详细的操作可以阅读 `readme.md` 文件。
 
 > * 操作过程如下：（一开始展示的是chrome浏览器，之后是ie浏览器）
 
