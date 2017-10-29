@@ -1,9 +1,7 @@
 http://www.jmazm.com
 
-http://www.jmazm.com/2017/08/28/Browser-Cache-Mechanism/
+http://www.jmazm.com/2017/10/25/js-Storage-Cookie1/
 
-http://www.jmazm.com/2017/10/08/js-scope/
+http://www.jmazm.com/2017/10/25/js-Storage-Cookie2/
 
-http://www.jmazm.com/2017/10/08/js-VO/
-
-http://www.jmazm.com/2017/10/08/js-EC/
+http://www.jmazm.com/2017/10/28/js-Storage-Cookie3/
