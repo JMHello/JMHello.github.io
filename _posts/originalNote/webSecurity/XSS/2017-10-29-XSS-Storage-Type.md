@@ -36,7 +36,7 @@ tag: WebSecurity
 
 > * 点击下载[demo](/effects/files/webSecurity/storageType.zip)，详细的操作可以阅读 `readme.md` 文件。
 
-> * `demo` 结果解析如下图：
+> * `demo` 结果解析如下图：（以下图片只是举个例子，并不是说百度是不好的网站！！）
 
 ![demo](/styles/images/web/security/security-04.png)
 
