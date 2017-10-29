@@ -40,7 +40,7 @@ tag: WebSecurity
 
 ![demo](/styles/images/web/security/security-04.png)
 
-> * 操作过程如下：（一开始展示的是chrome浏览器，之后是ie浏览器）
+> * 操作过程如下：
 
 ![demo](/effects/images/webSecurity/webSecurity-02.gif)
 
