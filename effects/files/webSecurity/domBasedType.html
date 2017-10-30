@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM-Based 型 XSS实例</title>
+</head>
+<body>
+<div id="content" style="margin-bottom: 30px;"></div>
+<input type="text" id="txt">
+<button type="button" id="btn">设置链接地址</button>
+<script>
+    const content = document.getElementById('content');
+    const txt = document.getElementById('txt');
+    const btn = document.getElementById('btn');
+
+    btn.onclick = function () {
+      // js代码
+      content.innerHTML = `<a href="${txt.value.trim()}">链接</a>`
+    }
+
+    // " onclick=alert(/xss/) //
+</script>
+</body>
+</html>
