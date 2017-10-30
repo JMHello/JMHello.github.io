@@ -22,7 +22,7 @@ tag: WebSecurity
 
 > * 请看下图：
 
-![demo](/styles/images/web/security/security-05.png)
+![demo](/styles/images/web/security/security-07.png)
 
 > 1. 用户打开带有恶意的链接。
 > 2. 浏览器（即：客户端）会在 `DOM` 解析时直接使用恶意数据。
@@ -63,7 +63,7 @@ tag: WebSecurity
 
 > * 总结之前，我们先来比较一下三种 `XSS` 攻击：
 
-![demo](/styles/images/web/security/security-05.png)
+![demo](/styles/images/web/security/security-06.png)
 
 > * 反射型 `XSS`（服务端直接使用恶意脚本并返回结果页）和存储型 `XSS` （服务端存储恶意脚本并返回）都是需要服务端的直接参与的。
 > * 然而对于 `DOM-Based` 型 `XSS` 来说，其并不依赖服务端，服务端的响应不会涉及到恶意脚本的内容。
