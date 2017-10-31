@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "XSS - 防御 - httpOnly"
-data: 2017-10-29 21:27:00 +0800
+data: 2017-10-30 21:27:00 +0800
 categories: 原创
 tag: WebSecurity
 ---
@@ -40,6 +40,8 @@ tag: WebSecurity
 > * 点击下载[demo](/effects/files/webSecurity/httpOnly.zip)，详细操作可阅读 `readme.md` 文件
 
 ### 1.4 httpOnly demo 过程
+
+> * 切换是否设置 `httpOnly` 的 `demo` 中的关键代码
 
 ![httpOnly](/styles/images/web/security/security-15.png)
 

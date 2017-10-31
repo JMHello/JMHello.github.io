@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤函数</title>
+</head>
+<body>
+<div>
+    题目要求：将传入的数据文本中符合下面要求的危险标签、属性和字符进行过滤<br>
+    过滤一些黑名单标签(整个标签去除)：&lt;script&gt;、&lt;style&gt;、iframe<br>
+    过滤标签中的事件黑名单属性（去除属性）：onerror、onclick
+</div>
+<p></p>
+<script>
+ const sourceText1 = `<div><iframe></iframe><button href="a.com" onclick="alert(1)">test</button></div>`;
+
+ function filter (str) {
+   const REGEXP_TAG = /<(script|style|iframe)>.*?<\/\1>/ig;
+   const REGEXP_ATTR_NAME = /(onclick|onerror)=([\'\"]?)([^\'\">]*?)\2/ig
+
+   return String(str)
+     .replace(REGEXP_TAG, '')
+     .replace(REGEXP_ATTR_NAME, '');
+ }
+
+ document.getElementsByTagName('p')[0].innerHTML = '过滤后的结果：' + filter(sourceText1);
+</script>
+</body>
+</html>

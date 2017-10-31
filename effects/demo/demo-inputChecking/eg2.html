@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转义函数</title>
+</head>
+<body>
+<div>
+    题目要求：将传入的数据文本中符合下面要求的危险标签、属性和字符进行过滤<br>
+    将 & 转义为 &amp;<br>
+    将 " 转义为 &quot;<br>
+    将 ' 转义为 &#39;<br>
+    将 & 转义为 &amp;<br>
+    将 < 转义为 &lt;<br>
+    将 > 转义为 &gt;
+</div>
+<p></p>
+<script>
+  const sourceText = '<a href="a.com" onclick="alert(1)">test</a>';
+  
+  function htmlEncode (str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  document.getElementsByTagName('p')[0].innerHTML = '过滤后的结果：' + htmlEncode(sourceText);
+</script>
+</body>
+</html>

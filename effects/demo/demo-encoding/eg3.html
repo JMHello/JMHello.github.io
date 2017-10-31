@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>encodeURI 和 encodeURIComponent</title>
+</head>
+<h2>encodeURI 和 encodeURIComponent</h2>
+<div></div>
+<body>
+<script>
+    const div = document.getElementsByTagName('div');
+    div[0].innerHTML = `http://a.com?key=?& ===》 ${encodeURI('http://a.com') + '?key=' + encodeURIComponent('?&')}`;
+</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "XSS - DOM-Based 型"
-data: 2017-10-29 19:27:00 +0800
+data: 2017-10-30 19:27:00 +0800
 categories: 原创
 tag: WebSecurity
 ---

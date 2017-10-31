@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>encodeURIComponent</title>
+</head>
+<h2>encodeURIComponent</h2>
+<div></div>
+<body>
+<script>
+    const div = document.getElementsByTagName('div');
+    div[0].innerHTML = `http://www.baidu.com?hello=nihao#token ===》 ${encodeURIComponent('http://www.baidu.com?hello=nihao#token')}`;
+</script>
+</body>
+</html>

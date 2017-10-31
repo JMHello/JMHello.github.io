@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>encodeURI</title>
+</head>
+<h2>encodeURI</h2>
+<div></div>
+<div></div>
+<div></div>
+<body>
+<script>
+    const div = document.getElementsByTagName('div');
+    div[0].innerHTML = `http://www.帅.com ===》 ${encodeURI('http://www.帅.com')}`;
+    div[1].innerHTML = `http://www.a.com?我=1 ===》 ${encodeURI('http://www.a.com?我=1')}`;
+    div[2].innerHTML = `值的内容为特殊符号：http://a.com?key=?& ===》 ${encodeURI('http://a.com?key=?&')}`;
+</script>
+</body>
+</html>
