@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输出检查</title>
+
+</head>
+<body>
+<h1>输出检查</h1>
+
+<h2>HTML 标签中</h2>
+<div id="content1"></div>
+
+<h2>HTML 属性中</h2>
+<div id="content2"></div>
+
+<h2>事件属性中</h2>
+<div id="content3"></div>
+
+<h2>在地址栏中输出</h2>
+<div id="content4"></div>
+
+
+<script>
+  const scriptData = {
+    text1: '<script>alert(1);<\/script>',
+    text2: '"><script>alert(2);<\/script>',
+    text3: ");alert(3);//",
+    text4: '"><script>alert(4);<\/script>"',
+
+  };
+
+  const content1 = document.getElementById('content1');
+  const content2 = document.getElementById('content2');
+  const content3 = document.getElementById('content3');
+  const content4 = document.getElementById('content4');
+
+
+  // 未防御前
+
+  // 插入到 HTML 标签中
+//  const html1 = `<div>${scriptData.text1}</div>`;
+  const html1 = '<div>' + scriptData.text1 + '</div>';
+  content1.innerHTML = html1;
+
+  // 插入到 HTML 标签属性中
+//  const html2 = `<div id="${scriptData.text2}"></div>`;
+  const html2 = '<div id="' + scriptData.text2 + '"></div>';
+  content2.innerHTML = html2;
+
+  // 插入到事件属性中
+//  const html3 = `<a href="#" onclick="func(${scriptData.text3})">test3</a>`;
+  const html3= '<a href="#" onclick="func(' + scriptData.text3 + ')">test3</a>';
+  content3.innerHTML = html3;
+
+  // 插入到地址栏中
+//  const html4 = `<a href="${scriptData.text4}"">test4</a>`;
+  const html4 = '<a href="' + scriptData.text4 + '">test4</a>';
+  content4.innerHTML = html4;
+
+
+  function func () {
+
+  }
+
+
+</script>
+</body>
+</html>

@@ -8,6 +8,8 @@ tag: WebSecurity
 * content
 {:toc}
 
+> * 其他相关链接：[XSS-总结](http://www.jmazm.com/2017/10/31/XSS-inclustion/)
+
 <!-- more -->
 
 

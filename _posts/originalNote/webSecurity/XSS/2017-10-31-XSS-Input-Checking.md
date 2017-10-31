@@ -8,6 +8,8 @@ tag: WebSecurity
 * content
 {:toc}
 
+> * 其他相关链接：[XSS-总结](http://www.jmazm.com/2017/10/31/XSS-inclustion/)
+
 <!-- more -->
 
 
@@ -78,7 +80,7 @@ tag: WebSecurity
 
 > * 结果图：
 
-![input](/styles/images/web/security/security-20.png)
+![input](/styles/images/web/security/security-19.png)
 
 ### 2.3 防御后的操作显示（伪造的post请求发起XSS攻击失败）
 
