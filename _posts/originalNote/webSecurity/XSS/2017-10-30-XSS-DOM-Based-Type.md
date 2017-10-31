@@ -23,7 +23,7 @@ tag: WebSecurity
 
 > * 请看下图：
 
-![demo](/styles/images/web/security/security-07.png)
+![demo](/styles/images/web/security/XSS/security-07.png)
 
 > 1. 用户打开带有恶意的链接。
 > 2. 浏览器（即：客户端）会在 `DOM` 解析时直接使用恶意数据。
@@ -45,7 +45,7 @@ tag: WebSecurity
 
 ### 2.1 demo的下载和操作
 
-> * 点击下载[demo](/effects/files/webSecurity/domBasedType.html)，详细的操作可以阅读 `readme.md` 文件。
+> * 点击下载[demo](/effects/files/webSecurity/XSS/domBasedType.html)，详细的操作可以阅读 `readme.md` 文件。
 
 > * 操作过程如下：
 
@@ -58,13 +58,13 @@ tag: WebSecurity
 >    * 这个例子屏蔽了 `href` 属性，为 `a` 标签添加了 `onclick` 事件，用户点击 `a` 标签，就会有弹窗出现！！
 >    * 如果是一些恶意的脚本代码，那么在这里就会起到 `DOM-Based` 型的 `XSS` 攻击的作用。
 
-![demo](/styles/images/web/security/security-08.png)
+![demo](/styles/images/web/security/XSS/security-08.png)
 
 ## 三、总结
 
 > * 总结之前，我们先来比较一下三种 `XSS` 攻击：
 
-![demo](/styles/images/web/security/security-06.png)
+![demo](/styles/images/web/security/XSS/security-06.png)
 
 > * 反射型 `XSS`（服务端直接使用恶意脚本并返回结果页）和存储型 `XSS` （服务端存储恶意脚本并返回）都是需要服务端的直接参与的。
 > * 然而对于 `DOM-Based` 型 `XSS` 来说，其并不依赖服务端，服务端的响应不会涉及到恶意脚本的内容。

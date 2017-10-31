@@ -22,7 +22,7 @@ tag: WebSecurity
 
 ### 1.2 白名单和黑名单
 
-![input](/styles/images/web/security/security-18.png)
+![input](/styles/images/web/security/XSS/security-18.png)
 
 ---
 
@@ -63,11 +63,11 @@ tag: WebSecurity
 
 ### 2.1 demo下载
 
-> *  点击下载[demo](/effects/files/webSecurity/inputChecking.zip)
+> *  点击下载[demo](/effects/files/webSecurity/XSS/inputChecking.zip)
 
 ### 2.2 是否转义demo切换的提示
 
-![input](/styles/images/web/security/security-21.png)
+![input](/styles/images/web/security/XSS/security-21.png)
 
 ### 2.2 未防御前的操作展示（伪造的post请求成功发起XSS攻击）
 
@@ -80,7 +80,7 @@ tag: WebSecurity
 
 > * 结果图：
 
-![input](/styles/images/web/security/security-19.png)
+![input](/styles/images/web/security/XSS/security-19.png)
 
 ### 2.3 防御后的操作显示（伪造的post请求发起XSS攻击失败）
 
@@ -90,7 +90,7 @@ tag: WebSecurity
 
 > * 结果图：
 
-![input](/styles/images/web/security/security-20.png)
+![input](/styles/images/web/security/XSS/security-20.png)
 
 
 

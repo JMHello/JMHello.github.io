@@ -19,7 +19,7 @@ tag: WebSecurity
 
 > * 反射型（非持久型）`XSS`：诱导用户 **点击恶意链接** 来造成一次性攻击。详情请看下图：
 
-![safe](/styles/images/web/security/security-02.png)
+![safe](/styles/images/web/security/XSS/security-02.png)
 
 > 1. 当我们将恶意链接发送给客户端，并诱导用户点击这个恶意链接，从而使用户访问这个带有恶意脚本代码参数的 `URL`。
 > 2. 当服务端获取到请求的时候，它会获取请求参数并且 **直接使用**，**直接使用** 意味着服务端不做任何的检查以及防范，就信任了这个请求参数
@@ -36,7 +36,7 @@ tag: WebSecurity
 
 ## 二、反射型demo
 
-> 点击下载[demo](/effects/files/webSecurity/reflectiveType.zip)，详细的操作可以阅读 `readme.md` 文件。
+> 点击下载[demo](/effects/files/webSecurity/XSS/reflectiveType.zip)，详细的操作可以阅读 `readme.md` 文件。
 
 > * 操作过程如下：（一开始展示的是chrome浏览器，之后是ie浏览器）
 

@@ -12,7 +12,7 @@ tag: WebSecurity
 
 ## 一、XSS 总结图
 
-![include](/styles/images/web/security/security-24.png.png)
+![include](/styles/images/web/security/XSS/security-24.png.png)
 
 ## 二、XSS 相关文章的链接
 

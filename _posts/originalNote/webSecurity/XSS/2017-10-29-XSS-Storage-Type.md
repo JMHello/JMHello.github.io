@@ -18,7 +18,7 @@ tag: WebSecurity
 
 > * 存储型（持久型）`XSS`：将恶意脚本代码 **存储** 到漏洞服务器中，用户浏览相关页面发起攻击。过程可看下图：
 
-![safe](/styles/images/web/security/security-03.png)
+![safe](/styles/images/web/security/XSS/security-03.png)
 
 > * 存储型 `XSS` 关键在于 **存储**。
 
@@ -35,11 +35,11 @@ tag: WebSecurity
 
 ## 二、反射型demo
 
-> * 点击下载[demo](/effects/files/webSecurity/storageType.zip)，详细的操作可以阅读 `readme.md` 文件。
+> * 点击下载[demo](/effects/files/webSecurity/XSS/storageType.zip)，详细的操作可以阅读 `readme.md` 文件。
 
 > * `demo` 结果解析如下图：（以下图片只是举个例子，并不是说百度是不好的网站！！）
 
-![demo](/styles/images/web/security/security-04.png)
+![demo](/styles/images/web/security/XSS/security-04.png)
 
 > * 操作过程如下：
 
@@ -49,7 +49,7 @@ tag: WebSecurity
 
 > * 总结之前，我们先来比较一下 反射型 `XSS` 和 存储型 `XSS`：
 
-![demo](/styles/images/web/security/security-04.png)
+![demo](/styles/images/web/security/XSS/security-04.png)
 
 > * 由图中可以看出，**存储型 `XSS`** 的破坏力要比 反射型 `XSS` 要强！！！
 

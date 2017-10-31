@@ -18,7 +18,7 @@ tag: WebSecurity
 
 > * 输入检查就是**最后一道防线，根据不同的场景对数据进行处理**！！（可看下图：5种场景的展示）
 
-![output](/styles/images/web/security/security-22.png)
+![output](/styles/images/web/security/XSS/security-22.png)
 
 ### 1.2 5种场景的对应特性
 
@@ -29,7 +29,7 @@ tag: WebSecurity
 
 > * 先看下图
 
-![output](/styles/images/web/security/security-23.png)
+![output](/styles/images/web/security/XSS/security-23.png)
 
 ---
 

@@ -43,7 +43,7 @@ tag: WebSecurity
 
 ### 1.2 XSS 钓鱼demo下载
 
-> * 点击下载[demo](/effects/files/webSecurity/XSSFish.zip)，详细操作可阅读 `readme.md` 文件
+> * 点击下载[demo](/effects/files/webSecurity/XSS/XSSFish.zip)，详细操作可阅读 `readme.md` 文件
 
 ### 1.3 XSS demo 过程的展示
 
@@ -53,19 +53,19 @@ tag: WebSecurity
 
 > * `http://localhost:8080/comments.html`
 
-![XSSFish](/styles/images/web/security/security-10.png)
+![XSSFish](/styles/images/web/security/XSS/security-10.png)
 
 > * `http://localhost:3001/fish.html`
 
-![XSSFish](/styles/images/web/security/security-11.png)
+![XSSFish](/styles/images/web/security/XSS/security-11.png)
 
 > * `http://localhost:3001/user.html`
 
-![XSSFish](/styles/images/web/security/security-12.png)
+![XSSFish](/styles/images/web/security/XSS/security-12.png)
 
 ### 1.5 总结XSS钓鱼窃取用户账号密码的流程
 
-![XSSFish](/styles/images/web/security/security-13.png)
+![XSSFish](/styles/images/web/security/XSS/security-13.png)
 
 
 

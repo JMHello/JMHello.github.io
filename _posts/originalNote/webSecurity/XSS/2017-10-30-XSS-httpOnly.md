@@ -27,7 +27,7 @@ tag: WebSecurity
 
 > * 过程可看下图
 
-![httpOnly](/styles/images/web/security/security-14.png)
+![httpOnly](/styles/images/web/security/XSS/security-14.png)
 
 ### 1.2 httpOnly 的缺点
 
@@ -38,13 +38,13 @@ tag: WebSecurity
 
 ### 1.3 httpOnly demo 下载
 
-> * 点击下载[demo](/effects/files/webSecurity/httpOnly.zip)，详细操作可阅读 `readme.md` 文件
+> * 点击下载[demo](/effects/files/webSecurity/XSS/httpOnly.zip)，详细操作可阅读 `readme.md` 文件
 
 ### 1.4 httpOnly demo 过程
 
 > * 切换是否设置 `httpOnly` 的 `demo` 中的关键代码
 
-![httpOnly](/styles/images/web/security/security-15.png)
+![httpOnly](/styles/images/web/security/XSS/security-15.png)
 
 ---
 
@@ -54,7 +54,7 @@ tag: WebSecurity
 
 > * 未设置 `httpOnly` 结果图
 
-![httpOnly](/styles/images/web/security/security-16.png)
+![httpOnly](/styles/images/web/security/XSS/security-16.png)
 
 ----
 
@@ -64,6 +64,6 @@ tag: WebSecurity
 
 > * 设置 `httpOnly` 结果图
 
-![httpOnly](/styles/images/web/security/security-17.png)
+![httpOnly](/styles/images/web/security/XSS/security-17.png)
 
 
