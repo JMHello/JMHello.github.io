@@ -52,6 +52,24 @@ tag: WebSecurity
 > * 为了避免用户输入被当作 `URL` 去执行，因此在输出之前，需要做一些工作 **`URLEncode()`**。
 >   * 即：把`URL`中一些特殊的字符进行转义，避免出现攻击的现象。
 
+## 二、XSS的防御 - 输出检查demo
 
+### 2.1 未检查前，XSS 攻击成功
 
+> * 点击打开[demo](/effects/files/webSecurity/XSS/xss-output.html);
+
+> * 过程
+
+![demo](/effects/images/webSecurity/XSS/webSecurity-09.gif);
+
+### 2.2 检查后，XSS 攻击失败
+
+> * 点击打开[demo](/effects/files/webSecurity/XSS/xss-output2.html);
+
+> * 最终结果：所有弹窗都无效了！！！
+
+### 2.3 注意事项
+
+> * 在做这个`demo` 的时候，发现将 `<script>` 标签直接赋值给某元素的 `innerHTML`，一点效果都没有。
+> * 原因可参考：[javascript - 为什么直接把script标签赋值给innerHTML不起作用](http://www.jmazm.com/2017/11/01/js-innerHTML-scriptTag)
 

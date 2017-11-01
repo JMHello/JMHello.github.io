@@ -76,7 +76,7 @@ tag: WebSecurity
 
 > * 操作过程：
 
-![post](/effects/images/webSecurity/webSecurity-07.gif)
+![post](/effects/images/webSecurity/XSS/webSecurity-07.gif)
 
 > * 结果图：
 
@@ -86,7 +86,7 @@ tag: WebSecurity
 
 > * 操作过程：
 
-![post](/effects/images/webSecurity/webSecurity-08.gif)
+![post](/effects/images/webSecurity/XSS/webSecurity-08.gif)
 
 > * 结果图：
 

@@ -47,7 +47,7 @@ tag: WebSecurity
 
 ### 1.3 XSS demo 过程的展示
 
-![XSSFish](/effects/images/webSecurity/webSecurity-04.gif)
+![XSSFish](/effects/images/webSecurity/XSS/webSecurity-04.gif)
 
 ### 1.4 XSS demo 过程的讲解
 

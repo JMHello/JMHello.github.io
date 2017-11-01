@@ -40,7 +40,7 @@ tag: WebSecurity
 
 > * 操作过程如下：（一开始展示的是chrome浏览器，之后是ie浏览器）
 
-![demo](/effects/images/webSecurity/webSecurity-01.gif)
+![demo](/effects/images/webSecurity/XSS/webSecurity-01.gif)
 
 ## 三、总结
 

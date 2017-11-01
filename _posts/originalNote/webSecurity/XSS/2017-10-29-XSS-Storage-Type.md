@@ -43,7 +43,7 @@ tag: WebSecurity
 
 > * 操作过程如下：
 
-![demo](/effects/images/webSecurity/webSecurity-02.gif)
+![demo](/effects/images/webSecurity/XSS/webSecurity-02.gif)
 
 ## 三、总结
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>输出检查 - 未检查</title>
+    <title>输出检查 - 检查</title>
 
 </head>
 <body>
@@ -42,21 +42,21 @@
   // 插入到 HTML 标签中
 //  const html1 = `<div>${scriptData.text1}</div>`;
   const html1 = '<div>' + scriptData.text1 + '</div>';
-  createScript(html1, content1);
+  createScript(htmlEncode(html1), content1);
 
   // 插入到 HTML 标签属性中
 //  const html2 = `<div id="${scriptData.text2}"></div>`;
   const html2 = '<div id="' + scriptData.text2 + '"></div>';
-  createScript(html2, content2);
+  createScript(htmlEncode(html2), content2);
 
   // 插入到事件属性中
 //  const html3 = `<a href="#" onclick="func(${scriptData.text3})">test3</a>`;
-  const html3= '<a href="#" onclick="func(' + scriptData.text3 + ')">test3</a>';
+  const html3= '<a href="#" onclick="func(' + javascriptEncode(scriptData.text3) + ')">test3</a>';
   content3.innerHTML = html3;
 
   // 插入到地址栏中
 //  const html4 = `<a href="${scriptData.text4}"">test4</a>`;
-  const html4 = '<a href="' + scriptData.text4 + '">test4</a>';
+  const html4 = '<a href="' + encodeURI(scriptData.text4) + '">test4</a>';
   createScript(html4, content4);
 
 
@@ -68,7 +68,6 @@
   function createScript (str, ele) {
     const reg = /<(script)>([^<>].*?)<\/\1>/g; // 匹配script标签
     const result = reg.exec(str);
-    console.log(result);
     if (result && result[2]) {
       const script = document.createElement('script');
       script.innerHTML = result[2];
@@ -79,6 +78,51 @@
     }
   }
 
+  /**
+   * 转义 HTML 特殊字符
+   * @param {String} str
+   */
+  function htmlEncode(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  /**
+   * javascriptEncode
+   * @param str
+   * @returns {string}
+   */
+  function javascriptEncode (str) {
+    function encodeChar(original) {
+        const char = original.charAt(0);
+
+        switch (char) {
+          case '\n': return "\\n";break;
+          case '\r': return "\\r";break;
+          case '\'': return "\\'";break;
+          case '"': return "\\x22";break;
+          case '\$': return "\\&";break;
+          case '\\': return "\\\\";break;
+          case '\t': return "\\t";break;
+          case '/': return "\\x2F";break;
+          case '<': return "\\x3C";break;
+          case '>': return "\\x3E";break;
+          default: return char;
+        }
+    }
+    let preechar = str;
+    let escaped = '';
+
+    for(let i = 0, len = preechar.length; i < len; i++) {
+      escaped = escaped + encodeChar(preechar.charAt(i));
+    }
+
+    return escaped;
+  }
 </script>
 </body>
 </html>

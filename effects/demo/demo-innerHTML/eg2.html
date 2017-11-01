@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为什么直接把script标签赋值给innerHTML不起作用</title>
+</head>
+<body>
+<div id="content" style="border: 1px solid; padding: 30px; margin-bottom: 10px"></div>
+<textarea id="txt" style="width: 300px; height: 100px;"></textarea>
+<button type="button" id="btn">确定</button>
+<script>
+    const btn = document.getElementById('btn');
+    const content = document.getElementById('content');
+    const txt = document.getElementById('txt');
+
+    btn.onclick = function () {
+      content.innerHTML = txt.value.trim();
+      txt.value = '';
+    }
+</script>
+</body>
+</html>

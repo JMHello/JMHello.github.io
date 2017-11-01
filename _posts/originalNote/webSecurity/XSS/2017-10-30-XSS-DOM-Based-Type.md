@@ -49,7 +49,7 @@ tag: WebSecurity
 
 > * 操作过程如下：
 
-![demo](/effects/images/webSecurity/webSecurity-03.gif)
+![demo](/effects/images/webSecurity/XSS/webSecurity-03.gif)
 
 ### 2.2 demo 的提示
 

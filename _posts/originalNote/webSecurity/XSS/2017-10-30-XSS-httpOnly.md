@@ -50,7 +50,7 @@ tag: WebSecurity
 
 > * 未设置 `httpOnly`
 
-![httpOnly](/effects/images/webSecurity/webSecurity-05.gif)
+![httpOnly](/effects/images/webSecurity/XSS/webSecurity-05.gif)
 
 > * 未设置 `httpOnly` 结果图
 
@@ -60,7 +60,7 @@ tag: WebSecurity
 
 > * 设置 `httpOnly`
 
-![httpOnly](/effects/images/webSecurity/webSecurity-06.gif)
+![httpOnly](/effects/images/webSecurity/XSS/webSecurity-06.gif)
 
 > * 设置 `httpOnly` 结果图
 

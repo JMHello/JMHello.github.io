@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重构script标签</title>
+</head>
+<body>
+<div id="content" style="border: 1px solid; padding: 30px; margin-bottom: 10px"></div>
+<textarea id="txt" style="width: 300px; height: 100px;"></textarea>
+<button type="button" id="btn">确定</button>
+<script>
+    const btn = document.getElementById('btn');
+    const content = document.getElementById('content');
+    const txt = document.getElementById('txt');
+
+    btn.onclick = function () {
+      const reg = /<(script)>([^<>].*?)<\/\1>/g; // 匹配script标签
+      const result = reg.exec(txt.value.trim());
+      console.log(result);
+      if (result && result[2]) {
+        const script = document.createElement('script');
+        script.innerHTML = result[2];
+        content.innerHTML = '';
+        content.appendChild(script);
+      } else {
+        content.innerHTML = txt.value.trim();
+      }
+      txt.value = '';
+    }
+</script>
+</body>
+</html>
