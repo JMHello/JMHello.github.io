@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>屏幕坐标位置 screenX 和 screenY</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="myDiv" class="box"></div>
+<p id="content"></p>
+<p id="content2"></p>
+<p id="content3"></p>
+
+<script>
+    var div = document.getElementById('myDiv');
+    var content = document.getElementById('content');
+    var content2 = document.getElementById('content2');
+    var content3 = document.getElementById('content3');
+
+    div.onclick = function (e) {
+      var e = e || window.event;
+      content.innerHTML = "Client coordinates: " + "pageX = " + e.pageX + ", pageY = " + e.pageY;
+      content2.innerHTML = "Page coordinates: " + "clientX = " + e.clientX + ", clientY = " + e.clientY;
+      content3.innerHTML = "Screen coordinates: " + "screenX = " + e.screenX + ", screenY = " + e.screenY;
+    }
+
+</script>
+</body>
+</html>

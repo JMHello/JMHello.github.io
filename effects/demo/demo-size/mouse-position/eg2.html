@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面坐标位置 pageX 和 pageY</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="myDiv" class="box"></div>
+<p id="content"></p>
+<p id="content2"></p>
+
+<script>
+    var div = document.getElementById('myDiv');
+    var content = document.getElementById('content');
+    var content2 = document.getElementById('content2');
+
+    div.onclick = function (e) {
+      var e = e || window.event;
+      content.innerHTML = "Client coordinates: " + "pageX = " + e.pageX + ", pageY = " + e.pageY;
+      content2.innerHTML = "Page coordinates: " + "clientX = " + e.clientX + ", clientY = " + e.clientY;
+    }
+
+</script>
+</body>
+</html>
