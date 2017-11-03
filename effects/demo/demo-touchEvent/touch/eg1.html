@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>触摸事件</title>
+    <style>
+        .box {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+
+<h2>touchstart</h2>
+<div class="box">
+    <h3>clientX：</h3>
+    <div class="output"></div>
+    <h3>clientY：</h3>
+    <div class="output"></div>
+    <h3>identifier：</h3>
+    <div class="output"></div>
+    <h3>pageX：</h3>
+    <div class="output"></div>
+    <h3>pageY：</h3>
+    <div class="output"></div>
+    <h3>screeX：</h3>
+    <div class="output"></div>
+    <h3>screenY：</h3>
+    <div class="output"></div>
+    <h3>target：</h3>
+    <div class="output"></div>
+</div>
+
+
+
+<h2>touchmove</h2>
+<div class="box">
+    <h3>clientX：</h3>
+    <div class="output"></div>
+    <h3>clientY：</h3>
+    <div class="output"></div>
+    <h3>identifier：</h3>
+    <div class="output"></div>
+    <h3>pageX：</h3>
+    <div class="output"></div>
+    <h3>pageY：</h3>
+    <div class="output"></div>
+    <h3>screeX：</h3>
+    <div class="output"></div>
+    <h3>screenY：</h3>
+    <div class="output"></div>
+    <h3>target：</h3>
+    <div class="output"></div>
+</div>
+
+<h2>touchend</h2>
+<div class="box">
+    <h3>clientX：</h3>
+    <div class="output">无</div>
+    <h3>clientY：</h3>
+    <div class="output">无</div>
+    <h3>identifier：</h3>
+    <div class="output">无</div>
+    <h3>pageX：</h3>
+    <div class="output">无</div>
+    <h3>pageY：</h3>
+    <div class="output">无</div>
+    <h3>screeX：</h3>
+    <div class="output">无</div>
+    <h3>screenY：</h3>
+    <div class="output">无</div>
+    <h3>target：</h3>
+    <div class="output">无</div>
+</div>
+
+<script>
+
+ var box = document.getElementsByClassName('box');
+ var output_one = box[0].getElementsByClassName('output');
+ var output_two = box[1].getElementsByClassName('output');
+ var output_three = box[2].getElementsByClassName('output');
+
+  function handleTouchEvent(event){
+    var obj = event.touches[0];
+
+    switch (event.type) {
+      case 'touchstart':
+        if (obj) {
+          output_one[0].innerHTML = obj.clientX;
+          output_one[1].innerHTML = obj.clientY;
+          output_one[2].innerHTML = obj.identifier;
+          output_one[3].innerHTML = obj.pageX;
+          output_one[4].innerHTML = obj.pageY;
+          output_one[5].innerHTML = obj.screenX;
+          output_one[6].innerHTML = obj.screenY;
+          output_one[7].innerHTML = obj.target;
+        }
+        break;
+      case 'touchmove':
+        if (obj) {
+          output_two[0].innerHTML = obj.clientX;
+          output_two[1].innerHTML = obj.clientY;
+          output_two[2].innerHTML = obj.identifier;
+          output_two[3].innerHTML = obj.pageX;
+          output_two[4].innerHTML = obj.pageY;
+          output_two[5].innerHTML = obj.screenX;
+          output_two[6].innerHTML = obj.screenY;
+          output_two[7].innerHTML = obj.target;
+        }
+        break;
+      case 'touchend':
+        if (obj) {
+          output_three[0].innerHTML = obj.clientX;
+          output_three[1].innerHTML = obj.clientY;
+          output_three[2].innerHTML = obj.identifier;
+          output_three[3].innerHTML = obj.pageX;
+          output_three[4].innerHTML = obj.pageY;
+          output_three[5].innerHTML = obj.screenX;
+          output_three[6].innerHTML = obj.screenY;
+          output_three[7].innerHTML = obj.target;
+        }
+        break;
+    }
+
+  }
+
+  document.addEventListener('touchstart', handleTouchEvent, true);
+  document.addEventListener('touchend', handleTouchEvent, true);
+  document.addEventListener('touchmove', handleTouchEvent, true);
+</script>
+</body>
+</html>

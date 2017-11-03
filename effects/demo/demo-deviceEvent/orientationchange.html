@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> orientationchange 事件</title>
+</head>
+<body>
+<div id="content"></div>
+<div id="content2"></div>
+<script>
+    window.onload = function () {
+      var div = document.getElementById('content');
+
+      div.innerHTML = '当前的方向为：' + window.orientation;
+    }
+
+    window.onorientationchange = function () {
+      var div2 = document.getElementById('content2');
+
+      div2.innerHTML = '当前的方向为：' + window.orientation;
+    }
+</script>
+</body>
+</html>

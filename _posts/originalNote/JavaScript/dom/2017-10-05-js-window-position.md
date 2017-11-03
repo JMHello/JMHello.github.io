@@ -79,20 +79,22 @@ window.moveBy(-50,0);
 
 ### 2.1 chrome、Firefox、IE
 
-* `outerWidth`、`outerHeight`：红色框框，即：返回浏览器窗口本身的尺寸
-* `innerWidth`、`innerHeight`：蓝色框框，即：浏览器视口的大小（减去了浏览器的边框）
+> * `outerWidth`、`outerHeight`：红色框框，即：返回浏览器窗口本身的尺寸
+> * `innerWidth`、`innerHeight`：蓝色框框，即：浏览器视口的大小（减去了浏览器的边框）
+
+> * 点击打开[demo](/effects/demo/demo-size/window.position/eg1.html)
 
 ![relationship-map]({{ '/styles/images/javascript/DOM/style/style-10.png' | prepend: site.baseurl }})
 
 ### 2.2 clientHeight & innerHeight、clientWidth & innerWidth
 
-* 以下两组输出的值是一样的，这两组属性都是保存了页面视口的信息。
+> * 以下两组输出的值是一样的，这两组属性都是保存了页面视口的信息。
 
-```js
-console.log(window.innerWidth, window.innerHeight);
-//  在 IE、Firefox、Safari、Opera 和 Chrome 中
-console.log(document.documentElement.clientWidth, document.documentElement.clientHeight);
-``` 
+> * 点击打开[demo](/effects/demo/demo-size/window.position/eg2.html)
+
+> * 操作过程
+
+![image](/effects/images/javascript/size/size-03.gif)
 
 ### 2.3 兼容浏览器，获取页面视口大小
 
@@ -114,7 +116,7 @@ if (typeof pageWidth != "number"){
 ### 2.4 移动设备与桌面浏览器的差异
 
 > * 对于移动设备：`window.innerWidth` 和 `window.innerHeight` 保存着**可见视口**，也就是**屏幕上可见页面区域的大小**。
-> * 移动 IE 浏览器不支持这些属性，但通过 `document.documentElement.clientWidth`和 `document.documentElement.clientHeihgt` 提供了相同的信息。
+> * 移动 `IE` 浏览器不支持这些属性，但通过 `document.documentElement.clientWidth`和 `document.documentElement.clientHeihgt` 提供了相同的信息。
 > * **着页面的缩放，这些值也会相应变化**。
 
 > * 在其他移动浏览器中，`document.documentElement` 度量的是**布局视口**，即**渲染后页面的实际大小**（**与可见视口不同，可见视口只是整个页面中的一小部分**）。

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>client & inner</title>
+</head>
+<body>
+<p id="content"></p>
+<p id="content2"></p>
+<script>
+    var content1 = document.getElementById('content');
+    var content2 = document.getElementById('content2');
+
+    content1.innerHTML = 'innerWidth = ' + window.innerWidth + ', innerHeight = ' + window.innerHeight;
+    content2.innerHTML = 'clientWidth = ' + document.documentElement.clientWidth + ', clientHeight = ' + document.documentElement.clientHeight;
+
+    document.body.onresize = function () {
+      content1.innerHTML = 'innerWidth = ' + window.innerWidth + ', innerHeight = ' + window.innerHeight;
+      content2.innerHTML = 'clientWidth = ' + document.documentElement.clientWidth + ', clientHeight = ' + document.documentElement.clientHeight;
+    }
+</script>
+</body>
+</html>

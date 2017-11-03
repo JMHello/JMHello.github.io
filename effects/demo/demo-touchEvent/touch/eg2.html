@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>触摸事件 - 三个用于跟踪触摸的属性</title>
+</head>
+<body>
+
+<script>
+
+  function handleTouchEvent(event){
+    switch (event.type) {
+      case 'touchstart':
+        console.log('========== touchstart start ==============');
+        console.log("touches：");
+        console.log(event.touches);
+        console.log("targetTouches：");
+        console.log(event.targetTouches);
+        console.log("changeTouches：");
+        console.log(event.changeTouches);
+        console.log('========== touchstart end ==============');
+
+        break;
+      case 'touchend':
+        console.log('========== touchend start ==============');
+        console.log("touches：");
+        console.log(event.touches);
+        console.log("targetTouches：");
+        console.log(event.targetTouches);
+        console.log("changeTouches：");
+        console.log(event.changeTouches);
+        console.log('========== touchend end ==============');
+        break;
+      case 'touchmove':
+        console.log('========== touchmove start ==============');
+        console.log("touches：");
+        console.log(event.touches);
+        console.log("targetTouches：");
+        console.log(event.targetTouches);
+        console.log("changeTouches：");
+        console.log(event.changeTouches);
+        console.log('========== touchmove end ==============');
+        break;
+    }
+
+  }
+
+  document.addEventListener('touchstart', handleTouchEvent, true);
+  document.addEventListener('touchend', handleTouchEvent, true);
+  document.addEventListener('touchmove', handleTouchEvent, true);
+</script>
+</body>
+</html>
