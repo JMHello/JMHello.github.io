@@ -1,10 +1,11 @@
-    ---
+---
 layout: post
-title: "javascript - 触摸与手势事件"
+title: "javascript - 触摸事件"
 data: 2017-11-03 12:27:00 +0800
 categories: 学习笔记
 tag: javascript
 ---
+
 * content
 {:toc}
 
@@ -29,7 +30,7 @@ tag: javascript
 > * 下面这几个事件都会冒泡，也都可以取消。
 >   * `touchstart`：当手指触摸屏幕时触发；即使已经有一个手指放在了屏幕上也会触发。
 >   * `touchmove`：当手指在屏幕上滑动时连续地触发。在这个事件发生期间，调用 `preventDefault()` 可以阻止滚动。
->   * `touchend`：当手指从屏幕上移开时触发。
+>   * `touchend`：当手指从屏幕上移开时触发。【输出有关触摸操作的最终信息】
 >   * `touchcancel`：当系统停止跟踪触摸时触发。关于此事件的确切触发时间，文档中没有明确说明。
 
 > * 虽然这些触摸事件没有在 `DOM` 规范中定义，但它们却是以兼容 `DOM` 的方式实现的。
@@ -47,11 +48,12 @@ tag: javascript
 
 ![img](/styles/images/javascript/event/touchEvent/touchEvent-01.png)
 
-> * 图2
+> * 图2 【补充：下图里展示的 `TouchList` 对象的数据应该是一样的，请脑补或者自己尝试一下】
 
 ![img](/styles/images/javascript/event/touchEvent/touchEvent-02.png)
 
-> * 通过图2的比较可以知道，当手指从屏幕上移开时，即触发 `touchend` 事件后，之前所存在的`Touch`对象都会消失！！！ 
+> * 通过图2的比较可以知道：
+>   * 当手指从屏幕上移开时，即触发 `touchend` 事件后，`touches` 集合中就没有任何 `Touch` 对象了【因为不存在活动的触摸操作】，不过可以使用 `changedTouches`【因为它保存了上一次`Touch`对象】。 
 
 ---
 
@@ -74,7 +76,16 @@ tag: javascript
 > * 从上面过程可知道：
 >   * 只要点击屏幕（无论点击一下还是更多下），就会触发 `touchstart` 事件。
 >   * 只是点击一次屏幕，但不在屏幕上移动的话，是不会触发 `touchmove` 事件。
->   * 触发 `touchend` 事件后，之前所存在的`Touch`对象都会消失。
+
+--- 
+
+> * **这些事件会在文档的所有元素上面触发，因而可以分别操作页面的不同部分。**
+> * 在触摸屏幕上的元素时，这些事件（包括鼠标事件）发生的顺序如下：
+
+![img](/styles/images/javascript/event/touchEvent/touchEvent-03.png)
+
+
+
 
 
 
