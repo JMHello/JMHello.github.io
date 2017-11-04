@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "css - transition - 过渡"
+title: "css - 选择器 - 1 - 基础知识"
 date: 2017-11-04 10:00:00 +0800 
 categories: 学习笔记
 tag: CSS
