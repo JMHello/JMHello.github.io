@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition - 媒体查询触发</title>
+    <style>
+        .transition {
+            width: 100px;
+            height: 100px;
+            background-color: #8ec63f;
+            transition: width 2s ease 0.5s,
+            background-color 2s ease 0.5s,
+            height 2s ease 0.5s;
+
+        }
+
+        @media only screen and (max-width: 960px) {
+            .transition{
+                background-color: #f7941d;
+                width: 200px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>transition - 媒体查询触发</h1>
+<div class="transition"></div>
+</body>
+</html>

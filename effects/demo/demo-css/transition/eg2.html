@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition - duration</title>
+    <style>
+        .transition {
+            width: 100px;
+            height: 100px;
+            border-radius: 0.5em;
+            background: #8ec63f;
+            transition-property: background, border-radius;
+            transition-duration: 0.5s, 1s;
+            transition-timing-function: linear, linear;
+            transition-delay: 1s
+        }
+        .transition:hover {
+            background: #f7941d;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="transition"></div>
+</body>
+</html>
