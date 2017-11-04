@@ -1,0 +1,58 @@
+/* 图片从左向右出现 */
+@keyframes slideLeft {
+ from {
+     left: -500px;
+ }
+ to {
+     left: 0;
+ }
+}
+
+/* 图片从底部向顶部出现*/
+@keyframes slideBottom {
+    from {
+        top: 350px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+/* 图片由小到大 放大 */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.1);
+    }
+    to {
+        transform: none;
+    }
+}
+
+/* 图片由大到小 缩小 */
+@keyframes zoomOut {
+    from {
+        transform: scale(2);
+    }
+    to {
+        transform: none;
+    }
+}
+
+/* 旋转 */
+@keyframes slideLeft {
+    from {
+        transform: rotate(-360deg) scale(0.1);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes notTarget {
+    from {
+        z-index: 75;
+    }
+    to {
+        z-index: 75;
+    }
+}

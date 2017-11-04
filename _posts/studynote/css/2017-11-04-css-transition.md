@@ -148,3 +148,4 @@ transition-delay: <time> [,<time>] * ;
 >   * 如果将 `transition` 添加到 `.box` 类，即初始类，而 `.on` 不添加 `transition`，你会发现在这两个类中切换的话，都是有过渡的效果的；
 >   * 如果将 `transition` 添加到 `.on` 类，即初始类，而 `.box` 不添加 `transition`，你会发现在这两个类中切换的话，第一次点击按钮，是 `.box ==》 .on`，有过渡效果，
 >     第二次点击按钮，是 `.on ==》 .box`，没有过渡效果。
+

@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: normal 14px/1.5 Arial, Sans-Serif;
+    background: rgb(30, 30, 30);
+    color: rgb(220, 220, 220);
+}
+
+.wrapper {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    width: 660px;
+    height: 340px;
+    margin: -190px 0 0 -330px;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px rgb(10, 10, 10);
+}
+
+.content {
+    position: relative;
+    width: 660px;
+    height: 340px;
+    overflow: hidden;
+    background: rgb(15, 15, 15);
+}
+
+.content .content-ti {
+    margin-top: 1.5em;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 1px 5px rgb(255, 160, 55), 0px 1px 15px rgb(255, 160, 55);
+}
+
+.dock {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    font: normal 14px/1 Arial, Sans-Serif;
+}
+
+.dock ul {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    margin: 0;
+}
+.dock li {
+    display: inline-block;
+    position: relative;
+    margin: 0 1px;
+    margin-bottom: 15px;
+    vertical-align: baseline; /* 导航项以基线对齐 */
+    /* 在Webkit 下实现导航项翻转倒影效果 */
+    -webkit-box-reflect: below -16px -webkit-gradient(
+        linear, left top, left bottom,
+        from(transparent),
+        color-stop(91%, rgba(255, 255, 255, 0.1)),
+        color-stop(91.01%, transparent),
+        to(transparent)
+    );
+}
