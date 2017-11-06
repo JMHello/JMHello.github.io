@@ -1,0 +1,62 @@
+.accordionMenu {
+    width: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    color: #424242;
+    background: #ffffff;
+}
+
+.accordionMenu h2 {
+    margin: 5px 0;
+    padding: 0;
+    position: relative;
+}
+
+.accordionMenu h2:before {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    content: '';
+    border: 5px solid #ffffff;
+    border-color: #ffffff transparent transparent;
+}
+
+.accordionMenu h2 a {
+    margin: 0;
+    padding: 10px 10px;
+    color: #424242;
+    font-size: 13px;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px #aeaeae;
+    display: block;
+    border-radius: 5px;
+    background: #8f8f8f;
+    background: linear-gradient(top, #cecece, #8f8f8f);
+}
+
+.accordionMenu :target h2 a,
+.accordionMenu h2 a:focus,
+.accordionMenu h2 a:hover,
+.accordionMenu h2 a:active {
+    color: white;
+    background: #2288dd;
+    background: linear-gradient(top, #6bb2ff, #2288dd);
+}
+
+.accordionMenu p {
+    margin: 0;
+    padding: 0 10px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+.accordionMenu :target p {
+    height: 100px;
+    overflow: auto;
+}
+
+.accordionMenu :target h2:before {
+    border-color: transparent transparent transparent #ffffff;
+}
