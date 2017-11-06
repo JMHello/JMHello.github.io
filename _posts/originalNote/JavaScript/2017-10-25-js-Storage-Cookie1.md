@@ -93,7 +93,7 @@ tag: javascript
 
 ---
 
-> * 先看下述代码，这个是 `eg2.html` 【点击打开[demo](/effects/demo/demo-cookie/eg2.html)】
+> * 先看下述代码，这个是 `eg2.html` 【点击打开[demo](/effects/demo/js/demo-cookie/eg2.html)】
 
 ```js
 // 没有设置 path 属性
@@ -118,7 +118,7 @@ document.cookie = `${decodeURIComponent('name4')}=${decodeURIComponent('jm4')}; 
 ![relationship-map]({{ '/styles/images/javascript/cookie/cookie-03.png' | prepend: site.baseurl }})
 
 > * `eg3.html`(什么内容都没有) 与 `eg2.html` 在同一个文件夹内，打开 `eg3.html` 你会发现：`eg2.html`所设置的`cookie` 在 `eg3.html` 里都可以访问到！！
-> * 点击打开[demo](/effects/demo/demo-cookie/eg3.html)
+> * 点击打开[demo](/effects/demo/js/demo-cookie/eg3.html)
 
 ![relationship-map]({{ '/styles/images/javascript/cookie/cookie-04.png' | prepend: site.baseurl }})
 

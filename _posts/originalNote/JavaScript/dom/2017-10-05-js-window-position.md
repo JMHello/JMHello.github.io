@@ -82,7 +82,7 @@ window.moveBy(-50,0);
 > * `outerWidth`、`outerHeight`：红色框框，即：返回浏览器窗口本身的尺寸
 > * `innerWidth`、`innerHeight`：蓝色框框，即：浏览器视口的大小（减去了浏览器的边框）
 
-> * 点击打开[demo](/effects/demo/demo-size/window.position/eg1.html)
+> * 点击打开[demo](/effects/demo/js/demo-size/window.position/eg1.html)
 
 ![relationship-map]({{ '/styles/images/javascript/DOM/style/style-10.png' | prepend: site.baseurl }})
 
@@ -90,7 +90,7 @@ window.moveBy(-50,0);
 
 > * 以下两组输出的值是一样的，这两组属性都是保存了页面视口的信息。
 
-> * 点击打开[demo](/effects/demo/demo-size/window.position/eg2.html)
+> * 点击打开[demo](/effects/demo/js/demo-size/window.position/eg2.html)
 
 > * 操作过程
 

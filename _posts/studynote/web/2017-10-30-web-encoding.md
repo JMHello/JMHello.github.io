@@ -63,7 +63,7 @@ var url3 = 'http://a.com?key=?&';
 [encoding](/styles/images/web/encoding/encoding-01.png)
 
 > * 例如之前 `URL` 中包含中文，我们可以使用 `encodeURI`：【下面代码中，`%E5%B8%85` 就是 帅 的 `URL` 编码，`%E6%88%91` 即为 我 的 `URL` 编码】
-> * 点击打开[demo](/effects/demo/demo-encoding/eg1.html)
+> * 点击打开[demo](/effects/demo/js/demo-encoding/eg1.html)
 
 ```js
 encodeURI('http://www.帅.com'); // http://www.%E5%B8%85.com
@@ -71,7 +71,7 @@ encodeURI('http://www.a.com?我=1');// "http://www.a.com?%E6%88%91=1"
 ```
 
 > * 由于 `encodeURI` 不转义 `&`、`?` 和 `=`。所以对于 `URL` 参数的值是无法转义的，如下面的例子：
-> * 点击打开[demo](/effects/demo/demo-encoding/eg1.html)
+> * 点击打开[demo](/effects/demo/js/demo-encoding/eg1.html)
 
 ```js
 // 值的内容为特殊符号
@@ -84,7 +84,7 @@ encodeURI('http://a.com?key=?&'); // "http://a.com?key=?&"
 > * 它会 **跳过非转义字符（字母数字以及 `-_.!~*'()`）**。
 > * 但 **会转义 `URL` 的 保留字符（ `;,/?:@&=+$#` ）**。
 
-> * 点击打开[demo](/effects/demo/demo-encoding/eg2.html)
+> * 点击打开[demo](/effects/demo/js/demo-encoding/eg2.html)
 
 ```js
 // ?:/# 都转义了
@@ -96,7 +96,7 @@ encodeURIComponent('http://www.baidu.com?hello=nihao#token') // http%3A%2F%2Fwww
 ---
 
 > * 通常来说我们会 `encodeURI` 结合 `encodeURIComponent` 来使用，如下所示：【其中 `%3F` 和 `%26` 分别为 `?` 和 `&` 的 `URL` 编码】
-> * 点击打开[demo](/effects/demo/demo-encoding/eg3.html)
+> * 点击打开[demo](/effects/demo/js/demo-encoding/eg3.html)
 
 ```js
 encodeURI('http://a.com') + '?key=' + encodeURIComponent('?&'); // http://a.com?key=%3F%26

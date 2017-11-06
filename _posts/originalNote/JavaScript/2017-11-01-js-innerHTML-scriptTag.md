@@ -27,7 +27,7 @@ tag: javascript
 
 ### 1.2 demo
 
-> * 点击打开[demo](/effects/demo/demo-innerHTML/eg2.html)
+> * 点击打开[demo](/effects/demo/js/demo-innerHTML/eg2.html)
 
 > * 过程展示
 
@@ -37,7 +37,7 @@ tag: javascript
 
 > * 既然直接将 `<script>` 赋值给 `innerHTML` 不行，我们就重构它，让它成功运行。
 
-> * 点击打开[demo](/effects/demo/demo-innerHTML/eg1.html)
+> * 点击打开[demo](/effects/demo/js/demo-innerHTML/eg1.html)
 
 > * 过程展示
 

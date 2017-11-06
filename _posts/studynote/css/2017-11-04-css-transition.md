@@ -61,7 +61,7 @@ transition-property: none|all|single-transition-property;
 
 ---
 
-> * 点击打开[demo](/effects/demo/demo-css/transition/eg1.html)
+> * 点击打开[demo](/effects/demo/css/transition/eg1.html)
 
 > * 效果如下：
 
@@ -77,7 +77,7 @@ transition-property: none|all|single-transition-property;
 transition-duration: <time> [,<time>] * ;
 ```
 
-> * 点击打开[demo](/effects/demo/demo-css/transition/eg2.html)
+> * 点击打开[demo](/effects/demo/css/transition/eg2.html)
 
 > * 效果如下：
 
@@ -120,27 +120,27 @@ transition-delay: <time> [,<time>] * ;
 
 ### 3.1 伪元素触发
 
-> * 使用 `:active` 【点击打开[demo](/effects/demo/demo-css/transition/eg3.html)】，效果如下：
+> * 使用 `:active` 【点击打开[demo](/effects/demo/css/transition/eg3.html)】，效果如下：
 
 ![transition](/effects/images/css/transition/transition-03.gif)
 
-> * 使用 `:focus` 【点击打开[demo](/effects/demo/demo-css/transition/eg4.html)】，效果如下：
+> * 使用 `:focus` 【点击打开[demo](/effects/demo/css/transition/eg4.html)】，效果如下：
 
 ![transition](/effects/images/css/transition/transition-04.gif)
 
-> * 使用 `:checked` 【点击打开[demo](/effects/demo/demo-css/transition/eg5.html)】，效果如下：
+> * 使用 `:checked` 【点击打开[demo](/effects/demo/css/transition/eg5.html)】，效果如下：
 
 ![transition](/effects/images/css/transition/transition-05.gif)
 
 ### 3.2 媒体查询触发
 
-> * 使用媒体查询触发 【点击打开[demo](/effects/demo/demo-css/transition/eg6.html)】，效果如下：
+> * 使用媒体查询触发 【点击打开[demo](/effects/demo/css/transition/eg6.html)】，效果如下：
 
 ![transition](/effects/images/css/transition/transition-06.gif)
 
 ### 3.3 Javascript 触发
 
-> * 使用媒体查询触发 【点击打开[demo](/effects/demo/demo-css/transition/eg7.html)】，效果如下：
+> * 使用媒体查询触发 【点击打开[demo](/effects/demo/css/transition/eg7.html)】，效果如下：
 
 ![transition](/effects/images/css/transition/transition-07.gif)
 

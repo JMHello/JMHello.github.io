@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Flex-实例"
+title: "css - Flex - 实例"
 date: 2017-09-03 12:00:00 +0800 
 categories: 学习笔记
 tag: CSS
@@ -10,7 +10,7 @@ tag: CSS
 
 其他链接：
 
-+ [Flex-基础]({{ '/2017/09/03/Flex-Basic' | prepend: site.baseurl }})
++ [css - Flex - 基础]({{ '/2017/09/03/Flex-Basic' | prepend: site.baseurl }})
 
 > 以下内容都摘自博客：[http://www.ruanyifeng.com/blog/2015/07/flex-examples.html](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html)  
 

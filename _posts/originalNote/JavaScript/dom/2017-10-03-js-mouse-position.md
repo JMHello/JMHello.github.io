@@ -24,7 +24,7 @@ tag: javascript
 
 ![relationship-map]({{ '/styles/images/javascript/DOM/style/style-08.png' | prepend: site.baseurl }})
 
-> * 点击打开[demo](/effects/demo/demo-size/mouse-position/eg1.html)
+> * 点击打开[demo](/effects/demo/js/demo-size/mouse-position/eg1.html)
 
 ```html
 <!DOCTYPE html>
@@ -61,7 +61,7 @@ tag: javascript
 >    * 即：这两个属性**表示鼠标光标在页面中的位置**，因此**坐标是从页面本身而非视口的左边和顶边计算的**。
 > * 在页面没有滚动的情况下，`pageX` = `clientX` 和 `pageY` = `clientY` 。
 
-> * 点击打开[demo](/effects/demo/demo-size/mouse-position/eg2.html)
+> * 点击打开[demo](/effects/demo/js/demo-size/mouse-position/eg2.html)
 
 > * 结果对比图
 
@@ -79,7 +79,7 @@ tag: javascript
 
 ![relationship-map]({{ '/styles/images/javascript/DOM/style/style-09.png' | prepend: site.baseurl }})
 
-> * 点击打开[demo](/effects/demo/demo-size/mouse-position/eg3.html)
+> * 点击打开[demo](/effects/demo/js/demo-size/mouse-position/eg3.html)
 
 > * 结果对比图
 

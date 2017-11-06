@@ -42,7 +42,7 @@ tag: javascript
 >   * `touches`：表示当前跟踪的触摸操作的 `Touch` 对象的数组。
 >   * `targetTouches`：特定于事件目标的 `Touch` 对象的数组。
 >   * `changeTouches`：表示自上次触摸以来发生了什么改变的 `Touch` 对象的数组。
-> * 点击打开[demo](/effects/demo/demo-touchEvent/touch/eg2.html)
+> * 点击打开[demo](/effects/demo/js/demo-touchEvent/touch/eg2.html)
 
 > * 图1
 
@@ -67,7 +67,7 @@ tag: javascript
 >   * `screenY`：触摸目标在屏幕中的 `y` 坐标。
 >   * `target`：触摸的 `DOM` 节点目标。
 
-> * 点击打开[demo](/effects/demo/demo-touchEvent/touch/eg1.html)
+> * 点击打开[demo](/effects/demo/js/demo-touchEvent/touch/eg1.html)
 
 > * 过程
 

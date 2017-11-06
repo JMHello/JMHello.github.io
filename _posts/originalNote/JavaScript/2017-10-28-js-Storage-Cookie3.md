@@ -47,7 +47,7 @@ tag: javascript
 
 ### 1.3 demo 下载
 
-> * 点击下载[demo](/effects/demo/demo-cookie/login.zip)
+> * 点击下载[demo](/effects/demo/js/demo-cookie/login.zip)
 > * 下载 `demo` 后可以阅读 `readme.md` 文件，里面有详细的操作步骤。
 
 ### 1.4 demo 过程

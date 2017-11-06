@@ -87,7 +87,7 @@ document.cookie = encodeURIComponent("name") + "=" +encodeURIComponent("Nicholas
 }
 ```
 
-> * 实例 【点击打开[demo](/effects/demo/demo-cookie/eg1.html)】
+> * 实例 【点击打开[demo](/effects/demo/js/demo-cookie/eg1.html)】
 
 ```html
 <!DOCTYPE html>
@@ -283,7 +283,7 @@ const SubCookieUtil = {
 };
 ```
 
-> * 点击打开[demo](/effects/demo/demo-cookie/eg4.html)
+> * 点击打开[demo](/effects/demo/js/demo-cookie/eg4.html)
 
 ```html
 <!DOCTYPE html>

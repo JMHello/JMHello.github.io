@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相邻兄弟选择器</title>
+    <style>
+        div {
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid;
+        }
+
+        /* 子选择器 */
+        body > div {
+            background: orange;
+        }
+        /* 后代选择器 */
+        div div {
+            background: green;
+        }
+        /* 相邻兄弟选择器 */
+        .active + div {
+            background: lime;
+        }
+    </style>
+</head>
+<body>
+<div class="active">1</div>
+<div>2</div>
+<div>3</div>
+<div>4
+    <div>5</div>
+    <div>6</div>
+</div>
+<div>7
+    <div>8
+        <div>9
+            <div>10</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
