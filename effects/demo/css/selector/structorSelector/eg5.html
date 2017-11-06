@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>:nth-of-type</title>
     <style>
         * {
             padding: 0;
@@ -24,13 +24,30 @@
             text-align: center;
             background: black;
         }
+
+        /* :nth-child */
+        .child > li:nth-child(4) {
+            background: orange;
+        }
+
+        /*.child > li:nth-child(5) {*/
+            /*background: orange;*/
+        /*}*/
+
+        /* :nth-of-type */
+        .type > li:nth-of-type(4) {
+            background: orange;
+        }
+
     </style>
 </head>
 <body>
-<ul>
+<h2>:nth-child</h2>
+<ul class="child">
     <li>1</li>
     <li>2</li>
     <li>3</li>
+    <div>:nth-child(4)</div>
     <li>4</li>
     <li>5</li>
     <li>6</li>
@@ -38,16 +55,21 @@
     <li>8</li>
     <li>9</li>
     <li>10</li>
-    <li>11</li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
+</ul>
+
+<h2>:nth-of-type</h2>
+<ul class="type">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <div>:nth-of-type(4)</div>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
 </ul>
 </body>
 </html>
