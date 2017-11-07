@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>:not - 否定选择器制作图片墙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            width: 690px;
+            margin: 20px auto;
+            font-size: 0;
+            letter-spacing: -4px;
+            word-spacing: -4px;
+        }
+        li {
+            font-size: 16px;
+            margin: 5px;
+            letter-spacing: normal;
+            word-spacing: normal;
+            display: inline-block;
+            zoom: 1;
+            list-style: none;
+        }
+        img {
+            width: 128px;
+            display: block;
+        }
+
+        .gallery li {
+            opacity: 1;
+        }
+
+        .gallery:hover li:not(:hover) {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+<ul class="gallery">
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+    <li><img src="timg.jpg" alt="theYellowMan"></li>
+</ul>
+</body>
+</html>

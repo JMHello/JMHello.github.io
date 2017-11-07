@@ -137,3 +137,9 @@ tag: CSS
 
 ![selector](/styles/images/css/selector/selector-16.png)
 
+### 2.3 demo
+
+> * 点击打开[demo](/effects/demo/css/selector/NegativePseudoClassSelector/eg1.html)
+
+![selector](/effects/images/css/selector/selector-03.gif)
+
