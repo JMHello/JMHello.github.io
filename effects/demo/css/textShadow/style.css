@@ -1,0 +1,145 @@
+.text-wrap {
+    width: 600px;
+    color: #f7edf7;
+    margin: 10px auto;
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+    border: 5px solid #cccccc;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+/* 0 deg */
+.box1 {
+    text-shadow: 0 0 0 rgb(188, 178, 188),
+                 1px 0 0 rgb(173, 163, 173),
+                 2px 0 0 rgb(157, 147, 157),
+                 3px 0 0 rgb(142, 132, 142),
+                 4px 0 0 rgb(126, 116, 126),
+                 5px 0 0 rgb(111, 101, 111),
+                 6px 0 0 rgb(95, 85, 95),
+                 7px 0 0 rgb(79, 69, 79),
+                 8px 0 0 rgba(0, 0, 0, 0.35),
+                 8px 0 1px rgba(0, 0, 0, 0.5),
+                 0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* 45 deg */
+.box2 {
+    text-shadow: 0 0 0 rgb(188, 178, 188),
+    1px -1px 0 rgb(173, 163, 173),
+    2px -2px 0 rgb(157, 147, 157),
+    3px -3px 0 rgb(142, 132, 142),
+    4px -4px 0 rgb(126, 116, 126),
+    5px -5px 0 rgb(111, 101, 111),
+    6px -6px 0 rgb(95, 85, 95),
+    7px -7px 0 rgb(79, 69, 79),
+    8px -8px 7px rgba(0, 0, 0, 0.35),
+    8px -8px 1px rgba(0, 0, 0, 0.5),
+    0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* 90 deg */
+.box3 {
+    text-shadow: 0 0 0 rgb(188, 178, 188),
+    0 -1px 0 rgb(173, 163, 173),
+    0 -2px 0 rgb(157, 147, 157),
+    0 -3px 0 rgb(142, 132, 142),
+    0 -4px 0 rgb(126, 116, 126),
+    0 -5px 0 rgb(111, 101, 111),
+    0 -6px 0 rgb(95, 85, 95),
+    0 -7px 0 rgb(79, 69, 79),
+    0 -8px 7px rgba(0, 0, 0, 0.35),
+    0 -8px 1px rgba(0, 0, 0, 0.5),
+    0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* 135 deg */
+.box4 {
+    text-shadow: 0 0 0 rgb(188, 178, 188),
+    -1px -1px 0 rgb(173, 163, 173),
+    -2px -2px 0 rgb(157, 147, 157),
+    -3px -3px 0 rgb(142, 132, 142),
+    -4px -4px 0 rgb(126, 116, 126),
+    -5px -5px 0 rgb(111, 101, 111),
+    -6px -6px 0 rgb(95, 85, 95),
+    -7px -7px 0 rgb(79, 69, 79),
+    -8px -8px 7px rgba(0, 0, 0, 0.35),
+    -8px -8px 1px rgba(0, 0, 0, 0.5),
+    0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* 180 deg */
+.box5 {
+    text-shadow: 0 0 0 rgb(188, 178, 188),
+    -1px 0 0 rgb(173, 163, 173),
+    -2px 0 0 rgb(157, 147, 157),
+    -3px 0 0 rgb(142, 132, 142),
+    -4px 0 0 rgb(126, 116, 126),
+    -5px 0 0 rgb(111, 101, 111),
+    -6px 0 0 rgb(95, 85, 95),
+    -7px 0 0 rgb(79, 69, 79),
+    -8px 0 0 rgba(0, 0, 0, 0.35),
+    -8px 0 1px rgba(0, 0, 0, 0.5),
+    0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* 225 deg */
+.box6 {
+    text-shadow: 0 0 0 rgb(188, 178, 188),
+    -1px 1px 0 rgb(173, 163, 173),
+    -2px 2px 0 rgb(157, 147, 157),
+    -3px 3px 0 rgb(142, 132, 142),
+    -4px 4px 0 rgb(126, 116, 126),
+    -5px 5px 0 rgb(111, 101, 111),
+    -6px 6px 0 rgb(95, 85, 95),
+    -7px 7px 0 rgb(79, 69, 79),
+    -8px 8px 7px rgba(0, 0, 0, 0.35),
+    -8px 8px 1px rgba(0, 0, 0, 0.5),
+    0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* 270 deg */
+.box7 {
+    text-shadow: 0 0 0 rgb(188, 178, 188),
+    0 1px 0 rgb(173, 163, 173),
+    0 2px 0 rgb(157, 147, 157),
+    0 3px 0 rgb(142, 132, 142),
+    0 4px 0 rgb(126, 116, 126),
+    0 5px 0 rgb(111, 101, 111),
+    0 6px 0 rgb(95, 85, 95),
+    0 7px 0 rgb(79, 69, 79),
+    0 8px 7px rgba(0, 0, 0, 0.35),
+    0 8px 1px rgba(0, 0, 0, 0.5),
+    0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* 315 deg */
+.box8 {
+    text-shadow: 0 0 0 rgb(188, 178, 188),
+    1px 1px 0 rgb(173, 163, 173),
+    2px 2px 0 rgb(157, 147, 157),
+    3px 3px 0 rgb(142, 132, 142),
+    4px 4px 0 rgb(126, 116, 126),
+    5px 5px 0 rgb(111, 101, 111),
+    6px 6px 0 rgb(95, 85, 95),
+    7px 7px 0 rgb(79, 69, 79),
+    8px 8px 0 rgba(0, 0, 0, 0.35),
+    8px 8px 1px rgba(0, 0, 0, 0.5),
+    0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* 360 deg */
+.box9 {
+    text-shadow: 0 0 0 rgb(188, 178, 188),
+    1px 0 0 rgb(173, 163, 173),
+    2px 0 0 rgb(157, 147, 157),
+    3px 0 0 rgb(142, 132, 142),
+    4px 0 0 rgb(126, 116, 126),
+    5px 0 0 rgb(111, 101, 111),
+    6px 0 0 rgb(95, 85, 95),
+    7px 0 0 rgb(79, 69, 79),
+    8px 0 0 rgba(0, 0, 0, 0.35),
+    8px 0 1px rgba(0, 0, 0, 0.5),
+    0 0 7px rgba(0, 0, 0, 0.2);
+}
