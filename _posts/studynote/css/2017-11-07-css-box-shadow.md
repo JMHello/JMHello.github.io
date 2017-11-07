@@ -67,3 +67,9 @@ box-shadow: none | [inset x-offset y-offset blur-radius spread-radius color]
 ![box-shadow](/styles/images/css/box-shadow/box-shadow-09.png)
 
 > * 使用多层级 `box-shadow` 时，需注意最先写的阴影将显示在最顶层。先定义 `1px` 红色阴影，再定义 `5px` 蓝色阴影，结果红色在蓝色上。【如果前面的阴影太大，顶层的阴影会遮盖底部的阴影】
+
+## 三、制作3D搜索表单
+
+> * 点击打开[demo](/effects/demo/css/boxShadow/demo/index.html)
+
+![box-shadow](/styles/images/css/box-shadow/box-shadow-10.png)

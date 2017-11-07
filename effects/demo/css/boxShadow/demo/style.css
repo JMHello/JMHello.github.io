@@ -1,0 +1,84 @@
+/* 设计表单容器的 3D 立体效果 */
+#formWrapper {
+    width: 450px;
+    padding: 8px;
+    margin: 20px;
+
+    /* 清除浮动 */
+    overflow: hidden;
+
+    /* 设置边框效果 */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dedede #bababa #aaa #bababa;
+
+    /* 关键代码：设置表单 3D 立体效果 */
+    box-shadow: 0 3px 3px rgba(255, 255, 255, 0.1),
+                0 3px 0 #bbb,
+                0 4px 0 #aaa,
+                0 5px 5px #444;
+
+    /* 设置圆角效果 */
+    border-radius: 10px;
+
+    /* 使用渐变制作表单的渐变背景图片 */
+    background-color: #f6f6f6;
+    background-image: linear-gradient(top, #f6f6f6, #eae8e8);
+}
+
+/* 制作表单输入框的搜索按钮效果 */
+
+/* 输入框样式效果 */
+#formWrapper .search {
+    width: 330px;
+    height: 20px;
+    padding: 10px 5px;
+    font: bold 16px 'Tahoma';
+    float: left;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px #ddd,
+                0 1px 0 #fff;
+}
+
+/* 输入框获得焦点时样式效果 */
+#formWrapper .search:focus {
+    outline: 0;
+    border-color: #aaa;
+    box-shadow: inset 1px 1px #bbb;
+}
+
+/* 修改输入框placeholder文字默认颜色 */
+#formWrapper .search::-webkit-input-placeholder,  /* WebKit browsers*/
+#formWrapper .search::-moz-placeholder, /* Mozilla Firefox 19+*/
+#formWrapper .search:-ms-input-placeholder {  /* Internet Explorer 10+*/
+    color: #999;
+    font-weight: normal;
+}
+
+/* 搜索按钮效果 */
+
+#formWrapper .btn {
+    width: 100px;
+    height: 42px;
+    font: bold 15px Arial;
+    color: #fafafa;
+    padding: 0;
+    float: right;
+    /* 将全部字母转化为大写 */
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    border: 1px solid #00748f;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3),
+                0 1px 0 #fff;
+    background-color: #0483a0;
+    background-image: linear-gradient(top, #31b2c3, #0483a0);
+    
+}
+
+/* 按钮悬浮状态和焦点状态下效果 */
+#formWrapper .btn:hover,
+#formWrapper .btn:focus {
+    background-color: #31b2c3;
+    background-image: linear-gradient(top, #0484a0, #31b2c3);
+}
