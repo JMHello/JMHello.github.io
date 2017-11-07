@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "css - transition - 过渡"
+title: "css - animation - 动画"
 date: 2017-11-04 10:00:00 +0800 
 categories: 学习笔记
 tag: CSS
