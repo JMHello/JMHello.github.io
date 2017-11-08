@@ -42,13 +42,23 @@ tag: WebSecurity
 
 > * 点击下载[demo](/effects/files/webSecurity/CSRF/CSRF-defence-referer.zip)
 
+> * `demo` 展示
+
 ![demo](/effects/images/webSecurity/CSRF/csrf-03.gif)
 
 ### 2.3 CSRF防御 - token验证
 
 > * 点击下载[demo](/effects/files/webSecurity/CSRF/CSRF-defence-token.zip)
 
+> * 发送的请求数据：（里面多了一个 `token` 参数）
+
+![CSRF](/styles/images/web/security/CSRF/csrf-08.png)
+
+> * `demo` 展示
+
 ![demo](/effects/images/webSecurity/CSRF/csrf-04.gif)
+
+
 
 
 
