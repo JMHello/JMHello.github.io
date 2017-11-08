@@ -38,6 +38,18 @@ tag: WebSecurity
 
 ![CSRF](/styles/images/web/security/CSRF/csrf-07.png)
 
+### 2.2 CSRF防御 - referer验证
+
+> * 点击下载[demo](/effects/files/webSecurity/CSRF/CSRF-defence-referer.zip)
+
+![demo](/effects/images/webSecurity/CSRF/csrf-03.gif)
+
+### 2.3 CSRF防御 - token验证
+
+> * 点击下载[demo](/effects/files/webSecurity/CSRF/CSRF-defence-token.zip)
+
+![demo](/effects/images/webSecurity/CSRF/csrf-04.gif)
+
 
 
 
