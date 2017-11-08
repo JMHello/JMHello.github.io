@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现拖拽 - 法1</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="drag"></div>
+<!--<a href="#">hhhh</a>-->
+<!--<p>sadddddddddddddddddddddddddddddddddddddddddddddddddddddaadddddddddddddddddddddddddddddddddddddddddddd</p>-->
+
+<script>
+    var oDrag = document.getElementById('drag');
+
+    drag(oDrag);
+
+    /**
+     * drag
+     * @param obj 被拖拽的元素
+     */
+    function drag (obj) {
+      var disX = 0,
+          disY = 0;
+
+      // 选择元素
+      obj.onmousedown = function (e) {
+        var ev = e || window.event;
+
+        // 计算固定距离
+        disX = ev.clientX - obj.offsetLeft;
+        disY = ev.clientY - obj.offsetTop;
+
+
+        // 移动元素
+        document.onmousemove = function (e) {
+          var ev = e || window.event;
+          obj.style.left = ev.clientX - disX + 'px';
+          obj.style.top = ev.clientY - disY + 'px';
+        }
+
+        // 放下元素
+        document.onmouseup = function () {
+          document.onmousemove = document.onmouseup = null;
+        }
+        // 拖拽的时候，如果有文字被选中，是因为当鼠标按下的时候，如果页面中有文字被选中，那么会触发浏览器默认拖拽文字的效果，在标准浏览器下，return false就可以阻止这个默认行为的发生
+        return false;
+      }
+    }
+</script>
+</body>
+</html>
