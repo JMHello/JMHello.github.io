@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise - reject</title>
+</head>
+<body>
+<script>
+    // 写法1
+    const promise1 = new Promise((resolve, reject) => {
+      throw new Error('test1');
+    })
+    promise1.catch((err) => console.log(err));
+
+    // 写法2
+    const promise2 = new Promise((resolve, reject) => {
+      try {
+        throw new Error('test2');
+      } catch(e) {
+        reject(e);
+      }
+    });
+
+    promise2.catch((err) => console.log(err));
+</script>
+</body>
+</html>
