@@ -14,6 +14,7 @@ tag: CSS
 >   * [css - 选择器 - 2 - 伪类选择器 - 上篇](http://www.jmazm.com/2017/11/04/css-selector2/)
 >   * [css - 选择器 - 3 - 伪类选择器 - 下篇](http://www.jmazm.com/2017/11/04/css-selector3/)
 >   * [css - 选择器 - 4 - 伪元素选择器](http://www.jmazm.com/2017/11/04/css-selector4/)
+>   * [css - 选择器 - 优化](http://www.jmazm.com/2017/11/12/css-optimization/)
 
 > * 以下内容源于：《图解CSS3核心技术与案例实战》 第2章
 
