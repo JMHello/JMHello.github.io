@@ -286,7 +286,7 @@ app.controller('FirstController',function($scope){
 <div ng-controller="MainController">
     <table class="table table-bordered">
         <thead>
-            <tr class="bg-info">
+            <tr class="bg.jpg-info">
                 <th><a href="#" ng-click="sortRule='name'" >Name</a></th>
                 <th><a href="#" ng-click="sortRule='age'" >Age</a></th>
             </tr>
