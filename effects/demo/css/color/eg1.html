@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>可控图标效果实现实例页面</title>
+    <style>
+        .list li {
+            list-style: none;
+        }
+        .list a {
+            text-decoration: none;
+            color: #34538b;
+            display: block;
+            margin: 10px;
+        }
+        .list a:hover {
+            color: red;
+        }
+        .list .icon {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin-right: 10px;
+            background: currentColor;
+        }
+    </style>
+</head>
+<body>
+更改颜色：<input type="text" placeholder="请输入想要改变的颜色" id="colorShop"><button type="button" id="btn">确认</button>
+<ul class="list">
+    <li><a href="#"><i class="icon"></i>链接 1</a></li>
+    <li><a href="#"><i class="icon"></i>链接 2</a></li>
+    <li><a href="#"><i class="icon"></i>链接 3</a></li>
+    <li><a href="#"><i class="icon"></i>链接 4</a></li>
+</ul>
+<script>
+    var colorShop = document.getElementById('colorShop');
+    var aTag = document.getElementsByTagName('a');
+    var btn = document.getElementById('btn');
+
+    btn.onclick = function () {
+
+      var i = 0, l = aTag.length;
+      console.log(this.value);
+      for (; i < l; i++) {
+        aTag[i].style.color = colorShop.value;
+      }
+    }
+</script>
+</body>
+</html>
