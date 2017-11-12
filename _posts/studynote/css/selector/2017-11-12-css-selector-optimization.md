@@ -37,6 +37,8 @@ tag: CSS
 
 ## 二、如何减少 CSS 选择器性能损耗？
 
+> * 各种 CSS 选择器的效率由高至低排序如下:
+
 ![selector](/styles/images/css/selector/selector-23.png)
 
 > * 1、避免使用通用选择器
