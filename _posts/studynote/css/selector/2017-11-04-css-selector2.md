@@ -8,6 +8,12 @@ tag: CSS
 * content
 {:toc}
 
+> * 相关链接：
+>   * [css - 选择器 - 1 - 基本选择器和层次选择器](http://www.jmazm.com/2017/11/04/css-selector1/)
+>   * [css - 选择器 - 3 - 伪类选择器 - 下篇](http://www.jmazm.com/2017/11/04/css-selector3/)
+>   * [css - 选择器 - 4 - 伪元素选择器](http://www.jmazm.com/2017/11/04/css-selector4/)
+>   * [css - 选择器 - 5 - 属性选择器](http://www.jmazm.com/2017/11/04/css-selector5/)
+
 > * 以下内容源于：《图解CSS3核心技术与案例实战》 第2章
 
 <!-- more -->
@@ -21,6 +27,12 @@ tag: CSS
 ### 1.2 浏览器兼容性
 
 ![selector](/styles/images/css/selector/selector-07.png)
+
+### 1.3 demo
+
+> * 点击打开[demo](/effects/demo/css/selector/eg1.html)
+
+![selector](/effects/images/css/selector/selector-04.gif)
 
 ## 二、目标伪类选择器
 

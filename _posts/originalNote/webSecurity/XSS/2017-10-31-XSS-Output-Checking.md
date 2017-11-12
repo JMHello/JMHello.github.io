@@ -64,7 +64,7 @@ tag: WebSecurity
 
 ### 2.2 检查后，XSS 攻击失败
 
-> * 点击打开[demo](/effects/files/webSecurity/XSS/xss-output2.html);
+> * 点击打开[demo](/effects/files/webSecurity/XSS/xss-output-2.html);
 
 > * 最终结果：所有弹窗都无效了！！！
 

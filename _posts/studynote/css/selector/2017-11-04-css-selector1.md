@@ -8,6 +8,13 @@ tag: CSS
 * content
 {:toc}
 
+> * 相关链接：
+>   * [css - 选择器 - 选择器分类](http://www.jmazm.com/2017/11/04/css-basic/)
+>   * [css - 选择器 - 2 - 伪类选择器 - 上篇](http://www.jmazm.com/2017/11/04/css-selector2/)
+>   * [css - 选择器 - 3 - 伪类选择器 - 下篇](http://www.jmazm.com/2017/11/04/css-selector3/)
+>   * [css - 选择器 - 4 - 伪元素选择器](http://www.jmazm.com/2017/11/04/css-selector4/)
+>   * [css - 选择器 - 5 - 属性选择器](http://www.jmazm.com/2017/11/04/css-selector5/)
+
 > * 以下内容源于：《图解CSS3核心技术与案例实战》 第2章
 
 <!-- more -->
@@ -18,6 +25,8 @@ tag: CSS
 
 ![selector](/styles/images/css/selector/selector-02.png)
 
+![selector](/styles/images/css/selector/selector-20.png)
+
 ### 1.2 浏览器兼容性
 
 ![selector](/styles/images/css/selector/selector-03.png)
@@ -27,6 +36,10 @@ tag: CSS
 ### 2.1 语法
 
 ![selector](/styles/images/css/selector/selector-04.png)
+
+![selector](/styles/images/css/selector/selector-21.png)
+
+![selector](/styles/images/css/selector/selector-22.png)
 
 ### 2.2 浏览器兼容性
 

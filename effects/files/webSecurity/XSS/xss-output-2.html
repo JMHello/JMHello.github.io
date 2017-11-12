@@ -91,6 +91,11 @@
       .replace(/>/g, '&gt;');
   }
 
+  console.log(javascriptEncode('"'));
+  console.log(javascriptEncode('\n'));
+  console.log(javascriptEncode('\r'));
+  console.log(javascriptEncode('\$'));
+  console.log(javascriptEncode('/'));
   /**
    * javascriptEncode
    * @param str
@@ -105,7 +110,7 @@
           case '\r': return "\\r";break;
           case '\'': return "\\'";break;
           case '"': return "\\x22";break;
-          case '\$': return "\\&";break;
+          case '\$': return "\\$";break;
           case '\\': return "\\\\";break;
           case '\t': return "\\t";break;
           case '/': return "\\x2F";break;
