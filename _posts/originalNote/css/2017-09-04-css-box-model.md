@@ -15,15 +15,15 @@ tag: CSS
 
 ## 一、什么是盒子模型
 
-`css`盒子模型(`Box Model`)，又称框模型。包含了元素内容（`content`）、内边距（`padding`）、边框（`border`）、外边距（`margin`）几个要素。
+> * 盒子模型：每个元素都被描绘成矩形盒子，这些矩形盒子通过一个模型来描述其占用空间。
+
+![relationship-map]({{ '/styles/images/css/box/box-16.png' | prepend: site.baseurl }})
 
 ## 二、盒子模型的分类
 
-如下图所示：
-
-![relationship-map]({{ '/styles/images/css/box/box-01.gif' | prepend: site.baseurl }})
-
 ### 2.1 W3C盒子模型
+
+![relationship-map]({{ '/styles/images/css/box/box-14.png' | prepend: site.baseurl }})
 
 * 外盒尺寸计算（**元素空间尺寸**）
     * 元素空间高度＝内容高度＋内距＋边框＋外距
@@ -34,6 +34,8 @@ tag: CSS
     * 元素宽度＝内容宽度＋内距＋边框（`width就是内容宽度`）
 
 ### 2.2 IE盒子模型
+
+![relationship-map]({{ '/styles/images/css/box/box-15.png' | prepend: site.baseurl }})
 
 * 外盒尺寸计算（**元素空间尺寸**）
     * 元素空间高度＝内容高度＋外距（`height包含了元素内容宽度、边框、内距`）
@@ -76,3 +78,5 @@ if (document.compatMode == "CSS1Compat"){
     alert("Quirks mode");
 } 
 ```
+
+
