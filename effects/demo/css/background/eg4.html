@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background - background-clip</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 500px;
+            margin: 10px;
+            text-align: center;
+            background: whitesmoke;
+            float: left;
+        }
+        .content {
+            width: 100px;
+            height:200px;
+            padding: 30px;
+            margin: 0 auto;
+            border: 10px dashed purple;
+            background: orange url("./bg.jpg") no-repeat;
+        }
+        .container:nth-of-type(1) .content {
+            background-clip: border-box;
+        }
+        .container:nth-of-type(2) .content {
+            background-clip: padding-box;
+        }
+        .container:nth-of-type(3) .content {
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>background-clip: border-box;</h2>
+    <div class="content"></div>
+    <p>div的背景图片从元素左上角内部padding开始</p>
+</div>
+<div class="container">
+    <h2>background-clip: padding-box;</h2>
+    <div class="content"></div>
+    <p>整个背景（包括背景色和背景图片）在超过 padding 外边缘的部分全部被裁剪掉，此时不是成比例裁剪，而是直接将超出 padding 边缘的背景剪掉</p>
+</div>
+<div class="container">
+    <h2>background-clip: content-box;</h2>
+    <div class="content"></div>
+    <p>div的背景只在内容区域显示，超过内容边缘的背景直接被剪掉</p>
+</div>
+
+</body>
+</html>

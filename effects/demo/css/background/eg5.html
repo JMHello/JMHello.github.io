@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background - background-size</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 500px;
+            margin: 10px;
+            text-align: center;
+            background: whitesmoke;
+            float: left;
+        }
+        .content {
+            width: 100px;
+            height:200px;
+            padding: 30px;
+            margin: 0 auto;
+            border: 10px dashed purple;
+            background: orange url("./bg.jpg") no-repeat;
+        }
+        .container:nth-of-type(1) .content {
+            background-size: auto;
+        }
+        .container:nth-of-type(2) .content {
+            background-size: 30% 10%;
+        }
+        .container:nth-of-type(3) .content {
+            background-size: 30px 40px;
+        }
+        .container:nth-of-type(4) .content {
+            background-size: cover;
+        }
+        .container:nth-of-type(5) .content {
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>background-size: auto;</h2>
+    <div class="content"></div>
+</div>
+<div class="container">
+    <h2>background-size: percentage;</h2>
+    <div class="content"></div>
+    <p>1. 取值为百分数时，不是相对于背景图片的尺寸大小来计算，而是相对于元素的宽度/高度来计算</p>
+    <p>2. 当元素有padding时，还需加上padding再计算</p>
+</div>
+<div class="container">
+    <h2>background-size: length;</h2>
+    <div class="content"></div>
+</div>
+<div class="container">
+    <h2>background-size: cover;</h2>
+    <div class="content"></div>
+    <p>背景图片放大后使背景图片不是正中间，为了让背景图片放大后中间显示，可设置 background-position: center;</p>
+</div>
+<div class="container">
+    <h2>background-size: contain;</h2>
+    <div class="content"></div>
+</div>
+</body>
+</html>

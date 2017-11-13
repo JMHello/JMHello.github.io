@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background - 基本属性demo2</title>
+    <style>
+        body {
+            background-image: url("./bg2.jpg");
+            background-attachment: fixed;
+            height: 1400px;
+        }
+        .container {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            text-align: center;
+            background: whitesmoke;
+        }
+        .content {
+            height: 300px;
+            margin: 0 auto;
+            background-color: black; /* 背景颜色 */
+            background-image: url("./bg.jpg"); /* 背景图片 */
+            background-position: center center; /* 背景图片定位 */
+            background-repeat: no-repeat; /* 背景图片平铺方式 */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>background-attachment</h2>
+    <div class="content"></div>
+</div>
+</body>
+</html>

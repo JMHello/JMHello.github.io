@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background - background-origin</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 400px;
+            margin: 0 auto;
+            text-align: center;
+            background: whitesmoke;
+        }
+        .content {
+            height:200px;
+            padding: 20px;
+            margin: 0 auto;
+            border: 10px dashed black;
+            background-image: url("./bg.jpg"); /* 背景图片 */
+            background-repeat: no-repeat; /* 背景图片平铺方式 */
+        }
+        .container:nth-of-type(1) .content {
+            background-origin: padding-box;
+        }
+        .container:nth-of-type(2) .content {
+            background-origin: border-box;
+        }
+        .container:nth-of-type(3) .content {
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>backround-origin: padding-box;</h2>
+    <div class="content"></div>
+</div>
+<div class="container">
+    <h2>backround-origin: border-box;</h2>
+    <div class="content"></div>
+</div>
+<div class="container">
+    <h2>backround-origin: content-box;</h2>
+    <div class="content"></div>
+</div>
+
+</body>
+</html>
