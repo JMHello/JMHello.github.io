@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "css - 背景 - background"
+title: "css - 背景 - background 和 雪碧图"
 date: 2017-11-13 15:00:00 +0800 
 categories: 学习笔记
 tag: CSS
@@ -58,7 +58,6 @@ tag: CSS
 
 ![background](/styles/images/css/background/background-06.png)
 
-
 > * 点击打开[demo](/effects/demo/css/background/eg4.html)
 
 ![background](/styles/images/css/background/background-07.png)
@@ -77,4 +76,18 @@ tag: CSS
 
 ![background](/styles/images/css/background/background-10.png)
 
-### 3.4 background-
+### 3.4 background-break
+
+![background](/styles/images/css/background/background-11.png)
+
+## 四、雪碧图（css Sprite）
+
+### 4.1 简介
+
+![background](/styles/images/css/background/background-12.png)
+
+### 4.2 demo
+
+> * 点击打开[demo](/effects/demo/css/background/eg6.html)
+
+![background](/styles/images/css/background/background-13.png)

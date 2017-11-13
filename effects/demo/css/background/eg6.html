@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background - 雪碧图</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            text-align: center;
+            background: whitesmoke;
+            float: left;
+        }
+        .content {
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+            border: 3px dashed purple;
+            display: block;
+            background: white url("./img/share-bg.png") no-repeat;
+        }
+        .container:nth-of-type(1) .content {
+            background-position: 0 0;
+        }
+        .container:nth-of-type(2) .content {
+            background-position: -30px 0;
+        }
+        .container:nth-of-type(3) .content {
+            background-position: -60px 0;
+        }
+        .container:nth-of-type(4) .content {
+            background-position: -90px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>background-position: 0 0;</h2>
+    <span class="content"></span>
+</div>
+<div class="container">
+    <h2>background-position: -30px 0;</h2>
+    <span class="content"></span>
+</div>
+<div class="container">
+    <h2>background-position: -60px 0;</h2>
+    <span class="content"></span>
+</div>
+<div class="container">
+    <h2>background-position: -90px 0;</h2>
+    <span class="content"></span>
+</div>
+
+</body>
+</html>
