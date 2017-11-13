@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素的显示和隐藏</title>
+    <style>
+        .box {
+            margin: 10px;
+        }
+
+        .box .box-content {
+            padding: 10px;
+            color: white;
+            background: rebeccapurple;
+        }
+        .box:nth-of-type(3) {
+            margin-bottom: 100px;
+        }
+        .box:nth-of-type(3) .box-content > div {
+            background: orange;
+        }
+        .dis {
+            display: none;
+        }
+        .vis {
+            visibility: hidden;
+        }
+        .ove {
+            overflow: hidden;
+        }
+        .opa {
+            opacity: 0;
+            filter: alpha(opacity:0);
+        }
+        .abs {
+            position: absolute;
+            left: -9999px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2>法一：display:none;</h2>
+    <div class="box-content dis">
+        <div>
+            <p>所有后代元素都会隐藏</p>
+            <p>好像这个元素不存在一样，即：不会在页面保留隐藏元素本来的占据的空间位置</p>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <h2>法二：visibility:hidden;</h2>
+    <div class="box-content vis">
+        <div>
+            <p>子元素设置了 visibility:visible; 则子元素依然可见。</p>
+            <p>元素大小不变，即：可在页面保留隐藏元素本来的所占据的空间位置【我们也可以理解为：元素变透明了！！！】</p>
+            <p>不可以被transition和animate</p>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <h2>法三：overflow:auto/hidden;</h2>
+    <div class="box-content ove" style="height: 100px">
+        <div style="height: 300px">
+            <p>规定了当内容元素溢出父容器时所展现出来的形式</p>
+            <p>裁剪内容，使用滚动条显示或者隐藏超出的内容</p>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <h2>法四：opacity:0;</h2>
+    <div class="box-content opa">
+        <div>
+            <p>可以被transition和animate</p>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <h2>法五：position:absolute;</h2>
+    <div class="box-content abs">
+        <div>
+            <p>使元素脱离文档流，处于普通文档之上，并给它设置一个很大的 left负值 定位，使元素定位在可见区域之外</p>
+            <p>float 和 margin 都不能影响到 position: absolute 的元素，因此它们可以很好的被隐藏起来</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
