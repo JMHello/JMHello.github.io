@@ -121,3 +121,7 @@
 .rbTolt .three{
     background: -webkit-linear-gradient(-225deg, red, orange, yellow);
 }
+
+.repeating .one{
+    background: -webkit-repeating-linear-gradient(225deg, blue, blue 5px,white 10px, white 15px);
+}

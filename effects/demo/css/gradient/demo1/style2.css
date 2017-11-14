@@ -1,0 +1,127 @@
+.container {
+    margin: 10px;
+    border-bottom: 1px solid;
+}
+.container-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.container-wrap img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+    display: block;
+}
+.content {
+    width: 100px;
+    height: 100px;
+    font: bold 18px/1 '';
+    text-align: center;
+    color: white;
+    float: left;
+    margin: 10px;
+}
+
+
+/* 由上到下 */
+.topToBottom .one{
+    background: linear-gradient(to bottom, red, orange, yellow);
+}
+.topToBottom .two{
+    background: linear-gradient(180deg, red, orange, yellow);
+}
+.topToBottom .three{
+    background: linear-gradient(-180deg, red, orange, yellow);
+}
+
+/* 由下到上 */
+
+.bottomToTop .one{
+    background: linear-gradient(to top, red, orange, yellow);
+}
+.bottomToTop .two{
+    background: linear-gradient(0deg, red, orange, yellow);
+}
+.bottomToTop .three{
+    background: linear-gradient(360deg, red, orange, yellow);
+}
+.bottomToTop .four{
+    background: linear-gradient(-360deg, red, orange, yellow);
+}
+/* 由左到右 */
+
+.leftToRight .one{
+    background: linear-gradient(to right, red, orange, yellow);
+}
+.leftToRight .two{
+    background: linear-gradient(90deg, red, orange, yellow);
+}
+.leftToRight .three{
+    background: linear-gradient(-270deg, red, orange, yellow);
+}
+
+/* 由右到左 */
+
+.rightToLeft .one{
+    background: linear-gradient(to left, red, orange, yellow);
+}
+.rightToLeft .two{
+    background: linear-gradient(270deg, red, orange, yellow);
+}
+.rightToLeft .three{
+    background: linear-gradient(-90deg, red, orange, yellow);
+}
+
+/* 由左上角到右下角 */
+
+.ltTorb .one{
+    background: linear-gradient(to right bottom, red, orange, yellow);
+}
+.ltTorb .two{
+    background: linear-gradient(135deg, red, orange, yellow);
+}
+.ltTorb .three{
+    background: linear-gradient(-225deg, red, orange, yellow);
+}
+
+/* 由左下角到右上角 */
+
+.lbTort .one{
+    background: linear-gradient(to right top, red, orange, yellow);
+}
+.lbTort .two{
+    background: linear-gradient(45deg, red, orange, yellow);
+}
+.lbTort .three{
+    background: linear-gradient(-315deg, red, orange, yellow);
+}
+
+/* 由右上角到左下角 */
+
+.rtTolb .one{
+    background: linear-gradient(to left bottom, red, orange, yellow);
+}
+.rtTolb .two{
+    background: linear-gradient(225deg, red, orange, yellow);
+}
+.rtTolb .three{
+    background: linear-gradient(-135deg, red, orange, yellow);
+}
+
+/* 由右下角到左上角 */
+
+.rbTolt .one{
+    background: linear-gradient(to left top, red, orange, yellow);
+}
+.rbTolt .two{
+    background: linear-gradient(315deg, red, orange, yellow);
+}
+.rbTolt .three{
+    background: linear-gradient(-45deg, red, orange, yellow);
+}
+
+.repeating .one{
+    background: repeating-linear-gradient(225deg, blue, blue 5px,white 10px, white 15px);
+}
