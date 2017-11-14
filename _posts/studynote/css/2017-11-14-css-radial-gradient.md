@@ -13,7 +13,7 @@ tag: CSS
 
 ## 一、径向渐变总结图
 
-![gradient](/styles/images/css/gradient/gradient-10     .png)
+![gradient](/styles/images/css/gradient/gradient-10.png)
 
 ## 二、浏览器兼容性
 
@@ -38,4 +38,6 @@ tag: CSS
 ![gradient](/styles/images/css/gradient/gradient-11.png)
 
 ![gradient](/styles/images/css/gradient/gradient-12.png)
+
+![gradient](/styles/images/css/gradient/gradient-16.png)
 

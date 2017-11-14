@@ -25,49 +25,104 @@
 }
 
 
-/* 定义径向渐变的圆心位置（指定中心点位置） <position> */
-.position .content:nth-of-type(1){
+/* 圆形渐变 - 指定中心点位置 （position) */
+.circle-position .content:nth-of-type(1){
+    background: radial-gradient(circle at center, red,orange, rgb(30, 144, 255));
+}
+.circle-position .content:nth-of-type(2){
+    background: radial-gradient(circle at top, red,orange, rgb(30, 144, 255));
+}
+.circle-position .content:nth-of-type(3){
+    background: radial-gradient(circle at right, red,orange, rgb(30, 144, 255));
+}
+.circle-position .content:nth-of-type(4){
+    background: radial-gradient(circle at bottom, red,orange, rgb(30, 144, 255));
+}
+.circle-position .content:nth-of-type(5){
+    background: radial-gradient(circle at left, red,orange, rgb(30, 144, 255));
+}
+.circle-position .content:nth-of-type(6){
+    background: radial-gradient(circle at top left, red,orange, rgb(30, 144, 255));
+}
+.circle-position .content:nth-of-type(7){
+    background: radial-gradient(circle at top right, red,orange, rgb(30, 144, 255));
+}
+.circle-position .content:nth-of-type(8){
+    background: radial-gradient(circle at bottom right, red,orange, rgb(30, 144, 255));
+}
+.circle-position .content:nth-of-type(9){
+    background: radial-gradient(circle at bottom left, red,orange, rgb(30, 144, 255));
+}
+.circle-position .content:nth-of-type(10){
+    background: radial-gradient(circle at 20px 20px, red,orange, rgb(30, 144, 255));
+}
+
+/* 椭圆形渐变 - 指定中心点位置 （position） */
+.ellipse-position .content:nth-of-type(1){
     background: radial-gradient(at center, red,orange, rgb(30, 144, 255));
 }
-.position .content:nth-of-type(2){
+.ellipse-position .content:nth-of-type(2){
     background: radial-gradient(at top, red,orange, rgb(30, 144, 255));
 }
-.position .content:nth-of-type(3){
+.ellipse-position .content:nth-of-type(3){
     background: radial-gradient(at right, red,orange, rgb(30, 144, 255));
 }
-.position .content:nth-of-type(4){
+.ellipse-position .content:nth-of-type(4){
     background: radial-gradient(at bottom, red,orange, rgb(30, 144, 255));
 }
-.position .content:nth-of-type(5){
+.ellipse-position .content:nth-of-type(5){
     background: radial-gradient(at left, red,orange, rgb(30, 144, 255));
 }
-.position .content:nth-of-type(6){
-    background: radial-gradient(at 20% 20%, red,orange, rgb(30, 144, 255));
+.ellipse-position .content:nth-of-type(6){
+    background: radial-gradient(at top left, red,orange, rgb(30, 144, 255));
 }
-.position .content:nth-of-type(7){
+.ellipse-position .content:nth-of-type(7){
+    background: radial-gradient(at top right, red,orange, rgb(30, 144, 255));
+}
+.ellipse-position .content:nth-of-type(8){
+    background: radial-gradient(at bottom right, red,orange, rgb(30, 144, 255));
+}
+.ellipse-position .content:nth-of-type(9){
+    background: radial-gradient(at bottom left, red,orange, rgb(30, 144, 255));
+}
+.ellipse-position .content:nth-of-type(10){
     background: radial-gradient(at 20px 20px, red,orange, rgb(30, 144, 255));
 }
 
 /* 定义径向渐变的形状(shape) */
-.position .content:nth-of-type(1){
+.shape .content:nth-of-type(1){
     background: radial-gradient(circle, red,orange, rgb(30, 144, 255));
 }
-.position .content:nth-of-type(2){
+.shape .content:nth-of-type(2){
     background: radial-gradient(ellipse, red,orange, rgb(30, 144, 255));
 }
 
-/* 指定渐变的尺寸（size） */
-.size .content:nth-of-type(1){
-    background: radial-gradient(circle  closest-side, red,orange, rgb(30, 144, 255));
+/*圆形渐变 - 指定渐变的尺寸（size）*/
+.circle-size .content:nth-of-type(1){
+    background: radial-gradient(circle  closest-side at 50% 75%, red,orange, rgb(30, 144, 255));
 }
-.size .content:nth-of-type(2){
-    background: radial-gradient(circle  farthest-side, red,orange, rgb(30, 144, 255));
+.circle-size .content:nth-of-type(2){
+    background: radial-gradient(circle  farthest-side at 50% 75%, red,orange, rgb(30, 144, 255));
 }
-.size .content:nth-of-type(3){
-    background: radial-gradient(circle  closest-corner, red,orange, rgb(30, 144, 255));
+.circle-size .content:nth-of-type(3){
+    background: radial-gradient(circle  closest-corner at 50% 75%, red,orange, rgb(30, 144, 255));
 }
-.size .content:nth-of-type(4){
-    background: radial-gradient(circle  farthest-corner, red,orange, rgb(30, 144, 255));
+.circle-size .content:nth-of-type(4){
+    background: radial-gradient(circle  farthest-corner at 50% 75%, red,orange, rgb(30, 144, 255));
+}
+
+/*椭圆形渐变 - 指定渐变的尺寸（size）*/
+.ellipse-size .content:nth-of-type(1){
+    background: radial-gradient(closest-side at 50% 75%, red,orange, rgb(30, 144, 255));
+}
+.ellipse-size .content:nth-of-type(2){
+    background: radial-gradient(farthest-side at 50% 75%, red,orange, rgb(30, 144, 255));
+}
+.ellipse-size .content:nth-of-type(3){
+    background: radial-gradient(closest-corner at 50% 75%, red,orange, rgb(30, 144, 255));
+}
+.ellipse-size .content:nth-of-type(4){
+    background: radial-gradient(farthest-corner at 50% 75%, red,orange, rgb(30, 144, 255));
 }
 
 /* 重复的径向渐变 */
