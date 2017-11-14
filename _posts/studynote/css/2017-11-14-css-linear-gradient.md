@@ -31,13 +31,19 @@ background/background-image: linear-gradient([<angle> | to <side-or-corner>], co
 background/background-image: repeating-linear-gradient([<angle> | to <side-or-corner>], color-shop, ..., color-shop)
 ```
 
-### 3.2 demo
+### 3.2 -webkit-linear-gradient demo
 
 > * 点击打开[demo](/effects/demo/css/gradient/demo1/index.html)，结果如下图所示：
 
 ![gradient](/styles/images/css/gradient/gradient-03.png)
 
-### 2.3 标准 linear-gradient demo
+### 3.3 标准 linear-gradient demo
+
+> * 计算角度示例：
+
+![gradient](/styles/images/css/gradient/gradient-01.png)
+
+---
 
 > * 点击打开[demo](/effects/demo/css/gradient/demo1/index2.html)，结果如下图所示：
 
