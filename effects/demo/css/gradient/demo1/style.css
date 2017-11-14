@@ -1,0 +1,123 @@
+.container {
+    margin: 10px;
+    border-bottom: 1px solid;
+}
+.container-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.container-wrap img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+    display: block;
+}
+.content {
+    width: 100px;
+    height: 100px;
+    font: bold 18px/1 '';
+    text-align: center;
+    color: white;
+    float: left;
+    margin: 10px;
+}
+
+
+/* 由上到下 */
+.topToBottom .one{
+    background: -webkit-linear-gradient(top, red, orange, yellow);
+}
+.topToBottom .two{
+    background: -webkit-linear-gradient(-90deg, red, orange, yellow);
+}
+.topToBottom .three{
+    background: -webkit-linear-gradient(270deg, red, orange, yellow);
+}
+
+/* 由下到上 */
+
+.bottomToTop .one{
+    background: -webkit-linear-gradient(bottom, red, orange, yellow);
+}
+.bottomToTop .two{
+    background: -webkit-linear-gradient(90deg, red, orange, yellow);
+}
+.bottomToTop .three{
+    background: -webkit-linear-gradient(-270deg, red, orange, yellow);
+}
+
+/* 由左到右 */
+
+.leftToRight .one{
+    background: -webkit-linear-gradient(left, red, orange, yellow);
+}
+.leftToRight .two{
+    background: -webkit-linear-gradient(0deg, red, orange, yellow);
+}
+.leftToRight .three{
+    background: -webkit-linear-gradient(360deg, red, orange, yellow);
+}
+.leftToRight .four{
+    background: -webkit-linear-gradient(-360deg, red, orange, yellow);
+}
+/* 由右到左 */
+
+.rightToLeft .one{
+    background: -webkit-linear-gradient(right, red, orange, yellow);
+}
+.rightToLeft .two{
+    background: -webkit-linear-gradient(180deg, red, orange, yellow);
+}
+.rightToLeft .three{
+    background: -webkit-linear-gradient(-180deg, red, orange, yellow);
+}
+
+/* 由左上角到右下角 */
+
+.ltTorb .one{
+    background: -webkit-linear-gradient(left top, red, orange, yellow);
+}
+.ltTorb .two{
+    background: -webkit-linear-gradient(315deg, red, orange, yellow);
+}
+.ltTorb .three{
+    background: -webkit-linear-gradient(-45deg, red, orange, yellow);
+}
+
+/* 由左下角到右上角 */
+
+.lbTort .one{
+    background: -webkit-linear-gradient(left bottom, red, orange, yellow);
+}
+.lbTort .two{
+    background: -webkit-linear-gradient(45deg, red, orange, yellow);
+}
+.lbTort .three{
+    background: -webkit-linear-gradient(-315deg, red, orange, yellow);
+}
+
+/* 由右上角到左下角 */
+
+.rtTolb .one{
+    background: -webkit-linear-gradient(right top, red, orange, yellow);
+}
+.rtTolb .two{
+    background: -webkit-linear-gradient(225deg, red, orange, yellow);
+}
+.rtTolb .three{
+    background: -webkit-linear-gradient(-135deg, red, orange, yellow);
+}
+
+/* 由右下角到左上角 */
+
+.rbTolt .one{
+    background: -webkit-linear-gradient(right bottom, red, orange, yellow);
+}
+.rbTolt .two{
+    background: -webkit-linear-gradient(135deg, red, orange, yellow);
+}
+.rbTolt .three{
+    background: -webkit-linear-gradient(-225deg, red, orange, yellow);
+}
