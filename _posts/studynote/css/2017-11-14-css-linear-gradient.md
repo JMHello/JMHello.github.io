@@ -39,7 +39,7 @@ background/background-image: repeating-linear-gradient([<angle> | to <side-or-co
 
 ![gradient](/styles/images/css/gradient/gradient-08.png)
 
-![gradient](/styles/images/css/gradient/gradient-09.png)
+![gradient](/styles/images/css/gradient/gradient-09**.png)
 
 ### 3.3 标准 linear-gradient demo
 

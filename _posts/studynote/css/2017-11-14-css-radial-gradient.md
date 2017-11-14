@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "css - radial-gradient"
-date: 2017-11-14 16:00:00 +0800 
+date: 2017-11-14 15:00:00 +0800 
 categories: 学习笔记
 tag: CSS
 ---
@@ -13,26 +13,29 @@ tag: CSS
 
 ## 一、径向渐变总结图
 
-![gradient](/styles/images/css/gradient/gradient-02.png)
+![gradient](/styles/images/css/gradient/gradient-10     .png)
 
-## 二、demo
+## 二、浏览器兼容性
 
-### 2.1 语法
+> * 点击查看[兼容性](https://caniuse.com/#search=linear-gradient)
 
-```
-background/background-image: linear-gradient([<angle> | to <side-or-corner>], color-shop, ..., color-shop);
+![gradient](/styles/images/css/gradient/gradient-04.png)
 
-background/background-image: repeating-linear-gradient([<angle> | to <side-or-corner>], color-shop, ..., color-shop)
-```
+## 三、demo
 
-### 2.2 -webkit-linear-gradient demo
+### 3.1 语法
 
-> * 点击打开[demo](/effects/demo/css/gradient/demo1/index.html)，结果如下图所示：
+![gradient](/styles/images/css/gradient/gradient-14.png)
 
-![gradient](/styles/images/css/gradient/gradient-03.png)
+### 3.2 理解 radial-gradient
 
-### 2.3 标准 linear-gradient demo
+![gradient](/styles/images/css/gradient/gradient-13.png)
 
-> * 点击打开[demo](/effects/demo/css/gradient/demo1/index2.html)，结果如下图所示：
+### 3.3 radial-gradient demo
 
-![gradient](/styles/images/css/gradient/gradient-05.png)
+> * 点击打开[demo](/effects/demo/css/gradient/demo2/index.html)，结果如下图所示：
+
+![gradient](/styles/images/css/gradient/gradient-11.png)
+
+![gradient](/styles/images/css/gradient/gradient-12.png)
+

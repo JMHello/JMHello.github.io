@@ -1,0 +1,76 @@
+.container {
+    margin: 10px;
+    border-bottom: 1px solid;
+}
+.container-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.container-wrap img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+    display: block;
+}
+.content {
+    width: 150px;
+    height: 100px;
+    font: bold 18px/1 '';
+    text-align: center;
+    color: white;
+    float: left;
+    margin: 10px;
+}
+
+
+/* 定义径向渐变的圆心位置（指定中心点位置） <position> */
+.position .content:nth-of-type(1){
+    background: radial-gradient(at center, red,orange, rgb(30, 144, 255));
+}
+.position .content:nth-of-type(2){
+    background: radial-gradient(at top, red,orange, rgb(30, 144, 255));
+}
+.position .content:nth-of-type(3){
+    background: radial-gradient(at right, red,orange, rgb(30, 144, 255));
+}
+.position .content:nth-of-type(4){
+    background: radial-gradient(at bottom, red,orange, rgb(30, 144, 255));
+}
+.position .content:nth-of-type(5){
+    background: radial-gradient(at left, red,orange, rgb(30, 144, 255));
+}
+.position .content:nth-of-type(6){
+    background: radial-gradient(at 20% 20%, red,orange, rgb(30, 144, 255));
+}
+.position .content:nth-of-type(7){
+    background: radial-gradient(at 20px 20px, red,orange, rgb(30, 144, 255));
+}
+
+/* 定义径向渐变的形状(shape) */
+.position .content:nth-of-type(1){
+    background: radial-gradient(circle, red,orange, rgb(30, 144, 255));
+}
+.position .content:nth-of-type(2){
+    background: radial-gradient(ellipse, red,orange, rgb(30, 144, 255));
+}
+
+/* 指定渐变的尺寸（size） */
+.size .content:nth-of-type(1){
+    background: radial-gradient(circle  closest-side, red,orange, rgb(30, 144, 255));
+}
+.size .content:nth-of-type(2){
+    background: radial-gradient(circle  farthest-side, red,orange, rgb(30, 144, 255));
+}
+.size .content:nth-of-type(3){
+    background: radial-gradient(circle  closest-corner, red,orange, rgb(30, 144, 255));
+}
+.size .content:nth-of-type(4){
+    background: radial-gradient(circle  farthest-corner, red,orange, rgb(30, 144, 255));
+}
+
+/* 重复的径向渐变 */
+.repeating .one{
+    background: repeating-radial-gradient(red, orange 10%, yellow 15%);
+}
