@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "css - linear-gradient"
+title: "css - radial-gradient"
 date: 2017-11-14 16:00:00 +0800 
 categories: 学习笔记
 tag: CSS

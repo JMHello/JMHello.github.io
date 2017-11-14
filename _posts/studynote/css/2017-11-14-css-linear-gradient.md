@@ -37,6 +37,10 @@ background/background-image: repeating-linear-gradient([<angle> | to <side-or-co
 
 ![gradient](/styles/images/css/gradient/gradient-03.png)
 
+![gradient](/styles/images/css/gradient/gradient-08.png)
+
+![gradient](/styles/images/css/gradient/gradient-09.png)
+
 ### 3.3 标准 linear-gradient demo
 
 > * 计算角度示例：
@@ -48,3 +52,7 @@ background/background-image: repeating-linear-gradient([<angle> | to <side-or-co
 > * 点击打开[demo](/effects/demo/css/gradient/demo1/index2.html)，结果如下图所示：
 
 ![gradient](/styles/images/css/gradient/gradient-05.png)
+
+![gradient](/styles/images/css/gradient/gradient-06.png)
+
+![gradient](/styles/images/css/gradient/gradient-07.png)
