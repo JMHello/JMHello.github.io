@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制作记事本纸张效果</title>
+    <style>
+        h1 {
+            width: 630px;
+            text-align: center;
+        }
+        h2 {
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .container::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .container > div {
+            float: left;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid;
+        }
+        .note {
+            width: 300px;
+            height: 400px;
+            margin: 40px auto;
+            background: repeating-linear-gradient(to top, #f9f9f9, #f9f9f9 29px, #ccc 30px);
+            position: relative;
+        }
+        .note::before {
+            content: '';
+            height: 400px;
+            width: 4px;
+            display: inline-block;
+            border-left: 4px double #fca1a1;
+            position: absolute;
+            left: 30px;
+            top: 0;
+        }
+        .addBs {
+            background-size: 100% 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>制作记事本纸张效果</h1>
+<div class="container">
+   <div>
+       <h2>未添加background-size: 100% 30px;</h2>
+       <div class="note"></div>
+   </div>
+    <div>
+        <h2>添加background-size: 100% 30px;</h2>
+        <div class="note addBs"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制作纹理背景</title>
+    <style>
+        h1 {
+            width: 630px;
+            text-align: center;
+        }
+
+        .content {
+            border: 1px solid;
+            margin: 10px;
+        }
+        .content::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .container .pattern {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            border: 1px solid;
+            float: left;
+        }
+        .container .img {
+            width: 800px;
+            margin: 10px;
+            float: left;
+        }
+
+        .pt1 {
+            background: #0ae linear-gradient(rgba(255, 255, 255, 0.2) 50%, transparent 50%, transparent);
+            background-size: 50px 50px;
+        }
+        .pt2 {
+            background: #f90 linear-gradient(0deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%, transparent);
+            background-size: 50px 50px;
+        }
+        .pt3_init {
+            background-color: red;
+            background-position: 0 0, 75px 75px; /* 关键代码 */
+            background-image: linear-gradient(45deg, green 25%, transparent 25%, transparent 75%, green 75%, green),
+            linear-gradient(45deg, green 25%, transparent 25%, transparent 75%, green 75%, green);
+        }
+        .pt3 {
+            background-color: red;
+            background-position: 0 0, 25px 25px; /* 关键代码 */
+            background-image: linear-gradient(45deg, green 25%, transparent 25%, transparent 75%, green 75%, green),
+            linear-gradient(45deg, green 25%, transparent 25%, transparent 75%, green 75%, green);
+            background-size: 50px 50px;
+        }
+        .pt4_init{
+            background-image: linear-gradient(45deg, #555 25%, transparent 25%, transparent), /* 左下角 */
+            linear-gradient(135deg, #555 25%, transparent 25%, transparent), /* 左上角 */
+            linear-gradient(225deg, #555 25%, transparent 25%, transparent), /* 右上角 */
+            linear-gradient(-45deg, #555 25%, transparent 25%, transparent); /* 右下角 */
+        }
+        .pt4{
+            background-image: linear-gradient(45deg, #555 25%, transparent 25%, transparent), /* 左下角 */
+                              linear-gradient(135deg, #555 25%, transparent 25%, transparent), /* 左上角 */
+                              linear-gradient(225deg, #555 25%, transparent 25%, transparent), /* 右上角 */
+                              linear-gradient(-45deg, #555 25%, transparent 25%, transparent); /* 右下角 */
+            background-size: 50px 50px;
+        }
+        .pt5_init {
+            background-position: 25px 25px, 0 0;
+            background-image: radial-gradient(circle,white 20%, transparent 20%),
+                              radial-gradient(circle,transparent 20%, black 20%);
+
+        }
+        .pt5 {
+            background-position: 25px 25px, 0 0;
+            background-image: radial-gradient(circle,white 20%, transparent 20%),
+            radial-gradient(circle,transparent 20%, black 20%);
+            background-size: 50px 50px;
+        }
+        .pt6_init {
+            background-color: #BB0033;
+            background-image: radial-gradient(closest-side circle at 60% 43%, #BB0033 26%, rgba(187, 0, 51, 0) 27%), /* 1 */
+            radial-gradient(closest-side circle at 40% 43%, #BB0033 26%, rgba(187, 0, 51, 0) 27%), /* 2 */
+            radial-gradient(closest-side circle at 40% 22%, #DD3355 45%, rgba(221, 51, 85, 0) 46%), /* 3 */
+            radial-gradient(closest-side circle at 60% 22%, #DD3355 45%, rgba(221, 51, 85, 0) 46%), /* 4 */
+            radial-gradient(closest-side circle at 50% 35%, #DD3355 30%, rgba(221, 51, 85, 0) 31%), /* 5 */
+            radial-gradient(closest-side circle at 60% 43%, #BB0033 26%, rgba(187, 0, 51, 0) 27%), /* 1 */
+            radial-gradient(closest-side circle at 40% 43%, #BB0033 26%, rgba(187, 0, 51, 0) 27%), /* 2 */
+            radial-gradient(closest-side circle at 40% 22%, #DD3355 45%, rgba(221, 51, 85, 0) 46%), /* 3 */
+            radial-gradient(closest-side circle at 60% 22%, #DD3355 45%, rgba(221, 51, 85, 0) 46%), /* 4 */
+            radial-gradient(closest-side circle at 50% 35%, #DD3355 30%, rgba(221, 51, 85, 0) 31%); /* 5 */
+            background-position: 0 0%, 0 0%, 0 0%, 0 0%, 0 0%, 50px 50px, 50px 50px, 50px 50px, 50px 50px, 50px 50px;
+        }
+        .pt6 {
+            background-color: #BB0033;
+            background-image: radial-gradient(closest-side circle at 60% 43%, #BB0033 26%, rgba(187, 0, 51, 0) 27%), /* 1 */
+                              radial-gradient(closest-side circle at 40% 43%, #BB0033 26%, rgba(187, 0, 51, 0) 27%), /* 2 */
+                              radial-gradient(closest-side circle at 40% 22%, #DD3355 45%, rgba(221, 51, 85, 0) 46%), /* 3 */
+                              radial-gradient(closest-side circle at 60% 22%, #DD3355 45%, rgba(221, 51, 85, 0) 46%), /* 4 */
+                              radial-gradient(closest-side circle at 50% 35%, #DD3355 30%, rgba(221, 51, 85, 0) 31%), /* 5 */
+                              radial-gradient(closest-side circle at 60% 43%, #BB0033 26%, rgba(187, 0, 51, 0) 27%), /* 1 */
+                              radial-gradient(closest-side circle at 40% 43%, #BB0033 26%, rgba(187, 0, 51, 0) 27%), /* 2 */
+                              radial-gradient(closest-side circle at 40% 22%, #DD3355 45%, rgba(221, 51, 85, 0) 46%), /* 3 */
+                              radial-gradient(closest-side circle at 60% 22%, #DD3355 45%, rgba(221, 51, 85, 0) 46%), /* 4 */
+                              radial-gradient(closest-side circle at 50% 35%, #DD3355 30%, rgba(221, 51, 85, 0) 31%); /* 5 */
+            background-position: 0 0%, 0 0%, 0 0%, 0 0%, 0 0%, 50px 50px, 50px 50px, 50px 50px, 50px 50px, 50px 50px;
+            background-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<h1>制作纹理背景</h1>
+<div class="container">
+    <div class="content">
+        <div class="pattern pt1"></div>
+    </div>
+    <div class="content">
+        <div class="pattern pt2"></div>
+    </div>
+    <div class="content">
+        <div class="pattern pt3"></div>
+        <div class="pattern pt3_init"></div>
+        <img src="./imgs/img-03.png" class="img">
+    </div>
+    <div class="content">
+        <div class="pattern pt4"></div>
+        <div class="pattern pt4_init"></div>
+        <img src="./imgs/img-04.png" class="img">
+    </div>
+    <div class="content">
+        <div class="pattern pt5"></div>
+        <div class="pattern pt5_init"></div>
+        <img src="./imgs/img-05.png" class="img">
+    </div>
+    <div class="content">
+        <div class="pattern pt6"></div>
+        <div class="pattern pt6_init"></div>
+        <img src="./imgs/img-06.png" class="img">
+    </div>
+</div>
+</body>
+</html>

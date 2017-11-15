@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            margin: 10px;
+            padding: 10px;
+        }
+        .container .content {
+            width: 100px;
+            height: 150px;
+            border: 1px solid;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .wrapper {
+            padding: 5px;
+            border: 1px solid;
+            margin: 10px;
+        }
+        .wrapper > div, .wrapper img {
+            float: left;
+            margin-right: 10px;
+        }
+        .linear-01 {
+            background: linear-gradient(red, red 50px, transparent 50px, transparent);
+        }
+        .linear-01-01 {
+            background: linear-gradient(red, red 33.333%, transparent 33.333%, transparent);
+        }
+        .linear-02 {
+            background: linear-gradient(45deg, red, red 50px, transparent 50px, transparent);
+        }
+        .linear-03 {
+            background: linear-gradient(to right, red, red 50px, transparent 50px, transparent);
+        }
+
+        .radial-01 {
+            background: radial-gradient(circle, red, red 50px, transparent 50px, transparent);
+        }
+        .radial-02 {
+            background: radial-gradient(circle at top, red, red 50px, transparent 50px, transparent);
+        }
+        .radial-03 {
+            background: radial-gradient(ellipse, red, red 50px, transparent 50px, transparent);
+        }
+        .radial-03-01 {
+            background: radial-gradient(ellipse, transparent, transparent 50px, red 50px, red);
+        }
+        .radial-03-02 {
+            background: radial-gradient(ellipse, yellow, red, yellow, red, yellow,red,yellow, red, yellow,red, yellow,red);
+        }
+        .radial-04 {
+            background: radial-gradient(ellipse at left bottom, red, red 50px, transparent 50px, transparent);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>线性渐变</h2>
+    <div class="wrapper clearfix">
+        <div class="content linear-01"></div>
+        <div class="content linear-01" style="height: 100px"></div>
+        <div class="content linear-01-01"></div>
+        <img src="imgs/img-01.png">
+    </div>
+    <div class="wrapper clearfix">
+        <div class="content linear-02"></div>
+        <div class="content linear-02" style="height: 100px"></div>
+        <img src="imgs/img-02.png">
+    </div>
+    <div class="wrapper clearfix">
+        <div class="content linear-03"></div>
+        <img src="imgs/img-03.png">
+    </div>
+</div>
+<div class="container">
+    <h2>径向渐变</h2>
+    <div class="wrapper clearfix">
+        <div class="content radial-01"></div>
+        <img src="imgs/img-04.png">
+    </div>
+    <div class="wrapper clearfix">
+        <div class="content radial-02"></div>
+        <img src="imgs/img-05.png">
+    </div>
+    <div class="wrapper clearfix">
+        <div class="content radial-03"></div>
+        <div class="content radial-03-01" style="width: 100px"></div>
+        <div class="content radial-03-02" style="width: 100px"></div>
+        <div class="content radial-03" style="height: 100px"></div>
+        <div class="content radial-03" style="width: 170px"></div>
+        <img src="imgs/img-06.png">
+    </div>
+    <div class="wrapper clearfix">
+        <div class="content radial-04"></div>
+        <div class="content radial-04" style="height: 100px"></div>
+        <div class="content radial-04" style="height:100px; width: 150px"></div>
+        <img src="imgs/img-07.png">
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>extend-keyword</title>
+    <style>
+        .container {
+            margin: 10px;
+            padding: 10px;
+        }
+        .container > div {
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid;
+        }
+        .container .content {
+            width: 200px;
+            height: 150px;
+            border: 1px solid;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .wrapper {
+            margin: 10px;
+            padding: 5px;
+        }
+        .wrapper > div, .wrapper img {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .circle-01 {
+            background: radial-gradient(circle closest-side, red, yellow, red, yellow);
+        }
+        .circle-01-01 {
+            background: radial-gradient(circle closest-side at 35% 10%, red, yellow, red, yellow);
+        }
+        .circle-01-02 {
+            background: radial-gradient(circle closest-side at 10% 35%, red, yellow, red, yellow);
+        }
+        .circle-02 {
+            background: radial-gradient(circle farthest-side, red, yellow, red, yellow);
+        }
+        .circle-02-01 {
+            background: radial-gradient(circle farthest-side at 35% 10%, red, yellow, red, yellow);
+        }
+        .circle-02-02 {
+            background: radial-gradient(circle farthest-side at 10% 35%, red, yellow, red, yellow);
+        }
+        .circle-03 {
+            background: radial-gradient(circle closest-corner, red, yellow, red, yellow);
+        }
+        .circle-03-01 {
+            background: radial-gradient(circle closest-corner at 35% 10%, red, yellow, red, yellow);
+        }
+        .circle-03-02 {
+            background: radial-gradient(circle closest-corner at 10% 35%, red, yellow, red, yellow);
+        }
+        .circle-04 {
+            background: radial-gradient(circle farthest-corner, red, yellow, red, yellow);
+        }
+        .circle-04-01 {
+            background: radial-gradient(circle farthest-corner at 35% 10%, red, yellow, red, yellow);
+        }
+        .circle-04-02 {
+            background: radial-gradient(circle farthest-corner at 10% 35%, red, yellow, red, yellow);
+        }
+
+        .circle-05 {
+            background: radial-gradient(circle, red, yellow, red, yellow);
+        }
+
+        .ellipse-01 {
+            background: radial-gradient(ellipse closest-side, red, yellow, red, yellow);
+        }
+        .ellipse-01-01 {
+            background: radial-gradient(ellipse closest-side at 35% 10%, red, yellow, red, yellow);
+        }
+        .ellipse-01-02 {
+            background: radial-gradient(ellipse closest-side at 10% 35%, red, yellow, red, yellow);
+        }
+        .ellipse-02 {
+            background: radial-gradient(ellipse farthest-side, red, yellow, red, yellow);
+        }
+        .ellipse-02-01 {
+            background: radial-gradient(ellipse farthest-side at 35% 10%, red, yellow, red, yellow);
+        }
+        .ellipse-02-02 {
+            background: radial-gradient(ellipse farthest-side at 10% 35%, red, yellow, red, yellow);
+        }
+        .ellipse-03 {
+            background: radial-gradient(ellipse closest-corner, red, yellow, red, yellow);
+        }
+        .ellipse-03-01 {
+            background: radial-gradient(ellipse closest-corner at 35% 10%, red, yellow, red, yellow);
+        }
+        .ellipse-03-02 {
+            background: radial-gradient(ellipse closest-corner at 10% 35%, red, yellow, red, yellow);
+        }
+        .ellipse-04 {
+            background: radial-gradient(ellipse farthest-corner, red, yellow, red, yellow);
+        }
+        .ellipse-04-01 {
+            background: radial-gradient(ellipse farthest-corner at 35% 10%, red, yellow, red, yellow);
+        }
+        .ellipse-04-02 {
+            background: radial-gradient(ellipse farthest-corner at 10% 35%, red, yellow, red, yellow);
+        }
+        .ellipse-05 {
+            background: radial-gradient(ellipse, red, yellow, red, yellow);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>圆形径向渐变</h2>
+    <div>
+        <h3>圆形 - 与 farthest-corner 一样</h3>
+        <div class="wrapper clearfix">
+            <div class="content circle-05"></div>
+        </div>
+        <img src="imgs/img-09.png">
+    </div>
+    <div>
+        <h3>圆形 closest-side</h3>
+        <div class="wrapper clearfix">
+            <div class="content circle-01"></div>
+            <div class="content circle-01-01"></div>
+            <div class="content circle-01-02"></div>
+        </div>
+        <img src="imgs/img-01.png">
+    </div>
+    <div>
+        <h3>圆形 farthest-side</h3>
+        <div class="wrapper clearfix">
+            <div class="content circle-02"></div>
+            <div class="content circle-02-01"></div>
+            <div class="content circle-02-02"></div>
+        </div>
+        <img src="imgs/img-02.png">
+    </div>
+    <div>
+        <h3>圆形 closest-corner</h3>
+        <div class="wrapper clearfix">
+            <div class="content circle-03"></div>
+            <div class="content circle-03-01"></div>
+            <div class="content circle-03-02"></div>
+        </div>
+        <img src="imgs/img-03.png">
+    </div>
+    <div>
+        <h3>圆形 farthest-corner</h3>
+        <div class="wrapper clearfix">
+            <div class="content circle-04"></div>
+            <div class="content circle-04-01"></div>
+            <div class="content circle-04-02"></div>
+        </div>
+        <img src="imgs/img-04.png">
+    </div>
+</div>
+
+<div class="container">
+    <h2>椭圆形径向渐变</h2>
+    <div>
+        <h3>椭圆形 - 与 farthest-corner 一样</h3>
+        <div class="wrapper clearfix">
+            <div class="content ellipse-05"></div>
+        </div>
+        <img src="imgs/img-10.png">
+    </div>
+    <div>
+        <h3>椭圆形 closest-side</h3>
+        <div class="wrapper clearfix">
+            <div class="content ellipse-01"></div>
+            <div class="content ellipse-01-01"></div>
+            <div class="content ellipse-01-02"></div>
+        </div>
+        <img src="imgs/img-05.png">
+    </div>
+    <div>
+        <h3>椭圆形 farthest-side</h3>
+        <div class="wrapper clearfix">
+            <div class="content ellipse-02"></div>
+            <div class="content ellipse-02-01"></div>
+            <div class="content ellipse-02-02"></div>
+        </div>
+        <img src="imgs/img-06.png">
+    </div>
+    <div>
+        <h3>椭圆形 closest-corner</h3>
+        <div class="wrapper clearfix">
+            <div class="content ellipse-03"></div>
+            <div class="content ellipse-03-01"></div>
+            <div class="content ellipse-03-02"></div>
+        </div>
+        <img src="imgs/img-07.png">
+    </div>
+    <div>
+        <h3>椭圆形 farthest-corner</h3>
+        <div class="wrapper clearfix">
+            <div class="content ellipse-04"></div>
+            <div class="content ellipse-04-01"></div>
+            <div class="content ellipse-04-02"></div>
+        </div>
+        <img src="imgs/img-08.png">
+    </div>
+</div>
+</body>
+</html>

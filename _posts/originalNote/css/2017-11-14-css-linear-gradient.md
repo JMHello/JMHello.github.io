@@ -2,7 +2,7 @@
 layout: post
 title: "css - linear-gradient"
 date: 2017-11-14 15:00:00 +0800 
-categories: 学习笔记
+categories: 原创
 tag: CSS
 ---
 * content
