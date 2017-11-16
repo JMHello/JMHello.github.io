@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>理解色标</title>
+    <style>
+        .screen {
+            width: 500px;
+            height: 300px;
+            margin: 10px;
+        }
+        .radialTxt {
+            background-image: radial-gradient(100px, red 5%, yellow 15%, rgb(30, 144, 255) 60%);
+        }
+    </style>
+</head>
+<body>
+<h1>径向渐变（默认以圆理解）</h1>
+<pre id="pre">
+    .radialTxt {
+            background-image: radial-gradient(100px, red 5%, yellow 15%, rgb(30, 144, 255) 60%);
+    }
+</pre>
+<div id="screen" class="screen radialTxt"></div>
+<div>
+    red: <input type="text" id="red">
+    yellow: <input type="text" id="yellow">
+    blue: <input type="text" id="blue">
+</div>
+<script>
+    const $ = ele => document.querySelector(ele);
+
+    let [red, yellow, blue] = ['5%', '15%', '60%'];
+
+    $('#red').addEventListener('input', function () {
+        red = this.value;
+        update();
+    }, false);
+
+    $('#yellow').addEventListener('input', function () {
+      yellow = this.value;
+      update();
+    }, false);
+
+    $('#blue').addEventListener('input', function () {
+      blue = this.value;
+      update();
+    }, false);
+
+
+    function update () {
+      let radialTxt = `radial-gradient(100px, red ${red}, yellow ${yellow}, rgb(30, 144, 255) ${blue})`
+      $('.radialTxt').style.backgroundImage = radialTxt;
+      $('#pre').innerHTML = `
+        .radialTxt {
+            ${radialTxt}
+        }
+      `
+    }
+</script>
+</body>
+</html>
