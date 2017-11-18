@@ -38,7 +38,21 @@ E {filter:shadow(color=颜色值，Direction=数值, Strength = 数值)}
 
 ## 二、demo - 制作立体文本
 
+### 2.1 完整demo
+
 > * 点击打开[demo](/effects/demo/css/textShadow/index.html)
 
 ![text-shadow](/styles/images/css/text-shadow/text-shadow-04.png)
+
+### 2.2 拆解 0 deg
+
+> * 点击打开[demo](/effects/demo/css/textShadow/index2.html)
+
+![text-shadow](/styles/images/css/text-shadow/text-shadow-05.png)
+
+![text-shadow](/styles/images/css/text-shadow/text-shadow-06.png)
+
+![text-shadow](/styles/images/css/text-shadow/text-shadow-07.png)
+
+> * 从上述图片，你会发现，其实 `0 deg` 的最终效果就是一个个 `0 deg` 阴影叠加起来而已！！
 

@@ -8,8 +8,6 @@ tag: node.js
 * content
 {:toc}
 
-> * 参考资料：
-
 <!-- more -->
 
 

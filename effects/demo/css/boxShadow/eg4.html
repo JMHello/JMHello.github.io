@@ -24,16 +24,33 @@
 <body>
 <div>
     <h2>内阴影 </h2>
+    <p>
+        .inset {
+        box-shadow: inset 3px 3px 10px blue;
+        }
+    </p>
     <div class="box inset"></div>
 </div>
 
 <div>
     <h2>内阴影在img上使用没有任何效果</h2>
+    <p>
+        .inset {
+        box-shadow: inset 3px 3px 10px blue;
+        }
+    </p>
     <img class="box inset" src="01.jpg">
 </div>
 
 <div>
     <h2>为img添加内阴影</h2>
+    <p>
+        .inset img {
+        position: relative;
+        z-index: -1;
+        vertical-align: top;
+        }
+    </p>
     <div class="inset box">
         <img class="box" src="01.jpg">
     </div>

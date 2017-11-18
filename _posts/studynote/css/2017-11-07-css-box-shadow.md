@@ -40,6 +40,8 @@ box-shadow: none | [inset x-offset y-offset blur-radius spread-radius color]
 
 ![box-shadow](/styles/images/css/box-shadow/box-shadow-04.png)
 
+![box-shadow](/styles/images/css/box-shadow/box-shadow-11.png)
+
 > * 从这个 `demo` 可以得出以下结论：
 
 ![box-shadow](/styles/images/css/box-shadow/box-shadow-05.png)
