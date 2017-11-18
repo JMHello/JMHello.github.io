@@ -9,7 +9,7 @@ tag: CSS
 {:toc}
 
 > * 相关链接：
->   * [css - radial-gradient - 下篇](http://www.hellojm.cn/2017/11/11/radial-gradient-2/)
+>   * [css - radial-gradient - 下篇](http://www.jmazm.com/2017/11/16/css-radial-gradient-2/)
 
 <!-- more -->
 
