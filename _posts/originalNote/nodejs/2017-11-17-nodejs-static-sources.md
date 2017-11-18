@@ -3,7 +3,7 @@ layout: post
 title: "nodejs - 静态资源管理"
 date: 2017-11-17 15:00:00 +0800 
 categories: 原创
-tag: CSS
+tag: node.js
 ---
 * content
 {:toc}
