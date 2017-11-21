@@ -16,7 +16,7 @@ tag: CSS
 
 ## 一、什么是视觉格式化模型
 
-> * 视觉格式化模型（`visual formatting model`）,是 `CSS` 布局的一个基础理论体系，是用来处理文档并将它显示在视觉媒体上的机制。
+![vfm](/styles/images/css/vfm/vfm-05.png)
 
 ## 二、关于模型的一些基础知识
 
