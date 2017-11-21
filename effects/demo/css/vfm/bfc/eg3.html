@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直bfc - 使用auto</title>
+    <style>
+        .container {
+            width: 500px;
+            border: 1px solid;
+            margin: 10px;
+        }
+        .outerBox {
+            background: yellow;
+        }
+        .innerBox {
+            background: red;
+        }
+        .parent1 {
+            height: auto;
+        }
+        .child1,
+        .child2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .parent2 {
+            height: auto;
+            border: 5px solid green;
+        }
+
+    </style>
+</head>
+<body>
+<h1>垂直bfc - 使用auto</h1>
+<div class="container">
+    <h3>height:auto; 无边框</h3>
+    <p>
+        .parent1 { <br>
+        height: auto; <br>
+        } <br>
+        .child1 { <br>
+        margin-top: 20px;<br>
+        margin-bottom: 20px;<br>
+        }
+    </p>
+    <div class="outerBox parent1">
+        <div class="innerBox child1">包含块无边框</div>
+    </div>
+</div>
+<div class="container">
+    <h3>height:auto; 有边框</h3>
+    <p>
+        .parent2 {<br>
+        height: auto;<br>
+        border: 1px solid;<br>
+        }<br>
+        .child2 {<br>
+        margin-top: 20px;<br>
+        margin-bottom: 20px;<br>
+        }
+    </p>
+    <div class="outerBox parent2">
+        <div class="innerBox child2">包含块有边框</div>
+    </div>
+</div>
+</body>
+</html>

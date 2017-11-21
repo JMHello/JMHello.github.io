@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bfc - 垂直方向间距计算</title>
+    <style>
+        .container {
+            width: 650px;
+            margin: 10px;
+            border: 1px solid;
+        }
+        .list {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background: red;
+        }
+        .list li {
+            background: yellow;
+        }
+        .positive .list li{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .positive .list li:nth-of-type(2) {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .positive .block {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            background: blue;
+        }
+        .posAndNeg .list li:nth-of-type(1) {
+            margin-bottom: -10px;
+        }
+        .posAndNeg .list li:nth-of-type(2) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .posAndNeg .list li:nth-of-type(3) {
+            margin-top: -30px;
+        }
+
+        .negative .list li:nth-of-type(1) {
+            margin-bottom: -10px;
+        }
+        .negative .list li:nth-of-type(2) {
+            margin-top: -5px;
+            background: green;
+        }
+        .block1 {
+            margin-bottom: 20px;
+            background: blue;
+        }
+        .block2 {
+            background: blue;
+        }
+        .block2 > div {
+            margin-top: 30px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<h1>垂直方向间距计算</h1>
+<div class="container positive">
+    <h3>正值合并 --- 取最大值</h3>
+    <ul class="list">
+        <li>li1 --- margin-top: 15px; margin-bottom: 15px;</li>
+        <li>li2 --- margin-top: 30px; margin-bottom: 10px;</li>
+        <li>li3 --- margin-top: 15px; margin-bottom: 15px;</li>
+    </ul>
+    <div class="block">block --- margin-top: 25px; margin-bottom: 25px;</div>
+    <hr>
+    <ul>
+        <li>li2与li1之间的距离是30px,因为li2的 margin-top > li1的margin-bottom</li>
+        <li>li2与li3之间的距离是15px,因为li3的 margin-top > li2的margin-bottom</li>
+        <li>ul与block之间的距离是25px,因为block的 margin-top > ul的margin-bottom</li>
+    </ul>
+</div>
+<div class="container posAndNeg">
+    <h3>正负合并 --- 取相加后的值</h3>
+    <ul class="list">
+        <li>li1 --- margin-bottom: -10px;</li>
+        <li>li2 --- margin-top: 30px; margin-bottom: 30px;</li>
+        <li>li3 --- margin-top: -30px;</li>
+    </ul>
+    <hr>
+    <ul>
+        <li>li1与li2之间的距离 = -10 + 30 = 20</li>
+        <li>li2与li3之间的距离 = 30 + （-30） = 0</li>
+    </ul>
+</div>
+<div class="container negative">
+    <h3>负值合并 --- 取绝对值大的那个</h3>
+    <ul class="list">
+        <li>li1 --- margin-bottom: -10px;</li>
+        <li>li2 --- margin-top: -5px;</li>
+    </ul>
+    <hr>
+    <ul>
+        <li>li1与li2之间的距离 = max([|-10|, |-5|]) = -10</li>
+    </ul>
+</div>
+<div class="container negative">
+    <h3>不同的 BFC，垂直方向相接的 margin 不合并</h3>
+    <div class="block1">div1 ---  margin-bottom: 20px;</div>
+    <div class="block2">div2
+        <div>div3 --- margin-top: 30px;</div>
+    </div>
+    <div></div>
+    <hr>
+    <ul>
+        <li>div3的父元素div2新建了一个 BFC，所以 div1 与 div3 之间的margin 没有合并</li>
+    </ul>
+</div>
+</body>
+</html>

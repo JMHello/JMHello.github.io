@@ -77,43 +77,24 @@ tag: CSS
 
 ### 3.2 使用auto
 
-* 7个垂直属性中，只有3个属性的值可以设置为`auto`:`margin-top`、`height`、`margin-bottom`
-    * 元素的上下外边距设置为`auto`，他们会被重置为0，即：元素框没有上下外边距。
+> * 7个垂直属性中，只有3个属性的值可以设置为`auto`:`margin-top`、`height`、`margin-bottom`
+> * 元素的上下外边距设置为`auto`，他们会被重置为0，即：元素框没有上下外边距。
+    
+> * 块级正常流元素的`height`设置为`auto`
+>    * 显示时其高度恰好包含其内联内容的行盒。
+>    * 其子元素是块级元素的话，默认的高度 从最高级块级子元素的外边框边界到最低块级子元素外边框边界之间的距离。
+>        * 子元素的外边距会“超出”包含这些子元素的元素。
+>    * 块级元素有上下内边距/上下边框，其高度从其最高子元素的上外边距边界到其最低子元素的下外边距边界之间的距离。
 
+> * 点击打开[demo](/effects/demo/css/vfm/bfc/eg3.html)
 
-**auto高度**
-
-* 块级正常流元素的`height`设置为`auto`
-    * 显示时其高度恰好包含其内联内容的行盒。
-    * 其子元素是块级元素的话，默认的高度 从最高级块级子元素的外边框边界到最低块级子元素外边框边界之间的距离。
-        * 子元素的外边距会“超出”包含这些子元素的元素。
-    * 块级元素有上下内边距/上下边框，其高度从其最高子元素的上外边距边界到其最低子元素的下外边距边界之间的距离。
-
-例1：无边框
-
-```html
-<div style="height: auto;background: blue">
-    <p style="margin-top: 2em; margin-bottom: 2em"></p>
-</div>
-```
-
-![relationship-map]({{ '/styles/images/css/box/box-02.png' | prepend: site.baseurl }})
-
-例2： 有边框
-
-```html
-<div style="height: auto;border-top: 1px solid; border-bottom: 1px solid;background: blue">
-    <p style="margin-top: 2em; margin-bottom: 2em"></p>
-</div>
-```
-
-![relationship-map]({{ '/styles/images/css/box/box-03.png' | prepend: site.baseurl }})
+![bfc](/styles/images/css/vfm/bfc/bfc-04.png)
 
 ### 3.3 百分数高度    
 
-* 一个正常流元素的`height`设置为一个百分数，其值是包含块 `height`的百分比。
+> * 一个正常流元素的`height`设置为一个百分数，其值是包含块 `height`的百分比。
 
-* 例：`p`元素的高是其父元素`div`的一半，即`3em`
+> * 例：`p`元素的高是其父元素`div`的一半，即`3em`
 
 ```html
 <div style="height: 6em;">
@@ -121,7 +102,7 @@ tag: CSS
 </div>
 ```
 
-* 没有显式声明包含块的`height`，百分数高度会重置为`auto`，即：与其包含块的高度完全相同
+> * 没有显式声明包含块的`height`，百分数高度会重置为`auto`，即：与其包含块的高度完全相同
 
 ```html
 <div style="height: auto;">
@@ -129,168 +110,14 @@ tag: CSS
 </div>
 ```
 
-### 3.4 合并垂直外边距
+### 3.4 垂直方向间距计算
 
-例1：
+> * 在一个 `BFC` 里，盒子垂直方向的距离由上下 `margin` 决定。
+> * 在同一个 `BFC` 中，垂直方向相接的间距会发生合并。
+>   * 如都为正值，则取最大值；
+>   * 如一正一负，则取相加后的值；
+>   * 如都为负，则取绝对值大的那个。
 
-```html
-<ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
-```
+> * 点击打开[demo](/effects/demo/css/vfm/bfc/eg4.html)
 
-```css
-li {
-    width: 200px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    background: blue;
-}
-```
-
-![relationship-map]({{ '/styles/images/css/box/box-04.png' | prepend: site.baseurl }})
-
-* 相邻两个`li`之间的距离不是 `25px`而是`15px`
-    * 原因：相邻外边距会沿着竖轴合并。即：**两个外边距中较小的一个会被较大的一个合并。**
-* 如果用户代理实现不正确的话，那么相邻两个`li`元素之间的距离是`25px`
-
-例2：
-
-```html
-<ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
-<h1>hello</h1>
-```
-
-```css
-h1 {
-    width: 240px;
-    margin-top: 28px;
-    background: orange;
-}
-ul {
-    width: 240px;
-    margin-bottom: 15px;
-    background: yellow;
-}
-li {
-    width: 200px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    background: blue;
-}
-```
-
-* `ul` 的下外边距为 `15px`
-
-![relationship-map]({{ '/styles/images/css/box/box-06.png' | prepend: site.baseurl }})
-
-* 列表中最后一项的下外边距为 `20px`。【其实相邻两个 `li`之间的距离也是`20px`】
-
-![relationship-map]({{ '/styles/images/css/box/box-07.png' | prepend: site.baseurl }})
-
-* `li`结尾到`h1`开始之间的距离有`28px` 
-* 原因：`h1`的上边距为`28px`，`li`的下边距为`20px`，前者大于后者，所以取最大值者。
-
-![relationship-map]({{ '/styles/images/css/box/box-05.png' | prepend: site.baseurl }})
-
-**在包含块上设置边框或者内边距，会使其子元素的外边距包含在包含块内。**
-
-```css
-h1 {
-    width: 240px;
-    margin-top: 28px;
-    background: orange;
-}
-ul {
-    width: 240px;
-    margin-bottom: 15px;
-    background: yellow;
-    border: 1px solid; /*新增了这一行*/
-}
-li {
-    width: 200px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    background: blue;
-}
-```
-
-* 没添加`border` 
-
-![relationship-map]({{ '/styles/images/css/box/box-09.png' | prepend: site.baseurl }})
-
-* 添加了`border`
-
-![relationship-map]({{ '/styles/images/css/box/box-08.png' | prepend: site.baseurl }})
-
-### 4.5 负外边距
- 
-* 负外边距会影响外边距的合并
-    * 如果垂直外边距都设置为负值，浏览器会取两个外边距**绝对值的最大值**
-    * 如果一个正外边距和一个负外边距合并，会从**正外边距减去这个负外边距的绝对值**
-
-基本`html`格式
-
-```html
-<p class="one">one</p>
-<p class="two">two</p>
-```
-
-例1：垂直外边距都设置为负值
-
-```css
-p {
-    width: 200px;
-    height: 40px;
-}
-.one {
-    margin-bottom: -20px;
-    background: blue;
-}
-.two {
-    margin-top: -30px;
-    background: red;
-}
-```
-
-* 段落1
-
-![relationship-map]({{ '/styles/images/css/box/box-10.png' | prepend: site.baseurl }})
-
-* 段落2
-
-![relationship-map]({{ '/styles/images/css/box/box-11.png' | prepend: site.baseurl }})
-
-例2：一正一负
-
-```css
-p {
-    width: 200px;
-    height: 40px;
-}
-.one {
-    margin-bottom: 20px;
-    background: blue;
-}
-.two {
-    margin-top: -30px;
-    background: red;
-}
-```
-
-* 段落1
-
-![relationship-map]({{ '/styles/images/css/box/box-12.png' | prepend: site.baseurl }})
-
-* 段落2
-
-![relationship-map]({{ '/styles/images/css/box/box-13.png' | prepend: site.baseurl }})
-
+![bfc](/styles/images/css/vfm/bfc/bfc-05.png)
