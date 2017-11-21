@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内非替换元素</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div.wrapper{
+            margin-top:80px;
+            margin-left:80px;
+            background-color:#9deaf1;
+            width:500px;
+        }
+        div strong{
+            padding:50px;
+            margin:50px;
+            border:2px solid green;
+            background-color:#5dc2f6;
+        }
+    </style>
+</head>
+<body>
+<h2>设置上下内边距，设置背景颜色后可以看见内边距区域有增加，对于行内非替换元素，不会影响其行高，不会撑开父元素</h2>
+<div class="wrapper"><strong>hello world</strong></div>
+</body>
+</html>
