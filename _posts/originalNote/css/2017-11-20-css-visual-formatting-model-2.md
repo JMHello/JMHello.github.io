@@ -17,13 +17,24 @@ tag: CSS
 
 ![vfm](/styles/images/css/vfm/vfm-06.png)
 
-## 二、块级元素 --- 水平格式化
+## 二、概念辨析
+
+> * 理解：
+>   * 块容器盒（`Box Container Box`）
+>   * 块级盒（`block-level box`）
+>   * 主要块级盒（`principal block-level box`）
+>   * 块盒（`block boxes`）
+>   * 匿名块盒(`Anonymous block boxes`)
+
+![bfc](/styles/images/css/vfm/bfc/bfc-06.png)
+
+## 三、块级元素 --- 水平格式化
 
 > * 水平格式化的复杂性在于`width`影响的是内容区的宽而不是整个可见的元素框。
 
 > * 要知道什么情况下会隐式地增加`width`值
 
-### 2.1 水平属性
+### 3.1 水平属性
 
 > * 水平格式化有7大属性
 >    * `margin-left`
@@ -36,7 +47,7 @@ tag: CSS
 
 >* 元素包含块的宽度（块元素的父元素的`width`值）= 元素7大水平属性之和
 
-### 2.2 使用auto
+### 3.2 使用auto
 
 > * 7个水平属性中，只有3个属性的值可以设置为`auto`:`margin-left`、`width`、`margin-right`
 > * 水平外边距不会合并
@@ -47,7 +58,7 @@ tag: CSS
 
 ![bfc](/styles/images/css/vfm/bfc/bfc-02.png)
 
-### 2.3 负外边距
+### 3.3 负外边距
 
 > * 7个水平属性的总和 = 父元素的 `width`。只要所有属性 >= 0，元素就不会大于父元素的内容区。
 
@@ -58,11 +69,11 @@ tag: CSS
 
 ![bfc](/styles/images/css/vfm/bfc/bfc-03.png)
 
-## 三、块级元素 --- 垂直格式化
+## 四、块级元素 --- 垂直格式化
 
 > * 一个元素的默认高度由其内容决定。高度还会受其内容宽度的影响：段落越窄，相应就越高。
 
-### 3.1 垂直属性
+### 4.1 垂直属性
 
 > * 垂直格式化有7大属性
 >    * `margin-top`
@@ -75,7 +86,7 @@ tag: CSS
     
 > * 元素包含块的高度（块元素的父元素的`height`值）= 元素7大垂直属性之和
 
-### 3.2 使用auto
+### 4.2 使用auto
 
 > * 7个垂直属性中，只有3个属性的值可以设置为`auto`:`margin-top`、`height`、`margin-bottom`
 > * 元素的上下外边距设置为`auto`，他们会被重置为0，即：元素框没有上下外边距。
@@ -90,7 +101,7 @@ tag: CSS
 
 ![bfc](/styles/images/css/vfm/bfc/bfc-04.png)
 
-### 3.3 百分数高度    
+### 4.3 百分数高度    
 
 > * 一个正常流元素的`height`设置为一个百分数，其值是包含块 `height`的百分比。
 
@@ -110,7 +121,7 @@ tag: CSS
 </div>
 ```
 
-### 3.4 垂直方向间距计算
+### 4.4 垂直方向间距计算
 
 > * 在一个 `BFC` 里，盒子垂直方向的距离由上下 `margin` 决定。
 > * 在同一个 `BFC` 中，垂直方向相接的间距会发生合并。
