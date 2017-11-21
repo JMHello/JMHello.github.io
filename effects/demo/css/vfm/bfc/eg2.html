@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平bfc - 负外边距</title>
+    <style>
+        .container {
+            width: 700px;
+            margin: 10px;
+            border: 1px solid;
+        }
+        .outerBox {
+            height: 100px;
+            background: yellow;
+        }
+        .innerBox {
+            height: 100px;
+            background: red;
+        }
+        .parent {
+            width: 600px;
+            border: 3px solid;
+        }
+        .child1 {
+            width: auto;
+            margin-left: 10px;
+            margin-right: -50px;
+        }
+
+        .child2 {
+            width: auto;
+            margin-left: 10px;
+            margin-right: -50px;
+            border: 3px solid;
+        }
+        .child3 {
+            width: 700px;
+            margin-left: 10px;
+            margin-right: auto; /*实际上，margin-right = -116px*/
+            border: 3px solid;
+        }
+        .child4 {
+            width: 500px;
+            margin-left: -50px;
+            margin-right: 10px;
+            border: 3px solid;
+        }
+    </style>
+</head>
+<body>
+<h1>水平bfc - 负外边距</h1>
+<p>黄色背景是父元素，红色背景是子元素</p>
+<hr>
+<div class="container">
+    <h3>640px是width:auto的实际计算值</h3>
+    <p>10px + 0 + 0 + 640px + 0 + 0 - 50px = 600px</p>
+    <p>
+        .parent { <br>
+        width: 600px; <br>
+        border: 3px solid; <br>
+        }<br>
+        .child1 {<br>
+        width: auto; <br>
+        margin-left: 10px; <br>
+        margin-right: -50px;<br>
+        }
+    </p>
+    <div class="outerBox parent">
+        <div class="innerBox child1"></div>
+    </div>
+</div>
+<div class="container">
+    <h3>634px是width:auto的实际计算值</h3>
+    <p>10px + 3px + 0 + 634px + 0 + 3px - 50px = 600px</p>
+    <p>
+        .parent { <br>
+        width: 600px; <br>
+        border: 3px solid; <br>
+        }<br>
+        .child2 {<br>
+        width: auto; <br>
+        margin-left: 10px; <br>
+        margin-right: -50px;<br>
+        border: 3px solid;<br>
+        }
+    </p>
+    <div class="outerBox parent">
+        <div class="innerBox child2"></div>
+    </div>
+</div>
+<div class="container">
+    <h3>子元素宽度 > 父元素宽度，将margin-right:auto计算为负值</h3>
+    <p>10px + 3px + 0 + 700px + 0 + 3px - 116px = 600px</p>
+    <p>
+        .parent { <br>
+        width: 600px; <br>
+        border: 3px solid; <br>
+        }<br>
+        .child3 {<br>
+        width: 700px;<br>
+        margin-left: 10px;<br>
+        margin-right: auto; /*实际上，margin-right = -116px*/<br>
+        border: 3px solid;<br>
+        }
+    </p>
+    <div class="outerBox parent">
+        <div class="innerBox child3"></div>
+    </div>
+</div>
+<div class="container">
+    <h3>margin-left设置为负值，会让子元素超出父元素本身，甚至超出浏览器窗口本身。</h3>
+    <p>
+        .parent { <br>
+        width: 600px; <br>
+        border: 3px solid; <br>
+        }<br>
+        .child4 {<br>
+        width: 500px;<br>
+        margin-left: -50px;<br>
+        margin-right: 10px; <br>
+        border: 3px solid;<br>
+        }
+    </p>
+    <div class="outerBox parent">
+        <div class="innerBox child4"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bfc - 使用auto</title>
+    <style>
+        .container {
+            width: 600px;
+            border: 1px solid;
+            margin: 10px;
+        }
+        .box {
+            background: blue;
+            height: 100px;
+        }
+        .box1 {
+            width:100px;
+            margin-left: auto; /* 实际上margin-left = 200px*/
+            margin-right: 100px;
+        }
+        .box2 {
+            width:100px;
+            margin-left: 100px;
+            margin-right: 100px; /* 此时 margin-right不是100px，而是200px */
+        }
+        .box3 {
+            margin-left: auto;
+            margin-right: auto;
+            width:100px;
+        }
+        .box4 {
+            width:auto; /* 实际上，width = 600px */
+            margin-left: auto; /* 实际上margin-left = 0 */
+            margin-right: auto; /* 实际上margin-right = 0 */
+        }
+    </style>
+</head>
+<body>
+<h1>bfc - 使用auto</h1>
+<p>7个属性和为600px，无padding和border（主要关注蓝色盒子）</p>
+<hr>
+<div class="container">
+    <h3>三个属性中随意一个设置为`auto`，余下的两个属性设置为特定值，那么设置了`auto`的属性的值就会被指定相应的值，以保证元素框的宽度等于父元素的`width`</h3>
+    <p>
+        .box1 { <br>
+        width:100px; <br>
+        margin-left: auto; /* 实际上margin-left = 400px*/ <br>
+        margin-right: 100px; <br>
+        }
+    </p>
+    <div class="box1 box"></div>
+</div>
+<div class="container">
+    <h3>三个属性都设置为非auto，那么会将margin-right强制为auto</h3>
+    <p>
+        .box2 { <br>
+        width:100px; <br>
+        margin-left: 100px; <br>
+        margin-right: 100px; /* 此时 margin-right不是100px，而是400px */<br>
+        }
+    </p>
+    <div class="box2 box"></div>
+</div>
+<div class="container">
+    <h3>margin-right和margin-left为auto，width为特定值，那么元素会居中</h3>
+    <p>
+        .box3 { <br>
+        width:100px; <br>
+        margin-left: auto; <br>
+        margin-right: auto; <br>
+        }
+    </p>
+    <div class="box3 box"></div>
+</div>
+<div class="container">
+    <h3>三个属性都设置为auto，两个外边距为0，width为600px</h3>
+    <p>
+        .box4 { <br>
+        width:auto; /* 实际上，width = 600px */<br>
+        margin-left: auto; /* 实际上margin-left = 0 */<br>
+        margin-right: auto; /* 实际上margin-right = 0 */<br>
+        }
+    </p>
+    <div class="box4 box"></div>
+</div>
+</body>
+</html>

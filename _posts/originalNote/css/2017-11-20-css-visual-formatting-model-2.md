@@ -13,179 +13,69 @@ tag: CSS
 
 <!-- more -->
 
-## 一、块级元素 --- 水平格式化
+## 一、BFC总结图
 
-* 水平格式化的复杂性在于`width`影响的是内容区的宽而不是整个可见的元素框。
+![vfm](/styles/images/css/vfm/vfm-06.png)
 
-* 要知道什么情况下会隐式地增加`width`值
+## 二、块级元素 --- 水平格式化
 
-### 3.1 水平属性
+> * 水平格式化的复杂性在于`width`影响的是内容区的宽而不是整个可见的元素框。
 
-* 水平格式化有7大属性
-    * `margin-left`
-    * `border-left`
-    * `padding-left`
-    * `width`
-    * `padding-right`
-    * `border-right`
-    * `margin-right`
+> * 要知道什么情况下会隐式地增加`width`值
 
-* 元素包含块的宽度（块元素的父元素的`width`值）= 元素7大水平属性之和
+### 2.1 水平属性
+
+> * 水平格式化有7大属性
+>    * `margin-left`
+>    * `border-left`
+>    * `padding-left`
+>    * `width`
+>    * `padding-right`
+>    * `border-right`
+>    * `margin-right`
+
+>* 元素包含块的宽度（块元素的父元素的`width`值）= 元素7大水平属性之和
+
+### 2.2 使用auto
+
+> * 7个水平属性中，只有3个属性的值可以设置为`auto`:`margin-left`、`width`、`margin-right`
+> * 水平外边距不会合并
+
+> * 点击打开[demo](/effects/demo/css/vfm/bfc/eg1.html)【7个属性和为 `600px`，无`padding`和 `border`】
+
+![bfc](/styles/images/css/vfm/bfc/bfc-01.png)
+
+![bfc](/styles/images/css/vfm/bfc/bfc-02.png)
+
+### 2.3 负外边距
+
+> * 7个水平属性的总和 = 父元素的 `width`。只要所有属性 >= 0，元素就不会大于父元素的内容区。
+
+> * **元素水平属性过分受限的一个规则：** 通过重置`margin-right`以保证元素水平属性的总和 = 父元素的`width`。
+>    * 在此规则下，`margin-right`很容易得到负值
+    
+> * 点击打开[demo](/effects/demo/css/vfm/bfc/eg2.html)
+
+![bfc](/styles/images/css/vfm/bfc/bfc-03.png)
+
+## 三、块级元素 --- 垂直格式化
+
+> * 一个元素的默认高度由其内容决定。高度还会受其内容宽度的影响：段落越窄，相应就越高。
+
+### 3.1 垂直属性
+
+> * 垂直格式化有7大属性
+>    * `margin-top`
+>    * `border-top`
+>    * `padding-top`
+>    * `height`
+>    * `padding-bottom`
+>    * `border-bottom`
+>    * `margin-bottom`
+    
+> * 元素包含块的高度（块元素的父元素的`height`值）= 元素7大垂直属性之和
 
 ### 3.2 使用auto
-
-7个水平属性中，只有3个属性的值可以设置为`auto`:`margin-left`、`width`、`margin-right`
-
-**假设7个属性和为`400px`，无`padding`和`border`**
-
-*  三个属性中随意一个设置为`auto`，余下的两个属性设置为特定值，那么设置了`auto`的属性的值就会被指定相应的值，以保证元素框的宽度等于父元素的`width`。
-
-```css
-p {
-    width:100px;
-    margin-left: auto; /* 实际上margin-left = 200px*/
-    margin-right: 100px;
-}
-```
-
-* 三个属性都设置为非`auto`，那么会将`margin-right`强制为`auto`
-
-```css
-p {
-    width:100px;
-    margin-left: 100px;
-    margin-right: 100px; /* 此时 margin-right不是100px，而是200px */
-}
-```
-
-* `margin-right`和`margin-left`为`auto`，`width`为特定值，那么元素会居中
-
-```css
-p {
-    margin-left: auto;
-    margin-right: auto;
-    width:100px;
-}
-```
-
-* `margin-right`和`margin-left`两个随意一个设置为`auto`，`width`也设置为`auto`，设置为`auto`的外边距强制性为0。
-
-```css
-p {
-    width:auto; /* 实际上，width = 400 - 100 = 300px */
-    margin-left: auto; /* 实际上margin-left = 0 */
-    margin-right: 100px;
-}
-```
-
-* 三个属性都设置为`auto`，两个外边距为0，`width`为400px
-
-```css
-p {
-    width:auto; /* 实际上，width = 400px */
-    margin-left: auto; /* 实际上margin-left = 0 */
-    margin-right: auto; /* 实际上margin-right = 0 */
-}
-```
-
-> 水平外边距不会合并
-
-### 3.3 负外边距
-
-基本`html`格式：
-
-```html
-<div class="parent">
-    <p class="child"></p>
-</div>
-```
-
-
-
-> 7个水平属性的总和 = 父元素的 `width`。只要所有属性 >= 0，元素就不会大于父元素的内容区。
-
-
-* `10px + 0 + 0 + 440px + 0 + 0 - 50px = 400px`
-    * 看上去，子元素比父元素还宽：`440px`是`width:auto`的实际计算值
-    
-```css
-.parent {
-    width: 400px;
-    border: 3px solid;
-}
-.child {
-    width: auto;
-    margin-left: 10px;
-    margin-right: -50px;
-}
-```
-
-* `10px + 3px + 0 + 434px + 0 + 3px - 50px = 400px`
-
-```css
-.parent {
-    width: 400px;
-    border: 3px solid;
-}
-.child {
-    width: auto;
-    margin-left: 10px;
-    margin-right: -50px;
-    border: 3px solid;
-}
-```
-
-* `10px + 3px + 0 + 500px + 0 + 3px - 116px = 400px`
-    * 将`margin-right:auto`计算为负值【在元素不能比其包含块更宽的情况下会执行】
-* **元素水平属性过分受限的一个规则：** 通过重置`margin-right`以保证元素水平属性的总和 = 父元素的`width`。
-    * 在此规则下，`margin-right`很容易得到负值
-    
-```css
-.parent {
-    width: 400px;
-    border: 3px solid;
-}
-.child {
-    width: 500px;
-    margin-left: 10px;
-    margin-right: auto; /*实际上，margin-right = -116px*/
-    border: 3px solid;
-}
-```
-
-* `margin-left`设置为负值，会让`p`超出`div`，甚至超出浏览器窗口本身。
-
-```css
-.parent {
-    width: 400px;
-    border: 3px solid;
-}
-.child {
-    width: 500px;
-    margin-left: -50px;
-    margin-right: 10px; 
-    border: 3px solid;
-}
-```
-
-## 四、块级元素 --- 垂直格式化
-
-> 一个元素的默认高度由其内容决定。高度还会受其内容宽度的影响：段落越窄，相应就越高。
-
-### 4.1 垂直属性
-
-* 垂直格式化有7大属性
-    * `margin-top`
-    * `border-top`
-    * `padding-top`
-    * `height`
-    * `padding-bottom`
-    * `border-bottom`
-    * `margin-bottom`
-    
-* 元素包含块的高度（块元素的父元素的`height`值）= 元素7大垂直属性之和
-
-### 4.2 使用auto
 
 * 7个垂直属性中，只有3个属性的值可以设置为`auto`:`margin-top`、`height`、`margin-bottom`
     * 元素的上下外边距设置为`auto`，他们会被重置为0，即：元素框没有上下外边距。
@@ -219,7 +109,7 @@ p {
 
 ![relationship-map]({{ '/styles/images/css/box/box-03.png' | prepend: site.baseurl }})
 
-### 4.3 百分数高度    
+### 3.3 百分数高度    
 
 * 一个正常流元素的`height`设置为一个百分数，其值是包含块 `height`的百分比。
 
@@ -239,7 +129,7 @@ p {
 </div>
 ```
 
-### 4.4 合并垂直外边距
+### 3.4 合并垂直外边距
 
 例1：
 

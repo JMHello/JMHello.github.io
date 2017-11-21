@@ -8,7 +8,7 @@ tag: CSS
 * content
 {:toc}
 
-> * 其他链接：
+> * 参考资料：
 >   * [替换元素和非替换元素](http://blog.csdn.net/gr11222/article/details/52071168)
 
 
@@ -69,8 +69,8 @@ tag: CSS
     
 ### 2.5 块级元素
 
+> * 当元素的 `CSS` 属性 `display` 的计算值为 `block`，`list-item`，`table`，`flex` 或 `grid` 时，它是块级元素。
 > * 块级元素在正常流中，会在其框前和框后生成“换行”，因此，处于正常流中的块级元素会垂直摆放。
->    * 块级元素有：`p`、`div`
 
 ![relationship-map]({{ '/styles/images/css/box/box-01.png' | prepend: site.baseurl }})
 
