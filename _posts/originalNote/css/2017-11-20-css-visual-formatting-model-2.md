@@ -8,7 +8,8 @@ tag: CSS
 * content
 {:toc}
 
-其他链接：
+> * 参考资料：
+>   * [CSS深入理解流体特性和BFC特性下多栏自适应布局](http://www.zhangxinxu.com/wordpress/2015/02/css-deep-understand-flow-bfc-column-two-auto-layout/)
 
 
 <!-- more -->
@@ -132,3 +133,21 @@ tag: CSS
 > * 点击打开[demo](/effects/demo/css/vfm/bfc/eg4.html)
 
 ![bfc](/styles/images/css/vfm/bfc/bfc-05.png)
+
+## 五、创建BFC
+
+> * 点击打开[demo](/effects/demo/css/vfm/bfc/eg5.html)
+
+![bfc](/styles/images/css/vfm/bfc/bfc-07.png)
+
+## 六、BFC 的应用
+
+### 6.1 应用
+
+> * 点击打开[demo](/effects/demo/css/vfm/bfc/eg6.html)
+
+![bfc](/styles/images/css/vfm/bfc/bfc-08.png)
+
+### 6.2  BFC特性下多栏自适应布局的效果展示
+
+![bfc](/effects/images/css/vfm/vfm-01.gif)

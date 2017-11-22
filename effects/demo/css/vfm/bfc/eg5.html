@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建bfc</title>
+    <style>
+        .container {
+            width: 650px;
+            border: 1px solid;
+            margin: 10px;
+        }
+        .box {
+            background: red;
+            color: white;
+        }
+        .box:nth-of-type(1) {
+            margin-bottom: 10px;
+        }
+        .test1 .box:nth-of-type(2) {
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .test2 .box:nth-of-type(2) {
+            margin-top: 10px;
+            float: left;
+        }
+        .test3 .box:nth-of-type(2) {
+            margin-top: 10px;
+            overflow: auto;
+        }
+        .test4 .box:nth-of-type(2) {
+            margin-top: 10px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<h1>创建bfc</h1>
+<div class="container test1">
+    <h3>创建bfc - 内联块 (元素具有 display: inline-block)</h3>
+    <div class="box">div1 --- margin-bottom: 10px;</div>
+    <div class="box">div2 --- margin-top: 10px; display: inline-block;</div>
+    <hr>
+    <p>div2成为内联块，所以div2创建了一个新的bfc，div1与div2不同属于同一个bfc，所以垂直margin无法合并</p>
+</div>
+<div class="container test2">
+    <h3>创建bfc - 浮动元素 (元素的 float不是 none)</h3>
+    <div class="box">div1 --- margin-bottom: 10px;</div>
+    <div class="box">div2 --- margin-top: 10px; float: left;</div>
+    <div style="clear: both"></div>
+    <hr>
+    <p>div2成为浮动元素，所以div2创建了一个新的bfc，div1与div2不同属于同一个bfc，所以垂直margin无法合并</p>
+</div>
+<div class="container test4">
+    <h3>创建bfc - 定位元素 (元素具有 position为 absolute 或 fixed)</h3>
+    <div class="box">div1 --- margin-bottom: 10px;</div>
+    <div class="box">div2 --- margin-top: 10px; position: absolute;</div>
+    <br>
+    <br>
+    <hr>
+    <p>div2成为定位元素，所以div2创建了一个新的bfc，div1与div2不同属于同一个bfc，所以垂直margin无法合并</p>
+</div>
+<div class="container test3">
+    <h3>创建bfc - 具有 overflow 且值不是 visible 的块元素（错误）</h3>
+    <div class="box">div1 --- margin-bottom: 10px;</div>
+    <div class="box">div2 --- margin-top: 10px; overflow: auto;
+        <div style="height:100px; float:left; background: blue">div3 --- float:left;</div>
+        <div style="height:100px; background: green; overflow: hidden">div4 --- </div>
+    </div>
+    <hr>
+    <p>div2设置了overflow值，但是，并不像网上各篇文章说得一样，生成bfc</p>
+</div>
+
+</body>
+</html>

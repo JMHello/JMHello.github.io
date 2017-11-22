@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bfc 的应用</title>
+    <style>
+        .container {
+            width: 650px;
+            border: 1px solid;
+            margin: 10px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        .container .box:nth-of-type(1) {
+            background: red;
+        }
+        .container .box:nth-of-type(2) {
+            background: blue;
+        }
+        .container .box:nth-of-type(3) {
+            background: yellow;
+        }
+
+        .test1 .box-wrapper {
+            border: 5px solid green;
+            margin: 5px;
+        }
+        .test2 .box:nth-of-type(2) {
+            width: 200px;
+        }
+        .wrap-overflow {
+            overflow: auto;
+        }
+        .fl {
+            float: left;
+        }
+        .test3 .box-wrapper {
+            border: 1px solid;
+            resize: both;
+            margin: 10px;
+        }
+        .test3 .box-wrapper img{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>bfc 的应用</h1>
+<div class="container test1">
+    <h2>bfc 的应用 - 清除浮动</h2>
+    <p>高度塌陷问题：在通常情况下父元素的高度会被子元素撑开，而在这里因为其子元素为浮动元素所以父元素发生了高度坍塌，上下边界重合。</p>
+    <div>
+        <h3>未清浮动前 - 父元素发生了高度坍塌</h3>
+        <div class="box-wrapper">
+            <div class="box fl">div1</div>
+            <div class="box fl">div2</div>
+            <div class="box fl">div3</div>
+        </div>
+        <div style="clear:both;"></div>
+        <h3>创建bfc - 清浮动后 - 父元素的高度会被子元素撑开</h3>
+        <div class="box-wrapper wrap-overflow">
+            <div class="box fl">div1</div>
+            <div class="box fl">div2</div>
+            <div class="box fl">div3</div>
+        </div>
+    </div>
+</div>
+
+<div class="container test2">
+    <h2>bfc 的应用 - 不被浮动元素覆盖 </h2>
+    <p>div浮动兄弟遮盖问题：由于左侧块级元素发生了浮动，所以和右侧未发生浮动的块级元素不在同一层内，所以会发生div遮挡问题</p>
+    <div>
+        <h3>div1左浮动，div2无浮动，div2被div1遮挡了部分内容</h3>
+        <div class="box-wrapper">
+            <div class="box fl">div1</div>
+            <div class="box">div2</div>
+        </div>
+        <div style="clear:both;"></div>
+        <h3>创建bfc - 解决div浮动兄弟元素被遮挡问题</h3>
+        <div class="box-wrapper wrap-overflow">
+            <div class="box fl">div1</div>
+            <div class="box wrap-overflow">div2 --- overflow: hidden;</div>
+        </div>
+    </div>
+</div>
+
+<div class="container test3">
+    <h2>bfc 的应用 - BFC特性下多栏自适应布局 </h2>
+
+    <div class="box-wrapper wrap-overflow">
+        <img src="timg.gif" width="40%" class="fl">
+        <div class="wrap-overflow">块格式化上下文对于定位很重要。定位和清除浮动的样式规则只适用于处于同一块格式化上下文内的元素。浮动不会影响其它块格式化上下文中元素的布局，并且清除浮动只能清除同一块格式化上下文中在它前面的元素的浮动。</div>
+    </div>
+    <hr>
+    <p>
+        图片：float: left;margin-right: 10px;<br>
+        文本：无浮动；overflow: auto;
+    </p>
+    <hr>
+    <h3>BFC自适应布局优势</h3>
+    <ul>
+        <li>自适应内容由于封闭，更健壮，容错性强。比方说，内部clear:both不会与兄弟float产生矛盾。而纯流体布局，clear:both会让后面内容无法和float元素在一个水平上，产生布局问题。</li>
+        <li>自适应内容自动填满浮动以为区域，无需关心浮动元素宽度，可以整站大规模应用。而纯流体布局，需要大小不确定的margin/padding等值撑开合适间距，无法CSS组件化。</li>
+    </ul>
+</div>
+</body>
+</html>
