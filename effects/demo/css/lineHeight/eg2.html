@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内级元素垂直对齐方式（vertical-align）</title>
+    <style>
+        .wrapper {
+            background: #eeeeee;
+        }
+        .wrapper .img {
+            width: 100px;
+        }
+        .test2 .img {
+            vertical-align: middle;
+        }
+        .test3 .img {
+            vertical-align: text-top;
+        }
+        .test4 .img {
+            vertical-align: text-bottom;
+        }
+        .test5 .img {
+            vertical-align: top;
+        }
+        .test6 .img {
+            vertical-align: bottom;
+        }
+        .test7 .img {
+            vertical-align: 50%;
+        }
+        .test8 .sub {
+            vertical-align: sub;
+        }
+        .test8 .sup {
+            vertical-align: sub;
+        }
+    </style>
+</head>
+<body>
+<h1>行内级元素垂直对齐方式（vertical-align）</h1>
+<div class="test1">
+    <h3>baseline (默认对齐)： 小写字母x的最底线</h3>
+    <p class="wrapper"><img src="timg.gif" class="img"> <span>Xx 中文 Xx</span> <img src="b.png" class="img"> <span>gf</span> <img src="timg.gif" class="img"> <span>中耐高温</span></p>
+</div>
+<div class="test2">
+    <h3>middle： 小写字母x的中线</h3>
+    <p class="wrapper"><img src="timg.gif" class="img"> <span>Xx 中文 Xx</span> <img src="b.png" class="img"> <span>gf</span> <img src="timg.gif" class="img"> <span>中耐高温</span></p>
+</div>
+<div class="test3">
+    <h3>text-top：行盒 font-size 大小所组成的内容区域顶部</h3>
+    <p>行内盒 “gf” 的 font-size 大小（继承自父元素）与行盒的 font-size 大小一样，所以其内容区域与行盒 font-size 大小所组成的内容区域一样。</p>
+    <p class="wrapper"><img src="timg.gif" class="img"> <span>Xx 中文 Xx</span> <img src="b.png" class="img"> <span>gf</span> <img src="timg.gif" class="img"> <span>中耐高温</span></p>
+</div>
+<div class="test4">
+    <h3>text-bottom：行盒 font-size 大小所组成内容区域的底部</h3>
+    <p class="wrapper"><img src="timg.gif" class="img"> <span>Xx 中文 Xx</span> <img src="b.png" class="img"> <span>gf</span> <img src="timg.gif" class="img"> <span>中耐高温</span></p>
+</div>
+<div class="test5">
+    <h3>top：行盒的最高线</h3>
+    <p class="wrapper"><img src="timg.gif" class="img"> <span>Xx 中文 Xx</span> <img src="b.png" class="img"> <span>gf</span> <img src="timg.gif" class="img"> <span>中耐高温</span></p>
+</div>
+<div class="test6">
+    <h3>bottom：行盒的最低线</h3>
+    <p class="wrapper"><img src="timg.gif" class="img"> <span>Xx 中文 Xx</span> <img src="b.png" class="img"> <span>gf</span> <img src="timg.gif" class="img"> <span>中耐高温</span></p>
+</div>
+<div class="test7">
+    <h3>length / %：按照字母x的基线（baseline）偏移设置的数值</h3>
+    <p class="wrapper"><img src="timg.gif" class="img"> <span>Xx 中文 Xx</span> <img src="b.png" class="img"> <span>gf</span> <img src="timg.gif" class="img"> <span>中耐高温</span></p>
+</div>
+<div class="test8">
+    <h3>sub / super：分别对齐 sub 标签 和 sup 标签的 baseline</h3>
+    <p class="wrapper"><img src="timg.gif" class="img"> <span>Xx 中文 Xx</span><span class="sub">sub</span> <img src="b.png" class="img"> <span>gf</span><span class="sup">sup</span> <img src="timg.gif" class="img"> <span>中耐高温</span></p>
+</div>
+</body>
+</html>

@@ -2,22 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>深入理解行高</title>
+    <title>行盒（line box）高度</title>
     <style>
         .wrapper {
+            color: white;
             background: #ccc;
         }
-        .wrapper span {
-            font-size: 100px;
-            line-height: 2;
-            background: #999;
+        .wrapper .span {
+            background: blue;
         }
-
+        .wrapper .strong {
+            background: green;
+        }
+        .wrapper .em {
+            background: red;
+        }
+        .wrapper .img {
+            width: 100px;
+            display: inline-block;
+        }
+        .test2 .strong {
+            font-size: 40px;
+        }
+        .test3 .strong {
+            padding: 10px;
+        }
+        .test4 .strong {
+            border: 10px solid orange;
+        }
+        .test5 .strong {
+            margin: 10px;
+        }
+        .test6 .strong {
+            line-height: 3;
+        }
+        .test7 .wrapper{
+            line-height: 0.8;
+        }
+        .test9 .img {
+            padding: 10px;
+        }
+        .test10 .img {
+            border: 10px solid orangered;
+        }
+        .test11 .img {
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
-<div class="wrapper">
-    <span>中文abcdglx字符</span><br>
+<h1>行内级元素的高度</h1>
+<ul>
+    <li>行盒的高度由其内容最高的一个决定。</li>
+    <li>如果都是纯 inline 元素，则其高度由最高的 line-height 计算值决定；</li>
+    <li>如果包括了 inline-block，则 inline-block 的 margin（上下），border（上下），padding（上下），height 都会影响整体行盒的高度</li>
+</ul>
+<hr>
+<div class="test1">
+    <h3>默认行 - inline</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em></p>
+</div>
+<div class="test2">
+    <h3>inline + 设置 font-size（tips: 内容区高度 由 font-size 决定）</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em></p>
+</div>
+<div class="test3">
+    <h3>inline + 设置 padding</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em></p>
+</div>
+<div class="test4">
+    <h3>inline + 设置 border</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em></p>
+</div>
+<div class="test5">
+    <h3>inline + 设置 margin</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em></p>
+</div>
+<hr>
+<hr>
+<div class="test6">
+    <h3>设置 line-height 大于 font-size</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em></p>
+</div>
+<div class="test7">
+    <h3>设置 line-height 小于 font-size</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em></p>
+</div>
+<hr>
+<hr>
+<div class="test8">
+    <h3>包括 inline-block</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em> <img class="img" src="timg.gif"></p>
+</div>
+<div class="test9">
+    <h3>inline-block + padding</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em> <img class="img" src="timg.gif"></p>
+</div>
+<div class="test10">
+    <h3>inline-block + border</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em> <img class="img" src="timg.gif"></p>
+</div>
+<div class="test11">
+    <h3>inline-block + margin</h3>
+    <p class="wrapper"><span class="span">span 元素</span> <strong class="strong">strong 元素</strong> <em class="em">em 元素</em> <img class="img" src="timg.gif"></p>
 </div>
 </body>
 </html>

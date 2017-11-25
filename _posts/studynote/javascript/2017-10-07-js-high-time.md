@@ -13,7 +13,7 @@ tag: javascript
 
 * 相关链接
     + [javascript - 定时器]({{ '/2017/10/06/js-time' | prepend: site.baseurl }})
-    + javascript - 高级定时器2 - throttle、debounce、immediate({{ '/2017/10/15/js-high-time2' | prepend: site.baseurl }})
+    + [javascript - 高级定时器2 - throttle、debounce、immediate]({{ '/2017/10/15/js-high-time2' | prepend: site.baseurl }})
 <!-- more -->
 
 ## 一、简述定时器的机制
