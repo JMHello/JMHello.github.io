@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多行文字的垂直居中</title>
+    <style>
+        .wrapper {
+            background: #eeeeee;
+        }
+        .wrapper p {
+            font-size: 20px;
+            color: white;
+            background: red;
+        }
+        .wrapper .pad {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .wrapper:nth-of-type(2) p{
+            display: inline-block;
+            line-height: 60px;
+        }
+        .wrapper .hei {
+            display: inline-block;
+            line-height: 1.5em;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<h1>多行文字的垂直居中</h1>
+<div class="wrapper">
+    <h3>方法1：padding （padding-top: 20px; padding-bottom: 20px;）  </h3>
+    <p class="pad"><span>Xxxx你好啊！欢迎来到王者荣耀~~~~~~·<br>甄姬猴犀利嘎！！！</span></p>
+</div>
+<div class="wrapper">
+    <h3>方法2：line-height</h3>
+    <p><span class="hei">Xxxx你好啊！欢迎来到王者荣耀~~~~~~·<br>甄姬猴犀利嘎！！！</span></p>
+</div>
+</body>
+</html>

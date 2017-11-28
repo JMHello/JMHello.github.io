@@ -24,12 +24,15 @@ tag: CSS
 
 ## 二、相关概念的理解
 
-
 > * 概念展示图
 
 ![line-height](/styles/images/css/lineHeight/lineHeight-01.png)
 
 ## 三、行盒高度
+
+> * 行盒的高度由其内容最高的一个决定。
+> * 如果都是纯 `inline` 元素，则其高度由最高的 `line-height` 计算值决定；
+> * 如果包括了 `inline-block`，则 `inline-block` 的 `margin`（上下），`border`（上下），`padding`（上下），`height` 都会影响整体行盒的高度
 
 > * 点击打开[demo](/effects/demo/css/lineHeight/eg1.html)
 
@@ -54,3 +57,15 @@ tag: CSS
 > * 点击打开[demo](/effects/demo/css/lineHeight/eg2.html)
 
 ![line-height](/styles/images/css/lineHeight/lineHeight-06.png)
+
+## 五、应用
+
+### 5.1 单行文字的垂直居中对齐
+
+> * 点击打开[demo](/effects/demo/css/lineHeight/eg3.html)
+
+![line-height](/styles/images/css/lineHeight/lineHeight-07.png)
+
+### 5.2 多行文字的垂直居中
+
+### 5.3 图片的垂直居中
