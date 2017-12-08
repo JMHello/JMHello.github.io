@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页插件 - 实战</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+<ul id="list" style="width: 400px; margin: 10px auto"></ul>
+<div id="pag"></div>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./test/pagination.test.js"></script>
+<script>
+    pagination({
+      wrapper: document.getElementById('pag'),
+      ajax: ajax
+    })
+</script>
+</body>
+</html>
