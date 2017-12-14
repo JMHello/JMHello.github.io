@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数值和布尔值的解构赋值</title>
+</head>
+<body>
+<script>
+  // 数值和布尔值的包装对象都有toString属性，因此变量s都能取到值。
+   let {toString: s1} = 123;
+   console.log(s1 === Number.prototype.toString); // true
+
+   let {toString: s2} = true;
+   console.log(s2 === Boolean.prototype.toString); //true
+
+   // Cannot destructure property `prop` of 'undefined' or 'null'.
+   let {prop: x} = undefined;
+   let {prop: y} = null;
+</script>
+</body>
+</html>

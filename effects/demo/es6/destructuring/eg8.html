@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的解构赋值</title>
+</head>
+<body>
+<script>
+   // p是模式，不是变量，因此不会被赋值
+   let obj = {
+     p: [
+       'name',
+       {age: 1}
+     ]
+   };
+
+   let {p: [x, {y}]} = obj;
+   let {p: [b, {age}]} = obj;
+   console.log(x, y, age); // name undefined 1
+   console.log(p); //  Uncaught ReferenceError: p is not defined
+
+   // 如果p也要作为变量赋值，可以写成下面这样。
+   /*
+   let {p, p: [c, {age}]} = obj;
+   console.log(p); // ["name", {age: 1}]
+   console.log(c, {age}); // name {age: 1}
+   */
+</script>
+</body>
+</html>

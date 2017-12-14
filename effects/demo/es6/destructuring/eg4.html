@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的解构赋值 - 默认值</title>
+</head>
+<body>
+<script>
+    let [foo = true] = [];
+    console.log(foo); // true
+
+    let [x, y = 1] = [2];
+    console.log(x, y); // 2 1
+
+    let [c, d = 3] = [4, undefined];
+    console.log(c, d) // 4 3
+
+    let [e, f = 3] = [5, null];
+    console.log(e, f) // 5 null
+</script>
+</body>
+</html>

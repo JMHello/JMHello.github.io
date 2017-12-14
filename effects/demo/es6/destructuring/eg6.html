@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的解构赋值 - 默认值</title>
+</head>
+<body>
+<script>
+   let [x = 1, y = x] = [];
+   console.log(x, y); // 1 1
+
+   let [a = b, b = 1] = [];
+   console.log(a, b); // b is not defined -- 因为x用到默认值y时，y还没有声明。
+</script>
+</body>
+</html>

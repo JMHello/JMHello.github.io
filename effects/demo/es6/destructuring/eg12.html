@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的解构赋值</title>
+</head>
+<body>
+<script>
+    let {x = 3} = {x: undefined};
+    console.log(x); // 3
+
+    // y属性等于null，就不严格相等于undefined，导致默认值不会生效。
+    let {y = 4} = {y: null};
+    console.log(y); // null
+
+    // 解构失败，变量的值等于undefined。
+    let {eg} = {bar: 'baz'};
+    console.log(eg);
+
+    // 等号左边对象的foo属性，对应一个子对象。
+    // 该子对象的bar属性，解构时会报错 -- Cannot destructure property `bar` of 'undefined' or 'null'.
+    // 原因：因为foo这时等于undefined，再取子属性就会报错。
+    // let {foo: {bar}} = {baz: 'baz'}; // 错误写法
+    let {foo: {bar}} = {foo: {bar: 'bar'}}; // 正确写法
+    console.log(bar); // 'bar'
+</script>
+</body>
+</html>

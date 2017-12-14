@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的解构赋值</title>
+</head>
+<body>
+<script>
+  let obj = {};
+  let arr = [];
+
+  // 省略括号会报错 - Uncaught SyntaxError: Unexpected token
+  // {foo: obj.prop, bar: arr[0]} = {foo: 123, bar: true}
+  // 正确的写法----将整个解构赋值语句，放在一个圆括号里面，就可以正确执行。
+  ({foo: obj.prop, bar: arr[0]} = {foo: 123, bar: true})
+  console.log(obj); // {prop: 123}
+  console.log(arr); // [true]
+
+  /*
+  因为 JavaScript 引擎会将`{x}`理解成一个代码块，从而发生语法错误。
+  只有不将大括号写在行首，避免 JavaScript 将其解释为代码块，才能解决这个问题。
+  */
+
+  // 古怪写法
+  ({} = [true, false]);
+  ({} = 'abc');
+  ({} = []);
+</script>
+</body>
+</html>

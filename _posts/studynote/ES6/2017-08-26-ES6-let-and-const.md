@@ -16,7 +16,7 @@ tag: ES6
 
 ### 1.1 let 的基本用法
 
-* let用于所声明的变量。这个变量只在let命令所在的代码块内有效。
+> * let用于所声明的变量。这个变量只在let命令所在的代码块内有效。
 
 ```js
 {
@@ -207,7 +207,7 @@ function func(arg) {
 const PI = 3.1415;
 PI // 3.1415
 
-PI = 3; // TypeError: Assignment to constant variable. 表明改变常量的值会报错。
+PI = 3; destructuring
 ```
 
 * const声明的变量不得改变值。即：**对于const来说，只声明不赋值，就会报错。**

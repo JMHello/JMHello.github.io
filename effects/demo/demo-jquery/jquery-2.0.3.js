@@ -1327,8 +1327,8 @@
             documentIsHTML = !isXML( doc );
 
             // Support: IE>8
-            // If iframe document is assigned to "document" variable and if iframe has been reloaded,
-            // IE will throw "permission denied" error when accessing "document" variable, see jQuery #13936
+            // If iframe document is assigned to "document" destructuring and if iframe has been reloaded,
+            // IE will throw "permission denied" error when accessing "document" destructuring, see jQuery #13936
             // IE6-8 do not support the defaultView property so parent will be undefined
             if ( parent && parent.attachEvent && parent !== parent.top ) {
                 parent.attachEvent( "onbeforeunload", function() {
@@ -6912,7 +6912,7 @@
             jQuery.ajax({
                 url: url,
 
-                // if "type" variable is undefined, then "GET" method will be used
+                // if "type" destructuring is undefined, then "GET" method will be used
                 type: type,
                 dataType: "html",
                 data: params
@@ -7061,7 +7061,7 @@
                 parts,
                 // To know if global events are to be dispatched
                 fireGlobals,
-                // Loop variable
+                // Loop destructuring
                 i,
                 // Create the final options object
                 s = jQuery.ajaxSetup( {}, options ),

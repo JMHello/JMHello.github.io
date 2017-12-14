@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的解构赋值</title>
+</head>
+<body>
+<script>
+   let node = {
+     loc: {
+       start: {
+         line: 1,
+         column: 5
+       }
+     }
+   }
+
+   // 分别对loc、start、line三个属性的解构赋值
+   // 最后一次对line属性的解构赋值之中，只有line是变量，loc和start都是模式，不是变量。
+   let {loc, loc: {start}, loc: {start: {line}} } = node;
+   console.log(loc); // {start: {line: 1, column: 5}}
+   console.log(start); // {line: 1, column: 5}
+   console.log(line); // 1
+</script>
+</body>
+</html>

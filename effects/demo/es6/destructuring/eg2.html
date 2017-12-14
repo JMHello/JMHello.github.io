@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的解构赋值</title>
+</head>
+<body>
+<script>
+   // 解构失败
+   let [foo] = [];
+   let [bar, baz] = [1];
+   console.log(foo, bar, baz) // undefined 1 undefined
+
+   // 不完全解构
+   let [x, y] = [1, 2, 3];
+   console.log(x, y); // 1 2
+   let [a, [b], d] = [1, [2,3], 4];
+   console.log(a, b, d); // 1 2 4
+</script>
+</body>
+</html>

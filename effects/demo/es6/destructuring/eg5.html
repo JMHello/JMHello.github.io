@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的解构赋值 - 默认值</title>
+</head>
+<body>
+<script>
+    function f () {
+      return 2;
+    }
+    // 因为x能取到值，所以函数f根本不会执行。
+    let [x = f()] = [1];
+
+    // 因为y不能取到值，所以函数f会执行。
+    let [y = f()] = [undefined];
+
+    console.log(x, y); // 1 2
+</script>
+</body>
+</html>
