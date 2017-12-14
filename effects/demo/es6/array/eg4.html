@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的扩展</title>
+</head>
+<body>
+<div></div>
+<div></div>
+<script>
+    // 例1：将类数组转化为真正的数组
+    let nodeLsit = document.querySelectorAll('div');
+    console.log(nodeLsit); // 还是 NodeList
+    console.log([...nodeLsit]); // 变成 Array
+
+    // 例2：没有部署 Iterator 接口，扩展运算符报错
+    // 使用`Array.from`方法将`arrayLike`转为真正的数组
+    let arrayLike = {
+      '0': 'a',
+      '1': 'b',
+      '2': 'c',
+      length: 3
+    };
+    // 报错：TypeError: arrayLike is not iterable
+    // console.log([...arrayLike])
+    console.log(Array.from(arrayLike)); // ["a", "b", "c"]
+</script>
+</body>
+</html>

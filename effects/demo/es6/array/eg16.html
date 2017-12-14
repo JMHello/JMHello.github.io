@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的扩展 - 数组的空位</title>
+</head>
+<body>
+<script>
+    // Array(3)返回一个具有3个空位的数组
+    console.log(Array(3)); // [, , ,]
+
+    console.log(0 in [undefined, undefined, undefined]); // true
+    console.log(0 in [, , ,]); // false
+</script>
+</body>
+</html>

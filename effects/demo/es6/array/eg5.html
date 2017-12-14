@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的扩展</title>
+</head>
+<body>
+<script>
+    // 例1：Map
+    let map = new Map(
+      [
+        [1, 'one'],
+        [2, 'two'],
+        [3, 'three'],
+      ]
+    )
+    console.log([...map.keys()]) // [1, 2, 3]
+
+    // 例2 Generator - 执行后返回的是一个遍历器对象
+    // 对这个遍历器对象执行扩展运算符，就会将内部遍历得到的值，转为一个数组
+    let go = function* () {
+      yield 1;
+      yield 2;
+      yield 3;
+    }
+    console.log(...go()); // 1 2 3
+</script>
+</body>
+</html>

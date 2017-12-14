@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的扩展</title>
+</head>
+<body>
+<script>
+    const [first, ...rest1] = [1, 2, 3, 4, 5];
+    console.log(first, rest1); // 1 [2, 3, 4, 5]
+
+    const [second, ...rest2] = [];
+    console.log(second, rest2); // undefined []
+
+    const [third, ...rest3] = ['foo'];
+    console.log(third, rest3); // foo []
+
+    // 报错： Rest element must be last element
+    // const [...rest4, last] = [1, 2, 3, 4, 5];
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的扩展</title>
+</head>
+<body>
+<script>
+    // 例1：
+    let arrayLike = {
+      '0': 'a',
+      '1': 'b',
+      '2': 'c',
+      length: 3
+    };
+    // es5
+    console.log([].slice.call(arrayLike)) // ["a", "b", "c"]
+    // es6
+    console.log(Array.from(arrayLike)) // ["a", "b", "c"]
+
+    // 如果参数是一个真正的数组，Array.from会返回一个一模一样的新数组
+    console.log(Array.from([1, 2, 3])); // [1, 2, 3]
+</script>
+</body>
+</html>

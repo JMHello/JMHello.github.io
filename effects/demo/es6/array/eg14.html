@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的扩展 - entries()，keys() 和 values()</title>
+</head>
+<body>
+<script>
+    let arr = ['a', 'b', 'c'];
+
+    // keys()
+    for (let index of arr.keys()) {
+      console.log(`index:${index}`);
+      // index:0
+      // index:1
+      // index:2
+    }
+
+    // values() -- 大多数浏览器暂时不兼容 - 报错
+//    for (let ele of arr.values()) {
+//      console.log(`value:${ele}`);
+//    }
+
+    for (let [index, ele] of arr.entries()) {
+      console.log(`index:${index}, value:${ele}`)
+      // index:0, value:a
+      // index:1, value:d
+      // index:2, value:c
+    }
+
+    // 如果不使用for...of循环，可以手动调用遍历器对象的next方法，进行遍历。
+    let letter = ['a', 'b', 'c'];
+    let entries = letter.entries();
+    console.log(entries.next().value); // [0, 'a']
+    console.log(entries.next().value); // [1, 'b']
+    console.log(entries.next().value); // [2, 'c']
+</script>
+</body>
+</html>

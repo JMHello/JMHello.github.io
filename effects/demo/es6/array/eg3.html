@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的扩展</title>
+</head>
+<body>
+<script>
+    // 例1
+    console.log([...'hello']); // ["h", "e", "l", "l", "o"]
+
+    // 例2
+    function getLength (str) {
+      return [...str].length;
+    }
+
+    let str = 'x\uD83D\uDE80y'
+    console.log(getLength(str)) // 3
+    console.log(str.length); // 4
+
+    // 如果不用扩展运算符，字符串的reverse操作就不正确。
+    console.log(str.split('').reverse().join()) // y,�,�,x
+    console.log([...str].reverse().join()); // y,🚀,x
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的扩展 - 数组的空位</title>
+</head>
+<body>
+<script>
+    // forEach
+    [, 'a'].forEach((v, i) => {
+      console.log(v, i);
+      // a 1
+    })
+
+    // filter
+    const result1 = ['b', , 'a'].filter((v, i) => {
+       return true;
+    });
+    console.log(result1); //  ["b", "a"]
+
+    // every
+    const result2 = [, 'a'].every((x) => {
+      return x === 'a';
+    })
+    console.log(result2); // true
+
+    // some
+    const result3 = [, 'a'].some((x) => {
+      return x !== 'a';
+    })
+    console.log(result3); // false
+
+    // map
+    const result4 = [, 'a'].map((x) => {
+      return 1;
+    })
+    console.log(result4); // [, 1]
+
+    // join
+    console.log([, 'a', undefined, null].join('#')); // #a##
+
+    // toString()
+    console.log([, 'a', undefined, null].toString()); // ,a,,
+</script>
+</body>
+</html>

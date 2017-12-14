@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的扩展 - fill()</title>
+</head>
+<body>
+<script>
+    let result1 = ['a', 'b', 'c'].fill(7);
+    console.log(result1); // [7, 7, 7]
+
+    let result2 = new Array(4).fill(3);
+    console.log(result2); // [3, 3, 3, 3]
+
+    // 从1号位开始，向原数组填充7，到2号位之前结束
+    let result3 = ['a', 'b', 'c'].fill(7, 1, 2);
+    console.log(result3); // ["a", 7, "c"]
+</script>
+</body>
+</html>
