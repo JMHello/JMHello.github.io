@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的扩展 - name</title>
+</head>
+<body>
+<script>
+    // 例1
+    console.log(new Function().name); // anonymous
+
+    let doSomething = function () {}
+    console.log(doSomething.bind().name); // bound doSomething
+
+    // 例2 - Symbol值
+    // key1对应的 Symbol 值有描述，key2没有
+    const key1 = Symbol('description');
+    const key2 = Symbol();
+    let obj = {
+      [key1] () {},
+      [key2] () {}
+    };
+    console.log(obj[key1].name); // [description]
+    console.log(obj[key2].name); // ''
+</script>
+</body>
+</html>

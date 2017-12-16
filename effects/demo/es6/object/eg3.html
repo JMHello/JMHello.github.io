@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的扩展 - name</title>
+</head>
+<body>
+<script>
+    const person = {
+     sayName () {},
+     get foo () {},
+     set foo (x) {}
+    }
+
+    console.log(person.sayName.name); // sayName
+
+    // 报错 - Cannot read property 'name' of undefined
+    // console.log(person.foo.name);
+    const descriptor = Object.getOwnPropertyDescriptor(person, 'foo');
+    console.log(descriptor); // {enumerable: true, configurable: true, get: ƒ, set: ƒ}
+    console.log(descriptor.get.name) // get foo
+    console.log(descriptor.set.name) // set foo
+</script>
+</body>
+</html>

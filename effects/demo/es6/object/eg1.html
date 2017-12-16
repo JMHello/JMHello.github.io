@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的扩展</title>
+</head>
+<body>
+<script>
+    // 变量
+    // 例1
+    let foo = `foo`;
+    let baz = {foo};
+    console.log(baz); // {foo: "foo"}
+
+    // 例2
+    function returnObj (x, y) {
+      return {x, y};
+    }
+    console.log(returnObj(1, 2)); // {x: 1, y: 2}
+
+    // 方法
+    const obj = {
+      method () {
+        // ...
+      }
+      // 等价于
+      // method: function () {}
+    }
+
+    // 如果某个方法的值是一个 Generator 函数，前面需要加上星号
+    const o = {
+      * m() {
+        yield 'hello'
+      }
+    }
+</script>
+</body>
+</html>

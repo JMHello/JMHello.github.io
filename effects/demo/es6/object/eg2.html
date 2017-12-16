@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的扩展</title>
+</head>
+<body>
+<script>
+    let propKey = 'foo';
+    let obj = {
+      // 定义属性
+      [propKey]: true,
+      [`a${1+2}`]: 123,
+      // 定义方法名
+      ['say' + 'Hello']() {
+        return 'hello';
+      }
+    };
+    console.log(obj); // {foo: true, a3: 123, sayhello: ƒ}
+    console.log(obj.sayHello()); // hello
+
+    // 属性名表达式与简洁表示法，不能同时使用，会报错
+    let foo = 'bar';
+    // let baz = {[foo]}; // 报错
+    let baz = {[foo]: 'abc'}; // 正确
+    console.log(baz); // {bar: "abc"}
+</script>
+</body>
+</html>

@@ -25,38 +25,35 @@ tag: js-设计模式
 
 ## 一、MVC模式
 
-![relationship-map]({{ '/styles/images/javascript/designPattern/designPattern-03.png' | prepend: site.baseurl }})
+![relationship-map]({{ '/styles/images/javascript/designPattern/designPattern-05.png' | prepend: site.baseurl }})
 
-* `MVC`模式是软件工程中的架构模式：
-    * 早期的开发中，`MVC`模式主要用于服务端，而前端主要负责`View`视图。
-    * 随着`BackboneJs`、`EmberJs`等框架的出现，前端也逐渐兴起了`MVC`模式
+> * `MVC`模式是软件工程中的架构模式：
+>    * 早期的开发中，`MVC`模式主要用于服务端，而前端主要负责`View`视图。
+>    * 随着`BackboneJs`、`EmberJs`等框架的出现，前端也逐渐兴起了`MVC`模式
 
 ### 1.1 MVC的简介
 
-* `MVC`：
-    * `M`：模型层 -- `Model`，
-        * 提供和保存业务数据。
-        * 个人理解：模型层的代码主要是一些关于对数据处理的代码。
-            * 例如：获取数据、设置数据、观察者模式的代码（下面的例子会讲到）  
-    * `V`：视图层 -- `View`。
-        * 展示数据以及提供用户界面。
-        * 个人理解：视图层的代码主要是一些展示页面的代码。
-            * 例如：大量的`DOM`操作、一小部分用来更新视图的代码（这里与控制器层有关）
-    * `C`：控制器层 -- `Controller`。
-        * 处理业务的应用逻辑。
-        * 个人理解：`控制器层（Controller）` 是 `视图层（View）` 和 `模型层（Model)`的桥梁  --- 控制器层可以调用数据层数据和视图层内的视图创建页面增添逻辑。
-            * 例：初始化模型层、视图层，通过控制层建立起视图层和模型层之间的联系
+> * `MVC`：
+>    * `M`：模型层 -- `Model`，
+>        * 提供和保存业务数据。
+>        * 个人理解：模型层的代码主要是一些关于对数据处理的代码。
+>           * 例如：获取数据、对数据处理的一些代码、观察者模式的代码（下面的例子会讲到）  
+>    * `V`：视图层 -- `View`。
+>        * 展示数据以及提供用户界面。
+>        * 个人理解：视图层的代码主要是一些展示页面的代码。
+>            * 例如：大量的`DOM`操作、一小部分用来更新视图的代码（这里与控制器层有关）
+>    * `C`：控制器层 -- `Controller`。
+>        * 处理业务的应用逻辑。
+>        * 个人理解：`控制器层（Controller）` 是 `视图层（View）` 和 `模型层（Model)`的桥梁  --- 控制器层可以调用数据层数据和视图层内的视图创建页面增添逻辑。
+>            * 例：初始化模型层、视图层，通过控制层建立起视图层和模型层之间的联系
 
 
 ### 1.2 MVC模式整个过程的简单描述
 
-* 当用户与**视图**交互的时候，会触发一些用户的事件，这些事件会被**控制器**监听。
-
-* **控制器**会根据不同的用户事件调用**模块层**的一些相应的接口，通过这个接口的调用，修改**模块层**的数据，导致**模块层**数据的改变。
-
-* 而**视图**会根据**观察者模式**去观察模块的数据，当模块的数据进行改变的时候，则会通过**事件通知**的方式去通知**视图**。
-
-* 最后，视图根据新的数据来改变自己的状态，即：改变我们的用户界面
+> * 当用户与**视图**交互的时候，会触发一些用户的事件，这些事件会被**控制器**监听。
+> * **控制器**会根据不同的用户事件调用**模块层**的一些相应的接口，通过这个接口的调用，修改**模块层**的数据，导致**模块层**数据的改变。
+> * 而**视图**会根据**观察者模式**去观察模块的数据，当模块的数据进行改变的时候，则会通过**事件通知**的方式去通知**视图**。
+> * 最后，视图根据新的数据来改变自己的状态，即：改变我们的用户界面
 
 ## 二、实例1：简单的增减价钱牌实例
 
@@ -64,7 +61,7 @@ tag: js-设计模式
 
 ![relationship-map]({{ '/styles/images/javascript/designPattern/designPattern-04.png' | prepend: site.baseurl }})
 
-* html
+> * html
 
 ```html
 <div class="calculator">
@@ -74,7 +71,7 @@ tag: js-设计模式
 </div>
 ```
 
-* css
+> * css
 
 ```css
   .calculator {
@@ -92,9 +89,9 @@ tag: js-设计模式
         }
 ```
 
-* js
+> * js
    
-* `Model`
+> * `Model`
 
 ```js
 class Model {
@@ -136,7 +133,7 @@ class Model {
 }
 ```
 
-* View
+> * View
 
 ```js
 class View {
@@ -163,7 +160,7 @@ class View {
 ```
 
 
-* Controller
+> * Controller
 
 ```js
 class Controller {
@@ -199,7 +196,7 @@ class Controller {
 }
 ```
 
-* 调用代码
+> * 调用代码
 
 ```js
 var controller= new Controller();
@@ -209,7 +206,7 @@ controller.init();
 
 ### 2.2 遇到的问题
 
-* `this`的指向出了问题，代码如下：
+> * `this`的指向出了问题，代码如下：
 
 ```js
 class View {
@@ -242,10 +239,10 @@ class Controller {
 }
 ```
 
-* 我忽略了一句很重要的话：**如果将类中定义方法提取出来单独使用，`this`会指向该方法运行时所在的环境。**
-    * 这就意味着 `Controller`类的`increase`拿到了`View`类的`addEvent`里使用，由于`increase`是绑定在按钮的`click`事件上，
-        即：`increase`是用在了`addBtn`这个对象上，因此，`increase`里的`this`的指向指代的是`addBtn`这个对象，所以，
-        `this.model = undefined`。
+> * 我忽略了一句很重要的话：**如果将类中定义方法提取出来单独使用，`this`会指向该方法运行时所在的环境。**
+>    * 这就意味着 `Controller`类的`increase`拿到了`View`类的`addEvent`里使用，由于`increase`是绑定在按钮的`click`事件上，
+>        即：`increase`是用在了`addBtn`这个对象上，因此，`increase`里的`this`的指向指代的是`addBtn`这个对象，所以，
+>        `this.model = undefined`。
         
-    * 解决方法：
-        * `bind`：更改函数内`this`的指向，详情请看上面的代码。
+>  * 解决方法：
+>    * `bind`：更改函数内`this`的指向，详情请看上面的代码。

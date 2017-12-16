@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的扩展 - Object.is()</title>
+</head>
+<body>
+<script>
+    console.log(Object.is('foo', 'foo')); // true
+    console.log(Object.is({}, {})); // false
+
+    console.log(+0 === -0); // true
+    console.log(NaN === NaN); // false
+
+    console.log(Object.is(+0, -0)); // false
+    console.log(Object.is(NaN, NaN)); // true
+</script>
+</body>
+</html>
