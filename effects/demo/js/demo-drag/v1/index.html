@@ -7,14 +7,38 @@
         .box {
             width: 100px;
             height: 100px;
-            margin: 10px;
             background: blue;
             position: absolute;
         }
-
     </style>
 </head>
 <body>
 <div id="drag" class="box" draggable="true"></div>
+<script>
+  const dragEle = document.getElementById('drag')
+  let disX = 0
+  let disY = 0
+
+  dragEle.addEventListener('dragstart', count, false)
+  dragEle.addEventListener('dragend',getPosition, false)
+
+  /**
+   * 计算每次点击div时鼠标的位置
+   * @param e
+   */
+  function count (e) {
+    disX = e.clientX - this.offsetLeft
+    disY = e.clientY - this.offsetTop
+  }
+
+  /**
+   * 获得div最终停留的位置
+   * @param e
+   */
+  function getPosition (e) {
+    this.style.left = e.clientX - disX + 'px'
+    this.style.top = e.clientY - disY + 'px'
+  }
+</script>
 </body>
 </html>

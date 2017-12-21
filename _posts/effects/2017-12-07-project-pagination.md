@@ -59,9 +59,9 @@ tag: 原创
 
 ## 三、demo
 
-> * 点击打开[demo](/effects/demo/demo-plugins/pagination/index.html)
+> * 点击打开[demo](/effects/demo/plugins/pagination/index.html)
 
-> * [源码下载](/effects/demo/demo-plugins/pagination/pagination.zip)
+> * [源码下载](/effects/demo/plugins/pagination/pagination.zip)
 
 ## 四、总结
 > 在第一次做分页插件的时候，觉得实现了功能就可以了，完全没想那么多。这次重新写一次分页插件，觉得自己之前写的
