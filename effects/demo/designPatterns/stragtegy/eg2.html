@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>策略模式</title>
+</head>
+<body>
+<script>
+  // 策略对象
+  let strategies = {
+    S (salary) {
+      return salary * 4
+    },
+    A (salary) {
+      return salary * 3
+    },
+    B (salary) {
+      return salary * 2
+    }
+  }
+  // 调用接口 -- 计算奖金的函数
+  function calculateBonus(performanceLevel, salary) {
+    return strategies[performanceLevel](salary)
+  }
+</script>
+</body>
+</html>
