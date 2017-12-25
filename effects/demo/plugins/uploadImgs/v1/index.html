@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽图片</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div class="upload-wrapper">
+    <img src="timg.gif">
+    <div>
+
+    </div>
+    <input type="file" class="upload-file" id="js-upload">
+</div>
+<script>
+    const jsUpload = document.getElementById('js-upload')
+
+    jsUpload.addEventListener('change', (e) => {
+      const files = e.target.files
+      const reader = new FileReader()
+      console.log(files, reader)
+    }, false)
+</script>
+</body>
+</html>

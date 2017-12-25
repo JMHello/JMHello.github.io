@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileReader类型</title>
+</head>
+<body>
+
+<input type="file" class="upload-file" id="js-upload" multiple>
+<div id="text" style="width: 400px; margin: 10px; padding: 5px; border: 1px solid"></div>
+
+<script>
+  const jsUpload = document.getElementById('js-upload')
+  const text = document.getElementById('text')
+
+  // 关键事件：change事件
+  jsUpload.addEventListener('change', (e) => {
+    const files = e.target.files
+    const reader = new FileReader()
+
+    reader.readAsText(files[0], `utf8`)
+//    reader.readAsDataURL(files[0])
+//    reader.readAsBinaryString(files[0])
+//    reader.readAsArrayBuffer(files[0])
+
+    reader.onprogress = function (e) {
+        console.log(e)
+    }
+    reader.onerror = function () {
+      console.log(reader.error)
+      console.log(reader.error.code)
+    }
+    reader.onload = function () {
+      text.innerHTML = reader.result
+    }
+  }, false)
+</script>
+</body>
+</html>

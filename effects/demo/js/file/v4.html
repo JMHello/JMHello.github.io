@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象URL</title>
+</head>
+<body>
+
+<input type="file" class="upload-file" id="js-upload" multiple>
+<div id="text" style="width: 400px; margin: 10px; padding: 5px; border: 1px solid"></div>
+<img src="" id="img">
+<script>
+  /**
+   * 创建对象 URL
+   * @param blob File 或 Blob 对象
+   * @returns {*} 返回一个字符串，指向一块内存的地址 || null
+   */
+  function createObjectURL(blob){
+    if (window.URL){
+      return window.URL.createObjectURL(blob);
+    } else if (window.webkitURL){ // chrome
+      return window.webkitURL.createObjectURL(blob);
+    } else {
+      return null;
+    }
+  }
+
+
+
+  const jsUpload = document.getElementById('js-upload')
+  const text = document.getElementById('text')
+  const img = document.getElementById('img')
+
+  // 关键事件：change事件
+  jsUpload.addEventListener('change', (e) => {
+    const files = e.target.files
+    const url = createObjectURL(files[0])
+
+    if (url) {
+      text.innerHTML = url
+      img.src = url
+    } else {
+      alert("Your browser doesn't support object URLs.");
+    }
+  }, false)
+</script>
+</body>
+</html>

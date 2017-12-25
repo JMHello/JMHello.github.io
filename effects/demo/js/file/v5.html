@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>读取拖放的文件</title>
+</head>
+<body>
+
+<div id="dropTarget" style="width: 300px; height: 300px; background: gray; text-align: center; color: white">请将图片拖放到此区域</div>
+<div id="text"></div>
+
+<script>
+  /**
+   * 创建对象 URL
+   * @param blob File 或 Blob 对象
+   * @returns {*} 返回一个字符串，指向一块内存的地址 || null
+   */
+  function createObjectURL(blob){
+    if (window.URL){
+      return window.URL.createObjectURL(blob);
+    } else if (window.webkitURL){ // chrome
+      return window.webkitURL.createObjectURL(blob);
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * 事件处理函数
+   * @param event
+   */
+  function handleEvent (event) {
+    const text = document.getElementById('text')
+    // 阻止默认事件发生：如果不阻止默认事件发生，当把一个文件拖拽到div里，那么这个文件就会在此网页上打开
+    event.preventDefault()
+
+    if (event.type === 'drop') {
+      const files = event.dataTransfer.files
+      console.log(event.dataTransfer)
+      const url = createObjectURL(files[0])
+      if (url) {
+        text.innerHTML = `<img src="${url}">`
+      }
+    }
+  }
+
+  const dropTarget = document.getElementById('dropTarget')
+  dropTarget.addEventListener('dragenter', handleEvent, false)
+  dropTarget.addEventListener('dragover', handleEvent, false)
+  dropTarget.addEventListener('drop', handleEvent, false)
+</script>
+</body>
+</html>

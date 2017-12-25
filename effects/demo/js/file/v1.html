@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>files集合</title>
+</head>
+<body>
+
+<input type="file" class="upload-file" id="js-upload" multiple>
+
+<script>
+  const jsUpload = document.getElementById('js-upload')
+
+  // 关键事件：change事件
+  jsUpload.addEventListener('change', (e) => {
+    const files = e.target.files
+    console.log(files)
+  }, false)
+</script>
+</body>
+</html>

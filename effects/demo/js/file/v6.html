@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FormData 对象</title>
+</head>
+<body>
+<form id="user-info">
+
+</form>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+      if (xhr.readyState == 4){
+        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+          alert(xhr.responseText);} else {
+          alert("Request was unsuccessful: " + xhr.status);
+        }
+      }
+    };
+    xhr.open("post","postexample.php", true);
+    var form = document.getElementById("user-info");
+    xhr.send(new FormData(form));
+</script>
+</body>
+</html>

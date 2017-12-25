@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>读取部分内容</title>
+</head>
+<body>
+
+<input type="file" class="upload-file" id="js-upload" multiple>
+<div id="text" style="width: 400px; margin: 10px; padding: 5px; border: 1px solid"></div>
+
+<script>
+  /**
+   * 读取文件的部分内容
+   * @param blob
+   * @param startByte 起始字节
+   * @param length 要读取的字节数
+   * @returns {*} 返回一个 Blob 的实例 || null 【Blob 是 File 类型的父类型】
+   */
+  function blobSlice(blob, startByte, length){
+    if (blob.slice){ // 其他浏览器
+      return blob.slice(startByte, length);
+    } else if (blob.webkitSlice){ // Chrome
+      return blob.webkitSlice(startByte, length);
+    } else if (blob.mozSlice){ // Firefox
+      return blob.mozSlice(startByte, length);
+    } else {
+      return null;
+    }
+  }
+  const jsUpload = document.getElementById('js-upload')
+  const text = document.getElementById('text')
+
+  // 关键事件：change事件
+  jsUpload.addEventListener('change', (e) => {
+    const files = e.target.files
+    const reader = new FileReader()
+    // 只读取文件的 32B 内容
+    const blob = blobSlice(files[0], 0, 32)
+
+    console.log(blob)
+
+    if (blob) {
+      reader.readAsText(blob)
+
+      reader.onerror = function () {
+        text.innerHTML = "Could not read file, error code is " + reader.error.code;
+      }
+
+      reader.onload = function () {
+        text.innerHTML = reader.result + `；blobSize = ${blob.size}；blobType = ${blob.type}`
+
+      }
+    } else {
+      alert("Your browser doesn' t support slice().");
+    }
+  }, false)
+</script>
+</body>
+</html>
