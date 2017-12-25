@@ -19,7 +19,7 @@ tag: 辨析
 ### 1.1 es5 - this
 
 > * 先看 `es5`语法下函数内的 `this`。
-> * 点击打开[demo](/effects/demo/demo-discrimination/this/eg1.html)
+> * 点击打开[demo](/effects/demo/discrimination/this/eg1.html)
 
 ```js
 var obj = {};
@@ -48,7 +48,7 @@ obj.getThis();
 ### 1.2 es6 - this
 
 > * 看 `es6` 语法下函数内的 `this`。
-> * 点击打开[demo](/effects/demo/demo-discrimination/this/eg2.html)
+> * 点击打开[demo](/effects/demo/discrimination/this/eg2.html)
 > * 箭头函数相当于直接在全局作用域中定义，所以 `this` 指向 `window`。
 
 ```js
@@ -75,7 +75,7 @@ obj.getThis(); // window
 ---
 
 > * 例2
-> * 点击打开[demo](/effects/demo/demo-discrimination/this/eg6.html)
+> * 点击打开[demo](/effects/demo/discrimination/this/eg6.html)
 
 ```js
 var obj = {};
@@ -97,7 +97,7 @@ obj.getThis()(); //window
 ### 1.3 来个混合写法
 
 > * 例1：
-> * 点击打开[demo](/effects/demo/demo-discrimination/this/eg3.html)
+> * 点击打开[demo](/effects/demo/discrimination/this/eg3.html)
 > * 箭头函数是在 `obj.getThis` 函数中定义的，因此，`this`指向 `obj`
 
 ```js
@@ -131,7 +131,7 @@ obj.getThis()(); // obj
 ---
 
 > * 例2：
-> * 点击打开[demo](/effects/demo/demo-discrimination/this/eg4.html)
+> * 点击打开[demo](/effects/demo/discrimination/this/eg4.html)
 > * 箭头函数是在 `obj.getThis` 函数的内部函数`inner` 中定义，但是，`this`指向 `window`
 
 ```js
@@ -154,7 +154,7 @@ obj.getThis(); // window
 ---
 
 > * 例3
-> * 点击打开[demo](/effects/demo/demo-discrimination/this/eg5.html)
+> * 点击打开[demo](/effects/demo/discrimination/this/eg5.html)
 
 ```js
 function outer () {

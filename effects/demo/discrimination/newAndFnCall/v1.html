@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数调用和new一个函数的区别</title>
+</head>
+<body>
+<script>
+  function Person (name) {
+    this.name = name
+    return this.name
+  }
+
+  // 使用 new 操作符
+  const p1 = new Person('jm')
+  console.log(`使用 new 操作符：`) // 使用 new 操作符
+  console.log(p1) // Person {name: "jm"}
+
+  // 不适用 new 操作符
+  const p2 = Person('jm')
+  console.log(`不使用new操作符：`) // 不使用new操作符
+  console.log(p2) // undefined
+</script>
+</body>
+</html>

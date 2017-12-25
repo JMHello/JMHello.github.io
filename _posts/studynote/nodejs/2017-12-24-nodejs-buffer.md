@@ -82,7 +82,7 @@ tag: node.js
 ### 3.3 StringDecoder对象
 
 > 1. 先安装 `npm i string_decoder`
-> 2. 引入：`const StringDecoder = require('string_decoder)`
+> 2. 引入：`const StringDecoder = require('string_decoder).StringDecoder`
 > 3. 创建对象：`const decoder = new StringDecoder([encoding])` 【默认`utf8`】
 > 4. 将 `Buffer` 对象中的数据转换为字符串：`decoder.write(buffer)`，【参数：`Buffer`对象】，返回转换后的字符串
 

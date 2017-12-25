@@ -14,7 +14,7 @@ tag: 辨析
 
 ### 1.1 `getElementsByTagName()`
 
-> * 点击打开[demo](/effects/demo/demo-discrimination/get-element-length/eg1.html)
+> * 点击打开[demo](/effects/demo/discrimination/get-element-length/eg1.html)
 
 ```js
 
@@ -44,7 +44,7 @@ tag: 辨析
 ### 1.2 `querySelectorAll()`
 
 > * `querySelectorAll()`
-> * 点击打开[demo](/effects/demo/demo-discrimination/get-element-length/eg2.html)
+> * 点击打开[demo](/effects/demo/discrimination/get-element-length/eg2.html)
 
 ```js
   document.body.innerHTML = `<ul id="list"><li>1</li><li>2</li><li>3</li></ul>`;

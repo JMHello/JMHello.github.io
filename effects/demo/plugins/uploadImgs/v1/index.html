@@ -8,22 +8,36 @@
     </style>
 </head>
 <body>
-
-<div class="upload-wrapper">
-    <img src="timg.gif">
-    <div>
-
-    </div>
+<form id="form" method="post" enctype="application/x-www-form-urlencoded" action="http://127.0.0.1:8080/upload">
     <input type="file" class="upload-file" id="js-upload">
-</div>
+    <input type="submit" id="js-submit" value="上传">
+</form>
+
+<div id="area"></div>
 <script>
+    function ajax (data) {
+    xhr = new XMLHttpRequest();
+
+    xhr.open("post", "/upload", true);
+    xhr.onreadystatechange = function(){
+      if (xhr.readyState == 4){
+        text.innerHTML = xhr.responseText
+      }
+    };
+    xhr.send(data);
+    }
+
     const jsUpload = document.getElementById('js-upload')
+    const jsSubmit = document.getElementById('js-submit')
 
     jsUpload.addEventListener('change', (e) => {
       const files = e.target.files
       const reader = new FileReader()
       console.log(files, reader)
     }, false)
+
+
+
 </script>
 </body>
 </html>
