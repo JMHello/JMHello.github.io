@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽象工厂模式</title>
+</head>
+<body>
+<script>
+  /**
+   * 抽象工厂方法
+   * @param subType
+   * @param superType
+   * @constructor
+   */
+   const VehicleFactory = function (subType, superType) {
+     // 判断抽象工厂中是否有该抽象类
+     if (Object.prototype.toString.call(VehicleFactory[superType]) === '[object Function]') {
+       // 缓存类
+       function F () {}
+       // 继承父类属性和方法
+       F.prototype = new VehicleFactory[superType]()
+       // 将子类constructor指向子类
+       subType.constructor = subType
+       // 子类原型继承父类
+       subType.prototype = new F()
+     } else {
+       // 不存在该抽象类抛出错误
+       throw new Error('未创建该抽象类')
+     }
+   }
+
+  /**
+   * 小汽车抽象类
+   * @constructor
+   */
+   VehicleFactory.Car = function () {
+     this.type = 'car'
+   }
+   VehicleFactory.Car.prototype = {
+     getPrice: function () {
+       return new Error('抽象方法不能调用')
+     },
+     getSpeed: function () {
+       return new Error('抽象方法不能调用')
+     }
+   }
+
+  /**
+   * 汽车子类：宝马
+   * @param price
+   * @param speed
+   * @constructor
+   */
+   const BMW = function (price, speed) {
+     this.price = price
+     this.speed = speed
+   }
+   VehicleFactory(BMW, 'Car')
+   BMW.prototype.getPrice = function () {
+     return this.price
+   }
+//  BMW.prototype.getSpeed = function () {
+//    return this.speed
+//  }
+
+  const bmw = new BMW(12, 2)
+  console.log(bmw.getPrice()) // 12
+  console.log(bmw.getSpeed()) // 抽象方法不能调用
+</script>
+</body>
+</html>

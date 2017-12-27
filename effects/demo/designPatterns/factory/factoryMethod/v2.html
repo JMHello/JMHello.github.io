@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂方法模式</title>
+</head>
+<body>
+<script>
+    // 安全模式创建的工厂类
+    const Factory = function (type, content) {
+      // 安全模式类： 在构造函数开始时先判断当前对象this指代是不是类Factory
+      // 如果是，则通过 new 关键字创建对象（这里是指Java、php）；
+      // 如果不是，说明类在全局作用域中执行，所以this指向window，因此就需要返回Factory的实例
+      if (this instanceof Factory) {
+        console.log(this instanceof Factory)
+        const s = new this[type](content)
+        return s
+      } else {
+        console.log(this instanceof Factory)
+        return new Factory(type, content)
+      }
+    }
+
+    // 工厂原型中设置创建所有类型数据对象的基类
+    Factory.prototype = {
+      Java: function (content) {
+        // ...
+      },
+      JavaScript: function (content) {
+        // ...
+      },
+      php: function (content) {
+        // ...
+      },
+      UI: function (content) {
+        // ...
+      }
+    }
+
+    const data = [
+      {
+        type: 'Java',
+        content: 'Java'
+      },
+      {
+        type: 'php',
+        content: 'php'
+      },{
+        type: 'JavaScript',
+        content: 'JavaScript'
+      }
+      // ...
+    ]
+
+    for (let item of data) {
+      Factory(item.type, item.content)
+    }
+</script>
+</body>
+</html>

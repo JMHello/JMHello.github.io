@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单工厂模式</title>
+</head>
+<body>
+<script>
+  /**
+   * 警示框类
+   * @param text
+   * @constructor
+   */
+    const LoginAlert = function (text) {
+      this.context = text
+    }
+
+    LoginAlert.prototype.show = function () {
+      // 显示警示框
+    }
+
+   /**
+   * 确认框类
+   * @param text
+   * @constructor
+   */
+    const LoginConfirm = function (text) {
+      this.context = text
+    }
+
+    LoginConfirm.prototype.show = function () {
+      // 显示确认框
+    }
+
+   /**
+   * 提示框类
+   * @param text
+   * @constructor
+   */
+    const LoginPrompt = function (text) {
+      this.context = text
+    }
+
+    LoginPrompt.prototype.show = function () {
+      // 显示提示框
+    }
+
+  /**
+   * 简单工厂函数 - 自定义提示框 - 任意选择你想要的“框”
+   * @param name
+   * @param text
+   * @returns {*}
+   * @constructor
+   */
+    const PopFactory = function (name, text) {
+      switch (name) {
+        case 'alert':
+          return new LoginAlert(text)
+        case 'confirm':
+          return new LoginConfirm(text)
+        case 'prompt':
+          return new LoginPrompt(text)
+      }
+    }
+</script>
+</body>
+</html>

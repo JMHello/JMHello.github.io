@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+</head>
+<body>
+<script>
+    const $ = jQuery = function () {
+      return new jQuery.fn.init()
+    }
+
+    jQuery.fn = jQuery.prototype = {
+      init: function () {
+        this.length =   0
+        this.test = function () {
+          return this.length
+        }
+        console.log(this)
+        return this
+      },
+      jquery: '1.3.2',
+      length: 1,
+      size: function () {
+        return this.length
+      }
+    }
+
+    jQuery.fn.init.prototype = jQuery.fn
+
+    console.log($().jquery) // 1.3.2
+    console.log($().test()) // 0
+    console.log($().size()) // 0
+</script>
+</body>
+</html>

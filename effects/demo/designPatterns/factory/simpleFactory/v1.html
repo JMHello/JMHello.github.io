@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单工厂模式</title>
+</head>
+<body>
+<script>
+  /**
+   * 警示框类
+   * @param text
+   * @constructor
+   */
+    const LoginAlert = function (text) {
+      this.context = text
+    }
+
+    LoginAlert.prototype.show = function () {
+      // 显示警示框
+    }
+
+   /**
+   * 确认框类
+   * @param text
+   * @constructor
+   */
+    const LoginConfirm = function (text) {
+      this.context = text
+    }
+
+    LoginConfirm.prototype.show = function () {
+      // 显示确认框
+    }
+
+   /**
+   * 提示框类
+   * @param text
+   * @constructor
+   */
+    const LoginPrompt = function (text) {
+      this.context = text
+    }
+
+    LoginPrompt.prototype.show = function () {
+      // 显示提示框框
+    }
+</script>
+</body>
+</html>
