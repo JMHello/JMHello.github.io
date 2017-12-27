@@ -26,12 +26,18 @@ tag: node.js
 >    * 当读取完客户端请求流中的数据时触发`end`事件
 
 > * `http.IncomingMessage`对象拥有的一些属性：
->    * `method`：字符串，客户端向服务器端发送请求时使用的方法，`POST`
->    * `url`：字符串，客户端发送请求时所使用的 `URL`。【常用来判断客户端请求的页面及需要执行的处理。】
->    * `headers`：客户端发送的请求头对象，存放客户端发送的所有请求头信息，包括`cookie`以及浏览器的各种信息
->    * `httpVersion`：字符串，客户端发送的`HTTP`版本
->    * `trailers`：客户端发送的`trailer`对象。它存放了客户端附加的一些`HTTP`头信息。该对象被包含在客户端发送的请求数据之后，因此只有当`http.ImcomingMessage`对象的`end`事件触发之后才能读取到`trailer`对象中的信息
->    * `socket`：服务器端用于监听客户端请求的`socket`端口对象
+
+> * `method`：字符串，客户端向服务器端发送请求时使用的方法，`POST`
+> * `url`：字符串，客户端发送请求时所使用的 `URL`。【常用来判断客户端请求的页面及需要执行的处理。】
+> * `headers`：客户端发送的请求头对象，存放客户端发送的所有请求头信息，包括`cookie`以及浏览器的各种信息
+
+![http](/styles/images/nodejs/http/http-06.png)
+
+> * `httpVersion`：字符串，客户端发送的`HTTP`版本
+> * `trailers`：客户端发送的`trailer`对象。它存放了客户端附加的一些`HTTP`头信息。该对象被包含在客户端发送的请求数据之后，因此只有当`http.ImcomingMessage`对象的`end`事件触发之后才能读取到`trailer`对象中的信息
+> * `socket`：服务器端用于监听客户端请求的`socket`端口对象
+
+
 
 ## 1.2 实例 - 在文件中保存客户端请求信息
 
