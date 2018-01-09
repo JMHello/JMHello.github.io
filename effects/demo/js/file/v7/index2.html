@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传图片</title>
+</head>
+<body>
+<form method="post" action="http://localhost:3000/upload"  enctype="multipart/form-data">
+    <input type="file" id="file" multiple>
+    <input type="submit">
+    <button id="btn" type="button">上传</button>
+</form>
+<div id="text"></div>
+
+<script>
+  function ajax (data) {
+    xhr = new XMLHttpRequest();
+
+    xhr.open("post", "http://localhost:3000/upload", true);
+    xhr.onreadystatechange = function(){
+      if (xhr.readyState == 4){
+        const text = document.getElementById('text')
+        const resTxt = xhr.responseText
+        text.innerHTML = xhr.responseText
+      }
+    };
+    xhr.send(data);
+  }
+
+  const file = document.getElementById('file')
+  const btn = document.getElementById('btn')
+  let formData = new FormData()
+    btn.onclick = function (e) {
+      formData.append("name", 'jm');
+      formData.append("age", 20);
+      formData.append("person", 'name=jm&age=10&num=3215004382');
+      formData.append("isEmpty", '');
+      ajax(formData)
+
+    }
+    file.onchange = function (e) {
+      const files = e.target.files
+//      formData.append("name", 'jm');
+//      formData.append("age", 20);
+      formData.append('files', files[0])
+//      formData.append("person", 'name=jm&age=10&num=3215004382');
+//      formData.append("isEmpty", ' ');
+    }
+
+</script>
+</body>
+</html>

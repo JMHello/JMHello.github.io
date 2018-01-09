@@ -1,6 +1,6 @@
 const http = require('http')
 const fs = require('fs')
-const formidable = require('./multipart_parser.js')
+const formidable = require('formidable')
 
 const server = http.createServer()
 
@@ -10,25 +10,27 @@ server.on('request', (req, res) => {
   if (url === '/') {
 
   } else if (url === '/upload') {
-    new formidable(req, (fields, files) => {
+    const form = new formidable.IncomingForm()
+    form.parse(req, function(err, fields, files) {
       // 跨域
       res.setHeader('Access-Control-Allow-Origin', '*')
 
-      if (files.files) {
-        fs.writeFile('./newPic.png', files.files.data, (err) => {
-          if (err) {
-            console.log(err)
-          }
-        })
-      }
       
+      // fs.writeFile('./newPic.png', data[0].file, (err) => {
+      //   if (err) {
+      //     console.log(err)
+      //   }
+      // })
+
+      form.uploadDir = "/my/dir";
+      form.multiples = true;
       res.write(JSON.stringify({
         fields: fields,
         files: files
       }))
 
-      res.end()
-    })
+      res.end('ok')
+    });
   }
 })
 

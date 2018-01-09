@@ -11,17 +11,16 @@
   function ajax (data) {
     xhr = new XMLHttpRequest();
 
-    xhr.open("post", "/upload", true);
+    xhr.open("post", "http://localhost:8080/upload", true);
     xhr.onreadystatechange = function(){
       if (xhr.readyState == 4){
+        const text = document.getElementById('text')
         text.innerHTML = xhr.responseText
       }
     };
     xhr.send(data);
   }
   function handleEvent(event){
-    const text = document.getElementById('text')
-
     event.preventDefault()
 
     if (event.type == "drop"){
@@ -29,7 +28,9 @@
       let files = event.dataTransfer.files
 
       data.append("file", files[0]);
-      console.log(data)
+      data.append("name", 'jm');
+      data.append("age", 20);
+      data.append("person", 'name=jm&age=10&num=3215004382');
       ajax(data)
 
     }
