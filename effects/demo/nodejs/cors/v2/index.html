@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cors</title>
+</head>
+<body>
+<button id="btn" type="button">发送数据</button>
+<script>
+  document.getElementById('btn').onclick = () => {
+    ajax()
+  }
+  function ajax () {
+    const xhr = new XMLHttpRequest()
+
+    xhr.open('post', 'http://localhost:3000/upload', true)
+
+    xhr.upload.onprogress = function (e) {
+      console.log(e)
+    }
+
+    xhr.onerror = function (e) {
+      console.log(e)
+    }
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4) {
+        if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+          console.log(xhr.responseText)
+        }
+      }
+    }
+    let formData = new FormData()
+    formData.append('name', 'jm')
+    formData.append('age', 20)
+
+    xhr.send(formData)
+  }
+</script>
+</body>
+</html>
