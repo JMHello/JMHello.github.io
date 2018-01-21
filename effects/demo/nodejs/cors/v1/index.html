@@ -13,8 +13,15 @@
   function ajax () {
     const xhr = new XMLHttpRequest()
 
-    xhr.open('put', 'http://localhost:3000/upload', true)
+    xhr.open('post', 'http://localhost:3000/upload', true)
 
+    xhr.upload.onprogress = function (e) {
+      console.log(e)
+    }
+
+    xhr.onerror = function (e) {
+      console.log(e)
+    }
     xhr.onreadystatechange = () => {
       if (xhr.readyState === 4) {
         if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
