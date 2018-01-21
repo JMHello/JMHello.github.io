@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传表单数据</title>
+</head>
+<body>
+<form>
+    <input type="file" id="file" multiple>
+    <button id="btn" type="button">上传</button>
+</form>
+
+<div id="text"></div>
+
+<script>
+  function ajax (data) {
+    xhr = new XMLHttpRequest();
+
+    xhr.open("post", "http://localhost:3000/upload", true);
+    xhr.onreadystatechange = function(){
+      if (xhr.readyState == 4){
+        const text = document.getElementById('text')
+        text.innerHTML = xhr.responseText
+      }
+    };
+    xhr.send(data);
+  }
+
+  const file = document.getElementById('file')
+  const btn = document.getElementById('btn')
+  let formData = new FormData()
+
+  btn.onclick = function () {
+//    formData.append("name", 'jm');
+//    formData.append("age", 20);
+//    formData.append("person", 'name=jm&age=10&num=3215004382');
+//    formData.append("isEmpty", '');
+    ajax(formData)
+
+  }
+
+  file.onchange = function (e) {
+    const files = e.target.files
+    formData.append('files', JSON.stringify(files))
+  }
+
+</script>
+</body>
+</html>

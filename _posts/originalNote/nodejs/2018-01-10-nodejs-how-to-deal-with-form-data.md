@@ -258,7 +258,17 @@ auxiliary style description.
 >   * 第一类是`buffer`数据：由于文件是要保存二进制数据的，因此为了方便，一头一尾的标识（`startBuf` 和 `endBuf`）我都用了`buffer`数据去处理，并且一头一尾的位置（`startIndex` 和 `endIndex`）也是通过`buffer`数据去处理
 >   * 第二类是字符串数据：文件的头信息 与 字段的头信息、数据都需要把`buffer`数据转化成字符串才能处理
 
+### 2.4 如何使用及demo
 
+> * [源码](/effects/demo/nodejs/formData/v1/multipart_parser.js)
+> * [实践demo](/effects/demo/nodejs/formData/v1.zip)
+
+```js
+ new formidable(req, (fields, files) => {
+    // fields 是表单字段对象
+    // files 是文件对象
+    })
+```
 
 
 

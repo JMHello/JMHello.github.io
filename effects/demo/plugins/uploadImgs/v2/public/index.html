@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传图片插件</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+    <!--<div class="upload-img">-->
+        <!--<div class="upload-area">-->
+            <!--&lt;!&ndash; 点击上传文件 &ndash;&gt;-->
+            <!--<div class="upload-file-area clicking-upload-area">-->
+                <!--<img src="imgs/upload.png" class="upload-logo">-->
+                <!--<input type="file" id="file" class="upload-file-input">-->
+            <!--</div>-->
+            <!--&lt;!&ndash; 将文件拖拽到此处 &ndash;&gt;-->
+            <!--<div class="upload-file-area">-->
+                <!--<p class="txt">将文件拖拽到此处</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; 图片信息 &ndash;&gt;-->
+        <!--<div class="text-area">-->
+            <!--<div class="text-wrap">-->
+                <!--选中<span class="img-num"> 0 </span>张文件，共<span class="img-size"> 0 </span><span>B</span>-->
+            <!--</div>-->
+            <!--<button type="button" class="btn">确认上传</button>-->
+            <!--<button type="button" class="btn">取消上传</button>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; 展示图片区域 &ndash;&gt;-->
+        <!--<div class="img-area">-->
+            <!--<div class="img-item">-->
+                <!--<div class="img-item-text">-->
+                    <!--<p class="img-item-title">aaaaa</p>-->
+                    <!--<span class="del">x</span>-->
+                <!--</div>-->
+                <!--<div class="img-wrap">-->
+                    <!--<img src="./imgs/timg.jpg">-->
+                <!--</div>-->
+                <!--<div class="upload-progress hide">-->
+                    <!--<div class="progress-running active"></div>-->
+                    <!--<span class="progress-txt">0%</span>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<div style="width: 100px; height: 100px; background: blue;" draggable="true"></div>
+<script src="index.js"></script>
+<script>
+    uploadImg({
+      wrapper: document.getElementById('wrapper'),
+      url: 'http://localhost:3000/upload'
+    })
+</script>
+</body>
+</html>
