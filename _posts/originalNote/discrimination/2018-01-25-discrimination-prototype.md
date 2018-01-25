@@ -126,7 +126,7 @@ f.__proto__ === obj // true
 > * 2.我们忽略`__proto__`，直接把目光聚焦在`xxx`身上
 >   * 如果`xxx`是一个数组，那么创建这个对象的`constructor`就是`Array`，所以 `new Array().__proto__ === Array.prototype`
 >   * 如果`xxx`是一个对象，那么创建这个对象的`constructor`有可能是`Function` 或者 `Object`，因此，这里需视情况而言
-> * 3. 记住那些特别的例子：
+> * 3.记住那些特别的例子：
 >   * `Object.prototype.__proto__===null`
 >   * 通过 `Function.prototype.bind` 方法构造出来的函数是个例外，它没有 `prototype` 属性。
 
