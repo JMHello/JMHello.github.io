@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.create()和new一个新对象的区别</title>
+</head>
+<body>
+<script>
+    const Base = function () {
+      this.a = 1
+    }
+
+    Base.prototype.b = 2
+
+    const b1 = new Base()
+    const b2 = Object.create(Base)
+    const b3 = Object.create(Base.prototype)
+
+    console.log(b1) // Base {a: 1}
+    console.log(b2) // Function {}
+    console.log(b3) //
+
+    console.log(`b1.a = ${b1.a}, b1.b = ${b1.b}`) // b1.a = 1, b1.b = 2
+    console.log(`b2.a = ${b2.a}, b2.b = ${b2.b}`) // b2.a = undefined, b2.b = undefined
+    console.log(`b3.a = ${b3.a}, b3.b = ${b3.b}`) // b2.a = undefined, b2.b = undefined
+
+    console.log(b1.prototype) // undefined
+    console.dir(b1.prototype === Base.prototype) // false
+
+    console.log(b1.__proto__) // {b: 2, constructor: ƒ}
+    console.dir(b1.__proto__ === Base.prototype) // true
+
+
+    console.dir(b2.prototype)
+    console.dir(b2.prototype === Base.prototype) // true
+
+    console.dir(b2.__proto__) // ƒ Base()
+    console.dir(b2.__proto__ === Base) // true
+
+    console.log(`b2.b = ${b2.__proto__.b}`) // b2.b = undefined
+    console.log(`b2.b = ${b2.prototype.b}`) // b2.b = 2
+</script>
+</body>
+</html>
