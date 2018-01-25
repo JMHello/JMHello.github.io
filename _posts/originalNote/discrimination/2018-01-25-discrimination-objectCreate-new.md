@@ -100,19 +100,20 @@ console.dir(b2.prototype === Base.prototype) // true
 
 ![image](/styles/images/discrimination/objectAndNew/on-04.png)
 
+---
+
 > * 先回答这个问题：为什么 `b2.__proto__` 不是 `Base{}`？
 >   * 可从图中看到，`Object.create` 最终返回的是 `new F ()`，根据 [discrimination - __proto__ 和 prototype 的区别](http://www.jmazm.com/2018/01/25/discrimination-prototype/)里面所讲到的规则，
 >       `b2.__proto__` 的指向规则是基于创建其的构造函数，因此，其值肯定是 `f ()` 非 `Base {}`
+---
+> * 为什么 `b2` 不能获取到 `b` 的值？
 
-> * 补充：`b2.__proto__ === Base` 为`true` 的原因是：
+> * 先看：`b2.__proto__ === Base` 为`true` 的原因是：
 >   * 因为 `b2.__proto__ = F.prototype` 
 >   * 又因为 `F.prototype = Base`
 >   * 所以 `b2.__proto__ = Base`
 
----
-
-> * 接着，为什么 `b2` 不能获取到 `b` 的值？
->   * 从图中可知道，通过 `Object.create` 构造的 `b2` 没有指向 `Base` 的 `prototype`，
+> * 从图中可知道，通过 `Object.create` 构造的 `b2` 没有指向 `Base` 的 `prototype`，所以在`Base.prototype`上定义的`b`，只单纯是`Base.prototype`上的一个属性。
 
 
 

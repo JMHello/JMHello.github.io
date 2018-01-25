@@ -14,15 +14,7 @@
 
     const b1 = new Base()
     const b2 = Object.create(Base)
-    const b3 = Object.create(Base.prototype)
 
-    console.log(b1) // Base {a: 1}
-    console.log(b2) // Function {}
-    console.log(b3) //
-
-    console.log(`b1.a = ${b1.a}, b1.b = ${b1.b}`) // b1.a = 1, b1.b = 2
-    console.log(`b2.a = ${b2.a}, b2.b = ${b2.b}`) // b2.a = undefined, b2.b = undefined
-    console.log(`b3.a = ${b3.a}, b3.b = ${b3.b}`) // b2.a = undefined, b2.b = undefined
 
     console.log(b1.prototype) // undefined
     console.dir(b1.prototype === Base.prototype) // false

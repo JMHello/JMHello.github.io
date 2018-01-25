@@ -9,14 +9,20 @@
     const Base = function () {
       this.a = 1
     }
+
     Base.prototype.b = 2
+
     const b1 = new Base()
     const b2 = Object.create(Base)
 
-    console.log(b1)
-    console.log(b2)
-    console.log(`b1.a = ${b1.a}, b1.b = ${b1.b}`)
-    console.log(`b2.a = ${b2.a}, b2.b = ${b2.b}`)
+    console.log(b1) // Base {a: 1}
+    console.log(b2) // Function {}
+
+    console.log(`b1.a = ${b1.a}, b1.b = ${b1.b}`) // b1.a = 1, b1.b = 2
+    console.log(`b2.a = ${b2.a}, b2.b = ${b2.b}`) // b2.a = undefined, b2.b = undefined
+
+    console.log(b2.__proto__ === Base) // true
+    console.dir(b2.prototype === Base.prototype) // true
 </script>
 </body>
 </html>
