@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class - etter 和 setter - 解决方法</title>
+</head>
+<body>
+<script>
+  const person = {
+    p1: {},
+    get name () {
+      return this.p1.name
+    },
+    set name (name) {
+      this.p1.name = name
+    }
+  }
+
+  person.name = 'jm'
+  console.log(person.name)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class - etter 和 setter - 报错</title>
+</head>
+<body>
+<script>
+  class Person {
+    constructor(name) {
+      this.name = name
+    }
+    // getter
+    get name() {
+      return this.name
+    }
+    // setter
+    set name(name) {
+      this.name = name
+    }
+  }
+
+  let p1 = new Person();
+  p1.name = 'jm'
+  // 报错： Uncaught RangeError: Maximum call stack size exceeded
+
+</script>
+</body>
+</html>

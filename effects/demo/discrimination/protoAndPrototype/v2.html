@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中__proto__和prototype的区别</title>
+</head>
+<body>
+<script>
+  function inherit (obj) {
+    const F = function () {}
+    F.prototype = obj
+    return new F()
+  }
+
+  function Blue () {}
+  console.log(inherit({}))
+  console.log(new Blue())
+</script>
+</body>
+</html>

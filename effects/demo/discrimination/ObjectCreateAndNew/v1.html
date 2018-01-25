@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.create()和new一个新对象的区别</title>
+</head>
+<body>
+<script>
+    const Base = function () {}
+    const b1 = new Base()
+    const b2 = Object.create(Base)
+
+    console.log(b1)
+    console.log(b2)
+</script>
+</body>
+</html>

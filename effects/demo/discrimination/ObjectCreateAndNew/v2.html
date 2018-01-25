@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.create()和new一个新对象的区别</title>
+</head>
+<body>
+<script>
+    const Base = function () {
+      this.a = 1
+    }
+    Base.prototype.b = 2
+    const b1 = new Base()
+    const b2 = Object.create(Base)
+
+    console.log(b1)
+    console.log(b2)
+    console.log(`b1.a = ${b1.a}, b1.b = ${b1.b}`)
+    console.log(`b2.a = ${b2.a}, b2.b = ${b2.b}`)
+</script>
+</body>
+</html>
