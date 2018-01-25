@@ -118,6 +118,30 @@ console.dir(b2.prototype === Base.prototype) // true
 > * 从图中可知道，通过 `Object.create` 构造的 `b2` 没有指向 `Base` 的 `prototype`，而是直接执行`Base` 【即：`b2.__proto__ = Base` 而不是 `b2.__proto__ = Base.prototype`】,
 >   所以在`Base.prototype`上定义的`b`，只单纯是`Base.prototype`上的一个属性。
 
+## 传递给Object.create()的参数是对象
+
+> * [demo](/effects/demo/discrimination/ObjectCreateAndNew/v3.html)
+
+```js
+ const person = {
+    name: 'jm',
+    age: 12
+  }
+  const obj = Object.create(person)
+  console.log(obj)
+```
+
+> * 结果如下图：
+
+![image](/styles/images/discrimination/objectAndNew/on-04.png)
+
+## 总结
+
+> * `new` 关键字必须是以 `function` 定义的。
+> * `Object.create()` 则 `function` 和 `object` 都可以进行构建。
+
+
+
 
 
 
