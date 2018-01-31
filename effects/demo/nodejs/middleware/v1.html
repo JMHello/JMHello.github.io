@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>middleware</title>
+</head>
+<body>
+<script>
+    async function f1 (context, next) {
+      await next()
+      console.log(1)
+    }
+
+    async function f2 (context, next) {
+      await next()
+      console.log(2)
+    }
+
+    async function f3 (context, next) {
+      console.log(3)
+//      next()
+    }
+
+    async function f4 (context, next) {
+      console.log(4)
+//      next()
+    }
+
+    // 中间件数组
+    let mw = [f1, f2, f3, f4]
+    // context
+    let ctx = {}
+
+    const fn = compose(mw)
+    const result = fn(ctx)
+    console.log(result)
+
+    function compose (middleware) {
+        if (!Array.isArray(middleware)) {
+          throw new TypeError('Middleware stack must be an array')
+        }
+
+        for (const fn of middleware) {
+          if (typeof fn !== 'function') {
+            throw new TypeError('Middleware must be composed of functions')
+          }
+        }
+
+        return function (context, next) {
+          let index = -1
+          return dispatch(0)
+          function dispatch (i) {
+            if (i <= index) {
+              return Promise.reject(new Error('next() called multiple times'))
+            }
+
+            index = i
+
+            let fn = middleware[i]
+
+            if (i === middleware.length) {
+              fn = next
+            }
+
+            if (!fn) {
+              return Promise.resolve()
+            }
+
+            try {
+              return Promise.resolve(fn(context, function next () {
+                return dispatch(i + 1)
+              }))
+            } catch (err) {
+              return Promise.reject(err)
+            }
+          }
+        }
+    }
+</script>
+</body>
+</html>

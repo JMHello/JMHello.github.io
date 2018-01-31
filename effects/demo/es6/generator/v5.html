@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator</title>
+</head>
+<body>
+<script>
+  /**
+   * 通过 Generator 函数objectEntries为它加上遍历器接口，就可以用for...of遍历
+   */
+  function *objEntries () {
+      console.log(this) // {name: "jm", age: 20, Symbol(Symbol.iterator): ƒ}
+      let propKeys = Object.keys(this)
+      console.log(propKeys) // ["name", "age"]
+      for (let propKey of propKeys) {
+        yield [propKey, this[propKey]]
+      }
+    }
+
+    let person = {
+      name: 'jm',
+      age: 20
+    }
+
+    // 将 Generator 函数加到对象的Symbol.iterator属性上面。
+    person[Symbol.iterator] = objEntries
+
+    for (let [key, value] of person) {
+      console.log(`${key} = ${value}`)
+    }
+    // name = jm
+    // age = 20
+</script>
+</body>
+</html>

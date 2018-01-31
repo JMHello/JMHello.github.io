@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator</title>
+</head>
+<body>
+<script>
+    // Generator 函数
+    function *helloWorldGenerator () {
+      yield `hello`
+      yield 'world'
+      return 'ending'
+    }
+
+    // 调用 Generator 函数
+    const hw = helloWorldGenerator()
+    console.log(hw)
+
+    // next
+    console.log(hw.next()) // {value: "hello", done: false}
+    console.log(hw.next()) // {value: "world", done: false}
+    console.log(hw.next()) // {value: "ending", done: true}
+    console.log(hw.next()) // {value: undefined, done: true}
+</script>
+</body>
+</html>
