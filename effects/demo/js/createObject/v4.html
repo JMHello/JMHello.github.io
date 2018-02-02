@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象 - 原型模式</title>
+</head>
+<body>
+<script>
+    function Person () {}
+
+    Person.prototype.sayName = function () {
+      return this.name
+    }
+    const p1 = new Person()
+    const p2 = new Person()
+
+    console.log(p1 instanceof Person) // true
+    console.log(p1.sayName === p2.sayName) // true
+</script>
+</body>
+</html>

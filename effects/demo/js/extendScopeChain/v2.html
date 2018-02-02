@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>延长作用域链 - with 语句</title>
+</head>
+<body>
+<script>
+    let obj = {
+      href: 'http://localhost'
+    }
+    let href = '11111'
+    function buildUrl () {
+      const qs="?debug=true";
+      with (obj) {
+        href = '22222'
+        var url = href + qs
+      }
+
+      return url
+    }
+
+    const url = buildUrl()
+    console.log(url) // 22222?debug=true
+    console.log(href) // 11111
+</script>
+</body>
+</html>

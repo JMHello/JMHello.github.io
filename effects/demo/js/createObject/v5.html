@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象 - 原型模式</title>
+</head>
+<body>
+<script>
+    function Person () {}
+
+    Person.prototype.sayName = function () {
+    return this.name
+    }
+    const p1 = new Person()
+    const p2 = new Person()
+
+
+    console.dir(Person)
+    console.log(p1)
+
+    console.log(`--- test constructor ---`)
+    console.log(p1.constructor === Person) //true
+    console.log(p1.constructor == p2.constructor) // true
+
+    console.log(`--- test isPrototypeOf() ---`)
+    console.log(Person.prototype.isPrototypeOf(p1)) // true
+
+    console.log(`--- test Object.getPrototypeOf() ---`)
+    console.log(Object.getPrototypeOf(p1) === Person.prototype) // true
+</script>
+</body>
+</html>

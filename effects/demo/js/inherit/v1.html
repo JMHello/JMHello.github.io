@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承 - 原型链</title>
+</head>
+<body>
+<script>
+    // 父类构造函数
+    function Plane (color) {
+      this.color = color
+    }
+    Plane.prototype.fly = function () {
+      console.log('flying')
+    }
+
+    // Fighter 构造函数
+    function Fighter () {
+      this.bullets = []
+    }
+
+    // 打通原型链，实现继承
+    Fighter.prototype = new Plane('blue')
+
+    // 特有方法
+    Fighter.prototype.shoot = function () {
+      console.log('shooting');
+    }
+
+    // 检测
+    const fighter1 = new Fighter()
+    // 继承的属性
+    console.log(fighter1.color) // blue
+    // 继承的方法
+    fighter1.fly() //flying
+    // 自身特有的方法
+    fighter1.shoot() // shooting
+
+    console.log(`--- test constructor ---`)
+    console.log(fighter1.constructor === Plane) //true
+</script>
+</body>
+</html>

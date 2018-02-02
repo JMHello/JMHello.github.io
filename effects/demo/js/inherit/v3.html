@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承 - 借用构造函数继承</title>
+</head>
+<body>
+<script>
+    // 父类构造函数
+    function Plane (color) {
+      this.color = color
+      this.sayName = function () {}
+    }
+    Plane.prototype.fly = function () {
+      console.log('flying')
+    }
+
+    // Fighter 构造函数
+    function Fighter (color) {
+      //
+      Plane.call(this, color)
+      this.bullets = []
+    }
+
+    // 特有方法
+    Fighter.prototype.shoot = function () {
+      console.log('shooting');
+    }
+
+    // 检测
+    const fighter1 = new Fighter('blue')
+    console.log(fighter1)
+</script>
+</body>
+</html>

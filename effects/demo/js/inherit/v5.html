@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承 - 寄生组合式继承</title>
+</head>
+<body>
+<script>
+    // 父类构造函数
+    function Plane (color) {
+      this.color = color
+    }
+
+    Plane.prototype.fly = function () {
+      console.log('flying')
+    }
+
+    // Fighter 构造函数
+    function Fighter (color) {
+      // 借用构造函数
+      Plane.call(this, color)
+      this.bullets = []
+    }
+
+    // 继承原型
+    inheritPrototype(Fighter, Plane)
+
+    // 特有方法
+    Fighter.prototype.shoot = function () {
+      console.log('shooting');
+    }
+
+    // 检测
+    const fighter1 = new Fighter('blue')
+    console.log(fighter1)
+    console.log(fighter1.color) // blue
+    fighter1.fly() // flying
+    fighter1.shoot() // shooting
+    
+    function inheritPrototype (subType, superType) {
+      const prototype = Object.create(superType.prototype)
+      prototype.constructor = subType
+      subType.prototype = prototype
+    }
+</script>
+</body>
+</html>

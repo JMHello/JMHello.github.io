@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>延长作用域链 - with 语句</title>
+</head>
+<body>
+<script>
+    function buildUrl () {
+      const qs = `?debug=true`
+
+      with (location) {
+        var url = href + qs
+      }
+
+      return url
+    }
+
+    console.dir(buildUrl)
+    const url = buildUrl()
+    console.log(url)
+    // http://localhost:63342/JMHello.github.io/effects/demo/js/extendScopeChain/v1.html?_ijt=rkrvpjiijro2nfbo4615ajtekp?debug=true
+</script>
+</body>
+</html>

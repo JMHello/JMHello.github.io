@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象 - 构造函数</title>
+</head>
+<body>
+<script>
+    function Person (name, age) {
+      this.name = name
+      this.age = age
+      this.sayName = () => {
+        return this.name
+      }
+    }
+
+    const p1 = new Person('jm', 20)
+    const p2 = new Person('li', 20)
+    console.log(p1 instanceof Person) // true
+    console.log(p1.sayName === p2.sayName) // false
+</script>
+</body>
+</html>

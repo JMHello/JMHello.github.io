@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象 - 原型模式</title>
+</head>
+<body>
+<script>
+    function Person () {}
+
+    Person.prototype.hobby = ['swimming', 'running']
+    const p1 = new Person()
+
+    console.log(p1.hobby) // ["swimming", "running"]
+
+    let copyHobby = p1.hobby
+    copyHobby.push('eating')
+    console.log(p1.hobby) // ["swimming", "running", "eating"]
+</script>
+</body>
+</html>
