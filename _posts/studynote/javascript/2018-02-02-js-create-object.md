@@ -28,7 +28,8 @@ function createPerson (name, age) {
 }
 
 const p1 = createPerson('jm', 20)
-console.log(typeof p1) // object
+console.log(p1 instanceof createPerson) // false
+console.log(p1 instanceof Object) // true
 ```
 
 > * 工厂模式就是不管内部实现是怎么样的，直接将一些变量、方法作为一个对象的属性直接返回出去。

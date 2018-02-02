@@ -14,7 +14,8 @@
     }
 
     const p1 = createPerson('jm', 20)
-    console.log(typeof p1) // object
+    console.log(p1 instanceof createPerson) // false
+    console.log(p1 instanceof Object) // true
 </script>
 </body>
 </html>
