@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对于一个未知宽高的盒子，如何让它水平垂直居中于父元素？</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            color: white;
+            background: blue;
+        }
+        .box2 {
+            background: red;
+        }
+        .parent {
+            text-align: center;
+        }
+        .parent::before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .child {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h2>利用伪元素::before</h2>
+<div class="parent box1">
+    <div class="box2 child">未知宽高</div>
+</div>
+</body>
+</html>

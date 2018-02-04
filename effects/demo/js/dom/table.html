@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作dom</title>
+</head>
+<body>
+<script>
+  const table = createTable()
+
+  // 事件委托
+  table.onclick = function (e) {
+    const target = e.target
+
+    if (target.tagName.toLocaleLowerCase() === 'td') {
+      alert(target.innerHTML)
+    }
+  }
+
+  /**
+   * 创建表格
+   * @returns {Element|*}
+   */
+  function createTable() {
+    const table = document.createElement('table')
+    table.border = 1
+    table.width = 600
+    let tBody = document.createElement('tBody')
+    table.appendChild(tBody)
+    createRowAndCol(tBody)
+    document.body.appendChild(table)
+    return table
+  }
+
+  /**
+   * 创建行列
+   * @param tbody
+   * @returns {*}
+   */
+  function createRowAndCol(tbody) {
+    for (let i = 0; i < 10; i++) {
+      // 插入行
+      tbody.insertRow(i)
+      for (let j = 0; j < 10; j++) {
+        // 插入列
+        tbody.rows[i].insertCell(j)
+        tbody.rows[i].cells[j].appendChild(document.createTextNode(`${i}${j}`))
+      }
+    }
+
+    return tbody
+  }
+</script>
+</body>
+</html>

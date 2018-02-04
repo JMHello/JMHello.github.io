@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对于一个未知宽高的盒子，如何让它水平垂直居中于父元素？</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            color: white;
+            background: blue;
+        }
+        .box2 {
+            background: red;
+        }
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<h2>flex布局</h2>
+<div class="parent box1">
+    <div class="box2 child">未知宽高</div>
+</div>
+</body>
+</html>

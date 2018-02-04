@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骰子布局 - 单项目</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid #cccccc;
+            background: white;
+        }
+        .point {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: black;
+        }
+        /*
+         左上角
+         */
+        .container1 {
+            display: flex;
+        }
+
+        /*
+         上中
+         */
+        .container2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        /*
+         右上角
+         */
+        .container3 {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /*
+         左中
+         */
+        .container4 {
+            display: flex;
+            align-items: center;
+        }
+
+        /*
+         正中
+         */
+        .container5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*
+         下中
+         */
+        .container6 {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        /*
+         右下
+         */
+        .container7 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+
+    </style>
+</head>
+<body>
+<h2>单项目 - 左上角</h2>
+<div class="container1 box">
+    <span class="point item1"></span>
+</div>
+
+<h2>单项目 - 上中</h2>
+<div class="container2 box">
+    <span class="point item2"></span>
+</div>
+
+<h2>单项目 - 右上角</h2>
+<div class="container3 box">
+    <span class="point item3"></span>
+</div>
+
+<h2>单项目 - 左中</h2>
+<div class="container4 box">
+    <span class="point item4"></span>
+</div>
+
+<h2>单项目 - 正中</h2>
+<div class="container5 box">
+    <span class="point item5"></span>
+</div>
+
+<h2>单项目 - 下中</h2>
+<div class="container6 box">
+    <span class="point item6"></span>
+</div>
+
+<h2>单项目 - 右下</h2>
+<div class="container7 box">
+    <span class="point item7"></span>
+</div>
+
+</body>
+</html>

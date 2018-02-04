@@ -85,7 +85,7 @@ console.log(fighter1.constructor === Plane) //true
 
 > * 很奇怪，`fighter1` 不是 `Fighter` 的实例，为什么其`constructor` 却是 `Plane`！
 
-> * 解决方法：手动修改 ` Fighter.prototype.constructor = Fighter`
+> * 解决方法：手动修改 `Fighter.prototype.constructor = Fighter`
 > * [demo](/effects/demo/js/inherit/v2.html)
 
 ```js

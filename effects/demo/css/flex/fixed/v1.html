@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定底栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .fixed {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header {
+            background: blue;
+        }
+        .content {
+            flex: 1;
+            background: red;
+        }
+        .footer {
+            background: green;
+        }
+    </style>
+</head>
+<body class="fixed">
+    <header class="header">头部</header>
+    <main class="content">
+        内容
+    </main>
+    <footer class="footer">我是底栏，我要固定不动</footer>
+</body>
+</html>

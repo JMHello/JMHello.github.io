@@ -42,6 +42,8 @@ tag: CSS
 
 ### 1.1 单项目
 
+> * [demo](/effects/demo/css/flex/dice/v1.html)
+
 * 首先，只有左上角1个点的情况。Flex布局默认就是首行左对齐，所以一行代码就够了。
 
 ![relationship-map]({{ '/styles/images/css/flex/flex-17.png' | prepend: site.baseurl }})
@@ -115,6 +117,8 @@ tag: CSS
 
 ### 1.2 双项目
 
+> * [demo](/effects/demo/css/flex/dice/v2.html)
+
 ![relationship-map]({{ '/styles/images/css/flex/flex-24.png' | prepend: site.baseurl }})
 
 ```css
@@ -183,6 +187,8 @@ tag: CSS
 
 ### 1.3 三项目
 
+> * [demo](/effects/demo/css/flex/dice/v3.html)
+
 ![relationship-map]({{ '/styles/images/css/flex/flex-30.png' | prepend: site.baseurl }})
 
 ```css
@@ -200,6 +206,8 @@ tag: CSS
 ```
 
 ### 1.4 四项目
+
+> * [demo](/effects/demo/css/flex/dice/v4.html)
 
 ![relationship-map]({{ '/styles/images/css/flex/flex-31.png' | prepend: site.baseurl }})
 
@@ -242,6 +250,8 @@ tag: CSS
 ```
 
 ### 1.5 六项目
+
+> * [demo](/effects/demo/css/flex/dice/v5.html)
 
 ![relationship-map]({{ '/styles/images/css/flex/flex-33.png' | prepend: site.baseurl }})
 
@@ -305,6 +315,8 @@ tag: CSS
 
 ### 1.6 九项目
 
+> * [demo](/effects/demo/css/flex/dice/v6.html)
+
 ![relationship-map]({{ '/styles/images/css/flex/flex-36.png' | prepend: site.baseurl }})
 
 ```css
@@ -317,6 +329,8 @@ tag: CSS
 ## 二、网格布局
 
 ### 2.1 基本网格布局
+
+> * [demo](/effects/demo/css/flex/grid/v1.html)
 
 最简单的网格布局，就是平均分布。在容器里面平均分配空间，跟上面的骰子布局很像，但是需要设置项目的自动缩放。
 
@@ -341,6 +355,8 @@ tag: CSS
 ```
 
 ### 2.2 百分比布局
+
+> * [demo](/effects/demo/css/flex/grid/v2.html)
 
 某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。
 
@@ -392,6 +408,8 @@ tag: CSS
         * 其中躯干又水平分成三栏，从左到右为：导航、主栏、副栏。
 
 ![relationship-map]({{ '/styles/images/css/flex/flex-39.png' | prepend: site.baseurl }})
+
+> * [demo](/effects/demo/css/flex/HolyGrail/v1.html)
 
 ```html
 <body class="HolyGrail">
@@ -505,9 +523,11 @@ footer {
 
 ## 六、固定的底栏
 
-有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间。这时可以采用Flex布局，让底栏总是出现在页面的底部。
+> * 有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间。这时可以采用Flex布局，让底栏总是出现在页面的底部。
 
 ![relationship-map]({{ '/styles/images/css/flex/flex-42.png' | prepend: site.baseurl }})
+
+> * [demo](/effects/demo/css/flex/fixed/v1.html)
 
 ```html
 <body class="Site">
@@ -530,6 +550,8 @@ footer {
 ```
 
 ## 七、流式布局
+
+> * [demo](/effects/demo/css/flex/streamingLayout/v1.html)
 
 每行的项目数固定，会自动分行。
 

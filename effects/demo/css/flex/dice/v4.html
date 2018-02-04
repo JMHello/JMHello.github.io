@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骰子布局 - 四项目</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid #cccccc;
+            background: white;
+        }
+        .point {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: black;
+        }
+        /*
+         四项目1
+         */
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .container1 .row1 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .container1 .row2 {
+            display: flex;
+            justify-content: flex-end;
+        }
+        /*
+         四项目2
+         */
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .container2 .row1,
+        .container2 .row2 {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+<h2>四项目1</h2>
+<div class="container1 box">
+    <div class="row1">
+        <span class="point item1"></span>
+        <span class="point item1"></span>
+        <span class="point item1"></span>
+    </div>
+    <div class="row2">
+        <span class="point item1"></span>
+    </div>
+</div>
+
+<h2>四项目2</h2>
+<div class="container2 box">
+    <div class="row1">
+        <span class="point item2"></span>
+        <span class="point item2"></span>
+    </div>
+    <div class="row2">
+        <span class="point item2"></span>
+        <span class="point item2"></span>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对于一个未知宽高的盒子，如何让它水平垂直居中于父元素？</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            color: white;
+            background: blue;
+        }
+        .box2 {
+            background: red;
+        }
+        .parent {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2>利用js计算</h2>
+<div class="parent box1">
+    <div class="box2 child">未知宽高</div>
+</div>
+<script>
+  const parent = document.querySelector('.parent')
+  const child = document.querySelector('.child')
+
+  // 父元素设置相对定位
+  parent.style.position = 'relative'
+  // 子元素设置绝对定位
+  child.style.position = 'absolute'
+
+  // 获取父元素的宽高
+  const parentWidth = parent.offsetWidth
+  const parentHeight = parent.offsetHeight
+
+  // 获取子元素的宽高
+  const childWidth= child.offsetWidth
+  const childHeight = child .offsetHeight
+
+  // 设置子元素的left 值
+  child.style.left = (parentWidth - childWidth) / 2 + 'px'
+  // 设置子元素的top值
+  child.style.top = (parentHeight - childHeight) / 2 + 'px'
+</script>
+</body>
+</html>

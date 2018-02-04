@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骰子布局 - 双项目</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid #cccccc;
+            background: white;
+        }
+        .point {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: black;
+        }
+        /*
+         上
+         */
+        .container1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /*
+         左
+         */
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /*
+         中
+         */
+        .container3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /*
+         右
+         */
+        .container4 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        /*
+         对角1
+         */
+        .container5 {
+            display: flex;
+            flex-direction: column;
+        }
+        .container5 .item5:last-of-type {
+            align-self: center;
+        }
+        /*
+         对角2
+         */
+        .container6 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .container6 .item6:last-of-type {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+<h2>双项目 - 上</h2>
+<div class="container1 box">
+    <span class="point item1"></span>
+    <span class="point item1"></span>
+</div>
+
+<h2>双项目 - 左</h2>
+<div class="container2 box">
+    <span class="point item2"></span>
+    <span class="point item2"></span>
+</div>
+
+<h2>双项目 - 中</h2>
+<div class="container3 box">
+    <span class="point item3"></span>
+    <span class="point item3"></span>
+</div>
+
+<h2>双项目 - 右</h2>
+<div class="container4 box">
+    <span class="point item4"></span>
+    <span class="point item4"></span>
+</div>
+
+<h2>双项目 - 对角1</h2>
+<div class="container5 box">
+    <span class="point item5"></span>
+    <span class="point item5"></span>
+</div>
+
+<h2>双项目 - 对角2</h2>
+<div class="container6 box">
+    <span class="point item6"></span>
+    <span class="point item6"></span>
+</div>
+
+</body>
+</html>

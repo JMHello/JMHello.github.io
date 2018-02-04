@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨域 - JSONP</title>
+</head>
+<body>
+<div id="text">
+    正在获取数据。。。
+</div>
+
+<script>
+    function jsonp (data) {
+      console.log(data)
+      document.getElementById('text').innerHTML = data
+    }
+</script>
+<script src="http://localhost:3000/data.js"></script>
+</body>
+</html>
