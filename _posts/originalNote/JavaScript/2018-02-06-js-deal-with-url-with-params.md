@@ -1,3 +1,20 @@
+---
+layout: post
+title: "javascript - 处理带有参数的URL"
+data: 2018-02-06 14:27:00 +0800
+categories: 原创
+tag: javascript
+---
+* content
+{:toc}
+
+<!-- more -->
+
+## 一、 处理带有参数的URL
+
+> * [demo](/effects/demo/js/matchUrl/v1.html)
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +61,7 @@
                 第三种：:id&
             $1：指示的是 \/ 或者 \? 或者 & 或者 $ （$1表示第一个捕获组的字符串）
        */
-
+      
       apiReg = apiUrl.replace(/\//g, '\\\/')
         .replace(/\?/g, '\\\?')
 
@@ -75,3 +92,4 @@
 </script>
 </body>
 </html>
+```
