@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>处理有参数的URL</title>
+</head>
+<body>
+<h2>带有参数的url</h2>
+<p>/v1/api/:id/books?username=:name&password=:pwd</p>
+
+<h2>真实的url</h2>
+<p>/v1/api/123/books?username=garven&password=9898p</p>
+
+<script>
+    let realUrl = '/v1/api/123/books?username=garven&password=9898p'
+    let apiUrl = '/v1/api/:id/books?username=:name&password=:pwd'
+    dealWithUrlWithParams(realUrl, apiUrl)
+
+    function dealWithUrlWithParams (realUrl,apiUrl) {
+      let apiReg = apiUrl
+      let result = []
+
+      /*
+        第一：路径中的“/”需要转义
+        第二：路径中的 “?”需要转义
+        第三：将参数转换成 [\w\u4e00-\u9fa5] （\u4e00-\u9fa5代表任意汉字）
+            参数的表示状态有三种：
+                第一种：:id/
+                第二种：:id?
+                第三种：:id&
+            $1：指示的是 \/ 或者 \? 或者 & 或者 $
+       */
+      apiReg = apiUrl.replace(/\//g, '\\\/')
+        .replace(/\?/g, '\\\?')
+        .replace(/:\w+(\\\/|\\\?|&|$)/g, '([\\w\u4e00-\u9fa5]*?)$1')
+
+      // 将字符串转化成正则表达式
+      apiReg = new RegExp(`^${apiReg}$`)
+
+      // 获取参数值
+      let apiRegResult = realUrl.match(apiReg)
+      if (apiRegResult && apiRegResult.length) {
+        result = apiRegResult.splice(1)
+      }
+
+      return result
+    }
+</script>
+</body>
+</html>
