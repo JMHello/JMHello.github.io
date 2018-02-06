@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>discrimination - __proto__ 和 prototype 的区别</title>
+</head>
+<body>
+<script>
+    function Person (name) {
+      this.name = name
+    }
+    Person.prototype.run = function () {
+      console.log(`run`)
+    }
+
+    const p1 = new Person('jm')
+    console.log(p1)
+
+    console.dir(Person)
+
+</script>
+</body>
+</html>

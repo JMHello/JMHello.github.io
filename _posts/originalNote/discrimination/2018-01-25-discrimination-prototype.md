@@ -119,6 +119,32 @@ f.__proto__ === obj // true
 
 ![image](/styles/images/discrimination/prototype/p-02.png)
 
+## 4.3 再来一个demo
+
+> * [demo](/effects/demo/discrimination/protoAndPrototype/v4.html)
+
+```js
+ function Person (name) {
+  this.name = name
+}
+Person.prototype.run = function () {
+  console.log(`run`)
+}
+
+const p1 = new Person('jm')
+console.log(p1)
+
+console.dir(Person)
+```
+
+![image](/styles/images/discrimination/prototype/p-05.png)
+
+> * 标识为1的 `__proto__`：指代的就是 `Person.prototype`
+> * 标识为2的 `prototype`：就是`Person.prototype`
+> * 标识为3的 `__proto__`：指代的是 `Function` 这个原生构造函数  
+
+> * 从图中也证实了：每个对象都有一个隐式原型 `__proto__`，而只有函数才有`prototype`
+
 ## 五、总结
 
 > * 想知道 `xxx.__proto__` 究竟指向什么

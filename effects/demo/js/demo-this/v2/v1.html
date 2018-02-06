@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function outer () {
+      console.log(this)
+      function inner () {
+        console.log(this)
+      }
+      inner()
+    }
+    outer() // window, window
+
+    let obj = {}
+    obj.outer = outer
+    obj.outer() // outer, window
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对于一个未知宽高的盒子，如何让它水平垂直居中于父元素？</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            color: white;
+            background: blue;
+        }
+        .parent {
+            text-align: center;
+            line-height: 150px;
+        }
+        .child {
+            width: 100px;
+            height: 100px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<h2>利用line-height让图片垂直居中</h2>
+<div class="parent box1">
+    <img src="ti.jpg" class="child">
+</div>
+
+</body>
+</html>
