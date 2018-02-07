@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        .dog-wapper {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: black;
+            z-index: auto; /* 默认值 */
+        }
+        .dog {
+            position: absolute;
+            top: 120px;
+            left: 120px;
+            z-index: 2;
+        }
+        .cat {
+            position: absolute;
+            top: 80px;
+            left: 80px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<p>
+    给 .dog 和 .cat 增加了容器 .dog-wrapper 和 .cat-wrapper, 并且 .dog 和 .cat 都设置了 z-index 值，<br>
+    所以都显示在红色背景的 .wrapper 之上，而且 .dog z-index 数值比较大，所以显示在上面。
+</p>
+<div class="dog-wapper">
+    <img src="dog.png" class="dog" alt="dog">
+</div>
+<div class="cat-wapper">
+    <img src="cat.png" class="cat" alt="cat">
+</div>
+</body>
+</html>

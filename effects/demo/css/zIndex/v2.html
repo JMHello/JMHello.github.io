@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        .img-wapper {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            background: black;
+        }
+        .cat {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        .dog {
+            position: absolute;
+            top: 120px;
+            left: 120px;
+        }
+    </style>
+</head>
+<body>
+<p>
+    情况2：两张图片都设置了绝对定位，在 dom 结构上排后面的小狗图展示在上面。<br>
+    如果想小狗图展示在小猫图上面，只需要设置小猫图的 z-index 属性值大于0就可以了
+</p>
+<div class="img-wapper">
+    <img src="cat.png" class="cat" alt="cat">
+    <img src="dog.png" class="dog" alt="dog">
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        .dog-wapper {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: black;
+            z-index: 0; /* 设置为0 */
+        }
+        .dog {
+            position: absolute;
+            top: 120px;
+            left: 120px;
+            z-index: 2;
+        }
+        .cat {
+            position: absolute;
+            top: 80px;
+            left: 80px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<p>
+    当我们设置了 .dog-wrapper 的 z-index 属性值为0之后，我们发现，z-index 值比较大的 .dog 元素反而到 z-index值比较小的 .cat 下面了
+</p>
+<div class="dog-wapper">
+    <img src="dog.png" class="dog" alt="dog">
+</div>
+<div class="cat-wapper">
+    <img src="cat.png" class="cat" alt="cat">
+</div>
+</body>
+</html>

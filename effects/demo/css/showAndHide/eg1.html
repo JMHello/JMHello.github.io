@@ -41,6 +41,9 @@
 <body>
 <div class="box">
     <h2>法一：display:none;</h2>
+    <p>所有后代元素都会隐藏</p>
+    <p>好像这个元素不存在一样，即：不会在页面保留隐藏元素本来的占据的空间位置</p>
+    <hr>
     <div class="box-content dis">
         <div>
             <p>所有后代元素都会隐藏</p>
@@ -51,6 +54,11 @@
 
 <div class="box">
     <h2>法二：visibility:hidden;</h2>
+    <p>子元素设置了 visibility:visible; 则子元素依然可见。</p>
+    <p>元素大小不变，即：可在页面保留隐藏元素本来的所占据的空间位置【我们也可以理解为：元素变透明了！！！】</p>
+    <p>不可以被transition和animate</p>
+    <p>下面的元素就保留了原来所占据的空间</p>
+    <hr>
     <div class="box-content vis">
         <div>
             <p>子元素设置了 visibility:visible; 则子元素依然可见。</p>
@@ -72,6 +80,8 @@
 
 <div class="box">
     <h2>法四：opacity:0;</h2>
+    <p>可以被transition和animate</p>
+    <hr>
     <div class="box-content opa">
         <div>
             <p>可以被transition和animate</p>
@@ -81,6 +91,9 @@
 
 <div class="box">
     <h2>法五：position:absolute;</h2>
+    <p>使元素脱离文档流，处于普通文档之上，并给它设置一个很大的 left负值 定位，使元素定位在可见区域之外</p>
+    <p>float 和 margin 都不能影响到 position: absolute 的元素，因此它们可以很好的被隐藏起来</p>
+    <hr>
     <div class="box-content abs">
         <div>
             <p>使元素脱离文档流，处于普通文档之上，并给它设置一个很大的 left负值 定位，使元素定位在可见区域之外</p>
