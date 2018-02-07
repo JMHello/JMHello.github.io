@@ -204,12 +204,26 @@ tag: CSS
 
 ![relationship-map]({{ '/styles/images/css/flex/flex-11.png' | prepend: site.baseurl }})
 
-> * 如果所有项目的`flex-grow`属性都为1，则它们将等分剩余空间（如果有的话）。
-> * 如果一个项目的`flex-grow`属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+---
+
+> *  `flex-grow` 即定义如何去分配父容器的剩余空间
+>   * 如果所有项目的`flex-grow`属性都为1，则它们将等分剩余空间（如果有的话）。
+>   * 如果一个项目的`flex-grow`属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+
+> * [demo](/effects/demo/css/flex/flexGrow/v1.html)
+
+![flex](/styles/images/css/flex/flex-44.png)
+
+> * 这里要补充：
+>   * 当子元素的宽度总和超过父容器的宽度时，剩余空间不可以分配，例如上例：`500 - 600 = -100`，则定义了 `flex-grow` 的子元素能分配到的空间为0，故不生效
+>   * `flexbox` 环境的父容器的宽度 `500px` 并不会因为子元素的总宽而改变，即子元素的宽度总和最多等于父容器的宽度
+>   * 所以为了让子元素完整显示在父容器内，只有两个办法：
+>       * 通过设置 `flex-wrap` 来使子元素换行
+>       * 通过压缩子元素来使其能容纳在父容器内
 
 ### 4.3 flex-shrink属性
 
-> * `flex-shrink`属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+> * `flex-shrink`属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。如果一个 `flexbox` 项目的 `flex-shrink` 属性为0，则该元素不会被压缩。
 
 ```css
 .item {
@@ -219,15 +233,28 @@ tag: CSS
 
 ![relationship-map]({{ '/styles/images/css/flex/flex-12.jpg' | prepend: site.baseurl }})
 
+---
+
+> * 为什么需要 `flex-shrink` 来定义缩小比例呢？
+>   * 当子元素的宽度总和大于 `flexbox` 父容器的宽度时，其剩余空间将为负数，如果没有设置换行的情况下，其将会通过压缩子元素来使其能够容纳在父容器内。
+>   * 所以，我们可以通过 `flex-shrink` 定义缩小比例
 > * 如果所有项目的`flex-shrink`属性都为1，当空间不足时，都将等比例缩小。
 > * 如果一个项目的`flex-shrink`属性为0，其他项目都为1，则空间不足时，前者不缩小。
 > * 负值对该属性无效。
 
+> * [demo](/effects/demo/css/flex/flexShrink/v1.html)
+
+![flex](/styles/images/css/flex/flex-45.png)
+
 ### 4.4 flex-basis属性
 
-> * `flex-basis`属性定义了在分配多余空间之前，项目占据的主轴空间（`main size`）。
+> * `flex-basis` 属性定义了在分配多余空间之前，项目占据的主轴空间（`main size`）。
+>   * 即：`flex-basis` 用来定义子元素的默认宽或高
+>   * 如果父容器 `flex-direction` 属性的方向为水平方向则为宽度，如为垂直方向则为高度。
+>   * 相当于给子元素设置宽或高。
+>   * **如果同时设置了该属性与宽或高，则该属性权重大于宽或高的值**。
 > * 浏览器根据这个属性，计算主轴是否有多余空间。
-> * 它的默认值为auto，即项目的本来大小。
+> * 它的默认值为 `auto` ，即项目的本来大小。
 
 ```css
 .item {

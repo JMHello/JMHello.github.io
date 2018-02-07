@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-grow</title>
+    <style>
+        .box {
+            display: flex;
+            width: 500px;
+            height: 100px;
+            color: white;
+            background: black;
+        }
+        .item {
+            width: 100px;
+            background: orangered;
+        }
+        .item2 {
+            background: green;
+        }
+        .container2 .item1 {
+            flex-grow: 1;
+        }
+        .container3 .item1 {
+            flex-grow: 1;
+        }
+        .container3 .item2 {
+            flex-grow: 3;
+        }
+        .box.container5 {
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+<h2>默认情况 - flex-grow: 0;</h2>
+<div class="box container1">
+    <div class="item item1">div1：宽100px</div>
+    <div class="item item2">div2: 宽100px</div>
+</div>
+
+<h2>item1：flex-grow: 1;</h2>
+<div class="box container2">
+    <div class="item item1">div1: 宽400px</div>
+    <div class="item item2">div2: 宽100px</div>
+</div>
+
+<h2>设置 item1 的 flex-grow 为1，且 item2 的 flex-grow 为3</h2>
+<p>注意：300为剩余空间</p>
+<div class="box container3">
+    <div class="item item1">div1宽: 100 + 300/4 = 175px</div>
+    <div class="item item2">div2宽: 100 + 300/4*3 = 325px</div>
+</div>
+
+<h2>如果子元素的宽度的总和超过父容器，flex-grow 将不生效。</h2>
+<p>父容器总宽度为 500px，现在为每个item的宽设置为300px</p>
+<div class="box container4">
+    <div class="item item1" style="width: 300px">div1: 宽250px</div>
+    <div class="item item2" style="width: 300px">div2: 宽250px</div>
+</div>
+
+<h2>让子元素完整显示在父容器内，设置flex-wrap </h2>
+<div class="box container5">
+    <div class="item item1" style="width: 300px">div1: 宽250px</div>
+    <div class="item item2" style="width: 300px">div2: 宽250px</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-shrink</title>
+    <style>
+        .box {
+            display: flex;
+            width: 500px;
+            height: 100px;
+            color: white;
+            padding: 10px 0;
+            background: black;
+        }
+        .item {
+            width: 100px;
+            background: orangered;
+        }
+        .item2 {
+            background: green;
+        }
+        .container2 .item1 {
+            flex-shrink: 1;
+        }
+        .container2 .item2 {
+            flex-shrink: 4;
+        }
+        .container3 .item1 {
+            flex-shrink: 0;
+        }
+        .container3 .item2 {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+<h2>如果子元素的宽度的总和超过父容器，flex-grow 将不生效。</h2>
+<p>父容器总宽度为 500px，现在为每个item的宽设置为300px</p>
+<div class="box container1">
+    <div class="item item1" style="width: 300px">div1: 宽250px</div>
+    <div class="item item2" style="width: 300px">div2: 宽250px</div>
+</div>
+
+<h2>父容器总宽度为 500px，现在为每个item的宽设置为300px</h2>
+<p>同时定义了 item1 和 item2 的 flex-shrink 的属性分别为1和4。</p>
+<p> 100为 = |父容器宽度 - 子元素的总宽度| = |500 - 600| = 100</p>
+<div class="box container2">
+    <div class="item item1" style="width: 300px">div1宽: 300px - 100/5*1 = 280px</div>
+    <div class="item item2" style="width: 300px">div2宽: 300px - 100/5*4 = 220px</div>
+</div>
+
+<h2>设置项目的 flex-shrink 为0</h2>
+<p>项目的 flex-shrink 设为0来看下不压缩</p>
+<div class="box container3">
+    <div class="item item1" style="width: 300px">div1: 宽300px 不压缩</div>
+    <div class="item item2" style="width: 300px">div2: 宽300px 不压缩</div>
+</div>
+</body>
+</html>
