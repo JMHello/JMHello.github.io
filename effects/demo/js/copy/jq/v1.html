@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>extend - 只传一个对象</title>
+</head>
+<body>
+<script src="./extend.js"></script>
+<script>
+  var fruits1 = {
+    apple: 0,
+    banana: { weight: 52, price: 100 },
+    cherry: 97
+  };
+
+  const fruits = extend(fruits1)
+  console.log(fruits)
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>extend - 深拷贝：有相同属性</title>
+</head>
+<body>
+<script src="./extend.js"></script>
+<script>
+  let fruits1 = {
+    apple: 0,
+    banana: { weight: 52, price: 100 },
+    cherry: 97
+  };
+
+  let fruits2 = {
+    apple: {
+      weight: 100,
+      price: 10
+    },
+    banana: {
+      weight: 80
+    }
+  }
+
+  // 深拷贝
+  extend(true, fruits1, fruits2)
+  console.log(fruits1)
+  console.log(fruits2)
+</script>
+</body>
+</html>

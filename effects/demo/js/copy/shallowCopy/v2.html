@@ -12,8 +12,8 @@
       hobbies: ['打篮球', '游泳']
     }
 
-    // 直接赋值，浅拷贝
-    let copy = oObj
+    // Object.assign() 浅拷贝
+    let copy = Object.assign({}, oObj)
     copy.hobbies.push('跳舞')
     console.log(oObj)
     console.log(copy)

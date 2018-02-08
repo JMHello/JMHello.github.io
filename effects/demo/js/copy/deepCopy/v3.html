@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>浅拷贝</title>
+    <title>深拷贝 - 通过JSON解析解决</title>
 </head>
 <body>
 <script>
     let oObj = {
       name: 'jm',
       age: 18,
-      hobbies: ['打篮球', '游泳']
+      hobbies: ['打篮球', '游泳'],
+      friend: undefined
     }
 
-    // 直接赋值，浅拷贝
-    let copy = oObj
+    // 通过JSON解析，也可以实现深拷贝
+    let copy = JSON.parse(JSON.stringify(oObj))
     copy.hobbies.push('跳舞')
     console.log(oObj)
     console.log(copy)

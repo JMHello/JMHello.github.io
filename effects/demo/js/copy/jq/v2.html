@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>extend - 浅拷贝</title>
+</head>
+<body>
+<script src="./extend.js"></script>
+<script>
+  let fruits1 = {
+    apple: 0,
+    banana: { weight: 52, price: 100 },
+    cherry: 97
+  };
+
+  let fruits2 = {
+    orange: {},
+    watermelon: {
+      weight: 100,
+      price: 10
+    }
+  }
+
+  extend(fruits1, fruits2)
+  fruits1.orange.place = 'blue'
+  console.log(fruits1, fruits2)
+</script>
+</body>
+</html>
