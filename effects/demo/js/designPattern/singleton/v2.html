@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单例模式 - 透明的单例模式</title>
+</head>
+<body>
+<script>
+let CreateDiv = (function () {
+  let instance = null
+  const CreateDiv = function (html) {
+
+    // 保证只创建一个div
+    if (instance) {
+      return instance
+    }
+
+    this.html = html
+    // 创建div
+    this.init()
+    instance = this
+    return instance
+  }
+
+  CreateDiv.prototype.init = function () {
+    const div = document.createElement('div')
+    div.innerHTML  = this.html
+    document.body.appendChild(div)
+  }
+
+  return CreateDiv
+})()
+
+const div = new CreateDiv('html1')
+const div1 = new CreateDiv('html2')
+
+console.log(div === div1)
+</script>
+</body>
+</html>

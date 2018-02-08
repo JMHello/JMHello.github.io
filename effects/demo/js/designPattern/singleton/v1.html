@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单例模式 - 不透明的单例模式</title>
+</head>
+<body>
+<script>
+    const Singleton = function (name) {
+      this.name = name
+      this.instance = null
+    }
+    Singleton.getInstance = function (name) {
+      if (!this.instance) {
+        this.instance = new Singleton(name)
+      }
+      return this.instance
+    }
+
+    const a = Singleton.getInstance('a')
+    const b = Singleton.getInstance('b')
+    console.log(a === b) // true
+</script>
+</body>
+</html>

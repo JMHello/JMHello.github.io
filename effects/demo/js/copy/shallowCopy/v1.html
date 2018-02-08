@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浅拷贝</title>
+</head>
+<body>
+<script>
+    let oObj = {
+      name: 'jm',
+      age: 18,
+      hobbies: ['打篮球', '游泳'],
+      friend: {
+        name: 'lili',
+        age: 18
+      }
+    }
+
+    // 通过JSON解析，也可以实现深拷贝
+    let copy = oObj
+    copy.hobbies.push('跳舞')
+    console.log(oObj)
+    console.log(copy)
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "口述面试题 （三）js"
+title: "我对前端面试的看法  （三）js"
 date: 2018-02-05 09:00:00 +0800 
 categories: 面试
 tag: interview
@@ -317,3 +317,45 @@ reg.exec('20130213')  //结果： ['20130213', '2013', '02', '13']
 > * 标准的事件模式由三部分组成：事件捕获、处于目标、事件冒泡    
 > * 常用的就是处于目标、事件冒泡
 
+## 22、说说DOM的操作都有哪些
+
+> * 添加节点：
+>   * 父节点.appendChild(新节点)
+>   * 父节点.insertBefore(新节点, 参考节点)
+> * 删除节点：父节点.removeChild(想要删除的节点)
+> * 替换节点：父节点.replaceChild(新节点，要替换的节点)
+> * 拷贝节点：要拷贝的节点.cloneNode()
+>   * 要拷贝的节点.cloneNode(true)：表面深复制，复制节点及整个子节点树
+>   * 要拷贝的节点.cloneNode(false)：表面浅复制，复制当前节点
+
+## 23、说说childNodes 与 Children 的异同
+
+> * 相同点：都是表示子节点，都保存这一个类数组对象`NodeList`
+> * 不同点：`childNodes` 包含文本节点，而`children`不会包含文本节点
+
+## 24、javascript的typeof返回哪些数据类型
+
+> * Boolean, String, Number, Object, Function, Undefined
+
+## 25、说说location
+
+> * location主要用来提供文档信息，我们也可以用其来导航
+> * 有这些属性：`location.href  location.protocol  location.pathname  location.search  location.hash`
+> * 方法 `location.reload()`，如果传进参数 `true` ，则表示不用缓存，重新从服务器拉取数据
+
+## 26、说一说navigator
+
+> * `navigator`：主要保留客户端信息
+> * 尝使用的：`navigator.userAgent`，表示浏览器的用户代理
+
+## 26、说一说history
+
+> * history主要保存用户上网记录，其从用户打开浏览器那一刻算起
+> * history.go(-1)/history.back()：后退 
+> * history.go(1)/ history.forward()：前进 
+
+## 27、说说有什么对话框
+
+> * alert：警告框
+> * confirm：确认框
+> * prompt：提示框

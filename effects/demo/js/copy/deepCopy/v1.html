@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>深拷贝 - 递归</title>
+</head>
+<body>
+<script>
+    let oObj = {
+      name: 'jm',
+      age: 18,
+      hobbies: ['打篮球', '游泳'],
+      friend: {
+        name: 'lili',
+        age: 18
+      }
+    }
+
+    let cObj = {
+      workPlace: ['佛山', '广州']
+    }
+
+    // 测试是否已成功深拷贝
+    const result = deepCopy(oObj, cObj)
+    result.hobbies.push('学习')
+    console.log(result)
+    console.log(oObj)
+
+    /**
+     * 深拷贝（递归实现）- 将原对象复制到目标对象上
+     * @param originObj 原对象
+     * @param copyObj 目标对象
+     * @return {*|{}}
+     */
+    function deepCopy (originObj, targetObj) {
+        let cObj = targetObj || {}
+        for (var i in originObj) {
+          const item = originObj[i]
+          // 引用类型
+          if (typeof item === 'object') {
+            // 对象
+            if (Object.prototype.toString.call(item) === '[object Object]') {
+              cObj[i] = {}
+            }
+            // 数组
+            else if (Object.prototype.toString.call(item) === '[object Array]') {
+              cObj[i] = []
+            }
+            // 递归
+            deepCopy(originObj[i], cObj[i])
+          }
+          // 基本类型
+          else {
+            cObj[i] = item
+          }
+        }
+        return cObj
+    }
+</script>
+</body>
+</html>
