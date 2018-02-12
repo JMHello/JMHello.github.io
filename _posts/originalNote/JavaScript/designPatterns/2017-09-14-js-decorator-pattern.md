@@ -36,36 +36,40 @@ tag: js-设计模式
 
 ### 2.1 模拟传统面向对象语言的装饰者模式
 
+> * [demo](/effects/demo/js/designPattern/decorator/v1.html)
+
 ```js
-// 原始的飞机类：
-var Plane = function(){}
-Plane.prototype.fire = function(){
- console.log( '发射普通子弹' );
-}
-// 增加装饰类：原子弹
-var MissileDecorator = function( plane ){
- this.plane = plane;
-}
-MissileDecorator.prototype.fire = function(){
- this.plane.fire();
- console.log( '发射导弹' );
-}
+    // 原始飞机
+    const Plane = function () {}
+    Plane.prototype.fire = function () {
+      console.log('发射普通子弹')
+    }
 
-// 增加装饰类：原子弹
-var AtomDecorator = function( plane ){
- this.plane = plane;
-}
-AtomDecorator.prototype.fire = function(){
- this.plane.fire();
- console.log( '发射原子弹' );
-} 
+    // 增加装饰类：导弹
+    const MissleDecorator = function (plane) {
+      this.plane = plane
+    }
+    MissleDecorator.prototype.fire = function () {
+      console.log('发射导弹')
+    }
 
-// 测试
-var plane = new Plane();
-plane = new MissileDecorator( plane );
-plane = new AtomDecorator( plane );
-plane.fire();
-// 分别输出： 发射普通子弹、发射导弹、发射原子弹
+    // 增加装饰类：原子弹
+    const AtomDecorator = function (plane) {
+      this.plane = plane
+    }
+    AtomDecorator.prototype.fire = function () {
+      console.log('发射原子弹')
+    }
+
+    // 测试
+    const plane = new Plane()
+    plane.fire()
+
+    const planeWithMissle = new MissleDecorator(plane)
+    planeWithMissle.fire()
+
+    const planeWithAtom = new AtomDecorator(plane)
+    planeWithAtom.fire()
 ```
 
 > * 新增的装饰类：导弹和原子弹都接收参数`plane`对象，并调用了`plane.fire()`，而且没有改动“飞机”这个对象原有的任何方面。
@@ -74,35 +78,36 @@ plane.fire();
 ### 2.2 回到 JavaScript 的装饰者
 
 > * JavaScript 语言动态改变对象相当容易，我们可以直接改写对象或者对象的某个方法，并不需要使用“类”来实现装饰者模式。
+> * [demo](/effects/demo/js/designPattern/decorator/v2.html)
   
 ```js
-var plane = {
- fire: function(){
- console.log( '发射普通子弹' );
- }
-}
+    const plane = {
+      fire: function () {
+        console.log('发射普通子弹')
+      }
+    }
 
-var missileDecorator = function(){
- console.log( '发射导弹' );
-}
+    const missleDeractor = function () {
+      console.log('发射导弹')
+    }
 
-var atomDecorator = function(){
- console.log( '发射原子弹' );
-}
+    const atomDeractor = function () {
+      console.log('发射原子弹')
+    }
 
-var fire1 = plane.fire;
-plane.fire = function(){
- fire1();
- missileDecorator();
-}
+    const fire1 = plane.fire
+    plane.fire = function () {
+      fire1()
+      missleDeractor()
+    }
 
-var fire2 = plane.fire;
-plane.fire = function(){
- fire2();
- atomDecorator();
-}
+    const fire2 = plane.fire
+    plane.fire = function () {
+      fire2()
+      atomDeractor()
+    }
 
-plane.fire();
+    plane.fire()
 // 分别输出： 发射普通子弹、发射导弹、发射原子弹
 ```
 
@@ -126,7 +131,7 @@ window.onload = function(){
 >        需要装饰的函数变多，这些中间变量的数量也会越来越多。
 >     2. `this`的指向问题 
 
-> 下面再看看这个例子：
+> * 下面再看看这个例子：
 
 ```js
 var _getElementById = document.getElementById;
@@ -177,6 +182,22 @@ var before = function( fn, beforefn ){
 > * “代理”函数只是结构上像代理而已，并不承担代理的职责（比如控制对象的访问等）。
 >    * 它的工作是把请求分别转发给新添加的函数和原函数，且负责保证它们的执行顺序，让新添加的函数在原函数之前执行（前置装饰），这样就实现了动态装饰的效果。
 
+> * 实例：
+> * [demo](/effects/demo/js/designPattern/decorator/v3.html)
+
+```js
+const fn = function (fruits) {
+  console.log(`我喜欢吃的水果是：${fruits}`)
+}
+
+const bFn = function (fruits) {
+  console.log(`吃${fruits}前要洗手！`)
+}
+
+const result = before(fn, bFn)
+result('苹果')
+```
+
 ### 4.2 after（后置通知）
 
 ```js
@@ -207,6 +228,21 @@ var after = function(fn, afterFn) {
 ```
 
 > * 新添加的函数在原函数执行之后再执行。
+
+> * [demo](/effects/demo/js/designPattern/decorator/v4.html)
+
+```js
+    const fn = function (fruits) {
+      console.log(`我喜欢吃的水果是：${fruits}`)
+    }
+
+    const aFn = function (fruits) {
+      console.log(`吃${fruits}后要洗手！`)
+    }
+
+    const result = after(fn, aFn)
+    result('苹果')
+```
 
 ### 4.3 AOP简单实例
 
@@ -254,23 +290,32 @@ func();
 > * 在 `showLogin` 函数里，既要负责打开登录浮层，又要负责数据上报，这是两个层面的功能，在此处却被**耦合**在一个函数里。
 
 > * 解决耦合方法：使用后置通知（`after`），详细代码可看**四、AOP**
-
+> * [demo](/effects/demo/js/designPattern/decorator/v5.html)
+   
 ```html
 <html>
 <button tag="login" id="button">点击打开登录浮层</button>
 
 <script>
+    const after = function (fn, afterFn) {
+      return function () {
+        const ret = fn.apply(this, arguments)
+        afterFn.apply(this, arguments)
+        return ret
+      }
+    }
+
     var showLogin = function(){
-        console.log( '打开登录浮层' );
+      console.log( '打开登录浮层' );
     }
-    
+
     var log = function(){
-        console.log( '上报标签为: ' + this.getAttribute( 'tag' ) );
+      console.log( '上报标签为: ' + this.getAttribute( 'tag' ) );
     }
-    
+
     // 打开登录浮层之后上报数据
-    showLogin = showLogin.after( log ); 
-    
+    showLogin = after(showLogin, log );
+
     document.getElementById( 'button' ).onclick = showLogin;
 </script>
 </html>
@@ -292,30 +337,31 @@ Function.prototype.before = function( beforefn ){
 
 > * 从这段代码的`(1)`处 和`(2)`处可以看到，`beforefn` 和原函数 `__self` 共用一组参数列表
 >   `arguments`，当我们在 `beforefn` 的函数体内改变 `arguments` 的时候，原函数 `__self` 接收的参数列表自然也会变化。
+
+> * [demo](/effects/demo/js/designPattern/decorator/v6.html)
   
 ```js
-var fn = function(param) {
-  console.log(param);
-}
+  const before = function (fn, beforeFn) {
+    return function () {
+      beforeFn.apply(this, arguments)
+      return fn.apply(this, arguments)
+    }
+  }
 
-fn = fn.before(function(param) {
-  param.a = 'first';
-});
+  let fn = function (param) {
+    console.log(param)
+  }
 
-fn({
-    'b': 'second'
-});
+  fn = before(fn, function (param) {
+    console.log(param) // {b: 2}
+    param.a = 1
+  })
 
-// 一开始 param 为
-//{
-//    'b': 'second'
-//}
+  fn({
+    b: 2
+  })
 
-// 最后param为
-// {
-//    a: 'first',
-//    b: 'second'
-// }
+  // 结果 {b: 2, a: 1}
 ```
 
 ### 5.3 解决 CSRF 攻击
@@ -512,21 +558,37 @@ submitBtn.onclick = function(){
 > * 注意：为函数通过 `Function.prototype.before` 或者 `Function.prototype.after` 被装饰之后
 >    1. 返回的实际上是一个新的函数，如果在原函数上保存了一些属性，那么这些属性会丢失。
 >    2. 也叠加了函数的作用域，如果装饰的链条过长，性能上也会受到一些影响。 
-> * 实例
+> * [demo](/effects/demo/js/designPattern/decorator/v7.html)
 
 ```js
-var func = function(){
-    alert( 1 );
-}
+  const after = function (fn, afterFn) {
+    return function () {
+      const ret = fn.apply(this, arguments)
+      afterFn.apply(this, arguments)
+      return ret
+    }
+  }
 
-func.a = 'a';
+  let fn = function () {
+    console.log(1)
+  }
 
-func = func.after( function(){
- alert( 2 );
-});
+  fn.a = 1
+  console.dir(fn)
 
-alert ( func.a ); // 输出：undefined 
+  fn = after(fn, function () {
+    console.log(2)
+  })
+
+  console.dir(fn)
+
+  fn()
+  console.log(fn.a)  // undefined
 ```
+
+![decorator](/styles/images/javascript/designPattern/decorator/decorator-01.png)
+
+> * 红线上方是未`after`前，仍有a变量；红线下方是`after`后，没有了`a`变量
      
 ### 六、总结
 

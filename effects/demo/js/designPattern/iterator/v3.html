@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒序迭代器</title>
+</head>
+<body>
+<script>
+  function reverseEach(arr, callback) {
+    for (let l = arr.length - 1; l >= 0; l--) {
+      callback && callback(arr[l], l)
+    }
+  }
+
+  reverseEach([1, 2, 3], function (item, i) {
+    console.log(`index = ${i}, item = ${item}`)
+  })
+</script>
+</body>
+</html>

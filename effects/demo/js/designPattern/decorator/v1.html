@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装饰器模式</title>
+</head>
+<body>
+<script>
+    // 原始飞机
+    const Plane = function () {}
+    Plane.prototype.fire = function () {
+      console.log('发射普通子弹')
+    }
+
+    // 增加装饰类：导弹
+    const MissleDecorator = function (plane) {
+      this.plane = plane
+    }
+    MissleDecorator.prototype.fire = function () {
+      console.log('发射导弹')
+    }
+
+    // 增加装饰类：原子弹
+    const AtomDecorator = function (plane) {
+      this.plane = plane
+    }
+    AtomDecorator.prototype.fire = function () {
+      console.log('发射原子弹')
+    }
+
+    // 测试
+    const plane = new Plane()
+    plane.fire()
+
+    const planeWithMissle = new MissleDecorator(plane)
+    planeWithMissle.fire()
+
+    const planeWithAtom = new AtomDecorator(plane)
+    planeWithAtom.fire()
+</script>
+</body>
+</html>

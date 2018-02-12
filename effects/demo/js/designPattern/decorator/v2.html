@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装饰器模式</title>
+</head>
+<body>
+<script>
+    const plane = {
+      fire: function () {
+        console.log('发射普通子弹')
+      }
+    }
+
+    const missleDeractor = function () {
+      console.log('发射导弹')
+    }
+
+    const atomDeractor = function () {
+      console.log('发射原子弹')
+    }
+
+    const fire1 = plane.fire
+    plane.fire = function () {
+      fire1()
+      missleDeractor()
+    }
+
+    const fire2 = plane.fire
+    plane.fire = function () {
+      fire2()
+      atomDeractor()
+    }
+
+    plane.fire()
+</script>
+</body>
+</html>

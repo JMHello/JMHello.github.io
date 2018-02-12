@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装饰器模式</title>
+</head>
+<body>
+<script>
+    const after = function (fn, afterFn) {
+      return function () {
+        const ret = fn.apply(this, arguments)
+        afterFn.apply(this, arguments)
+        return ret
+      }
+    }
+
+    const fn = function (fruits) {
+      console.log(`我喜欢吃的水果是：${fruits}`)
+    }
+
+    const aFn = function (fruits) {
+      console.log(`吃${fruits}后要洗手！`)
+    }
+
+    const result = after(fn, aFn)
+    result('苹果')
+</script>
+</body>
+</html>

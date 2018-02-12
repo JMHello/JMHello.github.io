@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装饰器模式</title>
+</head>
+<body>
+<script>
+    const before = function (fn, beforeFn) {
+      return function () {
+        beforeFn.apply(this, arguments)
+        return fn.apply(this, arguments)
+      }
+    }
+
+    const fn = function (fruits) {
+      console.log(`我喜欢吃的水果是：${fruits}`)
+    }
+
+    const bFn = function (fruits) {
+      console.log(`吃${fruits}前要洗手！`)
+    }
+
+    const result = before(fn, bFn)
+    result('苹果')
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装饰器模式</title>
+</head>
+<body>
+<script>
+  const after = function (fn, afterFn) {
+    return function () {
+      const ret = fn.apply(this, arguments)
+      afterFn.apply(this, arguments)
+      return ret
+    }
+  }
+
+  let fn = function () {
+    console.log(1)
+  }
+
+  fn.a = 1
+  console.dir(fn)
+
+  fn = after(fn, function () {
+    console.log(2)
+  })
+
+  console.dir(fn)
+
+  fn()
+  console.log(fn.a)  // undefined
+
+</script>
+</body>
+</html>

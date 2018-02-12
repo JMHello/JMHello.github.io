@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装饰器模式</title>
+</head>
+<body>
+<script>
+  const before = function (fn, beforeFn) {
+    return function () {
+      beforeFn.apply(this, arguments)
+      return fn.apply(this, arguments)
+    }
+  }
+
+  let fn = function (param) {
+    console.log(param)
+  }
+
+  fn = before(fn, function (param) {
+    console.log(param) // {b: 2}
+    param.a = 1
+  })
+
+  fn({
+    b: 2
+  })
+
+  // 结果 {b: 2, a: 1}
+
+</script>
+</body>
+</html>
