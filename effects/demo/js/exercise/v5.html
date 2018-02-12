@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现 AutoComplete</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .container .txt-wrapper {
+            flex-grow: 1;
+            position: relative;
+        }
+        .txt-wrapper .text {
+            width: 200px;
+            height: 28px;
+            font: 14px/2 '';
+            border: 1px solid #333333;
+        }
+        .list {
+            position: absolute;
+            list-style: none;
+            width: 202px;
+            margin: 0;
+            padding: 0;
+        }
+        .list .list-item {
+            height: 30px;
+            font: 14px/30px '';
+            color: white;
+            padding-left: 10px;
+            background: grey;
+            border-bottom: 1px solid #e7e7e7;
+        }
+        .list .list-item:last-of-type {
+            border-bottom: none;
+        }
+        .list .list-item:hover {
+            color: grey;
+            background: #e7e7e7;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="txt-wrapper">
+        <input type="text" class="text autocomplete">
+        <!--<ul class="list">-->
+            <!--<li class="list-item">apple</li>-->
+            <!--<li class="list-item">apple</li>-->
+            <!--<li class="list-item">apple</li>-->
+            <!--<li class="list-item">apple</li>-->
+        <!--</ul>-->
+    </div>
+    <div class="txt-wrapper">
+        <input type="text" class="text autocomplete">
+    </div>
+    <div class="txt-wrapper">
+        <input type="text" class="text autocomplete">
+    </div>
+</div>
+
+<script>
+  /**
+   * 以下是个人对题目的理解：
+   * 1. 当文本框 onfocus：如果文本框里有内容，数据列表里有相应的内容，那么列表就会展示出来；否则，则不展示
+   * 2. 有多个文本框，但是列表只有1个，即：只出现一个列表
+   * 3. 当用户输入内容的时候 keyup：列表展示的内容随着用户输入的内容变化而变化
+   * 4. 点击相应的列表项 click：其内容会展示在输入框中
+   */
+
+  // 提示范围的数据
+  let data = ['apple', 'banana', 'carambola', 'grape', 'lemon', 'orange', 'watermelon'];
+
+
+
+
+
+  /**
+   * 过滤数据
+   * @param value 用户输入的值
+   * @param data 提示范围的数据
+   * @return {string}
+   */
+
+  function filterData (value, data) {
+    data = data.filter(function (item) {
+      if (item.indexOf(value) > -1) return item
+    })
+    console.log(data)
+    return data
+  }
+
+  /**
+   * 创建列表
+   * @param data 过滤后的数据
+   * @return {string}
+   */
+  function createDataList (data) {
+    let str = ''
+
+    for (let item of data) {
+      str += `<li class="list-item">${item}</li>`
+    }
+
+    str = `<ul class="list">${str}</ul>`
+
+    return str
+  }
+
+  /**
+   * 事件绑定
+   */
+  function bindEvent () {
+    // 获取元素
+    const aAutoComplete = [...document.querySelectorAll('.autocomplete')]
+
+    document.addEventListener('click', handleClick, false)
+
+    for (let aC of aAutoComplete) {
+      aC.addEventListener('focus', handleFocus, false)
+    }
+  }
+
+  /**
+   * 点击
+   */
+  function handleClick (e) {
+    const ev = e || window.event
+    const target = ev.target
+    const cName = target.className
+
+
+  }
+
+  function handleFocus (e) {
+    const parent = this.parentNode
+    const fData = filterData(this.value, data)
+    const list = createDataList(fData)
+    console.log(list)
+  }
+
+  bindEvent()
+</script>
+</body>
+</html>

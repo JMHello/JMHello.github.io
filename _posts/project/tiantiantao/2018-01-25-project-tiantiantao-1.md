@@ -20,7 +20,7 @@ tag: project
 
 ## 二、原型
 
-> * [原型](/effects/demo/project/tiantiantao-v2/source/tiantiantao-v2/index.html)
+> * [原型](/effects/demo/project/tiantiantao-v2/source/tiantiantao-v2/start.html)
 > * [原型下载](/effects/demo/project/tiantiantao-v2/source/tiantiantao-v2.rp)
 
 > * 以下是我在经历三天半的原型设计所总结出来的一些注意事项：

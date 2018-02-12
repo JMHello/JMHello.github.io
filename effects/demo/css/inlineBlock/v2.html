@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline-block 应用 - 网页头部菜单</title>
+    <style>
+        .nav {
+           background: black;
+        }
+        .list {
+            font-size: 0;
+        }
+        .list .list-item {
+            display: inline-block;
+            font-size: 20px;
+            padding: 5px 10px;
+        }
+        .list .item-link {
+            display: block;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <ul class="list">
+            <li class="list-item"><a href="#" class="item-link">首页</a></li>
+            <li class="list-item"><a href="#" class="item-link">关于</a></li>
+            <li class="list-item"><a href="#" class="item-link">热点</a></li>
+        </ul>
+    </nav>
+</header>
+</body>
+</html>

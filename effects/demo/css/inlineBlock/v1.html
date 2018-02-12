@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline-block的问题 - 空白符</title>
+    <style>
+        .list span {
+            border: 1px solid #eed3d7;
+        }
+        .list .list-item {
+            display: inline-block;
+            border: 1px solid #eed3d7;
+        }
+        .list-no-white {
+            font-size: 0; /* 让空白符消失 */
+        }
+        .list-no-white .list-item {
+            font-size: 12px; /* 让 li 有自己的字体大小 */
+        }
+    </style>
+</head>
+<body>
+<h2>display:inline</h2>
+<div class="list">
+    <span>首页</span>
+    <span>关于</span>
+    <span>热点</span>
+</div>
+
+<h2>display: inline-block 带来的问题：空白符 </h2>
+<ul class="list">
+    <li class="list-item">首页</li>
+    <li class="list-item">关于</li>
+    <li class="list-item">热点</li>
+</ul>
+
+<h2>解决空白符问题法1 - li标签写在一起</h2>
+<ul class="list">
+    <li class="list-item">首页</li><li class="list-item">关于</li><li class="list-item">热点</li>
+</ul>
+
+<h2>解决空白符问题法2 - 基于字符去解决</h2>
+<ul class="list list-no-white">
+    <li class="list-item">首页</li>
+    <li class="list-item">关于</li>
+    <li class="list-item">热点</li>
+</ul>
+
+</body>
+</html>

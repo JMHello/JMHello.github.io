@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数字数组去重</title>
+</head>
+<body>
+<script>
+  const result = unique([10, 2, 3, 4, 2, 10, 100, 20, 10, 20, 10, 4, 4, 1]);
+  console.log(result) // [10, 2, 3, 4, 100, 20, 1]
+
+  function unique (arr) {
+    // 思路
+    // 新开一个数组
+    // 如果传进来的数组的每一项在新开的数组里找不到对应的值，
+    // 那么就将该项添加到新数组中，否则不添加
+    // 最终返回新数组
+
+    let newArr = []
+    for (let num of arr) {
+      if (newArr.indexOf(num) === -1) {
+        newArr.push(num)
+      }
+    }
+
+    return newArr
+  }
+</script>
+</body>
+</html>

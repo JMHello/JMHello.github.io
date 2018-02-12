@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串字符统计</title>
+</head>
+<body>
+<script>
+  const result = count('javaScript');
+  console.log(result)
+
+  /**
+   * 字符串字符统计
+   * @param str
+   * @return {{}}
+   */
+  function count (str) {
+    let obj = {}
+
+    let len = str.length
+
+    for (let i = 0; i < len; i++) {
+      const s = str.charAt(i)
+      if (obj[s]) {
+        obj[s]++
+      } else {
+        obj[s] = 1
+      }
+    }
+
+    return obj
+  }
+</script>
+</body>
+</html>

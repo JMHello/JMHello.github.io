@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串转换为驼峰格式</title>
+</head>
+<body>
+<script>
+  const result1 = convertToCamelCase('background-image');
+  console.log(result1) // backgroundImage
+
+  const result2 = convertToCamelCase('-webkit-border-radius-image');
+  console.log(result2) // webkitBorderRadius
+
+  function convertToCamelCase (str) {
+    let strArr = str.split('-')
+
+    // 如果第一项是空格，则需要将其去除
+    if (strArr[0] === '') {
+      strArr = strArr.slice(1)
+    }
+
+    let len = strArr.length
+
+    // 思路一：
+    // 除了第一个单词，其他单词的首个字母都要转换为大写
+    // 转换结束后，再将数组join起来，变成字符串
+
+    // 思路二：
+    // 先将每个单词的首个字母都转化为大写
+    // 转换结束后，再将数组join起来，变成字符串
+    // 将首字母转化为小写
+
+    // 思路三：
+    // 先将每个单词的首个字母都转化为大写
+    // 转换结束后，再将首个单词的首字母转化为小写
+    // 最后再将数组join起来，变成字符串
+
+    // 实现思路一
+    for (let i = 1; i < len; i++) {
+      strArr[i] = strArr[i][0].toLocaleUpperCase() + strArr[i].slice(1)
+    }
+
+    return strArr.join('')
+  }
+</script>
+</body>
+</html>

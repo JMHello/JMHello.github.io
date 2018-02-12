@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$ - jQuery - 1</title>
+</head>
+<body>
+<script>
+    // Uncaught RangeError: Maximum call stack size exceeded
+    // 报错的原因是：jQuery在不停地自己调用自己，没有限制
+    var $ = jQuery = function () {
+      return new jQuery()
+    }
+    console.log($())
+</script>
+</body>
+</html>

@@ -69,19 +69,15 @@ jQuery().css();
 ### 2.2 为什么要在`jQuery`的构造函数里返回` return new jQuery.fn.init();`？
 
 > * 由于需要起到“链式”调用的作用，那么`jQuery`的构造函数返回的必然是一个对象才可以，因此，一开始我们的想法是：
-> * 点击打开[demo](/effects/demo/jq/v1.html)
+> * 点击打开[demo](/effects/demo/jq/$/v1.html)
 
 ```js
-const $ = jQuery = function () {
+// Uncaught RangeError: Maximum call stack size exceeded
+// 报错的原因是：jQuery在不停地自己调用自己，没有限制
+var $ = jQuery = function () {
   return new jQuery()
 }
-jQuery.fn = jQuery.prototype = {
-  size: function () {
-    return this.length
-  }
-}
-//  Maximum call stack size exceeded
-console.log($().size())
+console.log($())
 ```
 
 > * 从上述代码的输出结果，你可以发现报错了：` Maximum call stack size exceeded`，即：内存外溢，出现了死循环引用
@@ -98,8 +94,9 @@ console.log($().size())
 
 --- 
 
-> * 有了上面的想法，我们就可以尝试用工厂方法来创建一个实例，并且将这个方法放在`jQuery.prototype`原型对象上，并在`jQuery`函数中返回这个原型方法的调用。
-> * 点击打开[demo](/effects/demo/jq/v2.html)
+> * 既然自己调用自己不行，那么我就借助别人，然后再转化成自己的！
+> * 我们就可以尝试用工厂方法来创建一个实例，并且将这个方法放在`jQuery.prototype`原型对象上，并在`jQuery`函数中返回这个原型方法的调用。
+> * 点击打开[demo](/effects/demo/jq/$/v2.html)
 
 ```js
     const $ = jQuery = function () {
@@ -131,7 +128,7 @@ console.log($().size())
 > * 但是，`this`关键字又可以访问上一级对象`jQuery.fn`的作用域，所以`$().version`返回`'2.0.3'`。
 > * 记得，`$().size()`返回的是0。**很明显，这样的设计很糟糕！！因此我们需要分隔作用域**
   
-> * 点击打开[demo](/effects/demo/jq/v3.html)
+> * 点击打开[demo](/effects/demo/jq/$/v3.html)
   
 ```js
     var $ = jQuery = function() {
@@ -168,7 +165,7 @@ console.log($().size())
 
 ---
 
-> * 解决上述问题的方法如下：【点击打开[demo](/effects/demo/jq/v4.html)】
+> * 解决上述问题的方法如下：【点击打开[demo](/effects/demo/jq/$/v4.html)】
 
 ```js
     var $ = jQuery = function() {
@@ -205,3 +202,19 @@ console.log($().size())
 ![jquery](/styles/images/jq/jQuery/jQuery-02.png)
 
  > * 注意：`$().size()`的值仍然是`0`，原因是：根据作用域链寻找变量的原理，`init`方法中存在`length`，自然就不会寻找 `jQuery.prototype`下的`length`了
+ 
+## 三、总结
+
+> * 由于要实现链式调用，返回的必然是一个对象，通过这个对象，再调用其下的属性或者方法
+> * 由于在自己的函数里返回自己的对象，会出现内存溢出，所以这个方法无效
+> * 既然，自己的不行，为何不借助别人的？然后，再将别人的转化成自己的？
+> * 个人对于 `jQuery` 的变量对象的实现是这样子的： 
+>   * 既然要实现链式调用，函数肯定是返回一个对象，那么返回对象的最经典方法就是“工厂函数模式”，所以，这里我们使用工厂模式返回对象！
+>   * 就像创造对象一样，一般构造方法是存储属性的地方，而原型主要是存储方法；
+>   * 而`jQuery`这里，归根到底就是创建一个变量，所以属性就存在“构造函数” `init` 里，而方法，则存储在 `jQuery.prototype` 上
+>   * 这里其实也用到了一丢丢“原型链继承”的味道，在 `return new jQuery.fn.init();` 之后，无法访问`jQuery.prototype`上的方法，
+>     所以，我们就要 `Query.fn.init.prototype = jQuery.fn;`
+> * 说到这里，突然觉得，`jQuery` 对象的创建不就是 “构造函数结合原型” 去创建？只不过，这里不是用自己的，而是借用了别人的！
+
+> * 哦，对了，为什么不是新建一个函数，再借用这个函数的作用域，而是用`jQuery`原型对象上的`init`方法的作用域呢？
+>   * 个人理解是：其实 `jQuery.prototype.init` 还不是属于`jQuery`自己身体的一部分，用自己本身的东西要比借用别人的东西要好得多吧！

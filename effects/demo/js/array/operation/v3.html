@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组 - slice()</title>
+</head>
+<body>
+<script>
+    const a = toArray(1, 2, 3)
+    console.log(a)
+
+    /**
+     * 将类数组对象转化为数组
+     * @return {*}
+     */
+    function toArray () {
+      console.log(arguments)
+      return Array.prototype.slice.call(arguments)
+    }
+</script>
+</body>
+</html>
