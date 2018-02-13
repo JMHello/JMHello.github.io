@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>离线操作DOM - DocumentFragment</title>
+</head>
+<body>
+<ul id="list"></ul>
+<script>
+    const list = document.getElementById('list')
+    createDiv(list)
+
+    function createDiv (list) {
+      const fragment = document.createDocumentFragment()
+      let li = null
+
+      for (let i = 1; i <= 100; i++) {
+        li = document.createElement('li')
+        li.appendChild(document.createTextNode(i))
+        fragment.appendChild(li)
+      }
+
+      list.appendChild(fragment)
+    }
+</script>
+</body>
+</html>

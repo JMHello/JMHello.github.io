@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getComputedStyle()</title>
+    <style>
+        div {
+            height: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+<div style="width: 100px;" id="div"></div>
+<body>
+<script>
+  const div = document.getElementById('div')
+  const computedStyle = window.getComputedStyle(div, null)
+
+  console.log(computedStyle.width) // 100px
+  console.log(computedStyle.height) // 100px
+  console.log(computedStyle.background) // rgb(0, 0, 255) none repeat scroll 0% 0% / auto padding-box border-box
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getComputedStyle()</title>
+    <style>
+        div {
+            height: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+<div style="width: 100px;" id="div"></div>
+<body>
+<script>
+  const div = document.getElementById('div')
+  const width = getEleComputedStyle(div, 'width')
+
+  console.log(width) // 100px
+
+  function getEleComputedStyle (ele, cName) {
+    if (window.getComputedStyle) { // 非ie
+      return window.getComputedStyle(ele, null)[cName]
+    } else {
+      return ele.currentStyle[cName] // ie
+    }
+  }
+</script>
+</body>
+</html>

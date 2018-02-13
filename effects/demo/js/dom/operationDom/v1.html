@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>离线操作DOM - 字符串拼接</title>
+</head>
+<body>
+<ul id="list"></ul>
+<script>
+    const list = document.getElementById('list')
+    createDiv(list)
+
+    function createDiv (list) {
+      let str = ''
+
+      for (let i = 1; i <= 100; i++) {
+        str += `<li>${i}</li>`
+      }
+
+      list.innerHTML += str
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style与getComputedStyle()的区别</title>
+</head>
+<div id="div"></div>
+<body>
+<script>
+  const div = document.getElementById('div')
+  const width = getEleComputedStyle(div, 'width')
+  console.log(width) // 1350px
+  console.log(div.style.width) // 空白
+
+  function getEleComputedStyle (ele, cName) {
+    if (window.getComputedStyle) { // 非ie
+      return window.getComputedStyle(ele, null)[cName]
+    } else {
+      return ele.currentStyle[cName] // ie
+    }
+  }
+</script>
+</body>
+</html>

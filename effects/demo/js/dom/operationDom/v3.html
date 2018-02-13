@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>离线操作DOM - cloneNode()</title>
+</head>
+<body>
+<ul id="list"></ul>
+<script>
+    const list = document.getElementById('list')
+    createDiv(list)
+
+    function createDiv (list) {
+      const cList = list.cloneNode()
+
+      let li = null
+
+      for (let i = 1; i <= 100; i++) {
+        li = document.createElement('li')
+        li.appendChild(document.createTextNode(i))
+        cList.appendChild(li)
+      }
+
+      // 替换原始节点
+      document.body.replaceChild(cList, list)
+
+    }
+</script>
+</body>
+</html>

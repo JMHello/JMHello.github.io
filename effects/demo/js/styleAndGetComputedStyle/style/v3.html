@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style对象 - length 和 item() 和 getPropertyValue()</title>
+</head>
+<div style="width: 100px; height: 100px; background-color: blue" id="div"></div>
+<body>
+<script>
+    const div = document.getElementById('div')
+    const len = div.style.length
+    console.log(len) // 3
+
+    let cssAttr
+    let value
+    for (let i = 0; i < len; i++) {
+      cssAttr = div.style[i]
+      // 或者
+      // cssAttr = div.style.item(i)
+      value = div.style.getPropertyValue(cssAttr)
+      console.log(`${cssAttr} = ${value}`)
+    }
+</script>
+</body>
+</html>

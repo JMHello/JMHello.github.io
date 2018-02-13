@@ -3,7 +3,7 @@ layout: post
 title: "表单校验插件"
 date: 2017-12-23 22:00:00 +0800 
 categories: 插件
-tag: 原创
+tag: effects
 ---
 * content
 {:toc}

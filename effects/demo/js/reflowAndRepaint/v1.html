@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重拍和重绘 - 最佳实践</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .special {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="div">nihao</div>
+<script>
+    const div = document.getElementById('div')
+
+    // bad
+    div.style.left = 10 + 'px'
+    div.style.top = 10 + 'px'
+
+    // good
+    div.className += 'special'
+
+    // good
+    console.log(div.style.cssText) // left: 10px; top: 10px;
+    div.style.cssText += '; padding: 10px; margin: 10px;'
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style对象 - cssText</title>
+    <style>
+        div {
+            height: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+<div id="div"></div>
+<body>
+<script>
+    const div = document.getElementById('div')
+    div.style.width = `100px`
+    console.log(div.style.cssText) // width: 100px;
+
+    // 使用cssText修改样式
+    div.style.cssText = `;width: 300px;`
+    console.log(div.style.cssText) // width: 300px;
+
+    // 不想被覆盖，可以这样写
+    div.style.cssText += `; padding: 10px; margin: 40px;`
+    console.log(div.style.cssText) // width: 300px; padding: 10px; margin: 40px;
+</script>
+</body>
+</html>

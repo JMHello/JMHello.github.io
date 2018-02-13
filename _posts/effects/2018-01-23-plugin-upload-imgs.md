@@ -3,7 +3,7 @@ layout: post
 title: "上传图片插件"
 date: 2018-01-23 22:00:00 +0800 
 categories: 插件
-tag: 原创
+tag: effects
 ---
 * content
 {:toc}
