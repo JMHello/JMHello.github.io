@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页加载整个过程的(onload)耗时</title>
+</head>
+<body>
+<script>
+  // 网页加载整个过程的(onload)耗时
+  const timing = performance.timing
+  const duration = timing.loadEventEnd - timing.navigationStart
+  console.log(duration)
+</script>
+</body>
+</html>

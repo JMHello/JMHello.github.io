@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tcp 连接的耗时</title>
+</head>
+<body>
+<script>
+  // tcp 连接的耗时
+  const timing = performance.timing
+  const duration = timing.connectEnd - timing.connectStart
+  console.log(duration)
+</script>
+</body>
+</html>

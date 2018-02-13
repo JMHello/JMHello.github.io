@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TTFB 获取首字节的耗时</title>
+</head>
+<body>
+<script>
+  // TTFB 获取首字节的耗时
+  const timing = performance.timing
+  const duration = timing.responseStart - timing.navigationStart
+  console.log(duration)
+</script>
+</body>
+</html>

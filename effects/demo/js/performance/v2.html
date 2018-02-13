@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面经历了多长时间</title>
+</head>
+<body>
+<script>
+  // 页面经历了多长时间
+  const timing = performance.timing
+  const duration = Date.now() - timing.navigationStart
+  console.log(duration)
+</script>
+</body>
+</html>
