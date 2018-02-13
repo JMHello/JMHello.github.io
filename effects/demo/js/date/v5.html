@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date类型</title>
+</head>
+<body>
+<script>
+    const now = new Date()
+    console.log(now) // Tue Feb 13 2018 10:15:40 GMT+0800 (中国标准时间)
+
+    console.log(now.toString()) // Tue Feb 13 2018 10:15:40 GMT+0800 (中国标准时间)
+
+    console.log(now.toTimeString()) // 10:15:40 GMT+0800 (中国标准时间)
+
+    console.log(now.toDateString()) // Tue Feb 13 2018
+
+    console.log(now.toGMTString()) // Tue, 13 Feb 2018 02:15:40 GMT
+
+    console.log(now.toUTCString()) // Tue, 13 Feb 2018 02:15:40 GMT
+
+    console.log(now.toLocaleString()) // 2018/2/13 上午10:15:40
+
+    console.log(now.toLocaleTimeString()) // 上午10:15:40
+
+    // Date.UTC(year,month,day,hours,minutes,seconds,ms)
+    const utc = Date.UTC(2005,7,8)
+    console.log(utc) // 1123459200000
+
+    console.log(now.valueOf()) // 1518488140837
+</script>
+</body>
+</html>
