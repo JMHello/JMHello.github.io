@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+      // 测试时间起始点
+      const startTime = +new Date()
+    </script>
+    <title>白屏时间</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      // 测试时间起终点
+      const endTime = +new Date()
+    </script>
+</head>
+<body>
+<h1>白屏时间</h1>
+<script>
+  // 计算白屏时间法1：
+  const duration1 = endTime - startTime
+  console.log(duration1)
+
+  // 计算白屏时间法2
+  const duration2 = endTime - performance.timing.navigationStart
+  console.log(duration2)
+</script>
+</body>
+</html>

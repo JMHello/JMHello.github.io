@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+      // 测试时间起始点
+      const pageStartTime = +new Date()
+    </script>
+    <title>首屏时间</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>首屏时间</h1>
+<!-- 首屏可见模块1 -->
+<div>模块1</div>
+<!-- 首屏可见模块2 -->
+<div>模块2</div>
+<script>
+  // 测试时间起终点
+  const pageEndTime = +new Date()
+</script>
+<!-- 首屏不可见模块3 -->
+<div>模块3</div>
+<!-- 首屏不可见模块4 -->
+<div>模块4</div>
+<script>
+  // 计算首屏时间法1：
+  const duration1 = pageEndTime - pageStartTime
+  console.log(duration1)
+
+  // 计算首屏时间法2
+  const duration2 = pageEndTime - performance.timing.navigationStart
+  console.log(duration2)
+</script>
+</body>
+</html>

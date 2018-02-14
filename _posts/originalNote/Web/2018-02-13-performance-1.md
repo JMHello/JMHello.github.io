@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "性能 - window.performance"
-date: 2018-02-03 19:00:00 +0800 
-categories: 原创
+date: 2018-02-13 19:00:00 +0800 
+categories: 学习笔记
 tag: 深入理解Web前端
 ---
 * content
