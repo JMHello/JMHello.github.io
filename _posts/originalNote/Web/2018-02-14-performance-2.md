@@ -33,65 +33,7 @@ tag: 深入理解Web前端
 
 > * 白屏时间：用户屏幕刚开始显示内容的时刻
 
-![performance](/styles/images/web/performanceOptimization/po-21.png)
-
-### 2.2 计算白屏时间
-
-![performance](/styles/images/web/performanceOptimization/po-22.png)
-
-> * 白屏时间 = 页面开始展示的时间点 - 开始请求的时间点（`performance.timing.responseStart`）
-
-> * 如何知道页面开始展示的时间点？（并没有相应的`api`获取这个时间点）
-
-![performance](/styles/images/web/performanceOptimization/po-23.png)
-
-> * 一般来说，我们解析一个`html`文件的顺序如下： 
->   * 按照文档流从上到下解析 ===》 开始解析 `head` ===》结束解析`head`（开始解析`body`）===》解析完`body`
->   * 即：开始解析`body`就是我们开始看到内容的时刻
-
-> * 所以，我们可以在`head`标签的末尾插入 `endTime = +new Date()`，获取页面开始的时间点
-
-![performance](/styles/images/web/performanceOptimization/po-24.png)
-
-### 2.3 demo
-
-```html
----
-layout: post
-title: "性能 - 性能衡量指标"
-date: 2018-02-14 10:00:00 +0800 
-categories: 原创
-tag: 深入理解Web前端
----
-* content
-{:toc}
-
-> * 参考资料
-
-<!-- more -->
-
-
-## 一、性能衡量指标
-
-![performance](/styles/images/web/performanceOptimization/po-20.png)
-
-
-> * 打开一个页面的时候，都会做以下事情：
->   * 开始请求：加载页面的起始时间点，用 `performance.timing.navigationStart` 获取相应的值
->   * 获取首字节：接收到第一个字节数据的时刻，用 `performance.timing.responseStart` 获取相应的值
->   * 页面开始展示：用户屏幕刚开始显示内容的时刻，我们也俗称其为白屏时间
->   * 首屏内容加载完成：
->       * 一般来说，移动端页面比较长，但是我们的手机屏幕的大小是有限制的，所以不可能一屏就看完所有页面的内容。
->       * 因此，一般都是先加载手机屏幕可以容纳下的内容，即首屏内容。
->       * 综上所述：首屏内容加载完成指在不滚动屏幕能看到的内容加载完成的时间点，我们也称其为首屏时间
-
-## 二、白屏时间
-
-### 2.1 介绍
-
-> * 白屏时间：用户屏幕刚开始显示内容的时刻
-
-![performance](/styles/images/web/performanceOptimization/po-21.png)
+![performance](/styles/images/web/performanceOptimization/po-21.png)、
 
 ![performance](/styles/images/web/performanceOptimization/po-27.png)
 
@@ -113,10 +55,6 @@ tag: 深入理解Web前端
 >   * 按照文档流从上到下解析 ===》 开始解析 `head` ===》结束解析`head`（开始解析`body`）===》解析完`body`
 >   * 即：开始解析`body`就是我们开始看到内容的时刻
 
----
-
-> * 综上所述：浏览器开始渲染 `<body>` 标签或者解析完 `<head>` 标签的时刻就是页面白屏结束的时间点
-
 > * 所以，我们可以在`head`标签的末尾插入 `endTime = +new Date()`，获取页面开始的时间点
 
 ![performance](/styles/images/web/performanceOptimization/po-24.png)
@@ -129,7 +67,6 @@ tag: 深入理解Web前端
 ### 2.3 demo
 
 > * [demo](/effects/demo/js/performance/v8.html)
-
 
 ```html
 <!DOCTYPE html>
