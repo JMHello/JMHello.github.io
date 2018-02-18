@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>处理1px边框变粗的问题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #333333;
+        }
+        .des {
+            position: relative;
+        }
+        /* 上边框 处理1px边框变粗的问题 */
+        .des::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-top: 1px solid #e7e7e7;
+            transform: scaleY(0.5); /* 关键代码，y轴上压缩一半 */
+        }
+        /* 下边框 没有处理1px边框变粗的问题 */
+        .des::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-top: 1px solid #e7e7e7;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h1>处理1px边框变粗的问题</h1>
+    <p class="des">Hello，你好！</p>
+</div>
+</body>
+</html>

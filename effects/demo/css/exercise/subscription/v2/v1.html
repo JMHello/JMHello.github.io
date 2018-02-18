@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片不定宽高</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .wrapper {
+            padding: 10px;
+            border: 1px solid #e7e7e7;
+            border-radius: 10px;
+        }
+        .img-wrapper {
+            position: relative;
+            padding-top: 56.25%;
+            overflow: hidden;
+        }
+        .img-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h2>图片不定宽高</h2>
+    <div class="img-wrapper">
+        <img src="../timg.jpg">
+    </div>
+</div>
+</body>
+</html>
