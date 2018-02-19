@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>width & minWidth & maxWidth</title>
+    <style>
+        .box {
+            height: 100px;
+            background: blue;
+        }
+        .box1 {
+            width: 100px;
+        }
+        .box2 {
+            min-width: 100px;
+        }
+        .box3 {
+            max-width: 100px;
+        }
+        .box4 {
+            width: 100px;
+            max-width: 200px;
+        }
+        .box5 {
+            width: 100px;
+            min-width: 200px;
+        }
+        .box6 {
+            width: 100px;
+            min-width: 200px;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+<h2>width: 100px;</h2>
+<div class="box box1"></div>
+
+<h2>min-width: 100px;</h2>
+<div class="box box2"></div>
+
+<h2>max-width: 100px;</h2>
+<div class="box box3"></div>
+
+<h2>width: 100px; max-width: 200px;</h2>
+<div class="box box4"></div>
+
+<h2>width: 100px; min-width: 200px</h2>
+<div class="box box5"></div>
+
+<h2>width: 100px; min-width: 200px; max-width: 300px</h2>
+<div class="box box6"></div>
+</body>
+</html>
