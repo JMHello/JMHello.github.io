@@ -55,17 +55,44 @@ tag: CSS
 
 ### 2.3 非替换元素
 
-![vfm](/styles/images/css/vfm/vfm-03.png)
+> * 非替换元素：`(X)HTML` 的大多数元素都是非替换元素，他们将内容直接告诉浏览器，将其显示出来
+
+> * 行内非替换元素特点：
+>   * 行内非替换元素添加 `padding-top` 或 `padding-bottom`，不影响行框高度，但内容去高度会变化
+>   * `margin-top`，`margin-bottom` 对行框没有任何影响
+>   * 添加左右边距会影响行内非替换元素水平位置
+
+---
 
 > * 以下这两个 `demo` 是关于行内非替换元素与行内替换元素的对比：
->   * 点击打开[demo1](/effects/demo/css/vfm/eg3.html)
->   * 点击打开[demo2](/effects/demo/css/vfm/eg4.html)
+
+> * 行内非替换元素：【点击打开[demo1](/effects/demo/css/vfm/eg3.html)】
+
+![vfm](/styles/images/css/vfm/vfm-07.png)
+
+> * 行内替换元素：【点击打开[demo2](/effects/demo/css/vfm/eg4.html)】
+
+![vfm](/styles/images/css/vfm/vfm-08.png)
 
 ### 2.4 替换元素
 
-![vfm](/styles/images/css/vfm/vfm-04.png)
+> * 替换元素：替换元素是浏览器根据元素的标签和属性，来决定元素的具体显示内容
+
+> * 替换元素：
+>   * `audio` 和 `canvas` 在某些特定情况下为替换元素
+>   * 行内替换元素：`input`/`textarea`/`select`(`display:inline-block`)；`img`/`object`/`iframe`(`display:inline`)
+
+> * 特点：
+>   * 替换元素是其内容不受`css`视觉格式化模型控制的元素
+>   * 在这些元素没有实际的内容，是个空元素
+>   * 浏览器会根据元素的标签类型和属性来显示这些元素
+>   * 替换元素也在其显示中生成了框 --- 替换元素通常有其固有的尺寸（一个固有的宽度、一个固有的高度和一个固有的比率）
+>   * 替换元素可增加其行框高度，带不影响`line-height` --- 内容区高度值 = `pading-top` + `padding-bottom` + `margin-top` + `margin-bottom` + `height`（要向替换元素居中，可设置 `line-height = height`）
+
 
 > * 这个 `demo` 是关于说明行内替换元素有哪些。【点击打开[demo](/effects/demo/css/vfm/eg5.html)】
+
+![vfm](/styles/images/css/vfm/vfm-09.png)
     
 ### 2.5 块级元素
 
@@ -80,7 +107,7 @@ tag: CSS
 ### 2.6 行内元素
 
 > * 行内元素不会在框前或框后生成“行分隔符”。
->    * 行内元素有：`strong`、`span`
+>    * 行内元素有：`strong`、`span`、`em`、`i`、`b`
 
 ### 2.7 根元素
 

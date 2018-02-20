@@ -26,11 +26,11 @@
         }
         .test3 .box:nth-of-type(2) {
             margin-top: 10px;
-            overflow: auto;
+            position: absolute;
         }
         .test4 .box:nth-of-type(2) {
             margin-top: 10px;
-            position: absolute;
+            overflow: auto;
         }
     </style>
 </head>
@@ -51,7 +51,7 @@
     <hr>
     <p>div2成为浮动元素，所以div2创建了一个新的bfc，div1与div2不同属于同一个bfc，所以垂直margin无法合并</p>
 </div>
-<div class="container test4">
+<div class="container test3">
     <h3>创建bfc - 定位元素 (元素具有 position为 absolute 或 fixed)</h3>
     <div class="box">div1 --- margin-bottom: 10px;</div>
     <div class="box">div2 --- margin-top: 10px; position: absolute;</div>
@@ -60,14 +60,24 @@
     <hr>
     <p>div2成为定位元素，所以div2创建了一个新的bfc，div1与div2不同属于同一个bfc，所以垂直margin无法合并</p>
 </div>
-<div class="container test3">
-    <h3>创建bfc - 具有 overflow 且值不是 visible 的块元素（错误）</h3>
+
+
+<div class="container test4">
+    <h3>创建bfc - 具有 overflow 且值不是 visible 的块元素（第一种：div2没有父级）</h3>
     <div class="box">div1 --- margin-bottom: 10px;</div>
     <div class="box">div2 --- margin-top: 10px; overflow: auto;</div>
     <hr>
-    <p>div2设置了overflow值，但是，并不像网上各篇文章说得一样，生成bfc</p>
+    <p>div2设置了overflow值，但是无效</p>
 </div>
 
-
+<div class="container test5">
+    <h3>创建bfc - 具有 overflow 且值不是 visible 的块元素（第二种：div2有父级）</h3>
+    <div class="box">div1 --- margin-bottom: 10px;</div>
+    <div style="overflow: auto;">
+        <div class="box" style="margin-top: 10px">div2 --- margin-top: 10px;</div>
+    </div>
+    <hr>
+    <p>div2父级设置了overflow值，生成bfc</p>
+</div>
 </body>
 </html>
