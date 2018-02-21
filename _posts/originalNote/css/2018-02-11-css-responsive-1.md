@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "css - 响应式"
+title: "css - 响应式 - 1"
 data: 2018-02-11 10:27:00 +0800
 categories: 原创
 tag: CSS
@@ -86,3 +86,14 @@ tag: CSS
 ### 3.5 流行尺寸
 
 ![responsive](/styles/images/css/responsive/responsive-04.png)
+
+## 四、响应式布局
+
+> * 响应式布局主要有三种形式：
+>   * 流体布局
+>   * 流体 + 固定布局
+>   * 表现形式改变的布局
+
+> * 具体例子查看 [响应式布局](http://www.jmazm.com/2018/02/07/css-layout/)
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式图片</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h2>图片1</h2>
+<img
+     srcset="mm-width-128px.jpg 128w, mm-width-256px.jpg 256w, mm-width-512px.jpg 512w"
+     sizes="(max-width: 360px) 340px, 128px"
+>
+<h2>图片2</h2>
+
+<img
+     srcset="mm-width-128px.jpg 128w, mm-width-256px.jpg 256w, mm-width-512px.jpg 512w"
+     sizes="(max-width: 360px) calc(100vw - 20px), 128px"
+>
+</body>
+</html>
