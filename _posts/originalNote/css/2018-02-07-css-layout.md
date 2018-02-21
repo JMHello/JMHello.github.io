@@ -88,3 +88,35 @@ tag: CSS
 > * 以下是效果图：
 
 ![layout](/styles/images/css/layout/layout-04.png)
+
+## 二、响应式布局
+
+### 2.1 流体布局
+
+> * 流体布局：元素宽度无时无刻都在自适应
+> * [demo](/effects/demo/css/layout/v3.html)
+> * 这里使用了 `flex` 布局 以及设置断点
+
+![responsive](/effects/images/css/responsive/responsive-01.gif)
+
+
+### 2.2 流体 + 固定布局
+
+> * [demo](/effects/demo/css/layout/v4.html)
+
+> * 固定：有一个固定宽度，比如1200px 或者 1000px
+> * 流体：在特定的断点，布局会有所转换，并且部分内容的宽度会自适应
+
+![responsive](/effects/images/css/responsive/responsive-02.gif)
+
+### 2.3 表现形式改变
+
+> * [demo](/effects/demo/css/layout/v5.html)
+
+![responsive](/effects/images/css/responsive/responsive-03.gif)
+
+### 2.4 总结
+
+> * 如果做响应式布局，要想清楚是做流体布局，还是固定 + 流体布局，还是表现形式改变的响应式布局。
+> * 想清楚有什么断点，每个断点有哪些元素的展现形式是有变化的，变化的效果又是什么
+

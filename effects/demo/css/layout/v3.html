@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式布局 - 流体布局</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+        }
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+        .page .header,
+        .page .footer {
+            background: #cccccc;
+        }
+        .header .center-inner,
+        .footer .center-inner {
+            padding: 20px;
+        }
+        .container .center-inner {
+            display: flex;
+        }
+        .container .main {
+            flex: 1;
+            padding: 20px;
+        }
+        .container .aside {
+            width: 300px;
+            padding: 20px;
+        }
+        .container .aside--right {
+            background: #e7e7e7;
+        }
+        .aside .aside-block {
+            margin-bottom: 15px;
+        }
+
+        /* 设置断点 768px*/
+        @media screen and (max-width: 768px) {
+            .container .center-inner{
+                flex-direction: column;
+            }
+            .container .aside {
+                display: flex;
+                width: 100%;
+            }
+            .aside .aside-block {
+                margin-bottom: 0;
+                width: 50%;
+            }
+        }
+
+        /* 设置断点 480px*/
+        @media screen and (max-width: 480px) {
+            .container .aside {
+                flex-direction: column;
+            }
+            .aside .aside-block {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .aside .aside-block:last-child {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- header -->
+    <header class="header">
+        <div class="center-inner">
+            <h1>header区域</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="center-inner">
+            <!-- main -->
+            <main class="main">
+                <div class="content">
+                    <h2>内容区域</h2>
+                    <article class="article">
+                        <p>学恶乎始？恶乎终？曰：其数则始乎诵经，终乎读礼；其义则始乎为士，终乎为圣人， 真积力久则入，学至乎没而后止也。故学数有终，若其义则不可须臾舍也。为之，人也；舍 之，禽兽也。故书者，政事之纪也；诗者，中声之所止也；礼者，法之大分，类之纲纪也。故学至乎礼而止矣。夫是之谓道德之极。礼之敬文也，乐之中和也，诗书之博也，春秋之微 也，在天地之间者毕矣。君子之学也，入乎耳，着乎心，布乎四体，形乎动静。端而言，蝡而动，一可以为法则。小人之学也，入乎耳，出乎口；口耳之间，则四寸耳，曷足以美七尺之躯哉！古之学者为己，今之学者为人。君子之学也，以美其身；小人之学也，以为禽犊。故不问而告谓之傲，问一而告二谓之囋。傲、非也，囋、非也；君子如响矣。</p>
+                        <p>积土成山，风雨兴焉；积水成渊，蛟龙生焉；积善成德，而神明自得，圣心备焉。故不积跬步，无以至千里；不积小流，无以成江海。骐骥一跃，不能十步；驽马十驾，功在不舍。锲而舍之，朽木不折；锲而不舍，金石可镂。蚓无爪牙之利，筋骨之强，上食埃土，下饮黄泉，用心一也。蟹六跪而二螯，非蛇鳝之穴无可寄托者，用心躁也。</p>
+                    </article>
+                </div>
+            </main>
+            <!-- aside right -->
+            <aside class="aside aside--right">
+                <section class="aside-block">
+                    <h2>右边栏区域</h2>
+                    <ul>
+                        <li>君子博学而日参省乎己，则知明而行无过矣。</li>
+                        <li>神莫大于化道，福莫长于无祸</li>
+                        <li>故言有招祸也，行有招辱也，君子慎其所立乎！</li>
+                    </ul>
+                </section>
+                <section class="aside-block">
+                    <h2>右边栏区域</h2>
+                    <ul>
+                        <li>君子博学而日参省乎己，则知明而行无过矣。</li>
+                        <li>神莫大于化道，福莫长于无祸</li>
+                        <li>故言有招祸也，行有招辱也，君子慎其所立乎！</li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="center-inner">
+            <h2>footer区域</h2>
+            <p>积土成山，风雨兴焉；积水成渊，蛟龙生焉；积善成德，而神明自得。</p>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

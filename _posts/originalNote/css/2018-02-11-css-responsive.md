@@ -9,9 +9,9 @@ tag: CSS
 {:toc}
 
 > * 参考资料：
->   [移动前端开发之viewport的深入理解](https://www.cnblogs.com/2050/p/3877280.html)
->   [7种方法解决移动端Retina屏幕1px边框问题](https://www.jianshu.com/p/7e63f5a32636)
->   [使用Flexible实现手淘H5页面的终端适配](https://github.com/amfe/article/issues/17)
+>   * [移动前端开发之viewport的深入理解](https://www.cnblogs.com/2050/p/3877280.html)
+>   * [7种方法解决移动端Retina屏幕1px边框问题](https://www.jianshu.com/p/7e63f5a32636)
+>   * [使用Flexible实现手淘H5页面的终端适配](https://github.com/amfe/article/issues/17)
 
 
 <!-- more -->
@@ -50,3 +50,39 @@ tag: CSS
 > * 以下是`viewport`的一些相关属性
 
 ![viewport](/styles/images/css/responsive/responsive-02.png)
+
+## 三、媒体查询
+
+### 3.1 介绍
+
+> * 使用 `@media` 查询，你可以针对不同的媒体类型定义不同的样式。
+
+> * `@media` 可以针对不同的屏幕尺寸设置不同的样式，特别是如果你需要设置设计响应式的页面，`@media` 是非常有用的。
+
+> * 当你重置浏览器大小的过程中，页面也会根据浏览器的宽度和高度重新渲染页面。
+
+### 3.2 语法
+
+```
+@media mediatype and|not|only (media feature) {
+    CSS-Code;
+}
+```
+
+或者
+
+```
+<link rel="stylesheet" media="mediatype and|not|only (media feature)" href="mystylesheet.css">
+```
+
+### 3.3 媒体类型
+
+![responsive](/styles/images/css/responsive/responsive-02.png)
+
+### 3.4 媒体功能
+
+![responsive](/styles/images/css/responsive/responsive-03.png)
+
+### 3.5 流行尺寸
+
+![responsive](/styles/images/css/responsive/responsive-04.png)

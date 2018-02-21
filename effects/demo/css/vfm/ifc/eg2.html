@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内级元素的高度</title>
+    <style>
+        .line {
+            background: #e7e7e7;
+        }
+        .line .inline--1 {
+            background: brown;
+        }
+        .line .inline--2 {
+            background: skyblue;
+        }
+        .line .inline--3 {
+            background: orchid;
+        }
+        .line .inline--4{
+            width: 70px;
+            display: inline-block;
+        }
+        .line2 .inline--2{
+            font-size: 24px;
+        }
+        .line3 .inline--2 {
+            padding: 10px;
+        }
+        .line4 .inline--2 {
+           border: 8px solid;
+        }
+        .line5 .inline--2 {
+            margin: 10px;
+        }
+        .line6 .inline--2 {
+            line-height: 3;
+        }
+        .line7{
+            line-height: 0.5;
+        }
+        .line9 .inline--4 {
+            padding: 10px;
+            background: red;
+        }
+        .line10 .inline--4 {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>默认行 - display: inline</h2>
+<p class="line">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+</p>
+
+<h2>display: inline + font-size</h2>
+<p class="line line2">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+</p>
+<p>设置font-size, 父级行高被撑开了</p>
+
+<h2>display: inline + padding</h2>
+<p class="line line3">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+</p>
+<p>设置padding， 父级行高没有被撑开了</p>
+
+<h2>display: inline + border</h2>
+<p class="line line4">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+</p>
+<p>设置border， 父级行高没有被撑开了</p>
+
+<h2>display: inline + margin</h2>
+<p class="line line5">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+</p>
+<p>设置margin， 父级行高没有被撑开，上下margin无效</p>
+
+<h2>display: inline + line-height 大于 font-size</h2>
+<p class="line line6">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+</p>
+<p>line-height 大于 font-size，父级会被line-height撑开</p>
+
+<h2>display: inline + line-height 小于 font-size</h2>
+<p class="line line7">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+</p>
+<p>line-height 大于 font-size，父级的实际高度为line-height，而行内元素的实际高是font-size</p>
+
+<h2>display: inline-block</h2>
+<p class="line line8">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+    <img class="inline--4" src="./z-2.jpg">
+</p>
+
+<h2>display: inline-block + padding</h2>
+<p class="line line9">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+    <img class="inline--4" src="./z-2.jpg">
+</p>
+
+<h2>display: inline-block + margin</h2>
+<p class="line line10">
+    <span class="inline--1">span 元素</span>
+    <strong class="inline--2">strong 元素</strong>
+    <em class="inline--3">em 元素</em>
+    <img class="inline--4" src="./z-2.jpg">
+</p>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式布局 - 表现形式改变</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+        }
+        .header {
+            background: #000000;
+        }
+        .center-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header .center-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+        }
+        .logo .header-ti {
+            text-indent: -9999px;
+        }
+        .nav-list {
+            display: flex;
+        }
+        .nav-list .list-item {
+            font-size: 18px;
+            line-height: 74px;
+            padding: 0 20px;
+            color: #e7e7e7;
+        }
+        @media screen and (min-width: 569px){
+            .logo {
+                width: 277px;
+                height: 64px;
+                background: url(logo-white.png) no-repeat;
+                background-size: contain;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .logo {
+                width: 158px;
+                height: 36px;
+            }
+            .nav-list .list-item {
+                font-size: 14px;
+                line-height: 44px;
+            }
+        }
+        @media screen and (max-width: 568px) {
+            .logo {
+                width: 54px;
+                height: 44px;
+                background: url(logo.png) no-repeat;
+                background-size: contain;
+            }
+            .nav-bar .icon-nav {
+                display: block;
+                width: 44px;
+                height: 44px;
+                position: relative;
+                cursor: pointer;
+            }
+            .nav-bar:hover .nav-list {
+               display: flex;
+            }
+            .icon-nav::before {
+                content: '';
+                width: 20px;
+                height: 18px;
+                border: 2px solid #cccccc;
+                border-width: 2px 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .icon-nav::after {
+                content: '';
+                width: 20px;
+                height: 2px;
+                background: #cccccc;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .nav-list {
+                display: none; /* 默认隐藏 */
+                position: fixed;
+                top: 44px;
+                right: 0;
+                left: 0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, .7);
+            }
+            .nav-list .list-item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="center-inner">
+        <a class="logo" href="#"><h1 class="header-ti">imweb前端社区</h1></a>
+        <nav class="nav-bar">
+            <i class="icon-nav"></i>
+            <div class="nav-list">
+                <a class="list-item" href="#">首页</a>
+                <a class="list-item" href="#">技术</a>
+                <a class="list-item" href="#">杂谈</a>
+                <a class="list-item" href="#">关于</a>
+            </div>
+        </nav>
+    </div>
+</header>
+</body>
+</html>

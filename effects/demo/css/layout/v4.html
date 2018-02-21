@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式布局 - 流体 + 固定布局</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+        }
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+        .page .header,
+        .page .footer {
+            background: #cccccc;
+        }
+        .header .center-inner,
+        .footer .center-inner,
+        .aside-block,
+        .content {
+            padding: 20px;
+        }
+        .container {
+            background: #b9b9b9;
+        }
+        .center-inner {
+            width: 1200px; /* 默认宽度为1200px */
+            margin: 0 auto;
+        }
+        .main {
+            background: white;
+        }
+        .aside--right {
+            background: #e7e7e7;
+        }
+        .container .center-inner {
+            display: flex;
+        }
+        .container .main {
+            flex: 1;
+        }
+        .container .aside {
+            width: 300px;
+            margin-left: 20px;
+        }
+        .main .list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .list .list-item {
+            width: 200px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .list .item-img {
+            max-width: 100%;
+        }
+
+        /* 1199px - 769px */
+        @media screen and (max-width: 1199px) and (min-width: 769px) {
+            .page {
+                min-width: 1000px; /* 保证有最小宽度 */
+            }
+            .center-inner {
+                width: 1000px;
+            }
+        }
+        /* 小于768px */
+        @media screen and (max-width: 768px) {
+            .center-inner {
+                width: 100%;
+            }
+            .container .center-inner {
+                display: block;
+            }
+            .container .aside {
+                display: flex;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        /* 小于480px */
+        @media screen and (max-width: 480px) {
+            .list .list-item {
+                width: 50%;
+                padding-right: 10px;
+                margin-right: 0;
+            }
+            .container .aside {
+                flex-direction: column;
+            }
+            .aside .aside-block:last-child {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- header -->
+    <header class="header">
+        <div class="center-inner">
+            <h1>header区域</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="center-inner">
+            <!-- main -->
+            <main class="main">
+                <div class="content">
+                    <h2>内容区域</h2>
+                    <div class="list">
+                        <a href="#" class="list-item"><img src="./img-style.png" class="item-img"></a>
+                        <a href="#" class="list-item"><img src="./img-style.png" class="item-img"></a>
+                        <a href="#" class="list-item"><img src="./img-style.png" class="item-img"></a>
+                        <a href="#" class="list-item"><img src="./img-style.png" class="item-img"></a>
+                    </div>
+                </div>
+            </main>
+            <!-- aside right -->
+            <aside class="aside aside--right">
+                <section class="aside-block">
+                    <h2>右边栏区域</h2>
+                    <ul>
+                        <li>君子博学而日参省乎己，则知明而行无过矣。</li>
+                        <li>神莫大于化道，福莫长于无祸</li>
+                        <li>故言有招祸也，行有招辱也，君子慎其所立乎！</li>
+                    </ul>
+                </section>
+                <section class="aside-block">
+                    <h2>右边栏区域</h2>
+                    <ul>
+                        <li>君子博学而日参省乎己，则知明而行无过矣。</li>
+                        <li>神莫大于化道，福莫长于无祸</li>
+                        <li>故言有招祸也，行有招辱也，君子慎其所立乎！</li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="center-inner">
+            <h2>footer区域</h2>
+            <p>积土成山，风雨兴焉；积水成渊，蛟龙生焉；积善成德，而神明自得。</p>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
