@@ -126,3 +126,36 @@ tag: CSS
 ### 1.5 srcset and sizes 兼容性
 
 ![responsive](/styles/images/css/responsive/responsive-08.png)
+
+### 1.6 image-set()
+
+> * [demo](/effects/demo/css/responsive/img/v2.html)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式图片 - imgage-set()</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .eg {
+            width: 200px;
+            padding-top: 56.25%;
+            background: -webkit-image-set(url("mm-width-128px.jpg") 1x, url("mm-width-256px.jpg") 2x, url("mm-width-512px.jpg") 3x) no-repeat;
+            background: image-set(url("mm-width-128px.jpg") 1x, url("mm-width-256px.jpg") 2x, url("mm-width-512px.jpg") 3x) no-repeat;
+        }
+    </style>
+</head>
+<body>
+<h2>image-set()</h2>
+<div class="eg"></div>
+</body>
+</html>
+```
+
+![image-set()](/effects/images/css/responsive/responsive-04.gif)
+
+> * 兼容性
+
+![responsive](/styles/images/css/responsive/responsive-09.png)
