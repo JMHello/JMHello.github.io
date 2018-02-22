@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二叉搜索树 - 树的遍历</title>
+</head>
+<body>
+<script>
+
+  /**
+   * 辅助函数：插入节点
+   * @param node
+   * @param newNode
+   */
+  function insertNode (node, newNode) {
+    if (newNode.data < node.data) {
+      if (node.left === null) {
+        node.left = newNode
+      } else {
+        insertNode(node.left, newNode)
+      }
+    } else {
+      if (node.right === null) {
+        node.right = newNode
+      } else {
+        insertNode(node.right, newNode)
+      }
+    }
+  }
+
+  /**
+   * 辅助函数：中序遍历
+   * @param node
+   * @param callback
+   */
+  function inOrderTraverseNode (node, callback) {
+    if (node !== null) {
+      inOrderTraverseNode(node.left, callback)
+      callback(node)
+      inOrderTraverseNode(node.right, callback)
+    }
+  }
+
+  /**
+   * 辅助函数：先序遍历
+   * @param node
+   * @param callback
+   */
+  function preOrderTraverseNode (node, callback) {
+    if (node !== null) {
+      callback(node)
+      preOrderTraverseNode(node.left, callback)
+      preOrderTraverseNode(node.right, callback)
+    }
+  }
+
+  /**
+   * 辅助函数：后序遍历
+   * @param node
+   * @param callback
+   */
+  function postOrderTraverseNode (node, callback) {
+    if (node !== null) {
+      postOrderTraverseNode(node.left, callback)
+      postOrderTraverseNode(node.right, callback)
+      callback(node)
+    }
+  }
+
+  /**
+   * 节点类
+   * @param node
+   * @param callback
+   */
+  function Node (data) {
+    this.data = data
+    this.left = null
+    this.right = null
+  }
+
+  /**
+   * 二叉搜索树类
+   * @param node
+   * @param callback
+   */
+  function BinarySearchTree () {
+    this.root = null
+  }
+
+  /**
+   * 添加节点
+   * @param data
+   */
+  BinarySearchTree.prototype.insert = function (data) {
+    // 1. 判断根节点是否存在，不存在，那么添加的节点则作为根节点
+    // 2. 设置根节点作为当前节点
+    // 3. 如果需要添加的节点 小于 当前节点，则设置新的当前节点为原节点的左节点；反之，执行第5步
+    // 4. 如果当前节点的左节点为 null，就将新节点插入到这个位置，并且退出循环；反之，执行下一次循环
+    // 5. 设置新的当前节点为原节点的右节点
+    // 6. 如果当前节点的右节点为 null，就将新节点插入到这个位置，并且退出循环；反之，执行下一次循环
+
+    const newNode = new Node(data)
+
+    if (!this.root) {
+      this.root = newNode
+    } else {
+      insertNode(this.root, newNode)
+    }
+  }
+
+  /**
+   * 获取二叉搜索树
+   * @return {null|*}
+   */
+  BinarySearchTree.prototype.getTree = function () {
+    return this.root
+  }
+
+  /**
+   * 中序遍历
+   * @param callback
+   */
+  BinarySearchTree.prototype.inOrderTraverse = function (callback) {
+    inOrderTraverseNode(this.root, callback)
+  }
+
+  /**
+   * 先序遍历
+   * @param callback
+   */
+  BinarySearchTree.prototype.preOrderTraverse = function (callback) {
+    preOrderTraverseNode(this.root, callback)
+  }
+
+  /**
+   * 后序遍历
+   * @param callback
+   */
+  BinarySearchTree.prototype.postOrderTraverse = function (callback) {
+    postOrderTraverseNode(this.root, callback)
+  }
+
+
+  // 测试
+  const tree = new BinarySearchTree()
+
+  // 添加节点
+  tree.insert(11)
+  tree.insert(7)
+  tree.insert(15)
+  tree.insert(5)
+  tree.insert(9)
+  tree.insert(13)
+  tree.insert(20)
+  tree.insert(3)
+  tree.insert(6)
+  tree.insert(8)
+  tree.insert(10)
+  tree.insert(12)
+  tree.insert(14)
+  tree.insert(18)
+  tree.insert(25)
+
+  // 中序遍历
+  // 结果：3 5 6 7 8 9 10 11 12 13 14 15 18 20 25
+  tree.inOrderTraverse(function (node) {
+    console.log(`中序遍历：${node.data}`)
+  })
+
+  console.log('------------ 我是分割线 ------------------')
+
+  // 先序遍历
+  // 结果：11 7 5 3 6 9 8 10 15 13 12 14 20 18 25
+  tree.preOrderTraverse(function (node) {
+    console.log(`先序遍历：${node.data}`)
+  })
+
+  console.log('------------ 我是分割线 ------------------')
+
+  // 后序遍历
+  // 结果：3 6 5 8 10 9 7 12 14 13 18 25 20 15 11
+  tree.postOrderTraverse(function (node) {
+    console.log(`后序遍历：${node.data}`)
+  })
+
+</script>
+</body>
+</html>

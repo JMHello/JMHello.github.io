@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二叉搜索树</title>
+</head>
+<body>
+<script>
+  /**
+   * 节点类
+   */
+  class Node {
+    constructor (data) {
+      this.data = data
+      this.left = null
+      this.right = null
+    }
+  }
+
+  /**
+   * 二叉搜索树类
+   */
+  class BinarySearchTree {
+    constructor () {
+      this.root = null
+    }
+
+    /**
+     * 添加节点
+     * @param data
+     */
+    insert (data) {
+      const newNode = new Node(data)
+
+      if (!this.root) {
+        this.root = newNode
+      } else {
+        let currentNode = this.root
+        let parentNode = null
+
+        while (true) {
+          parentNode = currentNode
+          if (data < currentNode.data) {
+            currentNode = currentNode.left
+            if (currentNode === null) {
+              parentNode.left = newNode
+              break
+            }
+          }
+          else {
+            currentNode = currentNode.right
+            if (currentNode === null) {
+              parentNode.right = newNode
+              break
+            }
+          }
+        }
+      }
+    }
+
+    /**
+     * 删除节点
+     * @param data
+     */
+    remove (data) {
+        return this._removeNode(this.root, data)
+    }
+
+    /**
+     * 搜索特定值的节点
+     * @param data
+     */
+    search (data) {
+      let current = this.root
+      while (current !== null) {
+        if (current.data === data) {
+          return current
+        }
+        // 左子树
+        else if (data < current.data) {
+          current = current.left
+        }
+        // 右子树
+        else {
+          current = current.right
+        }
+      }
+
+      return null
+    }
+    /**
+     * 获取最小值节点
+     */
+    getMinNode () {
+        return this._getMinNode(this.root)
+    }
+
+    /**
+     * 获取最大值节点
+     */
+    getMaxNode () {
+      return this._getMaxNode(this.root)
+    }
+
+    /**
+     * 中序遍历
+     */
+    inOrderTraverse () {
+        return this._getMaxNode(this.root)
+    }
+
+    /**
+     * 先序遍历
+     */
+    preOrderTraverse () {
+      return this._preOrderTraverseNode(this.root)
+    }
+
+    /**
+     * 后序遍历
+     */
+    postOrderTraverse () {
+      return this._postOrderTraverseNode(this.root)
+    }
+
+    /**
+     * 获取树
+     */
+    getTree () {
+      return this.root
+    }
+
+    /**
+     * 辅助函数：移除节点
+     * @param node
+     * @param data
+     */
+    _removeNode (node, data) {
+      // 参数node不存在
+      if (node === null) {
+        return null
+      }
+
+      // 左子树：data < node.data
+      if (data < node.data) {
+        node.left = removeNode(node.left, data)
+        return node
+      }
+      // 右子树：data > node.data
+      else if (data > node.data) {
+        node.right = removeNode(node.right, data)
+        return node
+      }
+      // data = node.data
+      else {
+        // 有三种情况：
+        // 1. 移除一个叶节点
+        if (node.left === null && node.right === null) {
+          node = null
+          return node
+        }
+        // 2. 移除有一个左侧或右侧子节点的节点
+        // 移除有一个右侧子节点的节点
+        if (node.left === null) {
+          // 右侧子节点替换要删除的节点
+          node = node.right
+          return node
+        }
+        // 移除有一个左侧子节点的节点
+        else if (node.right === null) {
+          // 左侧子节点替换要删除的节点
+          node = node.left
+          return node
+        }
+        // 3. 移除有两个子节点的节点
+        // 找到要删除的节点的右子树中最小的节点
+        // 用这个最小节点的值替换要删除的节点的值
+        // 由于一棵树不能有相同键的节点
+        // 因此，替换后，这个最小节点要删除掉
+        const minNode = this._getMinNode(node.right)
+        node.data = minNode.data
+        node.right = removeNode(node.right, minNode.data)
+        return node
+      }
+    }
+
+    /**
+     * 辅助函数：获取最小值
+     * @param node
+     * @return {*}
+     */
+    _getMinNode (node) {
+      if (node) {
+        while (node && node.left !== null) {
+          node = node.left
+        }
+        return node
+      }
+      return null
+    }
+
+    /**
+     * 辅助函数：获取最大值
+     * @param node
+     * @return {*}
+     */
+    _getMaxNode (node) {
+      if (node) {
+        while (node && node.right !== null) {
+          node = node.right
+        }
+        return node
+      }
+      return null
+    }
+
+    /**
+     * 辅助函数：中序遍历
+     * @param node
+     * @param callback
+     */
+    _inOrderTraverseNode (node, callback) {
+      if (node !== null) {
+        inOrderTraverseNode(node.left, callback)
+        callback(node)
+        inOrderTraverseNode(node.right, callback)
+      }
+    }
+
+    /**
+     * 辅助函数：先序遍历
+     * @param node
+     * @param callback
+     */
+    _preOrderTraverseNode (node, callback) {
+      if (node !== null) {
+        callback(node)
+        preOrderTraverseNode(node.left, callback)
+        preOrderTraverseNode(node.right, callback)
+      }
+    }
+
+    /**
+     * 辅助函数：后序遍历
+     * @param node
+     * @param callback
+     */
+    _postOrderTraverseNode (node, callback) {
+      if (node !== null) {
+        postOrderTraverseNode(node.left, callback)
+        postOrderTraverseNode(node.right, callback)
+        callback(node)
+      }
+    }
+  }
+
+  // 测试
+  const tree = new BinarySearchTree()
+
+  // 添加节点
+  tree.insert(11)
+  tree.insert(7)
+  tree.insert(15)
+  tree.insert(5)
+  tree.insert(9)
+  tree.insert(13)
+  tree.insert(20)
+  tree.insert(3)
+  tree.insert(6)
+  tree.insert(8)
+  tree.insert(10)
+  tree.insert(12)
+  tree.insert(14)
+  tree.insert(18)
+  tree.insert(25)
+
+  console.log(tree.getTree())
+</script>
+</body>
+</html>

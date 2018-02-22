@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二叉搜索树 - 添加节点 - 法1</title>
+</head>
+<body>
+<script>
+
+  // 节点类
+  function Node (data) {
+    this.data = data
+    this.left = null
+    this.right = null
+  }
+
+  // 二叉搜索树类
+  function BinarySearchTree () {
+    this.root = null
+  }
+
+  /**
+   * 添加节点
+   * @param data
+   */
+  BinarySearchTree.prototype.insert = function (data) {
+    // 1. 判断根节点是否存在，不存在，那么添加的节点则作为根节点
+    // 2. 设置根节点作为当前节点
+    // 3. 如果需要添加的节点 小于 当前节点，则设置新的当前节点为原节点的左节点；反之，执行第5步
+    // 4. 如果当前节点的左节点为 null，就将新节点插入到这个位置，并且退出循环；反之，执行下一次循环
+    // 5. 设置新的当前节点为原节点的右节点
+    // 6. 如果当前节点的右节点为 null，就将新节点插入到这个位置，并且退出循环；反之，执行下一次循环
+
+    const newNode = new Node(data)
+
+    if (!this.root) {
+      this.root = newNode
+    } else {
+      let currentNode = this.root
+      let parentNode = null
+
+      while (true) {
+        parentNode = currentNode
+        if (data < currentNode.data) {
+          currentNode = currentNode.left
+          if (currentNode === null) {
+            parentNode.left = newNode
+            break
+          }
+        } else {
+          currentNode = currentNode.right
+          if (currentNode === null) {
+            parentNode.right = newNode
+            break
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * 获取二叉搜索树
+   * @return {null|*}
+   */
+  BinarySearchTree.prototype.getTree = function () {
+    return this.root
+  }
+
+  const tree = new BinarySearchTree()
+  tree.insert(11)
+  tree.insert(7)
+  tree.insert(15)
+  tree.insert(5)
+  tree.insert(9)
+  tree.insert(13)
+  tree.insert(20)
+  console.log(tree.getTree())
+</script>
+</body>
+</html>
