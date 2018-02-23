@@ -38,7 +38,7 @@ tag: interview
 
 ## 4个小时的笔试
 
-> * 以下是笔试题目【[笔试答案](/styles/txt/tencent-first-interview-answer.md)】：
+> * 以下是笔试题目【[笔试答案](tencent-first-interview-answer.md)】：
 
 ![relationship-map]({{ '/styles/images/interview/first/first-03.png' | prepend: site.baseurl }})
 
