@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解决父元素高度塌陷</title>
+    <style>
+        .parent {
+            width: 200px;
+            border: 5px solid #333333;
+        }
+        .child {
+            width: 50px;
+            height: 50px;
+            background: blue;
+        }
+        .child:last-of-type {
+            background: red;
+        }
+        .fl {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+
+<h2>方法2：给父元素新建一个BFC</h2>
+
+<h3>overflow不为visible</h3>
+<div class="parent" style="overflow: hidden;">
+    <p class="child fl"></p>
+    <p class="child fl"></p>
+</div>
+
+<h3>display: inline-block</h3>
+<div class="parent" style="display: inline-block">
+    <p class="child fl"></p>
+    <p class="child fl"></p>
+</div>
+
+<h3>display: flex/ inline-flex</h3>
+<div class="parent" style="display: flex">
+    <p class="child fl"></p>
+    <p class="child fl"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解决父元素高度塌陷</title>
+    <style>
+        .parent {
+            width: 200px;
+            border: 5px solid #333333;
+        }
+        .child {
+            width: 50px;
+            height: 50px;
+            background: blue;
+        }
+        .child:last-of-type {
+            background: red;
+        }
+        .fl {
+            float: left;
+        }
+        .cl {
+            clear: both;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<h2>方法1：给最后一个元素设置clear:both</h2>
+<h3>新增一个空元素，并为这个空元素设置clear:both</h3>
+<p>这个元素必须是块级元素</p>
+<div class="parent">
+    <p class="child fl"></p>
+    <p class="child fl"></p>
+    <div class="cl"></div>
+</div>
+<h3>通过父元素的伪元素（::after）实现 clearfix 方法</h3>
+<div class="parent clearfix">
+    <p class="child fl"></p>
+    <p class="child fl"></p>
+</div>
+
+</body>
+</html>

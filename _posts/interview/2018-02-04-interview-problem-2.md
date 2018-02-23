@@ -45,7 +45,7 @@ tag: interview
 
 > * 接下来说一说与盒模型有关的一个`css`属性，`box-sizing`
 > * `box-sizing`：
->   * `content-box`：标准模式下的盒模型，`padding` 和 `border` 不包含在 `width` 和 `height` 之内，所以元素实际宽度 = 所设置的 `width` + `border` + `padding`
+>   * `content-box`（默认值）：标准模式下的盒模型，`padding` 和 `border` 不包含在 `width` 和 `height` 之内，所以元素实际宽度 = 所设置的 `width` + `border` + `padding`
 >   * `border-box`：怪异模式下的盒模型，`padding` 和 `border` 包含在 `width` 和 `height` 之内，所以元素的实际宽度 = 所设置的 `width`
 >   * `inherit`：继承父元素的 `box-sizing` 属性的值
 

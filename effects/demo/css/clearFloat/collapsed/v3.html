@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解决父元素高度塌陷 - 绝对定位元素</title>
+    <style>
+        .parent {
+            width: 200px;
+            border: 5px solid #333333;
+        }
+        .child {
+            width: 50px;
+            height: 50px;
+            background: blue;
+        }
+        .child:last-of-type {
+            background: red;
+        }
+        .fl {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<h2>方法2：给父元素新建一个BFC</h2>
+
+<h3>绝对定位元素</h3>
+<div class="parent" style="position: absolute;">
+    <p class="child fl"></p>
+    <p class="child fl"></p>
+</div>
+</body>
+</html>
