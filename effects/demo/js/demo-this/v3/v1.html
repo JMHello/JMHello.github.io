@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为document绑定事件时，this指针指向的是</title>
+</head>
+<body>
+<script>
+    document.onclick = function () {
+      console.log(this) // documnent
+    }
+</script>
+</body>
+</html>

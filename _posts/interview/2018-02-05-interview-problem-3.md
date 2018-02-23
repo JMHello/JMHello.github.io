@@ -30,7 +30,7 @@ tag: interview
 > * 当遇到判断语句时：undefined 和 null 都会自动转化成false；当undefined 不强制等于 null时，会返回true ；那为什么要设置这两个值？
 
 > * 其实他们也是有区别的：
->   * 当你用typeof操作符去获取 undefined 和 null 的类型时，你会发现undefined为NaN，而null 却是对象
+>   * 当你用 `typeof` 操作符去获取 `undefined` 和 `null` 的类型时，你会发现 `undefined` 为 `undefined`，而null 却是对象
 >   * undefined表示的是缺少值，就是此处应有值，但是还没有添加上去
 >   * null的话，代表没有对象的意思，此处不应该有值
 
@@ -153,7 +153,7 @@ tag: interview
 
 > * 创建对象有4种方法
 >   * 工厂模式创建对象
->       * 直接向函数和变量写在函数体内，将这些属性和方法存到一个对象里，最终返回这个对象
+>       * 直接把函数和变量写在函数体内，将这些属性和方法存到一个对象里，最终返回这个对象
 >       * 缺点：无法判断对象的归属
 >   * 构造函数模式创建对象
 >       * 没有显式创建一个对象，将属性方法都赋值给this，没有return 语句；可传递参数
@@ -365,3 +365,13 @@ reg.exec('20130213')  //结果： ['20130213', '2013', '02', '13']
 > * alert：警告框
 > * confirm：确认框
 > * prompt：提示框
+
+## 28、说说ajax
+
+> 发送ajax请求有多少个步骤？如何判定发送成功？（readyState和onreadystatechange）
+
+> * 新建连接：创建 `xhr` 对象
+> * 打开连接: `xhr.open`
+> * 发送数据：`xhr.send`
+> * 接收数据：`xhr.onreadystatechange + xhr.readyState + xhr.status`
+>   * 由于 `Ajax` 是异步的，所以 `onreadystatechange` 事件是放在 `xhr.open()` 之前的
