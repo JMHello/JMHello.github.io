@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生拖放 - 自定义放置目标</title>
+    <style>
+        .drag {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .target {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="drag" id="drag" draggable="true"></div>
+<h2>元素支持设置为放置目标，但是，元素其实默认为不允许放置的！</h2>
+<div class="target" id="target"></div>
+<script>
+    const target = document.getElementById('target')
+    target.addEventListener('dragenter', function (e) {
+      console.log(e.dataTransfer)
+    }, false)
+</script>
+</body>
+</html>

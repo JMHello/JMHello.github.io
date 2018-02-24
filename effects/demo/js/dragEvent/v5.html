@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生拖放 - dropEffect与effectAllowed</title>
+    <style>
+        .target {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<h2>允许用户把文本框中的文本拖放到一个div元素中</h2>
+<input type="text" value="你好啊" id="txt">
+
+<div class="target" id="target"></div>
+<script>
+  const txt = document.getElementById('txt')
+  const target = document.getElementById('target')
+
+    txt.addEventListener('dragstart', function (e) {
+      // effectAllowed设置为move
+      e.dataTransfer.effectAllowed = 'move'
+    }, false)
+
+    target.addEventListener('dragenter', function (e) {
+      // dropEffect设置为move
+      e.dataTransfer.dropEffect = 'move'
+      e.preventDefault()
+    }, false)
+
+    target.addEventListener('dragover', function (e) {
+      e.preventDefault()
+    }, false)
+
+    target.addEventListener('drop', function (e) {
+      e.preventDefault()
+      // 获取文本
+      const content = e.dataTransfer.getData('text')
+      target.innerHTML = `被拖拽的文本内容为 ：${content}`
+    }, false)
+</script>
+</body>
+</html>

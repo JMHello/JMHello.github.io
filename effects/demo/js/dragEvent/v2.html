@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生拖放 - 自定义放置目标</title>
+    <style>
+        .drag {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .target {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="drag" id="drag" draggable="true"></div>
+<h2>把任何元素变成有效的放置目标</h2>
+<p>dragenter、dragover、drop事件要阻止默认事件发生</p>
+<div class="target" id="target"></div>
+<script>
+    const target = document.getElementById('target')
+    target.addEventListener('dragenter', function (e) {
+      e.preventDefault()
+    }, false)
+
+    target.addEventListener('dragover', function (e) {
+      e.preventDefault()
+    }, false)
+
+    target.addEventListener('drop', function (e) {
+      e.preventDefault()
+    }, false)
+</script>
+</body>
+</html>

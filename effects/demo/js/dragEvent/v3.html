@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生拖放 - dataTransfer对象</title>
+    <style>
+        .drag {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .target {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="drag" id="drag" draggable="true"></div>
+<div class="target" id="target"></div>
+<script>
+    const target = document.getElementById('target')
+    target.addEventListener('dragenter', function (e) {
+      console.log(e.dataTransfer)
+    }, false)
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生拖放 - dataTransfer对象</title>
+    <style>
+        .drag {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .target {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="drag" id="drag" draggable="true"></div>
+<div class="target" id="target"></div>
+<p id="txt"></p>
+<script>
+    const drag = document.getElementById('drag')
+    const target = document.getElementById('target')
+    const txt = document.getElementById('txt')
+
+    drag.addEventListener('dragstart', function (e) {
+      // 设置文本
+      e.dataTransfer.setData('text', this.id)
+    }, false)
+
+    target.addEventListener('dragenter', function (e) {
+      e.preventDefault()
+    }, false)
+
+    target.addEventListener('dragover', function (e) {
+      e.preventDefault()
+    }, false)
+
+    target.addEventListener('drop', function (e) {
+      e.preventDefault()
+      // 获取文本
+      const id = e.dataTransfer.getData('text')
+      txt.innerHTML = `被拖拽元素的 id 为：${id}`
+    }, false)
+</script>
+</body>
+</html>
