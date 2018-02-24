@@ -60,14 +60,19 @@ tag: CSS
 
 ![layout](/styles/images/css/layout/layout-03.png)
 
-> * 这里只左中右浮动布局，并且是固定宽度布局
-
 > * 关键 `css` 代码如下：
->   * 左右两边栏向左浮动，宽度为 `200px`，中间栏也向左浮动，左右外边距为 `200px`，宽度为自适应宽度
+>   * 中间栏宽度设置为100%，左浮动
+>   * `div.content` 设置 `margin: 0 200px`（留出空位给左右两栏）
+>   * 左右两栏左浮动，宽度设置为200px
+>   * 左栏`margin-left: -100%`
+>   * 右栏`margin-left: -200px`
 
 ```css
-.main .content {
+.container .main {
+    width: 100%;
     float: left;
+}
+.main .content {
     margin: 0 200px;
     padding: 10px;
 }

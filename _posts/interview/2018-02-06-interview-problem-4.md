@@ -357,8 +357,12 @@ tag: interview
 
 ---
 
-> * 传递参数的方式不一样
-> * 用途不一样
+> * 用途不一样：get用来获取数据，post用来传送数据
+> * 传递参数的方式不一样：get放在url的查询语句中，post放在报文的实体主体里
+> * 传递参数的长度不一样：get有限制，post无限制
+> * 缓存：get请求可被缓存，post请求不可被缓存
+> * 参数格式：get的参数要经过`encodeURIComponent` 加密，`decodeURIComponent` 解密；post格式不限，不用加解密
+> * 安全方面：post请求较之get请求要安全得多
 
 
 ## 19、讲讲模块化
