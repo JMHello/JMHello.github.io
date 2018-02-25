@@ -318,12 +318,60 @@ const reg = /(\d{4})([01]?\d)([0123]?\d)/g
 reg.exec('20130213')  //结果： ['20130213', '2013', '02', '13']
 ```
 
-## 21、说一说事件模型
+## 21、说一说事件
 
-> * 标准的事件模式由三部分组成：事件捕获、处于目标、事件冒泡    
-> * 常用的就是处于目标、事件冒泡
+> * JavaScript 与 HTML 之间的交互是通过事件实现的。下面先说一说事件模型：
+
+> * 事件模型
+>   * 标准的事件模式由三部分组成：事件捕获、处于目标、事件冒泡    
+>   * 事件捕获就是指：从document到实际目标元素
+>   * 事件冒泡是指：从目标元素到document
+>   * 常用的就是处于目标、事件冒泡
+
+---
+
+> * 说完事件模型，就要说说事件处理程序了
+
+> * 事件处理程序主要有两种：
+>   * 第一种是：DOM0级事件处理程序，比如 btn.onclick这种形式的就是DOM0级事件处理程序
+>   * 第二种是：DOM2级事件处理程序，这个比较特别，有兼容性的要求
+>       * ie的话：就是 element.attachEvent，其接受两个参数，事件处理程序的名称和事件处理程序的函数
+>       * 非ie的话：就是 element.addEventListener，接受三个参数，事件处理程序的名称和事件处理程序的函数以及是否捕获
+> * 上面除了addEventListener以外，其事件处理程序名称都要加on
+
+---
+
+> * 接下来说一说事件对象
+
+> * 事件对象就是我们常常在事件处理程序的函数里传的参数event
+> * 它也是有兼容性的：ie中，事件对象作为window的属性，而非ie中，就是事件处理程序函数里的参数event
+> * 事件对象里有许多属性和方法，下面说一下我常用到的属性和方法吧
+
+> * 获取事件目标：event.target || event.srcElement(ie)
+> * 阻止默认事件：event.preventDefault() , event.returnValue = true （ie）
+> * 阻止冒泡：event.stropPropagation(), event.cancelBubble = true(ie)
+> * 获取事件处理程序的类型：event.type
+
+---
+
+> * 接下来说说事件的类型
+> * 有鼠标事件
+> * 键盘事件
+> * 文本事件
+> * UI事件
+> * 滚轮事件
+> * 焦点事件
 
 ## 22、说说DOM的操作都有哪些
+
+> * 前者包括文本节点，后者不包括文本节点
+>   * childNodes、children
+>   * firstChild、firstElementChild
+>   * lastChild、lastElementChild
+>   * nextSibling、nextElementSibling
+>   * previousSibling、previousElementSibling
+
+---
 
 > * 添加节点：
 >   * 父节点.appendChild(新节点)
@@ -333,6 +381,12 @@ reg.exec('20130213')  //结果： ['20130213', '2013', '02', '13']
 > * 拷贝节点：要拷贝的节点.cloneNode()
 >   * 要拷贝的节点.cloneNode(true)：表面深复制，复制节点及整个子节点树
 >   * 要拷贝的节点.cloneNode(false)：表面浅复制，复制当前节点
+
+---
+
+> * 说说如何在已有的元素插入节点
+>   * 判断父元素是否有子节点，如果没有子节点，就有parent.appendChild，添加第一个子节点
+>   * 之后，就通过insertBefore插入节点即可
 
 ## 23、说说childNodes 与 Children 的异同
 
@@ -430,3 +484,26 @@ reg.exec('20130213')  //结果： ['20130213', '2013', '02', '13']
 >   * 将 Controller 改成 ViewModel，即视图模型。将View 和ViewModel进行数据绑定，当View发生变化时，数据会自动更新；
 >     当数据更新时view也会自动更新，即可以达到数据双向绑定，从而使得视图与数据自动化同步，常见的框架有 angularJS，vue.js
 >   * mvvm模式也有相应的缺点，即不适合简单的界面
+
+## 31、说说鼠标事件
+
+> * 主要有9个鼠标事件
+> * click、dblclick、mousedown、mouseup、mouseenter、mouseleave、mouseover、mouseout、mousemove
+
+> * mousedown -> mouseup -> click -> mousedown -> mouseup -> click -> dblclick
+
+## 32、说说键盘事件
+
+> * 有3个键盘事件
+>   * keydown：当用户按下键盘上的任意键触发，如果按住不放的话，会重复触发此事件
+>   * keypress：当用户按下键盘上的字符键时触发，如果按住不放，会重复触发此事件
+>   * keyup： 当用户释放键盘上的键时触发
+
+> * 触发顺序：keydown ==> keypress ==> keyup
+>   * keydown 和 keypress 都是在文本框发生变化前触发的
+>   * keyup 是文本框发生变化后触发的
+
+---
+
+> * 键码：event.keyCode || event.charCode
+>   * charCode只有在发生keypress时才包含值
