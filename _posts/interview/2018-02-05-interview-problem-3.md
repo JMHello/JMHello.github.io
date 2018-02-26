@@ -320,17 +320,17 @@ reg.exec('20130213')  //结果： ['20130213', '2013', '02', '13']
 
 ## 21、说一说事件
 
-> * JavaScript 与 HTML 之间的交互是通过事件实现的。下面先说一说事件模型：
+> * JavaScript 与 HTML 之间的交互是通过事件实现的。
+> * 说到事件，那么事件流肯定是重点，事件流描述的是从页面接收事件的顺序
 
-> * 事件模型
->   * 标准的事件模式由三部分组成：事件捕获、处于目标、事件冒泡    
->   * 事件捕获就是指：从document到实际目标元素
->   * 事件冒泡是指：从目标元素到document
->   * 常用的就是处于目标、事件冒泡
+> * 事件流会包含三个阶段：事件捕获、处于目标、事件冒泡，这也是标准的DOM事件流，也称之为事件模型
+>   * 事件捕获就是指：不太具体的元素应该更早接收到事件，而具体的节点最后接收到事件
+>   * 事件冒泡是指：与事件捕获相反，而我们可以利用事件冒泡实现事件代理来提高性能
 
 ---
 
-> * 说完事件模型，就要说说事件处理程序了
+> * 说完事件模型，就要说说事件处理程序了。
+> * 事件处理程序也叫做事件监听器，是响应某个事件的函数
 
 > * 事件处理程序主要有两种：
 >   * 第一种是：DOM0级事件处理程序，比如 btn.onclick这种形式的就是DOM0级事件处理程序
@@ -507,3 +507,47 @@ reg.exec('20130213')  //结果： ['20130213', '2013', '02', '13']
 
 > * 键码：event.keyCode || event.charCode
 >   * charCode只有在发生keypress时才包含值
+
+## 33、你使用过react吗?说说你对react生命周期的理解
+
+> * 我只在做简单版的口袋豆瓣中使用过react，还没有深入研究，我尝试去说一下自己对react生命周期的理解吧！
+
+> * 一部电脑从出厂到你买回来，到报废前，到报废以及到报废后，可以说是一个生命周期；
+> * 人从婴儿到少年到成年到中年到老年，也是一个生命周期
+
+> * 而对于react来说，它也是有自己的生命周期的
+> * 一开始是初始化（constructor），我们可以在这个方法里用this.setState设置一些初始的状态
+> * 接着是插入DOM前（componentWillMount）
+> * 接着是插入到DOM中（render）
+> * 接着是插入DOM后（componentDidMount）：所需要的DOM在这个方法内都已经准备好了
+>   * 举个例子：我要打开页面，文本框就聚焦，那么我就回在render方法里通过refs获取文本框，然后在componentDidMount方法里通过this.input.focus()就可以实现了
+> * 还有组件更新前（componentWillUpdate）、组建更新后（componentDidUpdate）、从DOM移除前（componentWillUnmount）
+
+## 34、易错点之鼠标事件
+
+> * mouseenter: 在鼠标光标从元素外部首次移入到元素范围内时触发，不冒泡；在光标移动到后代元素上不会触发
+
+> * mouseleave: 在位于元素上方的鼠标光标移动到元素范围之外时触发，不冒泡；在光标移动到后代元素上不会触发
+
+> * mousemove: 当鼠标指针在元素内部移动时重复触发
+
+> * mouseout: 在鼠标元素位于一个元素上方，然后用户将其移到另一个元素时触发
+
+> * mouseover: 在鼠标指针位于一个元素外部，然后用户将其首次移入另一个元素边界之内时触发
+
+> * 其实很容易记：enter和leave就是进入和离开；move是不断移动，out则是一个元素到另一个元素
+
+## 35、易错点之坐标区别
+
+> * BOM
+>   * 浏览器在屏幕中的位置：screenLeft/screenTop(除了FF)，screenX/screenY(除了ie)
+>   * innerHTML与innerWidth：浏览器视图区宽高(包含滚动条)
+>   * outerHeight/outerWidth: 浏览器本身宽高
+
+> * DOM
+>   * offsetParent: 包含元素的引用
+>   * offsetLeft/offsetTop: 元素的左/上外边框到包含元素的左/上内边框的像素距离
+>   * offsetHeight/offsetWidth: 元素在垂直/水平方向上占用的空间像素
+>   * clientHeight/clientWidth：内容+内边距
+>   * scrollHeight/scrollWidth: 元素的总宽高(若有滚动条也计算在内)
+>   * scrollTop/scrollLeft: 被隐藏在内容区域左侧的像素
