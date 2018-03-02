@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bind()</title>
+    <script src="./util/react-min.js"></script>
+    <script src="./util/react-dom.min.js"></script>
+    <script src="./util/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+    class App extends React.Component {
+        handleClick (color, e) {
+          console.log(e)
+          console.log(`这是我最喜欢的颜色：${color}`)
+        }
+        render () {
+          console.log('this：')
+          console.log(this)
+          return <button type="button" onClick={this.handleClick.bind(this, 'blue')}>点击</button>
+        }
+    }
+
+    ReactDOM.render(
+      <App/>,
+      document.getElementById('root')
+    )
+</script>
+</body>
+</html>

@@ -31,11 +31,15 @@
     }
 
     // 检测
-    const fighter1 = new Fighter()
+    const fighter1 = new Fighter('red')
 
     console.log(`--- test constructor ---`)
     console.log(fighter1.constructor === Plane) // false
     console.log(fighter1.constructor === Fighter) // true
+
+    console.dir(fighter1)
+    console.log(fighter1.color)
+
 </script>
 </body>
 </html>

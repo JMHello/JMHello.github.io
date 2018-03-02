@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 合成事件与原生事件混用</title>
+    <script src="./util/react-min.js"></script>
+    <script src="./util/react-dom.min.js"></script>
+    <script src="./util/babel.min.js"></script>
+    <style type="text/css">
+        .qr-wrapper {
+            width: 200px;
+        }
+        .code-wrapper {
+            position: relative;
+            padding-top: 56.25%;
+        }
+        .code-wrapper .code-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  class QrCode extends React.Component {
+    constructor (props) {
+      super(props)
+      // 初始化状态
+      this.state = {
+        active: false
+      }
+    }
+    componentDidMount () {
+      document.body.addEventListener('click', (e) => {
+        this.setState({
+          active: false
+        })
+      }, false)
+    }
+    componentWillUnmount () {
+      document.body.removeEventListener('click')
+    }
+
+    handleClick (e) {
+      this.setState({
+        active: !this.state.active
+      })
+
+      // 阻止冒泡无效
+      e.stopPropagation()
+    }
+    handleQr (e) {
+      // 阻止冒泡无效
+      e.stopPropagation()
+    }
+
+    render () {
+      const style = {
+        display: this.state.active ? 'block': 'none'
+      }
+      return (
+              <div className="qr-wrapper">
+                  <button type="button" className="js-qr" onClick={this.handleClick.bind(this)}>二维码</button>
+                  <div className="code-wrapper" style={style} onClick={this.handleQr.bind(this)}>
+                      <img src="QQ.jpg" alt="二维码" className="code-img"/>
+                  </div>
+              </div>
+      )
+    }
+  }
+
+  ReactDOM.render(
+          <QrCode/>,
+    document.getElementById('root')
+  )
+</script>
+</body>
+</html>

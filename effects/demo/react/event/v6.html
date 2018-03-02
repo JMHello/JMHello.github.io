@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 在 React 中使用原生事件</title>
+    <script src="./util/react-min.js"></script>
+    <script src="./util/react-dom.min.js"></script>
+    <script src="./util/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  class NativeEventDemo extends React.Component {
+    componentDidMount() {
+      /* refs：写法一 */
+      this.refs.button.addEventListener('click', e => {
+        console.log('refs：写法一')
+        this.handleClick(e);
+      });
+
+      /* refs：写法二 */
+      this.btn.addEventListener('click', e => {
+        console.log('refs：写法二')
+        this.handleClick(e);
+      });
+    }
+    handleClick(e) {
+      console.log(e);
+    }
+    componentWillUnmount() {
+      this.refs.button.removeEventListener('click');
+      this.btn.removeEventListener('click');
+    }
+    render() {
+      return (
+              <div>
+                  <p> refs：写法一 </p>
+                  <button ref="button">Test1</button>
+                  <p> refs：写法二 </p>
+                  <button ref={(btn) => this.btn = btn}>Test2</button>
+              </div>
+      )
+    }
+  }
+
+  ReactDOM.render(
+          <NativeEventDemo/>,
+    document.getElementById('root')
+  )
+</script>
+</body>
+</html>

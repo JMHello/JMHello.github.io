@@ -31,8 +31,8 @@ tag: interview
 
 > * 其实他们也是有区别的：
 >   * 当你用 `typeof` 操作符去获取 `undefined` 和 `null` 的类型时，你会发现 `undefined` 为 `undefined`，而null 却是对象
->   * undefined表示的是缺少值，就是此处应有值，但是还没有添加上去
->   * null的话，代表没有对象的意思，此处不应该有值
+>   * undefined表示的是缺少值，声明了但未初始化
+>   * null的话，空对象，此处不应该有值
 
 > * undefined典型用法就是:
 >   * 变量只是被声明，却还没有赋值
@@ -559,17 +559,16 @@ reg.exec('20130213')  //结果： ['20130213', '2013', '02', '13']
 
 ## 34、易错点之鼠标事件
 
-> * mouseenter: 在鼠标光标从元素外部首次移入到元素范围内时触发，不冒泡；在光标移动到后代元素上不会触发
+> * mouseover和mouseenter的效果一样，都是鼠标移入到某元素触发
+> * mouseout 和 mouseleave的效果一样，都是鼠标移出某元素后触发
+> * mousemove：就是鼠标在某元素内移动会不断触发
 
-> * mouseleave: 在位于元素上方的鼠标光标移动到元素范围之外时触发，不冒泡；在光标移动到后代元素上不会触发
+> * 但是他们也是有区别的：
+>   * mouseenter 和 mouseleave 是不冒泡的，如果对象是其后代元素也是不会触发的
+>   * mouseover 和 mouseout ,如果对象是其后代元素也是会触发的
 
-> * mousemove: 当鼠标指针在元素内部移动时重复触发
-
-> * mouseout: 在鼠标元素位于一个元素上方，然后用户将其移到另一个元素时触发
-
-> * mouseover: 在鼠标指针位于一个元素外部，然后用户将其首次移入另一个元素边界之内时触发
-
-> * 其实很容易记：enter和leave就是进入和离开；move是不断移动，out则是一个元素到另一个元素
+> * 再说一说上述5个鼠标事件触发的顺序吧：
+> * mouseover ==> mouseenter ==> mousemove ==> mouseout ===> mouseleave
 
 ## 35、易错点之坐标区别
 

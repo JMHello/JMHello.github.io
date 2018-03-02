@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 200px;
+            margin-top: 10px;
+            background: blue;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">点击</button>
+<div class="box hide"></div>
+<script>
+    const box = document.querySelector('.box')
+
+    document.body.addEventListener('click', (e) => {
+      console.log(1)
+      box.classList.add('hide')
+    }, false)
+    document.getElementById('btn').addEventListener('click', (e) => {
+      console.log(2)
+      box.classList.remove('hide')
+      e.stopPropagation()
+    }, false)
+</script>
+</body>
+</html>

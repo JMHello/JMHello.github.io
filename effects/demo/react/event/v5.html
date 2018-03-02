@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>合成事件与原生事件混用</title>
+    <script src="./util/react-min.js"></script>
+    <script src="./util/react-dom.min.js"></script>
+    <script src="./util/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  class App extends React.Component {
+    handleClick (e){
+      console.log(e)
+    }
+    render () {
+      // 以下写法错误，一定要传递参数e，才可以获取到事件对象
+      // return <button type="button" onClick={() => this.handleClick()}>点击</button>
+      return <button type="button" onClick={(e) => this.handleClick(e)}>点击</button>
+    }
+  }
+
+  ReactDOM.render(
+          <App/>,
+    document.getElementById('root')
+  )
+</script>
+</body>
+</html>
