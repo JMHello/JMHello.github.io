@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>根据盒模型解析边距重叠</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        h2 {
+            margin: 10px 0;
+        }
+        .box {
+            background: red;
+        }
+        .child {
+            height: 100px;
+            margin-top: 10px;
+            background: blue;
+        }
+        .box2 {
+            overflow: hidden;
+        }
+        .box3 .child:first-child {
+            margin-bottom: 30px;
+        }
+        .box3 .child:last-child {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>父元素的实际高度为：100px</h2>
+<section class="box">
+    <article class="child"></article>
+</section>
+
+<h2>父元素的实际高度为：110px</h2>
+<section class="box box2">
+    <article class="child"></article>
+</section>
+
+<h2>子元素上下边距重叠（取大）</h2>
+<section class="box box3">
+    <article class="child">下边距为30px</article>
+    <article class="child">上边距为10px</article>
+</section>
+
+<h2>解决子元素上下边距重叠问题，为子元素添加一个父元素，创建BFC</h2>
+<section class="box box3">
+    <article class="child">下边距为30px</article>
+    <div style="overflow: hidden">
+        <article class="child">上边距为10px</article>
+    </div>
+</section>
+</body>
+</html>

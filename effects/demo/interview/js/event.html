@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义事件</title>
+</head>
+<body>
+<div id="target">目标元素</div>
+<script>
+  const evTarget = document.getElementById('target')
+
+  /* 方法一：Event */
+  const event1 = new Event('test1');
+  console.log(event1)
+  evTarget.addEventListener('test1', function () {
+    console.log('test1 dispatch');
+  });
+  evTarget.dispatchEvent(event1);
+
+
+  /* 方法二：CustomEvent */
+  const event2 = new CustomEvent('test2', {
+    detail: {
+      color: 'blue'
+    }
+  })
+  console.log(event2)
+
+  evTarget.addEventListener('test2', function (e) {
+    console.log(`test2 dispatch，data is：${JSON.stringify(e.detail)}`);
+  });
+  evTarget.dispatchEvent(event2);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>假设高度已知，请写出三栏布局，左右栏为300px，中间自适应</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .layout {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .layout .left-center-right > div {
+            min-height: 100px;
+        }
+        .layout .left {
+            width: 300px;
+            background: blue;
+        }
+        .layout .center {
+            background: yellow;
+        }
+        .layout .right {
+            width: 300px;
+            background: red;
+        }
+
+        .float .left {
+            float: left;
+        }
+        .float .right {
+            float: right;
+        }
+
+        .layout.position {
+            margin-bottom: 120px;
+        }
+        .position .left-center-right {
+            position: relative;
+        }
+        .position .left {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .position .center {
+            position: absolute;
+            left: 300px;
+            top: 0;
+            right: 300px;
+        }
+        .position .right {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .flex .left-center-right{
+            display: flex;
+        }
+        .flex .center {
+            flex: 1;
+        }
+
+        .table .left-center-right{
+            display: table;
+        }
+        .table .left,
+        .table .center,
+        .table .right {
+            display: table-cell;
+        }
+
+        .grid .left-center-right {
+            display: grid;
+            grid-template-rows: 100px;
+            grid-template-columns: 300px auto 300px;
+        }
+    </style>
+</head>
+<body>
+<h1>题目：假设高度已知，请写出三栏布局，左右栏为300px，中间自适应</h1>
+<h2>方法一：浮动布局</h2>
+<section class="layout float">
+    <article class="left-center-right clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+    </article>
+</section>
+
+<h2>方法二：定位布局</h2>
+<section class="layout position">
+    <article class="left-center-right">
+        <div class="left"></div>
+        <div class="center">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+        <div class="right"></div>
+    </article>
+</section>
+
+<h2>方法三：flex布局</h2>
+<section class="layout flex">
+    <article class="left-center-right">
+        <div class="left"></div>
+        <div class="center">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+        <div class="right"></div>
+    </article>
+</section>
+
+<h2>方法四：表格布局</h2>
+<section class="layout table">
+    <article class="left-center-right">
+        <div class="left"></div>
+        <div class="center">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+        <div class="right"></div>
+    </article>
+</section>
+
+<h2>方法五：网格布局</h2>
+<section class="layout grid">
+    <article class="left-center-right">
+        <div class="left"></div>
+        <div class="center">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+        <div class="right"></div>
+    </article>
+</section>
+</body>
+</html>
