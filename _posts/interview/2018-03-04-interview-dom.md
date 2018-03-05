@@ -25,7 +25,7 @@ tag: 面试题目
 
 ### 1.2 基本概念：DOM事件的级别
 
-|           DOM事件类         |                                事件级别                                        | 事件级别      |
+|           DOM事件类         |                                事件级别                                        | 备注      |
 |:----------------------|:----------------------------------------------------------------------------|:---|
 |DOM0| element.onclick = function () {}||
 |DOM2| element.addEventListener('click', function(){},false)| ie: element.attachEvent('click', function() {})|
