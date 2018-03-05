@@ -2,8 +2,8 @@
 layout: post
 title: "css面试题目 - css盒模型"
 data: 2018-03-04 10:27:00 +0800
-categories: 原创
-tag: 面试题目
+categories: 面试
+tag: interview
 ---
 * content
 {:toc}

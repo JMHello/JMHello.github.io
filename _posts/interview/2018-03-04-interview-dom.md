@@ -2,8 +2,8 @@
 layout: post
 title: "面试题目 - DOM事件类"
 data: 2018-03-04 10:27:00 +0800
-categories: 原创
-tag: 面试题目
+categories: 面试
+tag: interview
 ---
 * content
 {:toc}
