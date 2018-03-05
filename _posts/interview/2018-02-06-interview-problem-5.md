@@ -137,4 +137,16 @@ tag: interview
 
 > * 还有SQL注入攻击
 
-## 3、
+## 3、XSS payload
+
+> 先说说是什么，再说说有什么应用场景
+
+> * XSS payload：payload就是有效载客的意思，而SS payload 就是能够有效实现XSS攻击的钥匙。我们可以通过XSS payload发起有效的XSS攻击
+
+> * XSS payload 的核心原理就是：能实现XSS攻击的恶意脚本
+
+> * XSS payload 有成千上万种，不同的浏览器，不同的场景，都会有不同的XSS payload。接下来就说几种常见的XSS payload
+>   * 窃听用户cookie：通过document.cookie就可以模仿用户登录态
+>   * 识别用户浏览器：通过navigation.userAgent就可以知道用户使用的浏览器是什么版本。如果浏览器版本较低，就用较古老的攻击方式；如果浏览器版本高，那么就使用对应的攻击方式
+>   * 伪造请求：通过Ajax、img.src、form表单等发起一下get或post请求，进行XSS攻击
+>   * XSS 钓鱼：XSS payload + 钓鱼网站（钓鱼网站就是骗人的网站）

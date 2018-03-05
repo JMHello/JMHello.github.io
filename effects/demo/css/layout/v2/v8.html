@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>假设高度已知，右宽度固定(300px)，左自适应</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .layout {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .layout .left-right > div {
+            min-height: 100px;
+        }
+        .layout .left {
+            background: blue;
+        }
+
+        .layout .right {
+            width: 300px;
+            background: red;
+        }
+
+        .float .left {
+            margin-right: 300px;
+        }
+        .float .right {
+            float: right;
+        }
+
+        .layout.position {
+            margin-bottom: 120px;
+        }
+        .position .left-right {
+            position: relative;
+        }
+        .position .left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 300px;
+        }
+
+        .position .right {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .flex .left-right{
+            display: flex;
+        }
+        .flex .left {
+            flex: 1;
+        }
+
+        .table .left-right{
+            display: table;
+        }
+        .table .left,
+        .table .right {
+            display: table-cell;
+        }
+
+        .grid .left-right {
+            display: grid;
+            grid-template-rows: 100px;
+            grid-template-columns: auto 300px ;
+        }
+    </style>
+</head>
+<body>
+<h1>题目：假设高度已知，左宽度固定(300px)，右自适应</h1>
+<h2>方法一：浮动布局</h2>
+<section class="layout float">
+    <article class="left-right clearfix">
+        <div class="right"></div>
+        <div class="left">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+    </article>
+</section>
+
+<h2>方法二：定位布局</h2>
+<section class="layout position">
+    <article class="left-right clearfix">
+        <div class="left">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+        <div class="right"></div>
+    </article>
+</section>
+
+<h2>方法三：flex布局</h2>
+<section class="layout flex">
+    <article class="left-right clearfix">
+        <div class="left">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+        <div class="right"></div>
+    </article>
+</section>
+
+<h2>方法四：表格布局</h2>
+<section class="layout table">
+    <article class="left-right clearfix">
+        <div class="left">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+        <div class="right"></div>
+    </article>
+</section>
+
+<h2>方法五：网格布局</h2>
+<section class="layout grid">
+    <article class="left-right clearfix">
+        <div class="left">
+            React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+            几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。
+        </div>
+        <div class="right"></div>
+    </article>
+</section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上下高度固定，中间自适应（假设高度为300px）flex布局</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .top-center-bottom {
+            display: flex;
+            flex-direction: column;
+        }
+        .flex .top {
+            height: 100px;
+            background: blue;
+        }
+        .flex .center {
+            flex: 1;
+            background: yellow;
+        }
+        .flex .bottom {
+            height: 100px;
+            background: red;
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="layout flex">
+    <article class="top-center-bottom">
+        <div class="top"></div>
+        <div class="center">
+            <p>React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+                几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。</p>
+
+            <p>React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+                几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。</p>
+
+            <p>React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+                几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。</p>
+
+            <p>React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+                几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。</p>
+            <p>React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+                几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。</p>
+            <p>React 是以组合组件的形式组织的，组件因为彼此是相互独立的，从传递信息的内容上看，
+                几乎所有类型的信息都可以实现传递，例如字符串、数组、对象、方法或自定义组件等。</p>
+        </div>
+        <div class="bottom"></div>
+    </article>
+</section>
+</body>
+</html>
