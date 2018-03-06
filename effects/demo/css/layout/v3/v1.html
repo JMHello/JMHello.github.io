@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见布局</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 100px;
+            background: black;
+        }
+        .inner-box {
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+        .layout {
+            width: 500px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        .layout .aside,
+        .layout .header
+        {
+            background: blue;
+        }
+        .layout .main{
+            background: red;
+        }
+        .layout .footer {
+            background: green;
+        }
+        .align--average {
+            height: auto;
+            display: flex;
+            background: grey;
+        }
+        .align--average .block {
+            flex: 1;
+            height: 50px;
+            margin-right: 10px;
+            background: red;
+        }
+        .vertical--average {
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            background: grey;
+        }
+        .vertical--average .block {
+            flex: 1;
+            margin-bottom: 10px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<h2>单栏布局</h2>
+<h3>水平居中</h3>
+<section class="box" style="text-align: center">
+    <div class="inner-box" style="display: inline-block"></div>
+</section>
+
+<section class="box" >
+    <div class="inner-box" style="display: table; margin: 0 auto"> </div>
+</section>
+
+<h3>垂直居中</h3>
+<section class="box" style="display: table-cell; vertical-align: middle">
+    <div class="inner-box"></div>
+</section>
+
+<h3>水平垂直居中</h3>
+<section class="box" style="display: table-cell; vertical-align: middle; text-align: center">
+    <div class="inner-box" style="display: inline-block"></div>
+</section>
+
+<h2>两栏布局</h2>
+
+<h3>左右布局</h3>
+<section class="layout" style="display: flex">
+    <aside class="aside" style="width: 100px"></aside>
+    <main class="main" style="flex: 1;"></main>
+</section>
+
+<section class="layout" style="display: flex">
+    <aside class="aside" style="flex: 1;"></aside>
+    <main class="main" style="width: 100px"></main>
+</section>
+
+<h3>上下布局</h3>
+<section class="layout" style="display: flex; flex-direction: column">
+    <header class="header" style="height: 50px"></header>
+    <main class="main" style="flex: 1"></main>
+</section>
+
+<section class="layout" style="display: flex; flex-direction: column">
+    <main class="main" style="flex: 1"></main>
+    <footer class="footer" style="height: 50px"></footer>
+</section>
+
+<h2>三栏布局</h2>
+
+<h3>左中右布局</h3>
+<section class="layout" style="display: flex">
+    <aside class="aside" style="width: 100px"></aside>
+    <main class="main" style="flex: 1;"></main>
+    <aside class="aside" style="width: 100px"></aside>
+</section>
+
+
+<h3>上中下布局</h3>
+
+<section class="layout" style="display: flex; flex-direction: column">
+    <header class="header" style="height: 50px"></header>
+    <main class="main" style="flex: 1"></main>
+    <footer class="footer" style="height: 50px"></footer>
+</section>
+
+<h2>圣杯布局</h2>
+<section class="layout" style="display: flex; flex-direction: column">
+    <header class="header" style="height: 50px"></header>
+    <div class="content" style="display: flex; flex: 1">
+        <nav class="nav" style="width: 50px; background: yellow"></nav>
+        <main class="main" style="flex: 1"></main>
+        <aside class="aside" style="width: 50px; background: grey;"></aside>
+    </div>
+    <footer class="footer" style="height: 50px"></footer>
+</section>
+
+<h2>等分布局</h2>
+
+<section class="layout align--average">
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+</section>
+
+<h2>等高布局</h2>
+
+<section class="layout vertical--average">
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+</section>
+
+
+</body>
+</html>

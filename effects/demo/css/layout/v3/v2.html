@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多列不定宽，一列自适应</title>
+    <style>
+        .layout {
+            background: grey;
+            min-height: 50px;
+        }
+        .nav {
+            background: red;
+        }
+        .main {
+            background: yellow;
+        }
+        .aside {
+            background: blue;
+        }
+        .layout .nav,
+        .layout .main {
+            float: left;
+            margin-right: 10px;
+        }
+        .layout .aside {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<h2>float + overflow</h2>
+<section class="layout">
+    <nav class="nav">nav</nav>
+    <main class="main">main</main>
+    <aside class="aside">aside</aside>
+</section>
+
+
+</body>
+</html>
