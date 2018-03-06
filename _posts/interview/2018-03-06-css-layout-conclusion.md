@@ -493,7 +493,7 @@ tag: interview
 
 ### 5.1 一列定宽，一列自适应
 
-**左定宽，右自适应**
+#### 5.1.1 左定宽，右自适应
 
 * float + overflow 【[demo](/effects/demo/css/layout/v3/double/lr/v1.html)】
 
@@ -693,9 +693,141 @@ tag: interview
 
 ![layout](/styles/images/css/layout/v2/v-11.png)
 
-**右定宽，左自适应**
+#### 5.1.2 右定宽，左自适应
+
+* float + margin 【[demo](/effects/demo/css/layout/v3/double/lr/v7.html)】
+
+思路：右栏定宽，右栏右浮动；左栏设置 `margin-right` 为右栏的宽度
+
+注意点：
+1. 注意html结构：右栏 ===》 左栏
+
+```html
+<div class="container">
+    <main class="main">右main</main>
+    <aside class="aside">左aside</aside>
+</div>
+<style>
+    .container {
+        background: gray;
+    }
+    .aside {
+        margin-right: 200px; /* 关键代码 */
+        background: red;
+    }
+    .main {
+        float: right; /* 关键代码 */
+        width: 200px; /* 关键代码 */
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-12.png)
+
+---
+
+* flex 【[demo](/effects/demo/css/layout/v3/double/lr/v8.html)】
+
+思路：父元素设置 `display: flex`，右栏定宽，左栏设置为flex: 1，让其自适应
+
+注意点：
+1. 左栏必须定宽
+2. 支持IE9+
+
+```html
+<div class="container">
+    <aside class="aside">左aside</aside>
+    <main class="main">右main</main>
+</div>
+<style>
+    .container {
+        display: flex; /* 关键代码 */
+        background: gray;
+    }
+    .aside {
+        flex: 1; /* 关键代码 */
+        background: red;
+    }
+    .main {
+        width: 200px;
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-12.png)
 
 
+---
+
+* table 【[demo](/effects/demo/css/layout/v3/double/lr/v9.html)】
+
+思路：父元素定宽并且设置display: table，左右两栏都设置为 table-cell，右栏定宽，左栏会自适应
+
+注意点：
+1. 右栏必须定宽
+2. 支持IE9+
+
+```html
+<div class="container">
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+<style>
+    .container {
+        width: 100%; /* 关键代码 */
+        display: table; /* 关键代码 */
+        background: gray;
+    }
+    .aside {
+        display: table-cell; /* 关键代码 */
+        background: red;
+    }
+    .main {
+        display: table-cell; /* 关键代码 */
+        width: 200px;
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-12.png)
+
+---
+
+* grid 【[demo](/effects/demo/css/layout/v3/double/lr/v10.html)】
+
+思路：父元素设置display: grid，由属性 grid-template-columns 控制有多少列，每列的宽度是多少
+
+注意点：
+1. 左由两栏可不设置宽度，由属性 grid-template-columns 决定每列的宽度
+
+```html
+<div class="container">
+    <aside class="aside">左aside</aside>
+    <main class="main">右main</main>
+</div>
+<style>
+    .container {
+        display: grid; /* 关键代码 */
+        grid-template-columns: auto 200px ; /* 关键代码：有多少列，每列的宽度 */
+        background: gray;
+    }
+    .aside {
+        background: red;
+    }
+    .main {
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-12.png)
+
+
+
+### 5.3 总结
 
 左右布局都可以用以下方法实现：
 
@@ -704,10 +836,6 @@ tag: interview
 * 弹性布局
 * 表格布局
 * 网格布局
-
----
-
-
 
 
 ### 5.2 上下布局

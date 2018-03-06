@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>右定宽，左自适应</title>
+</head>
+<body>
+<h2>右定宽，左自适应：flex</h2>
+<div class="container">
+    <aside class="aside">左aside</aside>
+    <main class="main">右main</main>
+</div>
+<style>
+    .container {
+        display: grid; /* 关键代码 */
+        grid-template-columns: auto 200px ; /* 关键代码：有多少列，每列的宽度 */
+        background: gray;
+    }
+    .aside {
+        background: red;
+    }
+    .main {
+        background: blue;
+    }
+</style>
+</body>
+</html>

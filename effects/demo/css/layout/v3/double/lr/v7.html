@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>右定宽，左自适应</title>
+</head>
+<body>
+<h2>右定宽，左自适应：float + margin</h2>
+<div class="container">
+    <main class="main">右main</main>
+    <aside class="aside">左aside</aside>
+</div>
+<style>
+    .container {
+        background: gray;
+    }
+    .aside {
+        margin-right: 200px; /* 关键代码 */
+        background: red;
+    }
+    .main {
+        float: right; /* 关键代码 */
+        width: 200px; /* 关键代码 */
+        background: blue;
+    }
+</style>
+</body>
+</html>
