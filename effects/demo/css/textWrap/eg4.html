@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解决长串英文和英文单词会被断开</title>
+    <style>
+        .div {
+            width: 200px;
+            margin: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="div">
+        hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?
+        hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?
+        URL:http://localhost:8080/api/index/user/jasdljslajdlajsldkjalkdjlkadadlajsldjaljdl?askdjha=asdlajld &asdljaslkdj=9089080
+    </div>
+</div>
+<div>
+    <h2>word-wrap: break-wrap 和 overflow: hidden</h2>
+    <div class="div" style="word-wrap: break-word; overflow: hidden">
+        hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?
+        hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?
+        URL:http://localhost:8080/api/index/user/jasdljslajdlajsldkjalkdjlkadadlajsldjaljdl?askdjha=asdlajld &asdljaslkdj=9089080
+    </div>
+</div>
+
+<div>
+    <h2>word-wrap: break-word 和 word-break: break-all</h2>
+    <div class="div" style="word-wrap: break-word; word-break: break-all">
+        hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?
+        hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?hello!!What are you doing?
+        URL:http://localhost:8080/api/index/user/jasdljslajdlajsldkjalkdjlkadadlajsldjaljdl?askdjha=asdlajld &asdljaslkdj=9089080
+    </div>
+</div>
+</body>
+</html>

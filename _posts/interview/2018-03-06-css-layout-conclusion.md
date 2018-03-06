@@ -19,7 +19,7 @@ tag: interview
 
 ## 二、布局展示
 
-![demo](/effects/demo/css/layout/v3/v1.html)
+> * [demo](/effects/demo/css/layout/v3/v1.html)
 
 * 单栏布局
 

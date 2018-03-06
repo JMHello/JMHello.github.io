@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>white-space</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .section {
+            flex: 1;
+        }
+        .div {
+            margin: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            word-break: keep-all;
+        }
+    </style>
+</head>
+<body>
+<section class="section">
+    <h2>white-space: normal</h2>
+    <div class="div" style="white-space: normal">
+        使用表格进行页面布局会带来很多问题问题：
+
+        1 把格式数据混入你的内容中。
+
+        o Table使得文件的大小无谓地变大，而用户访问每个 页面时都必须下载一次这样的格式信息。
+        o 客户的时间和带宽也是有限的。
+    </div>
+</section>
+
+<section class="section">
+    <h2>white-space: pre</h2>
+    <div class="div" style="white-space: pre">
+        使用表格进行页面布局会带来很多问题问题：
+        1 把格式数据混入你的内容中。
+        o Table使得文件的大小无谓地变大，而用户访问每个 页面时都必须下载一次这样的格式信息。
+        o 客户的时间和带宽也是有限的。
+    </div>
+</section>
+
+<section class="section">
+    <h2>white-space: nowrap</h2>
+    <div class="div" style="white-space: nowrap">
+        使用表格进行页面布局会带来很多问题问题：
+        1 把格式数据混入你的内容中。
+        o Table使得文件的大小无谓地变大，而用户访问每个 页面时都必须下载一次这样的格式信息。
+        o 客户的时间和带宽也是有限的。
+    </div>
+</section>
+
+<section class="section">
+    <h2>white-space: pre-line</h2>
+    <div class="div" style="white-space: pre-line">
+        使用表格进行页面布局会带来很多问题问题：
+        1 把格式数据混入你的内容中。
+        o Table使得文件的大小无谓地变大，而用户访问每个 页面时都必须下载一次这样的格式信息。
+        o 客户的时间和带宽也是有限的。
+    </div>
+</section>
+
+<section class="section">
+    <h2>white-space: pre-wrap</h2>
+    <div class="div" style="white-space: pre-wrap">
+        使用表格进行页面布局会带来很多问题问题：
+        1 把格式数据混入你的内容中。
+        o Table使得文件的大小无谓地变大，而用户访问每个 页面时都必须下载一次这样的格式信息。
+        o 客户的时间和带宽也是有限的。
+    </div>
+</section>
+</body>
+</html>
