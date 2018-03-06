@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+</head>
+<body>
+<h2>垂直居中：flex + align-items</h2>
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        display: flex; /* 关键代码 */
+        align-items: center; /* 关键代码 */
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+</body>
+</html>

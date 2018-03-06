@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+</head>
+<body>
+<h2>垂直居中：absolute + transform</h2>
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        position: relative;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        position: absolute; /* 关键代码 */
+        top: 50%; /* 关键代码 */
+        transform: translateY(-50%); /* 关键代码 */
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+</body>
+</html>

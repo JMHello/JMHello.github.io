@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平居中</title>
+</head>
+<body>
+<h2>水平居中：position + margin(子元素定宽)</h2>
+<section class="parent">
+    <div class="child">水平居中</div>
+</section>
+<style>
+    .parent {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        position: absolute; /* 关键代码 */
+        left: 50%; /* 关键代码 */
+        margin-left: -50px; /* 关键代码 */
+        width: 100px; /* 关键代码 */
+        background: red;
+    }
+</style>
+</body>
+</html>

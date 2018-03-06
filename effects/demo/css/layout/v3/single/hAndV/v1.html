@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平垂直居中</title>
+</head>
+<body>
+<h2>水平垂直居中：table-cell + vertical-align + inline-block + text-align</h2>
+<section class="parent">
+    <div class="child">水平垂直居中</div>
+</section>
+<style>
+    .parent {
+        display: table-cell; /* 关键代码 */
+        text-align: center; /* 关键代码 */
+        vertical-align: middle; /* 关键代码 */
+        width: 500px;
+        height: 300px;
+        text-align: center;
+        background: grey;
+    }
+    .child {
+        display: inline-block; /* 关键代码 */
+        /*width: 100px;*/
+        /*height: 100px;*/
+        background: red;
+    }
+</style>
+</body>
+</html>

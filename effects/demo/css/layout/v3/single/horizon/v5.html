@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平居中</title>
+</head>
+<body>
+<h2>水平居中：table （子元素不定宽） + margin</h2>
+<section class="parent">
+    <div class="child">子元素必须有内容，table才有效</div>
+</section>
+<style>
+    .parent {
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        display: table; /* 关键代码 */
+        margin: 0 auto; /* 关键代码 */
+        /*width: 100px;*/
+        /*height: 100px;*/
+        background: red;
+    }
+</style>
+</body>
+</html>

@@ -49,33 +49,452 @@ tag: interview
 * 网格布局？
 * column布局？
 
-## 四、总结实现每个布局有什么方法
+## 四、单栏布局
 
-### 4.1 单栏布局
+### 4.1 水平居中
 
-水平居中
+* inline-block + text-align 【[demo](/effects/demo/css/layout/v3/single/horizon/v1.html)】
 
-* inline-block + text-align
-* absolute + transform
-* flex + justify-content
-* table + margin
+思路：`text-align: center` 让行内元素水平居中。【表现为`inline` 或者 `inline-block` 的都可以实现】
 
-垂直居中
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        width: 500px;
+        height: 300px;
+        text-align: center; /* 关键代码 */
+        background: grey;
+    }
+    .child {
+        display: inline-block; /* 关键代码 */
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+```
 
-* absolute + transform
-* flex + align-items
-* table-cell + vertical-align
+![layout](/styles/images/css/layout/v2/v-01.png)
 
-水平垂直居中
+---
 
-* table-cell + vertical-align + inline-block + text-align
-* table + table-cell + vertical-align  + text-align
-* absolute + transform
-* flex + justify-content + align-items
+* absolute + transform【[demo](/effects/demo/css/layout/v3/single/horizon/v2.html)】
 
-### 多栏布局
+思路：利用定位中水平方向偏移50%，再通过`transform` 将定位元素自身偏移-50%来使中心回到正确的位置
 
-对于左右布局或者左中右布局
+注意点：
+
+1. 子元素的宽度不是必须的
+2. `transform` 只能兼容到 `IE9`
+
+```html
+<section class="parent">
+    <div class="child">水平居中</div>
+</section>
+<style>
+    .parent {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        position: absolute; /* 关键代码 */
+        left: 50%; /* 关键代码 */
+        transform: translateX(-50%); /* 关键代码 */
+        /*width: 100px;*/
+        /*height: 100px;*/
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-02.png)
+
+---
+
+* absolute + margin 【[demo](/effects/demo/css/layout/v3/single/horizon/v6.html)】
+
+思路：利用定位中水平方向偏移50%，在知道子元素宽度的情况下（即：子元素有设置固定宽度），再设置 `margin-left` 的值为子元素的宽度的一半，并设置为负值。
+
+注意点：
+
+1. 子元素定宽
+2. 兼容性好
+
+```html
+<section class="parent">
+    <div class="child">水平居中</div>
+</section>
+<style>
+    .parent {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        position: absolute; /* 关键代码 */
+        left: 50%; /* 关键代码 */
+        margin-left: -50px; /* 关键代码 */
+        width: 100px; /* 关键代码 */
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-03.png)
+
+---
+
+* flex + justify-content 【[demo](/effects/demo/css/layout/v3/single/horizon/v3.html)】
+
+思路： 通过容器表现为flex，用justify-content水平居中
+
+注意点：
+1. 支持IE10+
+2. 子元素可不定宽
+
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        display: flex; /* 关键代码 */
+        justify-content: center; /* 关键代码 */
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-04.png)
+
+---
+
+* 子元素定宽 + margin 【[demo](/effects/demo/css/layout/v3/single/horizon/v4.html)】
+
+思路：在子元素定宽的情况下，加上 `margin: 0 auto` 就可以实现水平居中
+
+注意点：
+1. 子元素必须定宽
+
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        width: 100px; /* 关键代码 */
+        height: 100px;
+        margin: 0 auto; /* 关键代码 */
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-04.png)
+
+---
+
+* table + margin 【[demo](/effects/demo/css/layout/v3/single/horizon/v5.html)】
+
+思路：子元素设置为table，加上 `margin: 0 auto` 就可以实现水平居中
+
+注意点：
+1. 子元素可不定宽 或者 子元素必须有内容才有效
+
+```html
+<section class="parent">
+    <div class="child">子元素必须有内容，table才有效</div>
+</section>
+<style>
+    .parent {
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        display: table; /* 关键代码 */
+        margin: 0 auto; /* 关键代码 */
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-05.png)
+
+### 4.2 垂直居中
+
+* position + transform 【[demo](/effects/demo/css/layout/v3/single/vertical/v1.html)】
+
+思路：这里利用的是定位中垂直方向偏移50%，再通过transform将定位元素自身偏移-50%来使得中心回到正确的位置
+
+注意点：
+1. 父元素要定高
+2. .用了transform只能兼容到IE9
+   
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        position: relative;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        position: absolute; /* 关键代码 */
+        top: 50%; /* 关键代码 */
+        transform: translateY(-50%); /* 关键代码 */
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-07.png)
+
+---
+
+* position + margin 【[demo](/effects/demo/css/layout/v3/single/vertical/v4.html)】
+
+思路：这里利用的是定位中垂直方向偏移50%，再通过margin-top将定位元素自身偏移-50%来使得中心回到正确的位置
+
+注意点：
+1. 父元素要定高，子元素要定高
+2. 用了transform只能兼容到IE9
+   
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        position: relative;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        position: absolute; /* 关键代码 */
+        top: 50%; /* 关键代码 */
+        margin-top: -50px; /* 关键代码 */
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-07.png)
+
+---
+
+* flex + align-items 【[demo](/effects/demo/css/layout/v3/single/vertical/v2.html)】
+
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        display: flex; /* 关键代码 */
+        align-items: center; /* 关键代码 */
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-07.png)
+
+---
+
+* table-cell + vertical-align 【[demo](/effects/demo/css/layout/v3/single/vertical/v3.html)】
+
+思路：父元素设置`display: table-cell;` 以及 `vertical-align: middle`；
+
+注意点：
+1. 子元素可不定宽高；但在不定宽高的情况下，必须有内容
+
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        display: table-cell; /* 关键代码 */
+        vertical-align: middle; /* 关键代码 */
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        /*width: 100px;*/
+        /*height: 100px;*/
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-08.png)
+
+### 4.3 水平垂直居中
+
+* table-cell + vertical-align + inline-block + text-align 【[demo](/effects/demo/css/layout/v3/single/hAndV/v1.html)】
+
+注意点：
+1. 子元素可不定宽高；在没宽高的情况下，必须有内容
+
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        display: table-cell; /* 关键代码 */
+        text-align: center; /* 关键代码 */
+        vertical-align: middle; /* 关键代码 */
+        width: 500px;
+        height: 300px;
+        text-align: center;
+        background: grey;
+    }
+    .child {
+        display: inline-block; /* 关键代码 */
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-09.png)
+
+---
+
+* absolute + transform 【[demo](/effects/demo/css/layout/v3/single/hAndV/v2.html)】
+
+注意点：
+1. 父元素必须定高
+2. 使用transform ，支持IE10+
+
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        position: relative;   /* 关键代码 */
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        position: absolute; /* 关键代码 */
+        top: 50%; /* 关键代码 */
+        left: 50%; /* 关键代码 */
+        transform: translate(-50%, -50%); /* 关键代码 */
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-10.png)
+
+---
+
+
+* absolute + margin 【[demo](/effects/demo/css/layout/v3/single/hAndV/v4.html)】
+
+注意点：
+1. 子元素必须定宽高
+
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        position: relative;   /* 关键代码 */
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        position: absolute; /* 关键代码 */
+        top: 50%; /* 关键代码 */
+        left: 50%; /* 关键代码 */
+        margin-top: -50px; /* 关键代码 */
+        margin-left: -50px; /* 关键代码 */
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-10.png)
+
+---
+
+* flex + justify-content + align-items 【[demo](/effects/demo/css/layout/v3/single/hAndV/v3.html)】
+
+```html
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        display: flex; /* 关键代码 */
+        justify-content: center; /* 关键代码 */
+        align-items: center; /* 关键代码 */
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-10.png)
+
+## 五、两栏布局
+
+### 5.1 左右布局
+
+
+
+左右布局都可以用以下方法实现：
 
 * 浮动布局
 * 定位布局
@@ -83,8 +502,12 @@ tag: interview
 * 表格布局
 * 网格布局
 
+---
 
-对于上下布局或者上中下布局
+
+
+
+### 5.2 上下布局
 
 * 定位布局
 * 弹性布局

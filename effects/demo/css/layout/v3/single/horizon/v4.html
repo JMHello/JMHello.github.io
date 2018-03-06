@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平居中</title>
+</head>
+<body>
+<h2>水平居中：子元素定宽 + margin</h2>
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        width: 500px;
+        height: 300px;
+        background: grey;
+    }
+    .child {
+        width: 100px; /* 关键代码 */
+        height: 100px;
+        margin: 0 auto; /* 关键代码 */
+        background: red;
+    }
+</style>
+</body>
+</html>

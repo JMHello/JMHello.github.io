@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平居中</title>
+</head>
+<body>
+<h2>水平居中：inline-block + text-align</h2>
+<section class="parent">
+    <div class="child"></div>
+</section>
+<style>
+    .parent {
+        width: 500px;
+        height: 300px;
+        text-align: center; /* 关键代码 */
+        background: grey;
+    }
+    .child {
+        display: inline-block; /* 关键代码 */
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+</body>
+</html>
