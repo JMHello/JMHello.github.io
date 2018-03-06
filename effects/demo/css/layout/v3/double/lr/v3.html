@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左定宽，右自适应</title>
+</head>
+<body>
+<h2>左定宽，右自适应：position</h2>
+<div class="container">
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+<style>
+    .container {
+        position: relative;
+        background: gray;
+    }
+    .aside {
+        position: absolute; /* 关键代码 */
+        top: 0; /* 关键代码 */
+        left: 0; /* 关键代码 */
+        width: 200px;
+        background: red;
+    }
+    .main {
+        position: absolute; /* 关键代码 */
+        top: 0; /* 关键代码 */
+        left: 200px; /* 关键代码 */
+        right: 0; /* 关键代码 */
+        background: blue;
+    }
+</style>
+</body>
+</html>

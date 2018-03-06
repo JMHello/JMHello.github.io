@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左定宽，右自适应</title>
+</head>
+<body>
+<h2>左定宽，右自适应：table</h2>
+<div class="container">
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+<style>
+    .container {
+        width: 100%; /* 关键代码 */
+        display: table; /* 关键代码 */
+        background: gray;
+    }
+    .aside {
+        display: table-cell; /* 关键代码 */
+        width: 200px;
+        background: red;
+    }
+    .main {
+        display: table-cell; /* 关键代码 */
+        background: blue;
+    }
+</style>
+</body>
+</html>

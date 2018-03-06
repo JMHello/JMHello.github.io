@@ -41,6 +41,7 @@ tag: interview
 
 > * 先从大布局下手，再到小布局
 
+* 是否固定宽高？
 * inlin-block？ block？
 * 浮动布局？
 * 定位布局？
@@ -490,7 +491,209 @@ tag: interview
 
 ## 五、两栏布局
 
-### 5.1 左右布局
+### 5.1 一列定宽，一列自适应
+
+**左定宽，右自适应**
+
+* float + overflow 【[demo](/effects/demo/css/layout/v3/double/lr/v1.html)】
+
+思路：浮动元素会脱离文档流，会影响其下面兄弟元素的布局，导致发生元素重叠；设置 overflow 非 visible，可以使其兄弟元素新建一个bfc，避免发生元素重叠
+
+```html
+<div class="container">
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+<style>
+    .container {
+        background: gray;
+    }
+    .aside {
+        float: left; /* 关键代码 */
+        width: 200px;
+        margin-right: 20px;
+        background: red;
+    }
+    .main {
+        overflow: hidden; /* 关键代码 */
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-11.png)
+
+---
+
+* float + margin 【[demo](/effects/demo/css/layout/v3/double/lr/v2.html)】
+
+思路：左栏定宽，左栏左浮动；右栏设置margin-left的值为“负”左栏的宽度
+
+注意点：
+1. 左栏必须定宽
+
+```html
+<div class="container">
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+<style>
+    .container {
+        background: gray;
+    }
+    .aside {
+        float: left; /* 关键代码 */
+        width: 200px;
+        margin-right: 20px;
+        background: red;
+    }
+    .main {
+        margin-left: 220px; /* 关键代码 */
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-11.png)
+
+
+---
+
+* position【[demo](/effects/demo/css/layout/v3/double/lr/v3.html)】
+
+思路：左右两栏都设置为绝对定位元素，其top值都为0；左栏left值为0，右栏的left值为左栏的宽度，并且设置右栏的right值为0
+
+注意点：
+1. 左栏必须定宽
+
+```html
+<div class="container">
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+<style>
+    .container {
+        position: relative;
+        background: gray;
+    }
+    .aside {
+        position: absolute; /* 关键代码 */
+        top: 0; /* 关键代码 */
+        left: 0; /* 关键代码 */
+        width: 200px;
+        background: red;
+    }
+    .main {
+        position: absolute; /* 关键代码 */
+        top: 0; /* 关键代码 */
+        left: 200px; /* 关键代码 */
+        right: 0; /* 关键代码 */
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-11.png)
+
+
+---
+
+* flex【[demo](/effects/demo/css/layout/v3/double/lr/v4.html)】
+
+思路：父元素设置`display: flex`，左栏定宽，右栏设置为`flex: 1`，让其自适应
+
+注意点：
+1. 支持IE9+
+
+```html
+<div class="container">
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+<style>
+    .container {
+        display: flex; /* 关键代码 */
+        background: gray;
+    }
+    .aside {
+        width: 200px;
+        background: red;
+    }
+    .main {
+        flex: 1; /* 关键代码 */
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-11.png)
+
+---
+
+* table 【[demo](/effects/demo/css/layout/v3/double/lr/v5.html)】
+
+思路：父元素定宽并且设置`display: table`，左右两栏都设置为 `table-cell`，左栏定宽，右栏会自适应
+
+注意点：
+1. 父元素定宽，左栏定宽
+
+```html
+<div class="container">
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+<style>
+    .container {
+        width: 100%; /* 关键代码 */
+        display: table; /* 关键代码 */
+        background: gray;
+    }
+    .aside {
+        display: table-cell; /* 关键代码 */
+        width: 200px;
+        background: red;
+    }
+    .main {
+        display: table-cell; /* 关键代码 */
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-11.png)
+
+---
+
+* grid 【[demo](/effects/demo/css/layout/v3/double/lr/v6.html)】
+
+思路：父元素设置`display: grid`，由属性 `grid-template-columns` 控制有多少列，每列的宽度是多少
+
+注意点：
+1. 左由两栏可不设置宽度，由属性 `grid-template-columns` 决定每列的宽度 
+
+```html
+<div class="container">
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+<style>
+    .container {
+        display: grid; /* 关键代码 */
+        grid-template-columns: 200px auto; /* 关键代码：有多少列，每列的宽度 */
+        background: gray;
+    }
+    .aside {
+        background: red;
+    }
+    .main {
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-11.png)
+
+**右定宽，左自适应**
 
 
 
