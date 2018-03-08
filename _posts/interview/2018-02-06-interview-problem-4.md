@@ -102,13 +102,9 @@ tag: interview
 >   * `if-modified-since`：文件最后修改的时间，它保存的值其实就是`last-modified`的值
 >   * `If-None-Match`：就是`Etag`值
 
-----
-
 > * `Etag` 和 `If-None-Match` 绝对是成对出现
 > * `Last-Modified` 和 `If-Modified-Since` 也是成对出现
 > * 这两队组合都是协商缓存
-
----
 
 > * 接下来开始说一说缓存的整个流程
 
@@ -125,6 +121,21 @@ tag: interview
 > * 下面再说一说状态码200和304的区别：
 >   * 200：说明可以返回新的资源给客户端
 >   * 304：告诉客户端，文件没有被修改过，你可以继续使用本地缓存的文件，简单来说，就是服务器端不会有新的资源返回给客户端
+
+---
+
+简单版：
+
+用户第一次访问，就会向服务器请求资源，并返回头字段：`Cache-Control`，`expires`,`Last-modified` 以及 `Etag` ；
+
+用户第二次访问，会存在两种情况：强缓存和协商缓存
+
+如果还在过期时间内，那么就不会发送请求，直接在缓存里拿资源，这就是强缓存，与强缓存相关的头字段是 Cache-control 和 Expires
+
+如果过了过期时间，就会发送请求给服务器端，服务器端就会比较Etag和If-None-Match的值，Last Modified 和 If-Modified-Since的值。
+如果两组值不相等或者 `Last-Modified` 和 `If-Modefied-Since`的值相等而`Etag`和`If-None-Match`不相等，则证明文件修改了，服务器端就会返回新的资源给客户端，状态码为200
+如果两组值相等或者 `Last-Modified` 和 `If-Modefied-Since`的值不相等而`Etag`和`If-None-Match`相等，则证明文件没有被修改，服务器端就会返回304给客户端，客户端可以继续使用缓存里的资源。
+
 
 ## 5、DNS
 

@@ -727,6 +727,39 @@ tag: interview
 
 ---
 
+
+* float + overflow 【[demo](/effects/demo/css/layout/v3/double/lr/v11.html)】
+
+思路：右栏定宽，右栏右浮动；左栏设置 `overflow` 
+
+注意点：
+1. 注意html结构：右栏 ===》 左栏
+
+```html
+<div class="container">
+    <main class="main">右main</main>
+    <aside class="aside">左aside</aside>
+</div>
+<style>
+    .container {
+        background: gray;
+    }
+    .aside {
+        overflow: hidden; /* 关键代码 */
+        background: red;
+    }
+    .main {
+        float: right; /* 关键代码 */
+        width: 200px; /* 关键代码 */
+        background: blue;
+    }
+</style>
+```
+
+![layout](/styles/images/css/layout/v2/v-12.png)
+
+---
+
 * flex 【[demo](/effects/demo/css/layout/v3/double/lr/v8.html)】
 
 思路：父元素设置 `display: flex`，右栏定宽，左栏设置为flex: 1，让其自适应
