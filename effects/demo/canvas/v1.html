@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+</head>
+<body>
+<canvas width="200" height="300" id="canvas">A drawing of something</canvas>
+<script>
+    // 获取 canvas 元素
+    const canvas = document.getElementById('canvas')
+
+    // 检测浏览器是否支持canvas元素
+    if (canvas.getContext) {
+      const ctx = canvas.getContext('2d')
+      const canvasWidth = canvas.width
+      const canvasHeight = canvas.height
+      console.log(ctx)
+      console.log(canvasWidth, canvasHeight) // 200 300
+    }
+</script>
+</body>
+</html>

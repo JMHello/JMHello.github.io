@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas - 绘制文本</title>
+</head>
+<body>
+<canvas width="200" height="300" id="canvas">A drawing of something</canvas>
+<script>
+    // 获取 canvas 元素
+    const canvas = document.getElementById('canvas')
+
+    // 检测浏览器是否支持canvas元素
+    if (canvas.getContext) {
+      const ctx = canvas.getContext('2d')
+
+      // 第一步：开始路径
+      ctx.beginPath()
+
+      let fontSize = 100;
+      ctx.font = fontSize + "px Arial";
+
+      while(ctx.measureText("Hello world!").width > 140){
+        fontSize--;
+        ctx.font = fontSize + "px Arial";
+      }
+
+      console.log(fontSize) // 26
+
+      ctx.fillText("Hello world!", 30, 30);
+      ctx.fillText("Font size is " + fontSize + "px", 5, 80);
+    }
+</script>
+</body>
+</html>

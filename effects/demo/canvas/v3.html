@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas - 绘制路径</title>
+</head>
+<body>
+<canvas width="200" height="300" id="canvas">A drawing of something</canvas>
+<script>
+    // 获取 canvas 元素
+    const canvas = document.getElementById('canvas')
+
+    // 检测浏览器是否支持canvas元素
+    if (canvas.getContext) {
+      const ctx = canvas.getContext('2d')
+
+      // 第一步：开始路径
+      ctx.beginPath()
+
+      // 绘制外圆
+      ctx.arc(100, 150, 80, 0, 2 * Math.PI, false)
+
+      // 移动绘图游标
+      ctx.moveTo(170, 150)
+
+      // 绘制内圆
+      ctx.arc(100, 150, 70, 0, 2 * Math.PI, false)
+
+      // 移动绘图游标
+      ctx.moveTo(100, 150)
+      // 分针
+      ctx.lineTo(100, 90)
+
+      // 移动绘图游标
+      ctx.moveTo(100, 150)
+      // 时针
+      ctx.lineTo(80, 120)
+
+      // 调用 stroke()方法才能把图形绘制到画布上
+      ctx.stroke()
+    }
+</script>
+</body>
+</html>
