@@ -141,10 +141,10 @@ Plane.prototype.clearBullet = function (context, bullet) {
  */
 Plane.prototype.crash = function (isPlane, enemy, context) {
     if (isPlane) {
-        console.log(this.x >= enemy.x && this.x <= (enemy.x + enemy.width), this.y >= enemy.y && this.x <= (enemy.y + enemy.height))
-        var isCrashX = this.x >= enemy.x && this.x <= (enemy.x + enemy.width)
-        var isCrashY = this.y >= enemy.y && this.x <= (enemy.y + enemy.height)
+        var isCrashX = this.x >= enemy.x && this.x <= (enemy.x + enemy.width);
+        var isCrashY = this.y >= enemy.y && this.y <= (enemy.y + enemy.height);
 
+        // console.log(isCrashX && isCrashY)
         if (isCrashX && isCrashY) {
             return true
         }

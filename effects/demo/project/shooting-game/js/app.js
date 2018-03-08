@@ -158,6 +158,19 @@ var GAME = {
         // 绘制
         this.draw();
 
+        // 如果飞机与任意一个怪兽碰撞，游戏就结束
+        for (let enemy of this.enemies) {
+            if (this.plane.crash(true, enemy, context)) {
+                // 游戏状态：闯关失败
+                this.endGame('failed');
+
+                // 获取最终得分
+                this.getFinalScore();
+
+                return
+            }
+        }
+
         // 在敌人完全被消灭的情况下，阻止动画的更新
         enemiesLength = this.enemies.length;
         if (enemiesLength === 0) {
@@ -184,19 +197,6 @@ var GAME = {
             this.getFinalScore();
 
             return;
-        }
-
-        // 如果飞机与任意一个怪兽碰撞，游戏就结束
-        for (let enemy of this.enemies) {
-            if (this.plane.crash(true, enemy, context)) {
-                // 游戏状态：闯关失败
-                this.endGame('failed');
-
-                // 获取最终得分
-                this.getFinalScore();
-
-                return
-            }
         }
 
         requestAnimFrame(function () {
