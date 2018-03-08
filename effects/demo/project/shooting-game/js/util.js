@@ -171,17 +171,88 @@ function offCanvas(fn, config) {
 /**
  *  图片资源预加载
  */
-var PreloadImg = (function () {
-    // 判断是否为函数
-    var isFn = function (obj) {
-        return new RegExp('Function'.toLowerCase(),'i').test(Object.prototype.toString.call(obj));
-    };
+// var PreloadImg = (function () {
+//     // 判断是否为函数
+//     var isFn = function (obj) {
+//         return new RegExp('Function'.toLowerCase(),'i').test(Object.prototype.toString.call(obj));
+//     };
+//
+//     var PreloadImg = function (config) {
+//         this.option = {
+//             resourceType : 'image', // 资源类型，默认为图片
+//             baseUrl : './', // 基准url
+//             resources : [], // 资源路径数组
+//             onStart : null, // 加载开始回调函数
+//             onProgress : null, // 正在加载回调函数
+//             onComplete : null // 加载完毕回调函数
+//         };
+//
+//         // 如果 config 存在，则覆盖 this.option对象
+//         if (config) {
+//             for(var i in config) {
+//                 this.option[i] = config[i];
+//             }
+//         } else {
+//             alert('参数错误！');
+//             return;
+//         }
+//
+//         // 资源总数
+//         this.total = this.option.resources.length || 0;
+//         // 当前正在加载的资源索引
+//         this.currentIndex = 0;
+//     };
+//
+//     PreloadImg.prototype.start = function(){
+//         var _self = this,
+//             baseUrl = this.option.baseUrl;
+//
+//         // 加载图片
+//         this.option.resources.forEach(function (item) {
+//             var url = baseUrl + item,
+//                 img = new Image();
+//
+//             img.onload = function () {
+//                 _self.loaded();
+//             };
+//
+//             img.src = url;
+//         });
+//
+//         // 加载开始回调函数，传入参数total
+//         if (isFn(this.option.onStart)) {
+//             this.option.onStart(this.total);
+//         }
+//     };
+//
+//     PreloadImg.prototype.loaded = function(){
+//         // 正在加载回调函数，传入参数 currentIndex, total
+//         if (isFn(this.option.onProgress)) {
+//             this.option.onProgress(++this.currentIndex, this.total);
+//         }
+//
+//         // 加载完毕回调函数，传入参数total
+//         if (this.currentIndex === this.total) {
+//             if (isFn(this.option.onComplete)) {
+//                 this.option.onComplete(this.total);
+//             }
+//         }
+//     };
+//
+//     return PreloadImg;
+// })();
 
-    var PreloadImg = function (config) {
+var preloadResource = {
+    loadedImg: 0,
+    totalImage: 0,
+    loadedAudio: 0,
+    totalAudio: 0,
+
+    init: function (config) {
         this.option = {
-            resourceType : 'image', // 资源类型，默认为图片
+            resourceType : '', // 资源类型，默认为图片
             baseUrl : './', // 基准url
-            resources : [], // 资源路径数组
+            resources : {}, // 资源路径对象
             onStart : null, // 加载开始回调函数
             onProgress : null, // 正在加载回调函数
             onComplete : null // 加载完毕回调函数
@@ -197,47 +268,85 @@ var PreloadImg = (function () {
             return;
         }
 
-        // 资源总数
-        this.total = this.option.resources.length || 0;
-        // 当前正在加载的资源索引
-        this.currentIndex = 0;
-    };
+        this.getAudio()
 
-    PreloadImg.prototype.start = function(){
-        var _self = this,
-            baseUrl = this.option.baseUrl;
+        this.totalImage = this.option.resources.images.length
+        this.totalAudio = this.option.resources.audios.length
 
-        // 加载图片
-        this.option.resources.forEach(function (item) {
-            var url = baseUrl + item,
-                img = new Image();
-
-            img.onload = function () {
-                _self.loaded();
-            };
-
-            img.src = url;
-        });
-
-        // 加载开始回调函数，传入参数total
-        if (isFn(this.option.onStart)) {
-            this.option.onStart(this.total);
+        this.start()
+    },
+    /**
+     * 找到浏览器兼容的音频格式
+     */
+    supportWhichFormat: function () {
+        const audio = new Audio()
+        if(audio.canPlayType('audio/mpeg')) return 'mp3';
+        else if(audio.canPlayType('audio/ogg')) return 'ogg';
+    },
+    /**
+     * 过滤音频
+     */
+    getAudio: function () {
+        const format = this.supportWhichFormat()
+        if (format) {
+            this.option.resources.audios = this.option.resources.audios.map((item) => {
+                return `${item}.${format}`
+            })
         }
-    };
+    },
+    /**
+     * 启动加载资源
+     */
+    start: function () {
+        const options = this.option
+        const resources = options.resources
+        const baseUrl = options.baseUrl
 
-    PreloadImg.prototype.loaded = function(){
-        // 正在加载回调函数，传入参数 currentIndex, total
-        if (isFn(this.option.onProgress)) {
-            this.option.onProgress(++this.currentIndex, this.total);
+        // 加载图片资源
+        for (let img of resources.images) {
+            const url = baseUrl + img
+            const image = new Image()
+
+            image.onload = () => {
+                ++this.loadedImg
+                this.loaded()
+            }
+            image.src = url
         }
 
-        // 加载完毕回调函数，传入参数total
-        if (this.currentIndex === this.total) {
-            if (isFn(this.option.onComplete)) {
-                this.option.onComplete(this.total);
+        // 加载音频资源
+        for (let a of resources.audios) {
+            const url = baseUrl + a
+            const audio = new Audio(url)
+
+            audio.addEventListener('canplaythrough', () => {
+                ++this.loadedAudio
+                this.loaded()
+            })
+        }
+    },
+
+    loaded: function () {
+        const option = this.option
+        const isFn = (obj) => this.isType(obj, '[object Function]')
+
+        const loading = this.loadedAudio + this.loadedImg
+        const total = this.totalImage + this.totalAudio
+
+        if (isFn(option.onProgress)) {
+            option.onProgress(loading, total)
+        }
+
+        if (loading === total) {
+            if (isFn(option.onComplete)) {
+                option.onComplete(total, option.resources.audios)
             }
         }
-    };
-
-    return PreloadImg;
-})();
+    },
+    /**
+     * 判断对象的类型
+     */
+    isType: function (obj, type) {
+        return new RegExp(type.toLowerCase(),'i').test(Object.prototype.toString.call(obj));
+    }
+}

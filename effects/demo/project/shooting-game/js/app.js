@@ -13,6 +13,19 @@ var doc = document,
     progressDes = doc.querySelector('.progress-des'),
     context;
 
+const resources = {
+    images: [
+        'img/plane.png',
+        'img/enemy.png',
+        'img/boom.png'
+    ],
+    audios: [
+        'audio/bgm',
+        'audio/lose',
+        'audio/shoot',
+    ]
+}
+
 if (canvas.getContext) {
     context = canvas.getContext('2d');
 } else {
@@ -83,6 +96,7 @@ var GAME = {
 
         // 事件监听
         this.bindEvent();
+
     },
     bindEvent: function() {
         var _self = this;
@@ -218,6 +232,22 @@ var GAME = {
 
         // 绘制分数
         this.drawScore();
+    },
+    playMusic: function (name) {
+        const src = CONFIG.music[name]
+
+        let audio = new Audio(src)
+        audio.addEventListener('canplaythrough', (e) => {
+            if (this.status === 'playing') {
+                audio.play()
+                console.log(this.status)
+
+            } else {
+                audio.pause()
+                console.log('11' + this.status)
+
+            }
+        })
     },
     /**
      * 创建飞机
@@ -429,13 +459,55 @@ var GAME = {
     }
 };
 
-var preloadImg = new PreloadImg({
+// var preloadImg = new PreloadImg({
+//     // 图片资源
+//     resources : [
+//        'img/plane.png',
+//        'img/enemy.png',
+//        'img/boom.png'
+//     ],
+//     // 图片正在加载
+//     onProgress : function(current, total){
+//         var per = Math.round(current / total * 100) + '%';
+//
+//         progressRunning.style.transform= 'scaleX(' + per + ')';
+//         progressPercentage.innerHTML = per;
+//
+//         if(current === total) {
+//             progressDes.innerHTML = '游戏加载完毕';
+//         }
+//     },
+//     // 图片加载完毕
+//     onComplete : function(){
+//         // 图片的路径
+//         var planeSrc = CONFIG.planeImg,
+//             enemyNormalSrc = CONFIG.enemyNormalImg,
+//             enemyBoomedSrc = CONFIG.enemyBoomedImg;
+//
+//         CONFIG.planeImg = new Image();
+//         CONFIG.enemyNormalImg = new Image();
+//         CONFIG.enemyBoomedImg = new Image();
+//
+//         CONFIG.planeImg.src = planeSrc;
+//         CONFIG.enemyNormalImg.src = enemyNormalSrc;
+//         CONFIG.enemyBoomedImg.src = enemyBoomedSrc;
+//
+//         // 图片加载完毕后，延迟300ms才出现游戏界面，这样可以增加进度条与游戏界面的过渡性
+//         setTimeout(function () {
+//             // 游戏初始化
+//             GAME.init();
+//         },500);
+//     }
+// });
+//
+// // 图片预加载开始
+// preloadImg.start();
+
+
+
+preloadResource.init({
     // 图片资源
-    resources : [
-       'img/plane.png',
-       'img/enemy.png',
-       'img/boom.png'
-    ],
+    resources : resources,
     // 图片正在加载
     onProgress : function(current, total){
         var per = Math.round(current / total * 100) + '%';
@@ -448,7 +520,7 @@ var preloadImg = new PreloadImg({
         }
     },
     // 图片加载完毕
-    onComplete : function(){
+    onComplete : function(total, audios){
         // 图片的路径
         var planeSrc = CONFIG.planeImg,
             enemyNormalSrc = CONFIG.enemyNormalImg,
@@ -462,14 +534,19 @@ var preloadImg = new PreloadImg({
         CONFIG.enemyNormalImg.src = enemyNormalSrc;
         CONFIG.enemyBoomedImg.src = enemyBoomedSrc;
 
+        for (var item in CONFIG.music) {
+            for (let m of audios) {
+                if (m.includes(item)) {
+                    CONFIG.music[item] = m
+                }
+            }
+        }
+
         // 图片加载完毕后，延迟300ms才出现游戏界面，这样可以增加进度条与游戏界面的过渡性
         setTimeout(function () {
             // 游戏初始化
             GAME.init();
         },500);
     }
-});
-
-// 图片预加载开始
-preloadImg.start();
+})
 

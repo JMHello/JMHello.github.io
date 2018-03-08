@@ -29,7 +29,12 @@ var CONFIG = {
     enemyGap: 10, // 敌人的间隔
     enemyDirection: 'right', // 敌人初始的移动方向
     enemyNormalImg: './img/enemy.png', // 敌人正常时的图片
-    enemyBoomedImg: './img/boom.png' // 敌人被消灭后的图片
+    enemyBoomedImg: './img/boom.png',// 敌人被消灭后的图片
+    music: {
+        bgm: '',
+        lose: '',
+        shoot: ''
+    }
 
 };
 
