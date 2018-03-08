@@ -244,7 +244,7 @@ tag: project
 
 ### 5.2 requestAnimationFrame
 
-参考[]()
+参考[动画循环 - requestAnmationFrame](http://www.jmazm.com/2018/03/08/js-requestAnimationFrame/)
 
 ## 六、碰撞检测
 
@@ -329,8 +329,6 @@ function getXBoundary(elems) {
 }
 ```
 
-
-
 ### 6.3 子弹和怪兽的碰撞检测
 
 我们可以将怪兽看作矩形，将子弹也看做矩形，因此，这也变成了**矩形间的碰撞检测**，详细参考【[碰撞检测](http://www.jmazm.com/2018/03/08/js-crash-check/)】
@@ -413,6 +411,10 @@ Plane.prototype.crash = function (isPlane, enemy, context) {
     return false;
 };
 ```
+
+## 七、demo
+
+[demo](/effects/demo/project/shooting-game/index.html)
 
 
 
