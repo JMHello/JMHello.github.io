@@ -13,6 +13,12 @@ var Plane = function (configObj) {
     // 飞机移动的右边界
     this.maxX = configObj.maxX;
 
+    // 飞机移动的下边界
+    this.minY = configObj.minY
+
+    // 飞机移动的上边界
+    this.maxY = configObj.maxY
+
     // 存放子弹的数组
     this.bullets = [];
     // 子弹宽度
@@ -40,7 +46,7 @@ Plane.prototype.draw = function (context) {
 /**
  * 水平移动飞机
  */
-Plane.prototype.translateX = function (direction, context) {
+Plane.prototype.translateX = function (direction) {
     var speed = this.speed;
 
     // 在大于 minX（即：左边界）的情况下，飞机可左移
@@ -55,6 +61,27 @@ Plane.prototype.translateX = function (direction, context) {
         }
     }
 };
+
+/**
+ * 竖直移动飞机
+ * @param direction
+ */
+Plane.prototype.translateY = function (direction) {
+    var speed = this.speed;
+
+    // 在大于 minY（即：下边界）的情况下，飞机可上移
+    // 在小于 maxY（即：上边界）的情况下，飞机可下移
+
+    if (/bottom/.test(direction)) {
+        if (this.y < this.maxY) {
+            this.move(0, speed)
+        }
+    } else {
+        if (this.y > this.minY) {
+            this.move(0, -speed)
+        }
+    }
+}
 
 /**
  * 处理子弹
@@ -104,29 +131,44 @@ Plane.prototype.shoot = function () {
 Plane.prototype.clearBullet = function (context, bullet) {
     context.clearRect(bullet.x, bullet.y, bullet.width, bullet.height);
 };
+
 /**
  * 碰撞检测
+ * @param isPlane：true：表示飞机与敌人的碰撞检测 false：表示敌人与子弹的碰撞检测
+ * @param enemy
+ * @param context
+ * @return {boolean}
  */
-Plane.prototype.crash = function (enemy, context) {
-    var bullets = this.bullets,
-        len = bullets.length;
+Plane.prototype.crash = function (isPlane, enemy, context) {
+    if (isPlane) {
+        console.log(this.x >= enemy.x && this.x <= (enemy.x + enemy.width), this.y >= enemy.y && this.x <= (enemy.y + enemy.height))
+        var isCrashX = this.x >= enemy.x && this.x <= (enemy.x + enemy.width)
+        var isCrashY = this.y >= enemy.y && this.x <= (enemy.y + enemy.height)
 
-    // 正常从 0 开始循环遍历数组有可能会出错，因为循环过程中调用 splice 方法删除数组的项，
-    // 这样会影响数组后面项的序号，所以应该从数组后面开始遍历，这样就不会影响前面项
-    while (len--) {
-        var bullet = bullets[len],
-            isCrashX = bullet.x >= enemy.x && bullet.x <= (enemy.x + enemy.width),
-            isCrashY = bullet.y >= enemy.y && bullet.y <= (enemy.y + enemy.height);
-
-        // 子弹与怪兽碰撞，就将这颗子弹删除
-        // isCrashX 和 isCrashY 这两个条件保证了子弹射到的是一个敌人的范围
         if (isCrashX && isCrashY) {
-            // 清除画布上的子弹
-            this.clearBullet(context, bullet);
+            return true
+        }
+    } else {
+        var bullets = this.bullets,
+            len = bullets.length;
 
-            bullets.splice(len, 1);
+        // 正常从 0 开始循环遍历数组有可能会出错，因为循环过程中调用 splice 方法删除数组的项，
+        // 这样会影响数组后面项的序号，所以应该从数组后面开始遍历，这样就不会影响前面项
+        while (len--) {
+            var bullet = bullets[len],
+                isCrashX = bullet.x >= enemy.x && bullet.x <= (enemy.x + enemy.width),
+                isCrashY = bullet.y >= enemy.y && bullet.y <= (enemy.y + enemy.height);
 
-            return true;
+            // 子弹与怪兽碰撞，就将这颗子弹删除
+            // isCrashX 和 isCrashY 这两个条件保证了子弹射到的是一个敌人的范围
+            if (isCrashX && isCrashY) {
+                // 清除画布上的子弹
+                this.clearBullet(context, bullet);
+
+                bullets.splice(len, 1);
+
+                return true;
+            }
         }
     }
 

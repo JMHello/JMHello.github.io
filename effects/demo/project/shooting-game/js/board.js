@@ -18,6 +18,8 @@ var Board = {
     pressedLeft: false,
     pressedRight: false,
     pressedSpace: false,
+    pressedUp: false,
+    pressDown: false,
     // 策略模式：减少在按键盘时候的判断
     strategy: {
         32: function (type) {
@@ -27,6 +29,7 @@ var Board = {
                 this.pressedSpace = false;
             }
         },
+        // 左箭头
         37: function (type) {
             if (/keydown/.test(type)) {
                 this.pressedLeft = true;
@@ -35,12 +38,31 @@ var Board = {
                 this.pressedLeft = false;
             }
         },
+        // 上箭头
+        38: function (type) {
+            if (/keydown/.test(type)) {
+                this.pressedUp = true;
+                this.pressDown = false;
+            } else {
+                this.pressedUp = false;
+            }
+        },
+        // 右箭头
         39: function (type) {
             if (/keydown/.test(type)) {
                 this.pressedLeft = false;
                 this.pressedRight = true;
             } else {
                 this.pressedRight = false;
+            }
+        },
+        // 下箭头
+        40: function (type) {
+            if (/keydown/.test(type)) {
+                this.pressDown = true;
+                this.pressedUp = false;
+            } else {
+                this.pressDown = false;
             }
         }
     },
@@ -50,6 +72,7 @@ var Board = {
             var ev = getEvent(e),
                 code = ev.charCode || ev.which || ev.keyCode;
 
+            console.log(code)
             if (this.strategy[code]) {
                 this.strategy[code].call(this, ev.type);
             }

@@ -38,7 +38,8 @@ var GAME = {
         var option = Object.assign({},CONFIG, configObj), // 基本配置的游戏对象
             canvasPadding = option.canvasPadding, // 画布边距
             maxHeight = canvasHeight - canvasPadding - option.planeHeight, // 飞机以及敌人在y轴上的最大高度
-            planeWidth = option.planeWidth; // 飞机宽度
+            planeWidth = option.planeWidth, // 飞机宽度
+            planeHeight = option.planeHeight; // 飞机宽度
 
         this.option = option;
         this.cP = canvasPadding;
@@ -56,6 +57,10 @@ var GAME = {
         this.planeMinX = canvasPadding;
         // 飞机移动的右边界
         this.planeMaxX = canvasWidth - planeWidth - canvasPadding;
+        // 飞机移动的下边界
+        this.planeMinY = canvasPadding
+        // 飞机移动的上边界
+        this.planeMaxY = canvasHeight - planeHeight - canvasPadding
 
         // 敌人
         this.enemies = null;
@@ -181,6 +186,19 @@ var GAME = {
             return;
         }
 
+        // 如果飞机与任意一个怪兽碰撞，游戏就结束
+        for (let enemy of this.enemies) {
+            if (this.plane.crash(true, enemy, context)) {
+                // 游戏状态：闯关失败
+                this.endGame('failed');
+
+                // 获取最终得分
+                this.getFinalScore();
+
+                return
+            }
+        }
+
         requestAnimFrame(function () {
             _self.update();
         });
@@ -214,7 +232,9 @@ var GAME = {
             height: option.planeHeight,
             speed: option.planeSpeed,
             minX: this.planeMinX,
-            maxX: this.planeMaxX
+            maxX: this.planeMaxX,
+            minY: this.planeMinY,
+            maxY: this.planeMaxY
         });
     },
     /**
@@ -255,6 +275,7 @@ var GAME = {
         var board = this.board,
             plane = this.plane;
 
+
         // 左箭头：左移
         if (board.pressedLeft) {
             plane.translateX('left');
@@ -263,6 +284,16 @@ var GAME = {
         // 右箭头：右移
         if (board.pressedRight) {
             plane.translateX('right');
+        }
+
+        // 上箭头：上移
+        if (board.pressedUp) {
+            plane.translateY('top');
+        }
+
+        // 下箭头：下移
+        if (board.pressDown) {
+            plane.translateY('bottom');
         }
 
         // 空格键：射击
@@ -308,7 +339,7 @@ var GAME = {
             // 判断敌人的状态
             switch (status) {
                 case 'normal': // 敌人正常
-                    if (plane.crash(enemy, context)) {
+                    if (plane.crash(false, enemy, context)) {
                         enemy.eliminate();
                         context.clearRect(enemy.x, enemy.y, enemy.width, enemy.height);
                     }

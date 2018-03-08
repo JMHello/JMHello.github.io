@@ -49,11 +49,9 @@ Enemy.prototype.translate = function (direction) {
     switch (direction) {
         case 'left' :
             this.move(-speed, 0);
-            console.log(this.x, this.y);
             break;
         case 'right' :
             this.move(speed, 0);
-            console.log(this.x, this.y);
             break;
         case 'down' :
             this.move(0, this.height);
