@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双半圆实现 - 动态环形进度条</title>
+</head>
+<body>
+<style>
+    .circle-bar {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #665555;
+        overflow: hidden;
+        text-align: center;
+        margin: 20px;
+    }
+    .circle-bar .circle-left,
+    .circle-bar .circle-right {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height: 200px;
+        /*border-radius: 50%;*/
+        background-color: yellowgreen;
+    }
+    .circle-bar .circle-left {
+        left: 0;
+        clip: rect(0 100px auto auto);
+        animation: rotateLeft 2s linear forwards 2s;
+    }
+    .circle-bar .circle-right {
+        right: 0;
+        clip: rect(0 auto auto 100px);
+        animation: rotateRight 2s linear forwards;
+    }
+
+    @keyframes rotateRight {
+        to {
+            transform: rotate(180deg)
+        }
+    }
+    @keyframes rotateLeft {
+        to {
+            transform: rotate(36deg)
+        }
+    }
+</style>
+<h2>进度：60%</h2>
+<div class="circle-bar">
+    <div class="circle-left"></div>
+    <div class="circle-right"></div>
+    <div class="circle-txt">60%</div>
+</div>
+</body>
+</html>

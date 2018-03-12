@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆饼图</title>
+</head>
+<body>
+<style>
+    .circle-bar {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: yellowgreen;
+        background-image: linear-gradient(to right, transparent  50%, #655 50%);
+        overflow: hidden;
+        text-align: center;
+        margin: 20px;
+    }
+    .circle-bar::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: inherit;
+        clip: rect(0 auto auto 100px);
+    }
+    .circle-bar:nth-of-type(1)::before {
+        transform: rotate(72deg);
+    }
+    .circle-bar:nth-of-type(2)::before {
+        transform: rotate(36deg);
+        background: #655;
+    }
+
+</style>
+<h2>进度：20%</h2>
+<p>旋转角度：360deg * 20% = 72deg</p>
+<div class="circle-bar"></div>
+
+<h2>进度：60%</h2>
+<p>旋转角度：360deg * 60% - 180deg = 36deg</p>
+<div class="circle-bar"></div>
+</body>
+</body>
+</html>

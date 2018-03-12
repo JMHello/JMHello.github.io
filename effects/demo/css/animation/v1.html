@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3动画效果</title>
+    <style>
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 300px;
+            height: 200px;
+            font: bold 14px/200px '';
+            color: white;
+            text-align: center;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .boom {
+            background: green;
+        }
+
+        .boom:hover {
+            animation: boom 0.33s linear forwards;
+        }
+
+        /* 原来大小逐渐变大，逐渐隐藏 */
+        @keyframes boom {
+            to {
+                opacity: 0;
+                transform: scale(2, 2);
+            }
+        }
+        .spin {
+            background: blue;
+        }
+        .spin:hover {
+            animation: spin 0.5s linear forwards;
+        }
+
+        /*由小变大，旋转出现*/
+        @keyframes spin {
+            0% {
+                transform: rotate(45deg) scale(0.1);
+            }
+            50% {
+                transform: rotate(90deg);
+            }
+            75% {
+                transform: rotate(180deg) ;
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+        .kint {
+            background: pink;
+        }
+        .kint:hover {
+            animation: kint 0.33s linear forwards;
+        }
+
+        /*上下往中间缩小*/
+        @keyframes kint {
+            to {
+                transform: scale(1, 0);
+            }
+        }
+        .glide-right {
+            background: purple;
+        }
+        .glide-right:hover {
+            animation: glide-right 0.33s linear forwards;
+        }
+
+        /*左斜切滑行*/
+        @keyframes glide-right {
+            0% {
+                opacity: 0.3;
+                transform: skew(225deg) translate(-100px, 0);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: skew(225deg) translate(-40px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: skew(180deg) translate(0, 0) ;
+            }
+        }
+        .shrink {
+            background: orangered;
+        }
+        .shrink:hover {
+            animation: shrink 0.33s linear forwards;
+        }
+
+        /* 缩小 */
+        @keyframes shrink {
+            to {
+                transform: scale(0);
+            }
+        }
+        .expand {
+            background: goldenrod;
+        }
+        .expand:hover {
+            animation: expand 0.33s linear forwards;
+        }
+
+        /*中间变大*/
+        @keyframes expand {
+            from {
+                opacity: 0.5;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>展示</h2>
+<section class="section">
+    <div class="box spin">Spin</div>
+    <div class="box glide-right">GlideRight</div>
+    <div class="box expand">Expand</div>
+</section>
+<h2>隐藏</h2>
+<section class="section">
+    <div class="box boom">Boom</div>
+    <div class="box kint">Knit</div>
+    <div class="box shrink">Shrink</div>
+</section>
+</body>
+</html>

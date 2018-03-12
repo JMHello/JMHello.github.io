@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双半圆实现 - 动态环形进度条</title>
+</head>
+<body>
+<style>
+    .circle-bar {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #665555;
+        overflow: hidden;
+        text-align: center;
+        margin: 20px;
+    }
+    .circle-bar .circle-left,
+    .circle-bar .circle-right,
+    .circle-left .left,
+    .circle-right .right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .circle-bar .circle-left,
+    .circle-left .left {
+        clip: rect(0, 100px,auto,auto);
+    }
+    .circle-bar .circle-right,
+    .circle-right .right {
+        clip: rect(0, auto,auto,100px);
+    }
+    .circle-left .left,
+    .circle-right .right {
+        background: yellowgreen;
+    }
+
+    .circle-bar .circle-txt {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 180px;
+        height: 180px;
+        font: 30px/6 '';
+        border-radius: 50%;
+        background: white;
+    }
+
+    .p20 .left {
+        animation: rotateLeft20 1s forwards 1s;
+    }
+    @keyframes rotateLeft20 {
+        to {
+            transform: rotate(0deg);
+        }
+    }
+
+    .p20 .right {
+        animation: rotateRight20 1s forwards;
+    }
+    @keyframes rotateRight20 {
+        to {
+            transform: rotate(72deg);
+        }
+    }
+
+    .p60 .left {
+        animation: rotateLeft60 1s forwards 1s;
+    }
+    @keyframes rotateLeft60 {
+        to {
+            transform: rotate(36deg);
+        }
+    }
+    .p60 .right {
+        /*animation: rotateRight60 1s forwards;*/
+        transition: transform 1s linear;
+        transform: rotate(180deg);
+    }
+    @keyframes rotateRight60 {
+        to {
+            transform: rotate(180deg);
+        }
+    }
+</style>
+<h2>进度：20%</h2>
+<div class="circle-bar p20">
+    <!-- 左半圆 -->
+    <div class="circle-left">
+        <div class="left"></div>
+    </div>
+    <!-- 右半圆 -->
+    <div class="circle-right">
+        <div class="right"></div>
+    </div>
+    <!-- 占比 -->
+    <div class="circle-txt">20%</div>
+</div>
+
+<h2>进度：60%</h2>
+<div class="circle-bar p60">
+    <!-- 左半圆 -->
+    <div class="circle-left">
+        <div class="left"></div>
+    </div>
+    <!-- 右半圆 -->
+    <div class="circle-right">
+        <div class="right"></div>
+    </div>
+    <!-- 占比 -->
+    <div class="circle-txt">60%</div>
+</div>
+<script>
+
+</script>
+
+</body>
+</html>

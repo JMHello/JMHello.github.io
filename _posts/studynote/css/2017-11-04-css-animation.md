@@ -141,6 +141,6 @@ animation-fill-mode: none|forwards|backwards|both;
 
 ## 四、demo
 
-> * 点击打开 [demo](/effects/demo/css/animation/index.html)
+> * 点击打开 [demo](/effects/demo/css/animation/slideShow/index.html)
 
 ![animation](/effects/images/css/animation/animation-01.gif)
