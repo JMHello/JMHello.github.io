@@ -6,28 +6,23 @@ body {
 .resume {
     width: 96%;
     max-width: 1000px;
-    margin: 20px auto 40px;
+    margin: 80px auto;
 }
 .section {
     width: 100%;
     padding: 0 15px;
+    margin-bottom: 50px;
 }
-.section-inner {
-    padding-bottom: 30px;
-}
+
 .section-title {
     font: bold 30px/2 '';
     color: white;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
-
 
 /* 个人信息 */
 .section--me {
-    margin-top: 80px;
-    margin-bottom: 70px;
     color: white;
     background: rgba(0, 0, 0, 0.3);
     box-shadow: rgba(0, 0, 0, 0.6) 5px 5px 5px;
@@ -413,15 +408,7 @@ body {
     background: #0052d4;
 }
 
-
-@media screen and (max-width: 992px){
-
-}
-
 @media screen and (max-width: 768px) {
-    .section--me {
-        margin-top: 40px;
-    }
     .info-list .label::after {
         display: none;
     }
@@ -431,14 +418,13 @@ body {
     }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px){
-
-}
-
 @media screen and (max-width: 700px) {
+    .resume {
+        margin: 25px auto;
+    }
     .section {
         padding: 0;
-        margin: 0 auto;
+        margin: 0 auto 40px;
     }
     .section--me .section-inner {
         flex-direction: column;
