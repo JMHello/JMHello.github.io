@@ -13,7 +13,7 @@ body {
     padding: 0 15px;
 }
 .section-inner {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 .section-title {
     font: bold 30px/2 '';
