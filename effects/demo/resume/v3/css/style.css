@@ -6,7 +6,7 @@ body {
 .resume {
     width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 .section {
     width: 100%;
@@ -445,8 +445,8 @@ body {
 
 @media screen and (max-width: 650px) {
     .section {
-            padding: 0;
-        margin: 15px auto;
+        padding: 0;
+        margin: 0 auto;
     }
     .section--me .section-inner {
         flex-direction: column;
