@@ -43,6 +43,7 @@ body {
     flex: 0 0 25%;
 }
 .avatar-wrapper .me-avatar {
+    display: block;
     width: 100%;
     padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -457,6 +458,7 @@ body {
     .avatar-wrapper {
         width: 200px;
         margin-bottom: 20px;
+        flex: 1;
     }
     .section--me .info-wrapper {
         width: 100%;
