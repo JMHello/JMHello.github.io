@@ -136,8 +136,9 @@ body {
     height: 150px;
     text-align: center;
     border-radius: 50%;
-    background: #ff0080 linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
-    background: #ff0080 -webkit-linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+    background-color: #ff0080;
+    background-image: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+    background-image: -webkit-linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
     overflow: hidden;
 }
 .circle-bar .circle-left,
@@ -237,8 +238,9 @@ body {
     width: 70%;
     height: 20px;
     border-radius: 10px;
-    background: #f7b733 linear-gradient(to right, #ee0979, #fc4a1a, #f7b733);
-    background: #f7b733 -webkit-linear-gradient(to right, #ee0979, #fc4a1a, #f7b733);
+    background-color: #f7b733;
+    background-image:  linear-gradient(to right, #ee0979, #fc4a1a, #f7b733);
+    background-image:  -webkit-linear-gradient(to right, #ee0979, #fc4a1a, #f7b733);
     transform: rotate(0deg);
     transform-origin: left center;
 }
@@ -313,8 +315,9 @@ body {
 }
 .bar .bar-item {
     width: 30px;
-    background: #0052d4 linear-gradient(to top, #9cecfb, #65c7f7, #0052d4);
-    background: #0052d4 -webkit-linear-gradient(to top, #9cecfb, #65c7f7, #0052d4);
+    background-color: #0052d4;
+    background-image:  linear-gradient(to top, #9cecfb, #65c7f7, #0052d4);
+    background-image:  -webkit-linear-gradient(to top, #9cecfb, #65c7f7, #0052d4);
 }
 
 /* 项目经验 */
