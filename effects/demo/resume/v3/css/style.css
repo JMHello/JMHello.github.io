@@ -9,6 +9,7 @@ body {
     margin: 0 auto;
 }
 .section {
+    width: 100%;
     padding: 0 15px;
 }
 .section-inner {
@@ -443,8 +444,7 @@ body {
 
 @media screen and (max-width: 650px) {
     .section {
-        width: 94%;
-        padding: 0;
+            padding: 0;
         margin: 15px auto;
     }
     .section--me .section-inner {
@@ -458,6 +458,7 @@ body {
         margin-bottom: 20px;
     }
     .section--me .info-wrapper {
+        width: 100%;
         padding-left: 0;
     }
     .skill-wrapper {
@@ -542,6 +543,9 @@ body {
 @media screen and (max-width: 321px){
     .rectangle-bar {
         width:100%;
+    }
+    .info-list .label {
+        margin-right: 40px;
     }
 }
 
