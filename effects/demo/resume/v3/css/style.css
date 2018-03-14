@@ -1,0 +1,547 @@
+body {
+    color: #333333;
+    background: url(../image/pattern-metal.png);
+}
+
+.resume {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section {
+    padding: 0 15px;
+}
+.section-inner {
+    margin-bottom: 20px;
+}
+.section-title {
+    font: bold 30px/2 '';
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* 个人信息 */
+.section--me {
+    margin-top: 80px;
+    margin-bottom: 70px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.6) 5px 5px 5px;
+}
+.section--me .section-inner {
+    display: flex;
+    padding: 30px;
+}
+.avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 25%;
+}
+.avatar-wrapper .me-avatar {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.6) 5px 5px 5px;
+}
+.me-position {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.6) 5px 5px 5px;
+}
+.section--me .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.self-evluation {
+    font-size: 16px;
+    letter-spacing: 4px;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.6) 5px 5px 5px;
+}
+.info-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+.info-list .list-item {
+    display: flex;
+    flex: 0 0 50%;
+    margin-bottom: 20px;
+}
+.info-list .label {
+    position: relative;
+    color: white;
+    font: 14px/2 '';
+    height: 28px;
+    min-width: 85px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-right: 34px;
+    background: #0575e6 url(../image/title-bg.png);
+}
+.info-list .label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -28px;
+    border: 14px solid #0575e6;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+.info-list .text {
+    font: 14px/2 '';
+}
+.info-list .text a {
+    color: white;
+}
+
+/* 技能栈 */
+
+.skill-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.7) 5px 5px 5px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0 0 33.33%;
+    margin: 20px 0;
+}
+.skill-item .skill-ti {
+    font-size: 20px;
+    color: whitesmoke;
+}
+.skill-item .skill-des {
+    color: #cccccc;
+    width: 80%;
+    text-align: center;
+}
+/* 环形进度条 */
+.circle-bar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+    overflow: hidden;
+}
+.circle-bar .circle-left,
+.circle-bar .circle-right,
+.circle-left .left,
+.circle-right .right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.circle-bar .circle-left,
+.circle-left .left {
+    clip: rect(0, 75px, auto, auto);
+}
+.circle-bar .circle-right,
+.circle-right .right {
+    clip: rect(0, auto, auto, 75px);
+}
+.circle-left .left,
+.circle-right .right {
+    background: #c0c0c0;
+}
+.circle-bar .circle-mask {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 130px;
+    height: 130px;
+    font: 30px/130px '';
+    border-radius: 50%;
+    color: black;
+    background: white;
+}
+
+.per40 .right {
+    animation: rotate144 1.5s linear forwards;
+}
+
+.per70 .left {
+    animation: rotate72 1.5s linear forwards 1.5s;
+}
+
+.per70 .right {
+    animation: rotate180 1.5s linear forwards;
+}
+
+.per80 .left {
+    animation: rotate108 1.5s linear forwards 1.5s;
+}
+
+.per80 .right {
+    animation: rotate180 1.5s linear forwards;
+}
+
+@keyframes rotate72 {
+    to {
+        transform: rotate(72deg);
+    }
+}
+@keyframes rotate108 {
+    to {
+        transform: rotate(108deg);
+    }
+}
+
+@keyframes rotate144 {
+    to {
+        transform: rotate(144deg);
+    }
+}
+
+@keyframes rotate180 {
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+/* 进度条 */
+.rectangle-bar {
+    position: relative;
+    display: none;
+    width: 300px;
+    min-width: 96%;
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #c0c0c0;
+}
+.rectangle-bar .progress-running {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ee0979, #fc4a1a, #f7b733);
+    transform: rotate(0deg);
+    transform-origin: left center;
+}
+.skill-item :hover .progress-running {
+    animation: progressRunning 0.6s linear  ;
+}
+@keyframes progressRunning {
+    from{
+        transform:scaleX(0);
+    }
+    to{
+        transform:scaleX(1);
+    }
+}
+.rectangle-bar .progress-per {
+    width: 300px;
+    min-width: 96%;
+    font: 12px/20px '';
+    display: inline-block;
+    text-align: center;
+    color: blue;
+}
+
+/* 柱形图 */
+.columnar {
+    width: 70%;
+    height: 380px;
+    position: relative;
+    margin: 50px auto 0;
+    display: none;
+}
+.columnar .columnar-inner {
+    position: relative;
+    height: 280px;
+}
+.x-axis {
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.y-axis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.y-axis li {
+    flex: 0 0 20%;
+    border-top: 1px solid #333333;
+}
+.y-axis li span {
+    position: relative;
+    top: -10px;
+    left: -60px;
+    display: block;
+    padding: 0 10px;
+}
+.bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.bar .bar-item {
+    width: 30px;
+    background: linear-gradient(to top, #9cecfb, #65c7f7, #0052d4);
+}
+
+
+
+
+/* 项目经验 */
+
+.project-wrapper {
+    position: relative;
+    color: #efefef;
+}
+.project-item {
+    position: relative;
+    padding-bottom: 20px;
+}
+.project-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    height: 100%;
+    border-right: 4px solid #efefef;
+}
+.item-content {
+    padding-left: 120px;
+}
+.project-time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 12px;
+    color: #0a6cd6;
+    padding: 25px 0;
+    border-radius: 50%;
+    border: 2px solid #c0c0c0;
+    background: white;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.project-ti {
+    position: relative;
+    color: #0a6cd6;
+    padding: 5px 0 5px 10px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.6) 4px 0 4px;
+}
+.project-ti::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -24px;
+    border: 12px solid rgba(0, 0, 0, 0.3);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+.project-content {
+    padding: 10px 10px 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 4px;
+}
+.project-content .project-des {
+    margin-bottom: 10px;
+}
+
+/* 教育经历 */
+.education-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.education-item {
+    flex: 0 0 40%;
+    color: white;
+    padding: 20px;
+    margin-right: 30px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.education-ti {
+    position: relative;
+    left: -30px;
+    display: inline-block;
+    min-width: 100px;
+    padding: 2px 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background: #0052d4;
+}
+
+@media screen and (max-width: 1000px){
+    .resume {
+        width: 96%;
+    }
+}
+
+
+@media screen and (max-width: 962px){
+    .info-list .label {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .section--me {
+        margin-top: 40px;
+    }
+    .info-list .label::after {
+        display: none;
+    }
+    .info-list .label {
+        margin-right: 15px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 650px) {
+    .section {
+        width: 94%;
+        padding: 0;
+        margin: 15px auto;
+    }
+    .section--me .section-inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .avatar-wrapper {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .section--me .info-wrapper {
+        padding-left: 0;
+    }
+    .skill-wrapper {
+        display: block;
+    }
+    .skill-item {
+        display: block;
+    }
+    .skill-item .skill-ti {
+        font-size: 18px;
+        color: #0a6cd6;
+    }
+    .skill-item .skill-des {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .circle-bar {
+        display: none;
+    }
+    .rectangle-bar {
+        display: block;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 460px){
+
+    .info-list {
+        flex-direction: column;
+    }
+    .info-list .label::after {
+        display: block;
+    }
+    .info-list .label {
+        margin-right: 80px;
+        border-radius: 0
+    }
+    .education-item {
+        flex: 0 0 96%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .education-ti {
+        left: 0;
+    }
+
+
+    .project-item {
+        background: rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+        padding-bottom: 0;
+    }
+    .project-ti::before,
+    .project-item::before {
+        display: none;
+    }
+    .item-content {
+        padding-left: 0;
+    }
+    .project-time {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        padding: 5px 10px;
+        border-radius: 0;
+        word-wrap: normal;
+        overflow: visible;
+        margin: 15px 10px;
+        border: none;
+        color: white;
+        background: #0487cc;
+    }
+    .project-ti,
+    .project-content {
+        background: none;
+        box-shadow: none;
+        border: none;
+    }
+}
+@media screen and (max-width: 321px){
+    .rectangle-bar {
+        width:100%;
+    }
+}
+
