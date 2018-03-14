@@ -29,4 +29,8 @@ tag: interview
 
 断点的设置
 
+考虑css3兼容性的问题
+
+比如线性渐进，最好加上backgroung-color
+
 

@@ -4,7 +4,7 @@ body {
 }
 
 .resume {
-    width: 100%;
+    width: 96%;
     max-width: 1000px;
     margin: 20px auto 40px;
 }
@@ -87,7 +87,6 @@ body {
     height: 28px;
     min-width: 85px;
     padding-left: 10px;
-    padding-right: 20px;
     margin-right: 34px;
     background: #0575e6 url(../image/title-bg.png);
 }
@@ -142,7 +141,8 @@ body {
     height: 150px;
     text-align: center;
     border-radius: 50%;
-    background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+    background: #ff0080 linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+    background: #ff0080 -webkit-linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
     overflow: hidden;
 }
 .circle-bar .circle-left,
@@ -242,7 +242,8 @@ body {
     width: 70%;
     height: 20px;
     border-radius: 10px;
-    background: linear-gradient(to right, #ee0979, #fc4a1a, #f7b733);
+    background: #f7b733 linear-gradient(to right, #ee0979, #fc4a1a, #f7b733);
+    background: #f7b733 -webkit-linear-gradient(to right, #ee0979, #fc4a1a, #f7b733);
     transform: rotate(0deg);
     transform-origin: left center;
 }
@@ -317,11 +318,9 @@ body {
 }
 .bar .bar-item {
     width: 30px;
-    background: linear-gradient(to top, #9cecfb, #65c7f7, #0052d4);
+    background: #0052d4 linear-gradient(to top, #9cecfb, #65c7f7, #0052d4);
+    background: #0052d4 -webkit-linear-gradient(to top, #9cecfb, #65c7f7, #0052d4);
 }
-
-
-
 
 /* 项目经验 */
 
@@ -414,20 +413,12 @@ body {
     background: #0052d4;
 }
 
-@media screen and (max-width: 1000px){
-    .resume {
-        width: 96%;
-    }
+
+@media screen and (max-width: 992px){
+
 }
 
-
-@media screen and (max-width: 962px){
-    .info-list .label {
-        padding-right: 0;
-    }
-}
-
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .section--me {
         margin-top: 40px;
     }
@@ -444,7 +435,7 @@ body {
 
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     .section {
         padding: 0;
         margin: 0 auto;
@@ -488,8 +479,7 @@ body {
     }
 }
 
-@media screen and (max-width: 481px){
-
+@media screen and (max-width: 500px){
     .info-list {
         flex-direction: column;
     }
@@ -510,7 +500,6 @@ body {
     .education-ti {
         left: 0;
     }
-
 
     .info-list .list-item {
         flex: 1;
