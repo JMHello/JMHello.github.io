@@ -376,6 +376,9 @@ body {
     border-left-color: transparent;
     border-bottom-color: transparent;
 }
+.project-ti a {
+    color: #0a6cd6;
+}
 .project-content {
     padding: 10px 10px 20px;
     color: white;

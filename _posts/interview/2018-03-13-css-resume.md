@@ -8,6 +8,9 @@ tag: interview
 * content
 {:toc}
 
+> * 参考资料
+>   * [Meta标签中的format-detection属性及含义](https://www.2cto.com/kf/201611/567917.html)
+
 <!-- more -->
 
 
@@ -83,7 +86,7 @@ tag: interview
 简历做出来后，就拿了舍友的手机测试，突然发现她手机的浏览器居然不兼容“线性渐变（`linear-gradient`）”，由于一开始我只是顾着实现就好，就没有想那么多`css3` 属性兼容性问题，
 因此，导致那个环形进度条外圈就只有灰色，而没有“七彩色”。如下图所示：
 
-![resume](/styles/images/resume/resume-01.jpg)
+![resume-01](/styles/images/resume/resume-01.jpg)
 
 因此，我的解决方法是：为环形进度条添加多一个背景颜色！
 
@@ -108,5 +111,45 @@ background-image: -webkit-linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
 ### 2.6 环形进度条的实现
 
 这个问题我已经写了博客，可参考【[css - 环形进度条](http://www.jmazm.com/2018/03/12/css-circle-progress/)】
+
+### 2.7 在iphone中日期的字体颜色被改变，并且赋予了tel捕捉功能
+
+在`iphone`中日期的字体颜色被改变，并且赋予了 `tel` 捕捉功能
+
+```html
+<span class="project-time">2017/06-2017/09</span>
+```
+
+如下图所示：
+
+![resume](/styles/images/resume/resume-02.jpg)
+
+解决方案如下：
+
+```html
+<meta name="format-detection" content="telephone=no">
+```
+
+这里补充，常用的“格式检测”还有：
+
+```html
+<!-- 告诉设备不识别邮箱，点击之后不自动发送 -->
+<meta name="format-detection" content="email=no">
+<!-- 禁止跳转至地图 -->
+<meta name="format-detection" content="address=no">
+```
+
+---
+
+如果想让设备识别出电话号码、邮箱等，可以在 `a` 标签的 `href` 属性里设置！
+
+```html
+<a href="tel:15626168865;">这是电话号码</a>
+<a href="mailto:471938302@qq.com;">这是邮箱地址</a>
+```
+
+## 三、我的简历
+
+[查看我的简历](/effects/demo/resume/v3/index.html)
 
 
