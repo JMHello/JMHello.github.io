@@ -10,6 +10,7 @@ body {
     flex-wrap: wrap;
 }
 .section {
+    width: 100%;
     padding: 0 15px;
     margin-bottom: 50px;
 }
@@ -62,9 +63,6 @@ body {
     justify-content: center;
     padding-left: 20px;
     padding-right: 40px;
-}
-.avatar-wrapper .me-avatar {
-    width: 100%;
 }
 .self-evluation {
     font: 16px/2 '';
@@ -238,9 +236,8 @@ body {
     position: relative;
     display: none;
     width: 300px;
-    min-width: 96%;
+    min-width: 100%;
     height: 20px;
-    margin: 0 auto;
     border-radius: 10px;
     background: #c0c0c0;
 }
@@ -270,7 +267,7 @@ body {
 }
 .rectangle-bar .progress-per {
     width: 300px;
-    min-width: 96%;
+    min-width: 100%;
     font: 12px/20px '';
     display: inline-block;
     text-align: center;
@@ -407,18 +404,19 @@ body {
 .project-item {
     position: relative;
     margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .project-time {
     display: block;
     padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .project-ti {
     position: relative;
     color: #0a6cd6;
     padding: 5px 0 5px 10px;
     font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .project-ti a {
@@ -427,6 +425,7 @@ body {
 .project-content {
     padding: 10px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .project-item .item-content {
     padding: 10px;
@@ -481,29 +480,36 @@ body {
 
 @media screen and (max-width: 1440px) {
     .resume {
-        width: 96%;
         display: block;
+        width: 96%;
         max-width: 1200px;
-        margin: 40px auto 20px;
+        padding: 0;
+        margin: 80px auto;
+    }
+    .avatar-wrapper .me-avatar {
+        width: 100%;
+    }
+    .section--me .info-wrapper{
+        padding-right: 0;
     }
     .section--education .section-inner {
-        background-color: transparent;
+        margin-left: 0;
+        background: transparent;
     }
     .education-wrapper {
         flex-direction: row;
-        margin-left: 0;
+        align-items: stretch;
         padding: 0;
     }
-    .education-item {
-        padding: 20px 30px;
-        flex: 0 0 45%;
+    .education-wrapper .education-item {
+        flex: 0 0 50%;
+        margin-bottom: 0;
+        padding: 15px 20px 25px;
         background-image: none;
         background-color: rgba(0, 0, 0, 0.5);
     }
-    .education-item:first-of-type {
-        margin-right: 30px;
-        margin-bottom: 0;
-
+    .education-wrapper .education-item:first-of-type {
+        margin-right: 20px;
     }
     .education-ti {
         top: 0;
@@ -516,7 +522,6 @@ body {
     }
     .project-item {
         margin-bottom: 0;
-        background-color: transparent;
     }
     .project-item .item-content {
         padding-left: 120px;
@@ -530,15 +535,6 @@ body {
         border-right: 4px solid #efefef;
     }
 
-    .project-ti {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        box-shadow: rgba(0, 0, 0, 0.6) 4px 0 4px;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    .project-content {
-        box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 4px;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
     .project-time {
         position: absolute;
         top: 0;
@@ -567,126 +563,107 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .resume {
-        padding: 10px;
-        margin: 20px auto;
-    }
-    .section {
-        margin: 0 auto 20px;
-    }
-    .section--me .info-wrapper {
-        padding-right: 0;
-    }
-    .info-list .label::after {
-        display: none;
-    }
-    .info-list .label {
-        margin-right: 15px;
-        border-radius: 5px;
-    }
-    .education-wrapper {
-        justify-items: flex-start;
-        align-items: stretch;
-    }
-    .education-ti {
-        left: -40px;
-    }
+@media screen and (max-width: 962px) {
+
 }
 
-@media screen and (max-width: 700px) {
-    .resume {
-        margin: 25px auto;
-    }
-    .section {
-        padding: 0;
-    }
+@media screen and (max-width: 768px) {
     .section--me .section-inner {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
+        padding: 30px 10px;
     }
-    .avatar-wrapper {
-        width: 200px;
+    .avatar-wrapper .me-avatar {
+        width: 50%;
+    }
+    .me-position {
         margin-bottom: 20px;
-        flex: 1;
     }
-    .section--me .info-wrapper {
+    .education-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .education-wrapper .education-item {
         width: 100%;
-        padding-left: 0;
     }
-    .skill-wrapper {
-        display: block;
-    }
-    .columnar--wrapper {
-        display: none;
-    }
-    .skill-item {
-        display: block;
-    }
-    .skill-item .skill-ti {
-        font-size: 18px;
-        color: #0a6cd6;
-    }
-    .skill-item .skill-des {
-        width: 100%;
-        text-align: left;
-        margin-bottom: 10px;
+    .education-wrapper .education-item:first-of-type {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
     .circle-bar {
         display: none;
     }
     .rectangle-bar {
         display: block;
-        margin: 0;
     }
-}
-
-@media screen and (max-width: 500px){
-    .info-list {
-        flex-direction: column;
+    .skill-wrapper {
+        padding: 10px 10px 20px;
     }
-    .info-list .label::after {
-        display: block;
+    .skill-item {
+        align-items: flex-start;
+        flex: 0 0 100%;
+        margin: 10px auto;
     }
-    .info-list .label {
-        margin-right: 80px;
-        border-radius: 0
-    }
-    .self-evluation {
-        letter-spacing: 2px;
-    }
-    .section--education .section-inner {
-        margin-left: 0;
-    }
-    .education-wrapper {
-        display: block;
-    }
-    .education-wrapper .education-item {
+    .skill-item .skill-des {
         width: 100%;
+        text-align: left;
         margin-bottom: 10px;
-        margin-right: 0;
     }
-    .education-ti {
-        left: 0;
-    }
-
-    .info-list .list-item {
-        flex: 1;
-        width: 100%;
-    }
-    .project-item {
-        background: rgba(0, 0, 0, 0.3);
-        margin-bottom: 20px;
-        padding-bottom: 0;
-    }
-    .project-ti::before,
     .project-item::before {
         display: none;
     }
+    .project-ti::before {
+        display: none;
+    }
     .project-item .item-content {
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+    .project-time {
+        position: relative;
+        display: block;
+        width: 100px;
+        min-width: 150px;
+        height: auto;
         padding: 0;
+        margin: 0 auto 20px;
+        border-radius: 0;
+    }
+    .project-ti::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border: 10px solid rgba(0, 0, 0, 0.5);
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-top-color: transparent;
+    }
+    .section--project {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 768px) {
+    .resume {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+}
+
+@media screen and (max-width: 500px){
+    .resume {
+        margin: 20px auto;
+    }
+    .avatar-wrapper .me-avatar {
+        width: 80%;
+    }
+    .info-list {
+        flex-direction: column;
     }
     .project-time {
         position: relative;
@@ -697,7 +674,7 @@ body {
         border-radius: 0;
         word-wrap: normal;
         overflow: visible;
-        margin: 15px 10px;
+        margin: 5px 10px;
         border: none;
         color: white;
         background: #0487cc;
@@ -708,13 +685,28 @@ body {
         box-shadow: none;
         border: none;
     }
+    .item-content {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .project-ti::after {
+        display: none;
+    }
+    .education-ti {
+        left: 0;
+    }
 }
 @media screen and (max-width: 321px){
-    .rectangle-bar {
-        width:100%;
+    .section {
+        padding: 0 5px;
     }
-    .info-list .label {
-        margin-right: 40px;
+    .section--me .info-wrapper {
+        padding-left: 0;
+    }
+    .skill-item {
+        width: 90%;
+    }
+    .rectangle-bar {
+        width: auto;
     }
 }
 
