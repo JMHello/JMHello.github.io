@@ -1,6 +1,6 @@
 body {
     color: #333333;
-    background: url(../image/pattern-metal.png);
+    background: black url(../image/pattern-metal.png);
 }
 
 .resume {
@@ -563,10 +563,6 @@ body {
     }
 }
 
-@media screen and (max-width: 962px) {
-
-}
-
 @media screen and (max-width: 768px) {
     .section--me .section-inner {
         flex-direction: column;
@@ -615,8 +611,7 @@ body {
         display: none;
     }
     .project-item .item-content {
-        padding-left: 0;
-        margin-bottom: 10px;
+        padding-left: 20px;
     }
     .project-time {
         position: relative;
@@ -644,6 +639,11 @@ body {
     .section--project {
         margin-bottom: 20px;
     }
+    .avatar-wrapper {
+        width: 80%;
+        margin: 0 auto;
+        flex: 0;
+    }
 }
 @media screen and (orientation: landscape) and (max-width: 768px) {
     .resume {
@@ -660,7 +660,7 @@ body {
         margin: 20px auto;
     }
     .avatar-wrapper .me-avatar {
-        width: 80%;
+        width: 100%;
     }
     .info-list {
         flex-direction: column;
