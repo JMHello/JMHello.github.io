@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b.html</title>
+</head>
+<body>
+<script>
+  const xhr = new XMLHttpRequest()
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        // 将拿回来的数据存储到 window.name
+        window.name = xhr.responseText
+
+        // 并跳转路由到 c.html页面
+        location.href = 'http://localhost:3001/c.html'
+      }
+    }
+  }
+  xhr.open("get", "http://localhost:3002/data.json", true)
+  xhr.send(null)
+</script>
+</body>
+</html>

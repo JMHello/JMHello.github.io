@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>c.html</title>
+</head>
+<body>
+<script>
+  // 从 location.search 拿数据
+  const getParams = query => {
+    if (!query) {
+      return { };
+    }
+
+    return (/^[?#]/.test(query) ? query.slice(1) : query)
+      .split('&')
+      .reduce((params, param) => {
+        let [ key, value ] = param.split('=');
+        params[key] = value ? decodeURIComponent(value.replace(/\+/g, ' ')) : '';
+        return params;
+      }, { });
+  };
+
+  const query = getParams(location.search);
+
+  // 获取 a 页面的回调并执行
+  parent[query.parentFuc](window.name);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b.html</title>
+</head>
+<body>
+<script>
+  const xhr = new XMLHttpRequest()
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        // 将拿回来的数据存储到 window.name
+        window.name = xhr.responseText
+
+        // 注意这里
+        // “跳转页面” 也应该从 `location.search` 拿的，这里没处理
+        location.href = `http://127.0.0.1:3001/c.html${location.search}`;
+      }
+    }
+  }
+  xhr.open("get", "http://localhost:3002/data.json", true)
+  xhr.send(null)
+</script>
+</body>
+</html>

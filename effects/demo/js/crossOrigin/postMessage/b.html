@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接收方 - b.html</title>
+</head>
+<body>
+<iframe src="http://localhost:3001/a.html" id="iframe"></iframe>
+
+<h2>接收方 - b.html</h2>
+<div id="text"></div>
+<script>
+    // 监听message事件
+    window.addEventListener('message', function (event) {
+      console.log(event)
+      if (event.origin === 'http://localhost:3001') {
+        const text = document.getElementById('text')
+        text.innerHTML = `我收到了 http:localhost:3001 发送来的数据了：${event.data}`
+      }
+    })
+</script>
+</body>
+</html>

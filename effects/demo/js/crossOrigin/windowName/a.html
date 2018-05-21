@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a.html</title>
+</head>
+<body>
+<ul class="data-list"></ul>
+<iframe src="http://localhost:3002/b.html" frameborder="0"></iframe>
+<script>
+    /**
+     * 正常情况，我们是通过ajax发送请求拿数据，但是由于存在跨域问题，直接通过ajax是无法将数据请求回来
+    /*
+    const xhr = new XMLHttpRequest()
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log(xhr.responseText)
+          }
+        }
+    }
+    xhr.open("get", "http://localhost:3002/data.json", true)
+    xhr.send(null)
+    */
+
+    /**
+     * 将拿回来的数据渲染到页面上
+     * @param data
+     */
+    function update (data) {
+      const dataList = document.querySelector('.data-list')
+      let str = ''
+
+      data = JSON.parse(data).data
+      for (let item of data) {
+        str += `<li>id = ${item.id}, name = ${item.name}</li>`
+      }
+      dataList.innerHTML = str
+    }
+</script>
+</body>
+</html>
