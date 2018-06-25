@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>debounce</title>
 </head>
 <body>
-$END$
+<script>
+  function debounce (fn, delay) {
+    let timer
+
+    return function () {
+      const context = this
+      const arg = arguments
+
+      clearTimeout(timer)
+
+      timer = setTimeout(function () {
+        fn.apply(context, arg)
+      }, delay)
+    }
+  }
+
+  document.addEventListener(
+    'mousemove',
+    debounce(
+      () => {
+        console.log(new Date().getTime())
+      },
+      1000
+    ),
+    false);
+</script>
 </body>
 </html>

@@ -149,10 +149,6 @@ background-image: -webkit-linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
 <a href="mailto:471938302@qq.com;">这是邮箱地址</a>
 ```
 
-### 2.8 背景的设置
-
-
-
 ## 三、我的简历
 
 [查看我的简历](/effects/demo/resume/v5/index.html)

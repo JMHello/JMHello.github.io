@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h5 history 相关api</title>
+</head>
+<body>
+<script>
+
+  window.onpopstate = function(event) {
+    console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+  };
+  
+  // 在未激活页面的时候，页面的路由为 http://localhost:63342/JMHello.github.io/effects/demo/js/history/v2.html
+
+  //绑定事件处理函数.
+  // 添加并激活一个历史记录条目 - http://localhost:63342/JMHello.github.io/effects/demo/js/history/v2.html?page=1
+  history.pushState({page: 1}, "title 1", "?page=1")
+  // 添加并激活一个历史记录条目 - http://localhost:63342/JMHello.github.io/effects/demo/js/history/v2.html?page=2
+  history.pushState({page: 2}, "title 2", "?page=2")
+  // 修改当前激活的历史记录条目 http://xxx?page=2 ==> http://xxx?page=3
+  history.replaceState({page: 3}, "title 3", "?page=3")
+  
+
+  // 在不经历下面的前进和后退的条件下，经历了两次pushState 和一次replaceState，
+  // 打开页面后，页面的路由为：http://localhost:63342/JMHello.github.io/effects/demo/js/history/v2.html?page=3
+
+  // 第一次打开页面的时候，历史记录的长度为3
+  // 一个历史栈 - 后进先出
+  // 说明可以后退两次
+  // v2.html ===》 v2.html?page=1 ===》 v2.html?page=3
+  console.log(history.length)
+  
+  // 可以通过history.state获取当前的历史状态
+  console.log(history.state)
+
+  // http://localhost:63342/JMHello.github.io/effects/demo/js/history/v2.html?page=3
+  console.log(location.href)
+
+
+  // 后退第一次 - location: http://localhost:63342/JMHello.github.io/effects/demo/js/history/v2.html?page=1, state: {"page":1}
+  // 本来在第二次pushState时的状态应该是page=2，但下面却用了replaceState替换了page=2，代替的是page=3
+  // 所以，这里后退一下，返回的不是page=2，而是page=1
+//  history.back()
+
+  //  后退第二次 - location: http://localhost:63342/JMHello.github.io/effects/demo/js/history/v2.html, state: null
+//  history.back()
+
+  // 前进两次 - location: http://localhost:63342/JMHello.github.io/effects/demo/js/history/v2.html?page=3, state: {"page":3}
+//  history.go(2)
+</script>
+</body>
+</html>

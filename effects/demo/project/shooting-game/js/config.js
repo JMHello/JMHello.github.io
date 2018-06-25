@@ -35,6 +35,5 @@ var CONFIG = {
         lose: '',
         shoot: ''
     }
-
 };
 

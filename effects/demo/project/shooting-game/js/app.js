@@ -213,7 +213,7 @@ var GAME = {
             return;
         }
 
-        requestAnimFrame(function () {
+        requestAnimationFrame(function () {
             _self.update();
         });
     },

@@ -6,107 +6,25 @@
 </head>
 <body>
 <script>
-//  function throttle (fn, delay=250) {
-//    let last
-//    let timer
-//
-//    return function () {
-//      const context = this
-//      const args = arguments
-//      let now = +new Date()
-//
-//      if (last && now < last + delay) {
-//        clearTimeout(timer)
-//        console.log('a')
-//        timer = setTimeout(function () {
-//          last = now
-//          fn.apply(context, args)
-//        }, delay)
-//      }
-//      else {
-//        last = now
-//        console.log('b')
-//        fn.apply(context, args)
-//      }
-//    }
-//  }
+function throttle (fn, delay=100) {
+  let timer = null
 
+  return function () {
+    const context = this
+    const args = arguments
 
-  var _now =  Date.now || function() {
-    return new Date().getTime();
+    // 清除定时器
+    clearTimeout(timer)
+
+    timer = setTimeout(function () {
+      fn.apply(context, args)
+    }, delay)
   }
-
-  function throttle (func, wait, options) {
-    var timeout, context, args, result;
-    var previous = 0;
-    if (!options) options = {};
-
-    // 延迟执行函数
-    var later = function() {
-      previous = options.leading === false ? 0 : _now();
-      timeout = null;
-      result = func.apply(context, args);
-      if (!timeout) context = args = null;
-    };
-
-
-    var throttled = function() {
-      var now = _now();
-      if (!previous && options.leading === false) previous = now;
-      var remaining = wait - (now - previous);
-      context = this;
-      args = arguments;
-      console.log(now, previous, now - previous,remaining)
-
-
-      if (remaining <= 0 || remaining > wait) {
-
-
-        if (timeout) {
-          clearTimeout(timeout);
-          timeout = null;
-        }
-
-        previous = now;
-        
-        result = func.apply(context, args);
-        if (!timeout) context = args = null;
-      }
-//      else if (!timeout && options.trailing !== false) {
-//        timeout = setTimeout(later, remaining);
-//      }
-      return result;
-    };
-
-    throttled.cancel = function() {
-      clearTimeout(timeout);
-      previous = 0;
-      timeout = context = args = null;
-    };
-
-    return throttled;
-  }
-
-//  function throttle (func, wait) {
-//    const context = this
-//    clearTimeout(func.timeId)
-//
-//    func.timeId = setTimeout(function () {
-//      func.apply(context, arguments)
-//    }, wait)
-//  }
-
-  var i = 1
-  window.onresize = throttle(function () {
-    console.log(i++)
-  }, 1000, {
-//    leading: false
-  })
-
-//  window.onresize = function () {
-//    console.log(i++)
-//  }
-
+}
+let i = 1
+window.onresize = throttle(function () {
+  console.log(i++)
+})
 
 </script>
 </body>

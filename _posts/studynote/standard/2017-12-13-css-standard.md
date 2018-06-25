@@ -44,7 +44,7 @@ tag: javascript
 /* 不推荐 */
 .news .info {}
 
-/* 推荐 */
+/* 推荐.md */
 .ui-news .news-info {}
 ```
 
@@ -56,7 +56,7 @@ tag: javascript
 .left {}
 .center {}
 
-/* 推荐 */
+/* 推荐.md */
 .ui-search {}
 .ui-main {}
 ```
@@ -76,7 +76,7 @@ tag: javascript
     opacity: 0.6;
 }
 
-/* 推荐 */
+/* 推荐.md */
 .ui-news {
     marigin: 0;
     opacity: .6;
@@ -91,7 +91,7 @@ body {
     background: url("sprites.png");
 }
 
-/* 推荐 */
+/* 推荐.md */
 body {
     background: url(sprites.png);
 }
@@ -105,7 +105,7 @@ body {
   color: #FF0000;
 }
 
-/* 推荐 */
+/* 推荐.md */
 .ui-news {
     color: #f00;
 }
@@ -128,7 +128,7 @@ body {
   float:left;
 }
 
-/* 推荐 */
+/* 推荐.md */
 .ui-news {
   float:left;
   margin: 10px;

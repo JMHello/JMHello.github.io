@@ -6,32 +6,6 @@
 </head>
 <body>
 <script>
-//  function throttle (fn, delay=250) {
-//    let last
-//    let timer
-//
-//    return function () {
-//      const context = this
-//      const args = arguments
-//      let now = +new Date()
-//
-//      if (last && now < last + delay) {
-//        clearTimeout(timer)
-//        console.log('a')
-//        timer = setTimeout(function () {
-//          last = now
-//          fn.apply(context, args)
-//        }, delay)
-//      }
-//      else {
-//        last = now
-//        console.log('b')
-//        fn.apply(context, args)
-//      }
-//    }
-//  }
-
-
   var _now =  Date.now || function() {
     return new Date().getTime();
   }
@@ -49,7 +23,6 @@
       if (!timeout) context = args = null;
     };
 
-
     var throttled = function() {
       var now = _now();
       if (!previous && options.leading === false) previous = now;
@@ -60,21 +33,19 @@
 
 
       if (remaining <= 0 || remaining > wait) {
-
-
         if (timeout) {
           clearTimeout(timeout);
           timeout = null;
         }
 
         previous = now;
-        
+
         result = func.apply(context, args);
         if (!timeout) context = args = null;
       }
-//      else if (!timeout && options.trailing !== false) {
-//        timeout = setTimeout(later, remaining);
-//      }
+      else if (!timeout && options.trailing !== false) {
+        timeout = setTimeout(later, remaining);
+      }
       return result;
     };
 
@@ -86,16 +57,6 @@
 
     return throttled;
   }
-
-//  function throttle (func, wait) {
-//    const context = this
-//    clearTimeout(func.timeId)
-//
-//    func.timeId = setTimeout(function () {
-//      func.apply(context, arguments)
-//    }, wait)
-//  }
-
   var i = 1
   window.onresize = throttle(function () {
     console.log(i++)
@@ -103,9 +64,6 @@
 //    leading: false
   })
 
-//  window.onresize = function () {
-//    console.log(i++)
-//  }
 
 
 </script>

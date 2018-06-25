@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>history 相关api</title>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+  const div1 = document.getElementById('div1')
+
+  window.onhashchange = (e) => {
+    const { newURL, oldURL } = e
+    div1.innerHTML = `
+        <p>newURL: ${newURL}</p>
+        <p>oldURL: ${oldURL}</p>
+        <p>location.hash = ${location.hash}</p>
+      `
+  }
+</script>
+</body>
+</html>

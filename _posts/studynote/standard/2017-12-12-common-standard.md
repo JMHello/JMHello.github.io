@@ -26,7 +26,7 @@ tag: javascript
 <!-- 不推荐 -->
 <button type="button" style="background:red;" onclick="alert(1)">按钮</button>
 
-<!-- 推荐 -->
+<!-- 推荐.md -->
 <link rel="stylesheet" href="...">
 ...
 <button class="btn">按钮</button>
@@ -52,7 +52,7 @@ tag: javascript
 <!-- 不推荐 -->
 <UL id="menu_list"></UL>
 
-<!-- 推荐 -->
+<!-- 推荐.md -->
 <ul id="menuList"></ul>
 ```
 

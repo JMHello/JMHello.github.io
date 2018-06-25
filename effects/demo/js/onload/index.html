@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        console.log("DOMContentLoaded ：初始DOM 加载并解析");
+      });
+      window.addEventListener("load", function (event) {
+        console.log("load : window 所有资源加载完成");
+      });
+
+      document.onreadystatechange = function () {
+        console.log('onreadystatechange', document.readyState)
+        if (document.readyState === "complete") {
+          console.log('初始DOM,加载解析完成')
+        }
+      }
+      window.addEventListener("beforeunload", function (event) {
+        console.log('即将关闭')
+        event.returnValue = "\o/";
+      });
+      window.addEventListener('unload', function (event) {
+        console.log('即将关闭1');
+      });
+    </script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-$END$
+<div id="root">文档加载时间</div>
+<script src="./index.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ tag: javascript
 <!-- 不推荐 - HTML 4.01 的 DTD 定义 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD  XHTML 1.1//EN"  "http://www.w3.org/TR/xhtml11//DTD/xhtml11.dtd">
 
-<!-- 推荐 HTML5 的标准文档类型 -->
+<!-- 推荐.md HTML5 的标准文档类型 -->
 <!DOCTYPE html>
 ```
 
@@ -53,7 +53,7 @@ tag: javascript
 <!-- 不推荐 -->
 <div class='wrap'></div>
 
-<!-- 推荐 -->
+<!-- 推荐.md -->
 <div class="wrap"></div>
 ```
 
@@ -66,7 +66,7 @@ tag: javascript
 <!-- 不推荐 -->
 <input type="text" readonly="readonly">
 <input type="text" disabled="disabled">
-<!-- 推荐 -->
+<!-- 推荐.md -->
 <input type="text" readonly>
 <input type="text" disabled>
 ```
@@ -88,7 +88,7 @@ tag: javascript
     <li>list-item</li>
 </ul>
 
-<!-- 推荐 -->
+<!-- 推荐.md -->
 <div>
     <p>p元素</p>
     <ul>
@@ -118,7 +118,7 @@ tag: javascript
 <!-- 不推荐 -->
 <label>蓝色</label><input type="radio" name="color">
 
-<!-- 推荐 -->
+<!-- 推荐.md -->
 <label for="blue">蓝色</label><input type="radio" id="blue" name="color">
 
 <!-- 或推荐 -->
@@ -145,7 +145,7 @@ tag: javascript
 <!-- 不推荐 -->
 <div><h1>name</h1><p>aaa<em>bbbb</em>ccc<span>dddd</span>eeee</p></div>
 
-<!-- 推荐 -->
+<!-- 推荐.md -->
 <div>
     <h1>name</h1>
     <p>aaa<em>bbbb</em>ccc<span>dddd</span>eeee</p>

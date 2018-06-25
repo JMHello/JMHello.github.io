@@ -2,7 +2,7 @@
 layout: post
 title: "Webpack - resolve"
 date: 2017-09-21 09:00:00 +0800 
-categories: 原创
+categories: 学习笔记
 tag: Webpack
 ---
 * content

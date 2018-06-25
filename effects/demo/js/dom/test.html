@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div className="form-item-wrapper" id="address">
+    <span className="article-item-ti">地址</span>
+    <select id="select">
+        <option>1</option>
+        <option>1</option>
+        <option>1</option>
+        <option>1</option>
+        <option>1</option>
+    </select>
+</div>
+<script>
+
+  document.getElementById('select').onclick = function (e) {
+    console.log(e.target)
+  }
+</script>
 </body>
 </html>
