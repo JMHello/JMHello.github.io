@@ -205,15 +205,21 @@ VElement.prototype.render = function() {
 
 ![vdom-06.png](/styles/images/react/vdom/vdom-06.png)
 
-### 4.1 比较两棵虚拟DOM树的差异
+### 4.1 diff算法三大策略
 
-如果两棵树完全 `diff` 算法去找不同，那么时间复杂度为 `O(n^3)`，这个时间复杂度真心累！但是在前端当中，你很少会跨越层级地移动 `DOM` 元素。**所以 `Virtual DOM` 只会对同一个层级的元素进行对比！**
+1. 策略一：Web UI 中 DOM 节点跨层级的移动操作特别少，可以忽略不计。 ====》 `tree diff`
+2. 策略二：拥有相同类的两个组件将会生成相似的树形结构，拥有不同类的两个组件将会生成不同的树形结构。====》`component diff`
+3. 策略三：对于同一层级的一组子节点，它们可以通过唯一 id 进行区分。 ====》`element diff`
+
+### 4.2 深度优先遍历 - 比较两棵虚拟DOM树的差异
+
+传统 `diff` 算法通过循环递归对节点进行依次对比，效率低下，算法复杂度达到 `O(n^3)`，其中 `n` 是树中节点的总数。如果要展示 1000 个节点，就要依次执行上十亿次的比较。
+
+但是在前端当中，很少会跨越层级地移动 `DOM` 元素。**所以 `Virtual DOM` 只会对同一个层级的元素进行对比！**【同一个层级指：同一个父节点的所有子节点】，如下图所示：
 
 ![vdom-09.png](/styles/images/react/vdom/vdom-09.png)
 
-`diff` 算法其实就做了一件事情：深度优先遍历，记录差异！
-
-### 4.2 深度优先遍历
+看看下面代码:
 
 ```js
 /**
@@ -232,26 +238,6 @@ function diff(oldTree, newTree) {
   dfsWalk(oldTree, newTree, index, patches);
 
   return patches;
-}
-
-/**
- * 深度遍历
- * @param {Object} oldNode 旧节点
- * @param {Object} newNode 新节点
- * @param {number} index 节点遍历的顺序
- * @param {Object} patches 记录差异的对象
- */
-function dfsWalk(oldNode, newNode, index, patches) {
-  var currentPatch = [];
-
-  // 省略一堆代码
-  
-   diffChildren(oldNode.children, newNode.children, index, patches, currentPatch);
-
-  // 标识哪一个节点有变化
-  if (currentPatch.length) {
-    patches[index] = currentPatch;
-  }
 }
 ```
 
@@ -300,7 +286,7 @@ function dfsWalk(oldNode, newNode, index, patches) {
 }
 ```
 
-### 4.2 差异类型
+### 4.3 差异类型
 
 看到上面一大段的`json`数据结构，或许会有点懵。其实上面就已经提前告诉我们有那4中差异类型。
 
@@ -329,6 +315,23 @@ function dfsWalk(oldNode, newNode, index, patches) {
 * `moves` 属性表示的就是对节点进行什么操作
 * `index` 的值表示在基于整棵树去计算的第5个节点`ul`的子节点的基础上去数数，到第2个位置，新增一个`li`元素。
 * `count` 表示这个新增的`li`元素有多少个子节点，这里是1个
+
+### 4.4 diff算法的优化 - key值
+
+在使用 `react` 的时候，每当使用 `array.map()`这个函数，就要为元素添加 `key` 值，否则就会有警告。就只是按照要求去添加`key`值，但不是很懂为什么要添加。
+在看了这个源码后，自己对 `key` 值有了一些理解。
+
+### 4.5 如果出现了 DOM 节点跨层级的移动操作，diff 会有怎样的表现
+
+比如：`A` 节点（包括其子节点）整个被移动到 `D` 节点下
+
+![vdom-12.png](/styles/images/react/vdom/vdom-12.png)
+
+* `React` 只会简单地考虑同层级节点的位置变换，而对于不同层级的节点，只有创建和删除操作。
+* 当根节点发现子节点中`A` 消失，直接销毁 `A`；当 `D` 发现多了一个子节点 `A`，则则会创建新的 `A`（包括子节点）作为其子节点
+* 综述：`diff` 的执行情况：`create A → create B → create C → delete A`
+
+
 
 
 
