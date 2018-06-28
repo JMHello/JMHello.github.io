@@ -201,6 +201,129 @@ VElement.prototype.render = function() {
 
 ## 四、diff 算法
 
+在研究 `diff` 算法之前，我先通过 `JSON.stringify()` 将新旧虚拟`DOM`的结构 `console.log`到控制台中，并将其值存储到 `.answer.js`文件中，便于分析。
+
+![vdom-06.png](/styles/images/react/vdom/vdom-06.png)
+
+### 4.1 比较两棵虚拟DOM树的差异
+
+如果两棵树完全 `diff` 算法去找不同，那么时间复杂度为 `O(n^3)`，这个时间复杂度真心累！但是在前端当中，你很少会跨越层级地移动 `DOM` 元素。**所以 `Virtual DOM` 只会对同一个层级的元素进行对比！**
+
+![vdom-09.png](/styles/images/react/vdom/vdom-09.png)
+
+`diff` 算法其实就做了一件事情：深度优先遍历，记录差异！
+
+### 4.2 深度遍历
+
+```js
+/**
+ * 避免了diff算法的复杂性，对同级别节点进行比较的常用方法是深度优先遍历
+ * @param {Object} oldTree - 旧DOM树
+ * @param {Object} newTree - 新DOM树
+ * @return {{}}
+ */
+function diff(oldTree, newTree) {
+  // 节点的遍历顺序
+  var index = 0;
+  // 在遍历过程中记录节点的差异
+  var patches = {};
+
+  // 深度优先遍历两棵树
+  dfsWalk(oldTree, newTree, index, patches);
+
+  return patches;
+}
+
+/**
+ * 深度遍历
+ * @param {Object} oldNode 旧节点
+ * @param {Object} newNode 新节点
+ * @param {number} index 节点遍历的顺序
+ * @param {Object} patches 记录差异的对象
+ */
+function dfsWalk(oldNode, newNode, index, patches) {
+  var currentPatch = [];
+
+  // 省略一堆代码
+  
+   diffChildren(oldNode.children, newNode.children, index, patches, currentPatch);
+
+  // 标识哪一个节点有变化
+  if (currentPatch.length) {
+    patches[index] = currentPatch;
+  }
+}
+```
+
+在实际操作中，我们只需要调用`diff`函数即可，而函数返回的是一个`patch`对象，这个对象就是记录两棵树差异的对象。
+
+简单的结构：`patch[0] = [{}]`
+
+```json
+{
+  "1": [{
+    "type": 0,
+    "node": {
+      "tagName": "h5",
+      "props": {
+        "style": "color:blue"
+      },
+      "children": ["simple virtual dom"],
+      "count": 1
+    }
+  }],
+  "4": [{
+    "type": 3,
+    "content": "hello world2"
+  }],
+  "5": [{
+    "type": 1,
+    "moves": [{
+      "index": 2,
+      "item": {
+        "tagName": "li",
+        "props": {
+          "key": 3
+        },
+        "children": ["item #3"],
+        "key": 3,
+        "count": 1
+      },
+      "type": 1
+    }]
+  }],
+  "10": [{
+    "type": 1,
+    "moves": [{
+      "index": 1,
+      "type": 0
+    }]
+  }]
+}
+```
+
+### 4.2 差异类型
+
+看到上面一大段的`json`数据结构，或许会有点懵。其实上面就已经提前告诉我们有那4中差异类型。
+
+先看看，这是新旧 `DOM` 结构：
+
+![vdom-08.png](/styles/images/react/vdom/vdom-08.png)
+
+这是新旧虚拟`DOM`结构转化为树形结构 - 属性值的变化没有在下图展示，而是在上图展示了【具体虚拟`DOM`结构可查看 `.answer.js` 文件】
+
+![vdom-01.png](/styles/images/react/vdom/vdom-01.png)
+
+总的来说，`diff` 算法就有4种类型：
+* `REPLACE` - 0 - 替换原来的节点
+* `REORDER` - 1 - 移动、删除、新增子节点
+* `PROPS` - 2 - 修改节点的属性
+* `TEXT` - 3 - 修改文本节点内容
+
+
+
+
+
 
 
 
