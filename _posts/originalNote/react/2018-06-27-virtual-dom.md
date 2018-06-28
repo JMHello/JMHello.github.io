@@ -213,7 +213,7 @@ VElement.prototype.render = function() {
 
 `diff` 算法其实就做了一件事情：深度优先遍历，记录差异！
 
-### 4.2 深度遍历
+### 4.2 深度优先遍历
 
 ```js
 /**
@@ -256,8 +256,6 @@ function dfsWalk(oldNode, newNode, index, patches) {
 ```
 
 在实际操作中，我们只需要调用`diff`函数即可，而函数返回的是一个`patch`对象，这个对象就是记录两棵树差异的对象。
-
-简单的结构：`patch[0] = [{}]`
 
 ```json
 {
@@ -320,6 +318,17 @@ function dfsWalk(oldNode, newNode, index, patches) {
 * `PROPS` - 2 - 修改节点的属性
 * `TEXT` - 3 - 修改文本节点内容
 
+![vdom-10.png](/styles/images/react/vdom/vdom-10.png)
+
+上图也就可以解析`diff`返回的`json`对象的每一项代表的是什么意思了！取“5”为例子
+
+![vdom-11.png](/styles/images/react/vdom/vdom-11.png)
+
+* `patch[5] = []` 中的5表示这个节点在整棵虚拟 `DOM` 树上存在的位置
+* `type = 1` 表示这个节点的差异类型为 `REORDER` ，其实这里就是新增了一个 `li` 节点
+* `moves` 属性表示的就是对节点进行什么操作
+* `index` 的值表示在基于整棵树去计算的第5个节点`ul`的子节点的基础上去数数，到第2个位置，新增一个`li`元素。
+* `count` 表示这个新增的`li`元素有多少个子节点，这里是1个
 
 
 
