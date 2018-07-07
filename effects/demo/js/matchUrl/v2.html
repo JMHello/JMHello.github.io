@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转化图片路径</title>
+</head>
+<body>
+
+<script>
+    var str = `
+    ![gradient](https://file.jmazm.com/gradient/gradient-11.png)
+
+    ![gradient](https://file.jmazm.com/gradient/gradient-11.png)
+
+    ![gradient](https://file.jmazm.com/gradient/gradient-11.png)
+
+    ![gradient](https://file.jmazm.com/gradient/gradient-11.png)
+    `
+
+    str = str.replace(/\.(png|jpg)/g, '\.$1\.webp')
+    console.log(str)
+</script>
+
+</body>
+</html>

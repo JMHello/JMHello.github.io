@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转化图片路径</title>
+</head>
+<body>
+
+<script>
+   document.cookie = 'name=1;'
+   document.cookie = 'blue=2;'
+   document.cookie = 'age=年后;'
+   console.log(document.cookie)
+
+   function getCookie (name) {
+     const result = document.cookie.match(new RegExp(`(?:^|\\s)${name}=(.*?)(?:;|$)`))
+     console.log(result)
+   }
+
+   getCookie('hello')
+</script>
+
+</body>
+</html>

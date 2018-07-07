@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="list">
+    <li><span>1</span></li>
+    <li><span>2</span></li>
+    <li><span>3</span></li>
+    <li><span>4</span></li>
+    <li><span>5</span></li>
+</ul>
+
+<script>
+    document.getElementById('list').onclick = function (e) {
+      const target = e.target
+      
+      console.log(target)
+    }
+</script>
+</body>
+</html>

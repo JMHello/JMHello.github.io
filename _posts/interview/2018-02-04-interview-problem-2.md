@@ -348,7 +348,7 @@ tag: interview
 > * `background-position`：背景图片定位；x：left center right；y: top center bottom；或者百分比像素
 > * `background-size`：背景图片大小；100% 铺满整个容器
 
-> * 简写：`backgound: #eee url(a.png) no-repeat center center/100px 100px
+> * 简写：`backgound: #eee url(a.png) no-repeat center center/100px 100px`
 
 ## 16、说一说层叠上下文 或者 z-index
 
