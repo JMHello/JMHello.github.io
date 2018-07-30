@@ -163,6 +163,8 @@ tag: interview
 >   * 模块化代码
 >   * 建立私有成员（有时候单例模式也会用到闭包）
 
+垃圾回收机制：标记清除、引用计数
+
 ## 10、谈一谈面向对象
 
 > 整体阐述面向对象是什么，再说一说js的面向对象，接着说一说面向对象的特点
@@ -582,7 +584,7 @@ reg.exec('20130213')  //结果： ['20130213', '2013', '02', '13']
 
 > * BOM
 >   * 浏览器在屏幕中的位置：screenLeft/screenTop(除了FF)，screenX/screenY(除了ie)
->   * innerHTML与innerWidth：浏览器视图区宽高(包含滚动条)
+>   * innerHeight与innerWidth：浏览器视图区宽高(包含滚动条)
 >   * outerHeight/outerWidth: 浏览器本身宽高
 
 > * DOM
